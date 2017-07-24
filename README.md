@@ -25,7 +25,12 @@ Useful links, books, posts about C++
 * [P. Gottschling. Discovering Modern C++(Addison-Wesley, 2016)](https://books.google.com.ua/books?id=KFdCCwAAQBAJ&pg=PT618&dq=Gottschling&hl=en&sa=X&ved=0ahUKEwil8tT_iJ_VAhUJSJoKHcWhA1wQ6AEIIjAA#v=onepage&q&f=false)
 * [E. Gamma, R. Helm, R. Johnson, J. Vlissides. Design Patterns: Elements of Reusable Object-Oriented Software (Addison-Wesley, 1995)](https://books.google.com.ua/books?id=6oHuKQe3TjQC&printsec=frontcover&dq=Erich+Gamma&hl=en&sa=X&ved=0ahUKEwjO0ozRip_VAhXBA5oKHY-RDn8Q6AEIIjAA#v=onepage&q&f=false), available [in Russian](http://scanlibs.com/priemyi-obektno-orientirovannogo-proektirovaniya/)
 
-## Tools & Instruments
+## Tools, Utils & Instruments
 * [Visual Studio Express](https://www.visualstudio.com/vs/visual-studio-express/), Fully-featured IDE for students, open-source and individual developers. The up-to-date C++ compiler & [C++ Core Check code analysis](https://blogs.msdn.microsoft.com/vcblog/2016/10/12/cppcorecheck/) are included! 
 * [GSL: Guideline Support Library](https://github.com/Microsoft/GSL) contains functions and types that are suggested for use by [the C++ Core Guidelines](https://github.com/isocpp/CppCoreGuidelines)
 * [TUT for C++](https://github.com/mrzechonek/tut-framework) is a small and portable unit test framework for C++.
+
+
+## Video trainings & courses
+* [Learning C++. Best practices](http://scanlibs.com/learning-cpp-best-practices/) with  Jason Turner. This course is designed for users that already have a basic working knowledge of C++. Skill level: 'Intermediate' is required.
+* [Modern C++. Design Patterns](http://scanlibs.com/modern-c-design-patterns/) with Juilian Templeman. This course provides beginning to intermediate C++ developers with the knowledge required for up-to-date C++ programming. Exploring Design Patterns, Idioms, Functional Programming Techniques, and the Key Features of C++ 11 and C++ 14
