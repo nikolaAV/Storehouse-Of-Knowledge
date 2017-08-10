@@ -16,7 +16,7 @@ Regarding code above what should be present in output?
 
 **Answer:** B
 
-При инстанцировании экземпляра любого типа (в том числе и "пустого"), под него должна быть выделена обязательно физическая память, поскольку к каждому объекту в С++ может быть применен  `operator &`  (получения адреса). Следуя Стандарту под «пустой» объект выделяется минимально возможный объем памяти – 1 байт.
+When instantiating an instance of any type (including "empty"), the physical memory must be allocated to it, since `operator &` (address acquisition) can be applied to every object in C ++. According to the Standard, under the "empty" object, the minimum possible amount of memory is allocated - 1 byte.
 
 **See also:** [Why is the size of an empty class not zero?](http://www.stroustrup.com/bs_faq2.html#sizeof-empty) 
 
