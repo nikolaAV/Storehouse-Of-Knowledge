@@ -9,10 +9,10 @@ int main()
 }
 ```
 Regarding code above what should be present in output?
-A. 0
-B. 1
-C. 2
-D. 4
+- A. 0
+- B. 1
+- C. 2
+- D. 4
 
 **Answer:** B
 

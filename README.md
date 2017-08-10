@@ -1,5 +1,6 @@
 # Storehouse-Of-Knowledge
 Useful links, books, posts about C++
+but first ... try to [examine yourself](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md)
 
 ## Online resources
 * [C++ reference](http://en.cppreference.com/w/) provides programmers with a complete online reference for the C and C++ languages and standard libraries, i.e. a more convenient version of the C and C++ standards
