@@ -135,6 +135,43 @@ Regarding code above what should be present in output?
 
 **See also:** ???
  
+# Function overriding. Default parameter value.
+**complexity:** professional
+```cpp
+struct base
+{
+   virtual void print(const char* colour = "red") const 
+      { cout << "base::" << colour << endl; }
+   virtual ~base() {}
+};
+
+struct derived : base
+{
+   void print(const char* colour = "green") const override 
+      { cout << "derived::" << colour << endl; }
+};
+
+int main()
+{
+   base* obj = new derived;
+   obj->print();
+   delete obj;
+}
+
+```
+Regarding code above what should be present in output?
+- A. base::red
+- B. derived::green
+- C. base::green
+- D. derived::red
+- F. compiler error
+
+**Answer:** D
+
+`Static type` of 'obj' is base* but its `dynamic type` is derived*. Missed argument in the point of call is substituted by the compiler in compile-time based on static type information. Function 'print' is virtual i.e. a decision which of them shoul be called will be resolved at run-time based on dymamic type information.   
+
+**See also:** [Evvective C++, item 37 by S. Meyers](https://books.google.com.ua/books?id=U7lTySXdFk0C&pg=PT208&dq=Effective+C%2B%2B+Never+redefine+a+function’s+inherited+default+parameter+value&hl=en&sa=X&redir_esc=y#v=onepage&q&f=false)
+ 
 
 
 
