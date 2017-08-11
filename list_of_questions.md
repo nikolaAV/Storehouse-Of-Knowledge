@@ -63,6 +63,56 @@ Regarding code above what should be present in output?
 
 **See also:** [Evvective C++, item 7 by S. Meyers](https://books.google.com.ua/books?id=U7lTySXdFk0C&lpg=PT68&dq=Effective%20C%2B%2B%20declare%20destructors%20virtual&pg=PT68#v=onepage&q&f=false)
  
+# class construction
+**complexity:** basic
+```cpp
+struct member
+{
+   member() { cout << "member" << endl; }
+};
+
+struct base
+{
+   base()  { cout << "base" << endl; }
+};
+
+struct derived : base
+{
+   derived() { cout << "derived" << endl; }
+private:
+   member m_;
+};
+
+int main()
+{
+   derived obj;
+}
+
+```
+Regarding code above what should be present in output?
+- A.
+    - member
+    - base
+    - derived
+- B.
+    - base
+    - member
+    - derived
+- C.
+    - base
+    - derived
+- D.
+    - base
+    - member
+    - derived
+- F.
+    - derived
+
+**Answer:** B 
+
+**See also:** ???
+ 
+
 
 
 
