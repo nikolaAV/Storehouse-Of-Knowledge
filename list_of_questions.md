@@ -18,7 +18,7 @@ Regarding code above what should be present in output?
 
 When instantiating an instance of any type (including "empty"), the physical memory must be allocated to it, since `operator &` (address acquisition) can be applied to every object in C ++. According to the Standard, under the "empty" object, the minimum possible amount of memory is allocated - 1 byte.
 
-**See also:** [Why is the size of an empty class not zero?](http://www.stroustrup.com/bs_faq2.html#sizeof-empty) 
+**See also:** [FAQ by Stroustrup](http://www.stroustrup.com/bs_faq2.html#sizeof-empty) 
 
 
 # virtual destructor
@@ -61,7 +61,8 @@ Regarding code above what should be present in output?
 
 **Answer:** C
 
-**See also:** 
+**See also:** [Evvective C++, item 7 by S. Meyers](https://books.google.com.ua/books?id=U7lTySXdFk0C&lpg=PT68&dq=Effective%20C%2B%2B%20declare%20destructors%20virtual&pg=PT68#v=onepage&q=Effective%20C++%20declare%20destructors%20virtual&f=false)
+ 
 
 
 
