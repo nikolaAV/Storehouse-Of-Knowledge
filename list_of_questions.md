@@ -113,6 +113,29 @@ Regarding code above what should be present in output?
 **See also:** ???
  
 
+# Function overloading. Parameter type: integer vs. pointer
+**complexity:** professional
+```cpp
+void foo(char*) {cout << "pointer argument" << endl; }
+void foo(int)   {cout << "integer argument" << endl; }
+
+int main()
+{
+   foo(NULL);
+}
+```
+Regarding code above what should be present in output?
+- A. pointer argument
+- B. integer argument
+- C. compiler error: ambiguous call to overloaded function
+
+**Answer:** B
+
+**NULL** is predefined macro with integer constant 0 (zero). foo(int) will be resolved due to better conformance between argument & parameter type.  
+
+**See also:** ???
+ 
+
 
 
 
