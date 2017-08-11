@@ -61,7 +61,7 @@ Regarding code above what should be present in output?
 
 **Answer:** C
 
-**See also:** [Evvective C++, item 7 by S. Meyers](https://books.google.com.ua/books?id=U7lTySXdFk0C&lpg=PT68&dq=Effective%20C%2B%2B%20declare%20destructors%20virtual&pg=PT68#v=onepage&q=Effective%20C++%20declare%20destructors%20virtual&f=false)
+**See also:** [Evvective C++, item 7 by S. Meyers](https://books.google.com.ua/books?id=U7lTySXdFk0C&lpg=PT68&dq=Effective%20C%2B%2B%20declare%20destructors%20virtual&pg=PT68#v=onepage&q&f=false)
  
 
 
