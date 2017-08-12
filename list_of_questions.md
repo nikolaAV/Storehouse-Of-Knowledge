@@ -238,6 +238,34 @@ Regarding code above what should be present in output?
 
 **See also:** [S. Meyers. Effective C++, item 33](https://books.google.com.ua/books?id=U7lTySXdFk0C&pg=PT184&dq=Avoid+hiding+inherited+names.&hl=en&sa=X&redir_esc=y#v=onepage&q&f=false)
 
+# Inheritance. Virtual base.
+**complexity:** professional
+```cpp
+class base
+{
+};
+
+class derived1 : public base
+{
+};
+
+class derived2 : virtual public base
+{
+};
+
+int main()
+{
+   cout << sizeof(derived2) - sizeof(derived1) << endl;
+}
+```
+Regarding code above what should be present in output?
+- A. 0
+- B. compiler dependent
+- C. platform dependent
+
+**Answer:** B
+
+**See also:** [S. Meyers. Effective C++, item 40](https://books.google.com.ua/books?id=U7lTySXdFk0C&pg=PT220&dq=Item+40:+Use+multiple+inheritance+judiciously.&hl=en&sa=X&redir_esc=y#v=onepage&q&f=false)
 
 
 
