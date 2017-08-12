@@ -239,7 +239,7 @@ Regarding code above what should be present in output?
 **See also:** [S. Meyers. Effective C++, item 33](https://books.google.com.ua/books?id=U7lTySXdFk0C&pg=PT184&dq=Avoid+hiding+inherited+names.&hl=en&sa=X&redir_esc=y#v=onepage&q&f=false)
 
 # Inheritance. Virtual base.
-**complexity:** professional
+**complexity:** expert
 ```cpp
 class base
 {
@@ -267,5 +267,48 @@ Regarding code above what should be present in output?
 
 **See also:** [S. Meyers. Effective C++, item 40](https://books.google.com.ua/books?id=U7lTySXdFk0C&pg=PT220&dq=Item+40:+Use+multiple+inheritance+judiciously.&hl=en&sa=X&redir_esc=y#v=onepage&q&f=false)
 
+
+# Virtual Inheritance. Object construction.
+**complexity:** expert
+```cpp
+struct base1
+{
+   base1() { cout << "base1" << endl; }
+};
+
+struct base2
+{
+   base2() { cout << "base2" << endl; }
+};
+
+struct derived : base1, virtual base2 
+{
+   derived() { cout << "derived" << endl; }
+};
+
+int main()
+{
+   derived d;
+}
+```
+Regarding code above what should be present in output?
+- A. 
+    - base1
+    - base2
+    - derived
+- B. 
+    - base2
+    - base1
+    - derived
+- C. 
+    - derived
+    - base1
+    - base2
+
+**Answer:** B 
+
+Subobject of virtually inheritable class is **always** Initialized first regardless of the its location in the inheritance list.
+
+**See also:** [S. Meyers. Effective C++, item 40](https://books.google.com.ua/books?id=U7lTySXdFk0C&pg=PT220&dq=Item+40:+Use+multiple+inheritance+judiciously.&hl=en&sa=X&redir_esc=y#v=onepage&q&f=false)
 
 
