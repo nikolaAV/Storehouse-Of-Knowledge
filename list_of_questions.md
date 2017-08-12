@@ -168,7 +168,7 @@ Regarding code above what should be present in output?
 
 **Answer:** D
 
-`Static type` of 'obj' is base* but its `dynamic type` is derived*. Missed argument in the point of call is substituted by the compiler in compile-time based on static type information. Function 'print' is virtual i.e. a decision which of them shoul be called will be resolved at run-time based on dymamic type information.   
+`Static type` of 'obj' is base* but its `dynamic type` is derived*. Missed argument in the point of call is substituted by the compiler in compile-time based on static type information. Function 'print' is virtual (polymorphic) i.e. a decision which of them shoul be called will be resolved at run-time based on dymamic type information.   
 
 **See also:** [S. Meyers. Effective C++, item 37](https://books.google.com.ua/books?id=U7lTySXdFk0C&pg=PT208&dq=Effective+C%2B%2B+Never+redefine+a+function’s+inherited+default+parameter+value&hl=en&sa=X&redir_esc=y#v=onepage&q&f=false)
  
@@ -185,13 +185,13 @@ struct part
 
 struct unit
 {
-   unit(const char* arg) { part_ = arg; }  // 2
-// unit(const char* arg) : part_(arg) {}   // 1
+   unit(const char* arg) { part_ = arg; }  // [2]
+// unit(const char* arg) : part_(arg) {}   // [1]
 private:
    part part_;
 };
 ```
-Regarding code above what should be present in output? Which of proposed constructors above is more effective? Why?
+Regarding code above what should be present in output? Which of proposed constructors above (`[1]`,`[2]`) is more effective? Why?
 - A. 
     - part::default ctor
     - part::copy ctor
@@ -210,7 +210,33 @@ Regarding code above what should be present in output? Which of proposed constru
 
 **See also:** [S. Meyers. Effective C++, item 4](https://books.google.com.ua/books?id=U7lTySXdFk0C&pg=PT56&dq=A+better+way+to+write+the+ABEntry+constructor+is+to+use+the+member+initialization+list+instead+of+assignments:&hl=en&sa=X&redir_esc=y#v=onepage&q&f=false)
 
+# Inheritance. Hiding names.
+**complexity:** professional
+```cpp
+struct base
+{
+   void foo(double) const { cout << "base::foo(double)" << endl; }  
+};
 
+struct derived : base
+{
+   void foo(const char*) const    { cout << "derived::foo(const char*)" << endl; }  
+};
+
+int main()
+{
+   derived d;
+   d.foo(3.14);
+}
+```
+Regarding code above what should be present in output?
+- A. base::foo(double)
+- B. derived::foo(const char*)
+- C. compiler error: 'derived::foo(const char*)': cannot convert argument 1 from 'double' to 'const char*'
+
+**Answer:** C
+
+**See also:** [S. Meyers. Effective C++, item 33](https://books.google.com.ua/books?id=U7lTySXdFk0C&pg=PT184&dq=Avoid+hiding+inherited+names.&hl=en&sa=X&redir_esc=y#v=onepage&q&f=false)
 
 
 
