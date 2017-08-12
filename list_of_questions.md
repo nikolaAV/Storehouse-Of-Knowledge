@@ -18,7 +18,7 @@ Regarding code above what should be present in output?
 
 When instantiating an instance of any type (including "empty"), the physical memory must be allocated to it, since `operator &` (address acquisition) can be applied to every object in C ++. According to the Standard, under the "empty" object, the minimum possible amount of memory is allocated - 1 byte.
 
-**See also:** [FAQ by Stroustrup](http://www.stroustrup.com/bs_faq2.html#sizeof-empty) 
+**See also:** [Bjarne Stroustrup's FAQ](http://www.stroustrup.com/bs_faq2.html#sizeof-empty) 
 
 
 # virtual destructor
@@ -61,7 +61,7 @@ Regarding code above what should be present in output?
 
 **Answer:** C
 
-**See also:** [Evvective C++, item 7 by S. Meyers](https://books.google.com.ua/books?id=U7lTySXdFk0C&lpg=PT68&dq=Effective%20C%2B%2B%20declare%20destructors%20virtual&pg=PT68#v=onepage&q&f=false)
+**See also:** [S. Meyers. Effective C++, item 7](https://books.google.com.ua/books?id=U7lTySXdFk0C&lpg=PT68&dq=Effective%20C%2B%2B%20declare%20destructors%20virtual&pg=PT68#v=onepage&q&f=false)
  
 # class construction
 **complexity:** basic
@@ -170,8 +170,46 @@ Regarding code above what should be present in output?
 
 `Static type` of 'obj' is base* but its `dynamic type` is derived*. Missed argument in the point of call is substituted by the compiler in compile-time based on static type information. Function 'print' is virtual i.e. a decision which of them shoul be called will be resolved at run-time based on dymamic type information.   
 
-**See also:** [Evvective C++, item 37 by S. Meyers](https://books.google.com.ua/books?id=U7lTySXdFk0C&pg=PT208&dq=Effective+C%2B%2B+Never+redefine+a+function’s+inherited+default+parameter+value&hl=en&sa=X&redir_esc=y#v=onepage&q&f=false)
+**See also:** [S. Meyers. Effective C++, item 37](https://books.google.com.ua/books?id=U7lTySXdFk0C&pg=PT208&dq=Effective+C%2B%2B+Never+redefine+a+function’s+inherited+default+parameter+value&hl=en&sa=X&redir_esc=y#v=onepage&q&f=false)
  
+# Class construction. Member initialization list.
+**complexity:** basic
+```cpp
+struct part
+{
+   part()                        { cout << "part::default ctor" << endl; } 
+   part(const char*)             { cout << "part::ctor(arg)"   << endl; } 
+   part(const part&)             { cout << "part::copy ctor"   << endl; } 
+   part& operator=(const part&)  { cout << "part::assignment operator" << endl; return *this; }
+};
+
+struct unit
+{
+   unit(const char* arg) { part_ = arg; }  // 2
+// unit(const char* arg) : part_(arg) {}   // 1
+private:
+   part part_;
+};
+```
+Regarding code above what should be present in output? Which of proposed constructors above is more effective? Why?
+- A. 
+    - part::default ctor
+    - part::copy ctor
+    - part::assignment operator
+- B. 
+    - part::default ctor
+    - part::assignment operator
+- C. 
+    - part::default ctor
+    - part::ctor(arg)
+    - part::assignment operator
+- D. 
+    - part::ctor(arg)
+
+**Answer:** C
+
+**See also:** [S. Meyers. Effective C++, item 4](https://books.google.com.ua/books?id=U7lTySXdFk0C&pg=PT56&dq=A+better+way+to+write+the+ABEntry+constructor+is+to+use+the+member+initialization+list+instead+of+assignments:&hl=en&sa=X&redir_esc=y#v=onepage&q&f=false)
+
 
 
 
