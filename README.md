@@ -7,6 +7,7 @@ but first ... try to [examine yourself](https://github.com/nikolaAV/Storehouse-O
 * [The C++ Core Guidelines](https://github.com/isocpp/CppCoreGuidelines) are a collaborative effort led by Bjarne Stroustrup & Herb Sutter. The aim of the guidelines is to help people to use modern C++ effectively.
 * [Bjarne Stroustrup's homepage](http://stroustrup.com/), C++FAQ, style, techique, etc.
 * [Herb Satter's homepage](https://herbsutter.com/), Here, you can find well known "Guru of the Week (GotW)", a series of C++ programming problems created and written by Herb Sutter.
+* [News, Status & Discussion about Standard C++](https://isocpp.org/std/status)
 
 ## Books
 * [S. Meyers. Effective C++ (2nd Edition) (Addison-Wesley, 1997)](https://books.google.com.ua/books?id=Qx5oyB49poYC&lpg=PP1&dq=Effective%20C%2B%2B&pg=PP1#v=onepage&q&f=false), available [in Russian](http://scanlibs.com/effektivnoe-ispolzovanie-cpp/)
