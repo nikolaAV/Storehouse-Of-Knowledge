@@ -87,7 +87,6 @@ int main()
 {
    derived obj;
 }
-
 ```
 Regarding code above what should be present in output?
 - A.
@@ -190,6 +189,11 @@ struct unit
 private:
    part part_;
 };
+
+int main()
+{
+   unit obj;
+}
 ```
 Regarding code above what should be present in output? Which of proposed constructors above (`[1]`,`[2]`) is more effective? Why?
 - A. 
@@ -209,6 +213,8 @@ Regarding code above what should be present in output? Which of proposed constru
 **Answer:** C
 
 **See also:** [S. Meyers. Effective C++, item 4](https://books.google.com.ua/books?id=U7lTySXdFk0C&pg=PT56&dq=A+better+way+to+write+the+ABEntry+constructor+is+to+use+the+member+initialization+list+instead+of+assignments:&hl=en&sa=X&redir_esc=y#v=onepage&q&f=false)
+
+**Relatives:**
 
 # Inheritance. Hiding names.
 **complexity:** professional
@@ -311,4 +317,43 @@ Subobject of virtually inheritable class is **always** Initialized first regardl
 
 **See also:** [S. Meyers. Effective C++, item 40](https://books.google.com.ua/books?id=U7lTySXdFk0C&pg=PT220&dq=Item+40:+Use+multiple+inheritance+judiciously.&hl=en&sa=X&redir_esc=y#v=onepage&q&f=false)
 
+
+# Class construction. Member initialization list vs. member declaration ordering
+**complexity:** professional
+```cpp
+class range
+{
+   size_t  distance_;
+   size_t  begin_;
+   size_t  end_;
+
+public:
+    range(size_t x1, size_t x2)
+      : begin_(x1), end_(x2), distance_(end_ - begin_) 
+   {}
+   size_t distance() const { return distance_; }
+};
+
+void main()
+{
+   range r(1,9);
+   cout << r.distance() << endl;
+}
+```
+Regarding code above what should be present in output?
+- A. 1
+- B. 9
+- C. 0
+- D. <undefined>
+- F. 8
+
+**Answer:** D (C) 
+
+Data members are initialized __in the order in which they are declared__. This is true
+even if they are listed in a different order on the member initialization
+list. __D__ is the right answer in common case. For the the given test, __B__ is also correct, because of members `begin_`, `end_` are of build-in type which are initialized with 0 (zero) before `range::range()` invokation.
+
+**See also:** [S. Meyers. Effective C++, item 4](https://books.google.com.ua/books?id=U7lTySXdFk0C&pg=PT56&dq=A+better+way+to+write+the+ABEntry+constructor+is+to+use+the+member+initialization+list+instead+of+assignments:&hl=en&sa=X&redir_esc=y#v=onepage&q&f=false)
+
+**Relatives:** [ctor::member_initialization_list](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#class-construction-member-initialization-list)
 
