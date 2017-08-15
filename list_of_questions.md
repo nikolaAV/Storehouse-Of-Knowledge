@@ -130,7 +130,7 @@ Regarding code above what should be present in output?
 
 **Answer:** B
 
-**NULL** is predefined macro with integer constant 0 (zero). foo(int) will be resolved due to better conformance between argument & parameter type.  
+**NULL** is predefined macro with integer constant 0 (zero). foo(int) will be resolved due to __exact match__ between argument & parameter type.  
 
 **See also:** [Bjarne Stroustrup's FAQ](http://www.stroustrup.com/bs_faq2.html#null)
  
