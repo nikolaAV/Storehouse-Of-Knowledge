@@ -132,7 +132,7 @@ Regarding code above what should be present in output?
 
 **NULL** is predefined macro with integer constant 0 (zero). foo(int) will be resolved due to better conformance between argument & parameter type.  
 
-**See also:** ???
+**See also:** [Bjarne Stroustrup's FAQ](http://www.stroustrup.com/bs_faq2.html#null)
  
 # Function overriding. Default parameter value.
 **complexity:** professional
@@ -214,7 +214,7 @@ Regarding code above what should be present in output? Which of proposed constru
 
 **See also:** [S. Meyers. Effective C++, item 4](https://books.google.com.ua/books?id=U7lTySXdFk0C&pg=PT56&dq=A+better+way+to+write+the+ABEntry+constructor+is+to+use+the+member+initialization+list+instead+of+assignments:&hl=en&sa=X&redir_esc=y#v=onepage&q&f=false)
 
-**Relatives:**
+**Relatives:** [ctor::member_ordering](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#class-construction-member-initialization-list-vs-member-declaration-ordering)
 
 # Inheritance. Hiding names.
 **complexity:** professional
@@ -344,7 +344,7 @@ Regarding code above what should be present in output?
 - A. 1
 - B. 9
 - C. 0
-- D. <undefined>
+- D. \<undefined\>
 - F. 8
 
 **Answer:** D (C) 
