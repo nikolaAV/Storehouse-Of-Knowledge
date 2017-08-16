@@ -410,3 +410,45 @@ If you have a class with virtual method then you should access it through object
 
 **Relatives:** 
 
+# Cost of the virtuality?
+**complexity:** professional
+```cpp
+class point
+{   // designed as a terminal class
+    size_t x_;
+    size_t y_;
+public:
+    point(size_t x, size_t y) : x_(x), y_(y) {}
+    ~point() {}
+};
+
+class spot
+{   // designed to be used as a base, OOP style
+    size_t x_;
+    size_t y_;
+public:
+    spot(size_t x, size_t y) : x_(x), y_(y) {}
+    virtual ~spot() {}
+};
+
+void main()
+{
+   cout << sizeof(spot) - sizeof(point) << endl;
+   cin.get();
+}
+```
+Regarding code above what should be present in output? 
+- A. 0 
+- B. sizeof(void*)
+- C. compiler dependent
+- D. platform depentedt
+
+**Answer:** C 
+
+The Standard does not say how the virtual table and the pointer to it should be implemented.
+
+**See also:** [S. Meyers. Effective C++, item 7](https://books.google.com.ua/books?id=U7lTySXdFk0C&pg=PT72&dq=destructors+virtual+in+polymorphic+base+classes.%5C&hl=en&sa=X&redir_esc=y#v=onepage&q&f=false)
+
+**Relatives:** [virtual destructor](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#virtual-destructor)
+
+
