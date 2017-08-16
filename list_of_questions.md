@@ -357,3 +357,57 @@ list. __D__ is the right answer in common case. For the the given test, __B__ is
 
 **Relatives:** [ctor::member_initialization_list](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#class-construction-member-initialization-list)
 
+# Polymorphic objects. Slicing
+**complexity:** basic
+```cpp
+struct base
+{
+    virtual void foo() const { cout << "base" << endl; }
+};
+
+struct derived : base
+{
+    void foo() const override { cout << "derived" << endl; }
+};
+
+void display(const base* obj)
+{
+    obj->foo();
+}
+
+void display(const base obj)
+{
+    obj.foo();
+}
+
+void main()
+{
+   const derived d;
+   display(&d);
+   display(d);
+   cin.get();
+}
+```
+Regarding code above what should be present in output? 
+Can a virtual method be virtual?
+- A. 
+    - derived
+    - derived
+- B. 
+    - derived
+    - base
+- C. 
+    - base
+    - base
+- D. 
+    - base
+    - derived
+
+**Answer:** B 
+
+If you have a class with virtual method then you should access it through object pointer or reference. Otherwise you will have __type slicing__ - a copying a portion (base part) of the whole object. If you use object itself syntax to invoke a virtual method then polymorphic sence is lost i.e. object's `dynamic type` is equal to its `static type`. Thus, for this particular case, a virtual method can be threated as inlined.
+
+**See also:** [CppCoreGuidelines](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#c145-access-polymorphic-objects-through-pointers-and-references)
+
+**Relatives:** 
+
