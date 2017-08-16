@@ -63,6 +63,8 @@ Regarding code above what should be present in output?
 
 **See also:** [S. Meyers. Effective C++, item 7](https://books.google.com.ua/books?id=U7lTySXdFk0C&lpg=PT68&dq=Effective%20C%2B%2B%20declare%20destructors%20virtual&pg=PT68#v=onepage&q&f=false)
  
+**Relatives:** [virtuality](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#cost-of-the-virtuality)
+
 # class construction
 **complexity:** basic
 ```cpp
@@ -434,7 +436,6 @@ public:
 void main()
 {
    cout << sizeof(spot) - sizeof(point) << endl;
-   cin.get();
 }
 ```
 Regarding code above what should be present in output? 
