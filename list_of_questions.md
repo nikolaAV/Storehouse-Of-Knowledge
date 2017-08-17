@@ -13,10 +13,11 @@ Regarding code above what should be present in output?
 - B. 1
 - C. 2
 - D. 4
+- F. compiler dependent, but definitely greater than 0
 
-**Answer:** B
+**Answer:** F(B)
 
-When instantiating an instance of any type (including "empty"), the physical memory must be allocated to it, since `operator &` (address acquisition) can be applied to every object in C ++. According to the Standard, under the "empty" object, the minimum possible amount of memory is allocated - 1 byte.
+When instantiating an instance of any type (including "empty"), the physical memory must be allocated to it, since `operator &` (address acquisition) can be applied to every object in C ++. The Standard does not specify size of "empty" object. The minimum possible amount of memory is 1 byte and VC++ allocates it.
 
 **See also:** [Bjarne Stroustrup's FAQ](http://www.stroustrup.com/bs_faq2.html#sizeof-empty) 
 
@@ -268,12 +269,14 @@ int main()
 ```
 Regarding code above what should be present in output?
 - A. 0
-- B. compiler dependent
-- C. platform dependent
+- B. but definitely greater than 0 (compiler dependent)
+- C. but definitely greater than 0 (platform dependent)
 
 **Answer:** B
 
-**See also:** [S. Meyers. Effective C++, item 40](https://books.google.com.ua/books?id=U7lTySXdFk0C&pg=PT220&dq=Item+40:+Use+multiple+inheritance+judiciously.&hl=en&sa=X&redir_esc=y#v=onepage&q&f=false)
+The Standatd does not specify size of `pointer` to a virtual table (vtbl).
+
+**See also:** [S. Meyers. Effective C++, item 40](https://books.google.com.ua/books?id=U7lTySXdFk0C&pg=PT220&dq=Item+40:+Use+multiple+inheritance+judiciously.&hl=en&sa=X&redir_esc=y#v=onepage&q&f=false), [Bjarne Stroustrup's FAQ](http://www.stroustrup.com/bs_faq2.html#layout-obj)
 
 
 # Virtual Inheritance. Object construction.
@@ -448,8 +451,51 @@ Regarding code above what should be present in output?
 
 The Standard does not say how the virtual table and the pointer to it should be implemented.
 
-**See also:** [S. Meyers. Effective C++, item 7](https://books.google.com.ua/books?id=U7lTySXdFk0C&pg=PT72&dq=destructors+virtual+in+polymorphic+base+classes.%5C&hl=en&sa=X&redir_esc=y#v=onepage&q&f=false)
+**See also:** [S. Meyers. Effective C++, item 7](https://books.google.com.ua/books?id=U7lTySXdFk0C&pg=PT72&dq=destructors+virtual+in+polymorphic+base+classes.%5C&hl=en&sa=X&redir_esc=y#v=onepage&q&f=false), [Bjarne Stroustrup's FAQ](http://www.stroustrup.com/bs_faq2.html#layout-obj)
 
 **Relatives:** [virtual destructor](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#virtual-destructor)
+
+# Size Of C++ object (members only)?
+**complexity:** basic
+```cpp
+struct point
+{
+    size_t x_;
+    size_t y_;
+};
+
+class spot
+{
+    size_t x_;
+    size_t y_;
+
+public:
+    spot(size_t x, size_t y) : x_(x), y_(y) {}
+
+    // data accessors
+    unsigned long   getX() const   { return x_; }
+    void            setX(size_t x) { x_=x; }
+    unsigned long   getY() const   { return y_; }
+    void            setY(size_t y) { y_=y; }
+};
+
+void main()
+{
+   cout << sizeof(spot) - sizeof(point) << endl;
+}
+```
+Regarding code above what should be present in output? 
+- A.  0 
+- B. <0
+- C. >0
+- D. compiler dependent.
+
+**Answer:**  
+
+Function-member does not impact on the object size.
+
+**See also:** [Bjarne Stroustrup's FAQ](http://www.stroustrup.com/bs_faq2.html#layout-obj)
+
+**Relatives:** 
 
 
