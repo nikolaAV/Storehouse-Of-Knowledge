@@ -113,6 +113,8 @@ Regarding code above what should be present in output?
 **Answer:** B 
 
 **See also:** ???
+
+**Relatives:** [ctor::exception](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#object-construction-exception)
  
 
 # Function overloading. Parameter type: integer vs. pointer
@@ -559,7 +561,7 @@ In C++ the lifetime of an object is said to begin when the constructor runs to c
 
 **See also:** [Bjarne Stroustrup's FAQ](http://www.stroustrup.com/bs_faq2.html#ctor-exceptions)
 
-**Relatives:** 
+**Relatives:** [ctor::member](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#object-construction) 
 
 
 
