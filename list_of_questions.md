@@ -66,7 +66,7 @@ Regarding code above what should be present in output?
  
 **Relatives:** [virtuality](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#cost-of-the-virtuality)
 
-# class construction
+# Object construction
 **complexity:** basic
 ```cpp
 struct member
@@ -174,7 +174,7 @@ Regarding code above what should be present in output?
 
 **See also:** [S. Meyers. Effective C++, item 37](https://books.google.com.ua/books?id=U7lTySXdFk0C&pg=PT208&dq=Effective+C%2B%2B+Never+redefine+a+function’s+inherited+default+parameter+value&hl=en&sa=X&redir_esc=y#v=onepage&q&f=false)
  
-# Class construction. Member initialization list.
+# Object construction. Member initialization list.
 **complexity:** basic
 ```cpp
 struct part
@@ -217,7 +217,7 @@ Regarding code above what should be present in output? Which of proposed constru
 
 **See also:** [S. Meyers. Effective C++, item 4](https://books.google.com.ua/books?id=U7lTySXdFk0C&pg=PT56&dq=A+better+way+to+write+the+ABEntry+constructor+is+to+use+the+member+initialization+list+instead+of+assignments:&hl=en&sa=X&redir_esc=y#v=onepage&q&f=false)
 
-**Relatives:** [ctor::member_ordering](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#class-construction-member-initialization-list-vs-member-declaration-ordering)
+**Relatives:** [ctor::member_ordering](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#object-construction-member-initialization-list-vs-member-declaration-ordering)
 
 # Inheritance. Hiding names.
 **complexity:** professional
@@ -279,7 +279,7 @@ The Standatd does not specify size of `pointer` to a virtual table (vtbl).
 **See also:** [S. Meyers. Effective C++, item 40](https://books.google.com.ua/books?id=U7lTySXdFk0C&pg=PT220&dq=Item+40:+Use+multiple+inheritance+judiciously.&hl=en&sa=X&redir_esc=y#v=onepage&q&f=false), [Bjarne Stroustrup's FAQ](http://www.stroustrup.com/bs_faq2.html#layout-obj)
 
 
-# Virtual Inheritance. Object construction.
+# Object construction. Virtual Inheritance
 **complexity:** expert
 ```cpp
 struct base1
@@ -323,7 +323,7 @@ Subobject of virtually inheritable class is **always** Initialized first regardl
 **See also:** [S. Meyers. Effective C++, item 40](https://books.google.com.ua/books?id=U7lTySXdFk0C&pg=PT220&dq=Item+40:+Use+multiple+inheritance+judiciously.&hl=en&sa=X&redir_esc=y#v=onepage&q&f=false)
 
 
-# Class construction. Member initialization list vs. member declaration ordering
+# Object construction. Member initialization list vs. member declaration ordering
 **complexity:** professional
 ```cpp
 class range
@@ -360,7 +360,7 @@ list. __D__ is the right answer in common case. For the the given test, __B__ is
 
 **See also:** [S. Meyers. Effective C++, item 4](https://books.google.com.ua/books?id=U7lTySXdFk0C&pg=PT56&dq=A+better+way+to+write+the+ABEntry+constructor+is+to+use+the+member+initialization+list+instead+of+assignments:&hl=en&sa=X&redir_esc=y#v=onepage&q&f=false)
 
-**Relatives:** [ctor::member_initialization_list](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#class-construction-member-initialization-list)
+**Relatives:** [ctor::member_initialization_list](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#object-construction-member-initialization-list)
 
 # Polymorphic objects. Slicing
 **complexity:** basic
@@ -497,5 +497,69 @@ Function-member does not impact on the object size.
 **See also:** [Bjarne Stroustrup's FAQ](http://www.stroustrup.com/bs_faq2.html#layout-obj)
 
 **Relatives:** 
+
+# Object construction. Exception
+**complexity:** basic
+```cpp
+struct part
+{
+   part()   { cout << "part::ctor" << endl; } 
+   ~part()  { cout << "part::dtor" << endl; }
+};
+
+class unit
+{
+   part part_;
+public:
+   unit()
+   { 
+      cout << "unit::ctor" << endl;       
+      throw std::logic_error("something wrong");
+   }
+   ~unit() { cout << "unit::dtor" << endl; }
+};
+
+int main()
+{
+   try {
+   unit obj;
+   } 
+   catch(const std::exception& e)
+   {
+      cout << e.what() << endl;
+   }
+}
+```
+Regarding code above what should be present in output? 
+- A.  
+    - part::ctor
+    - unit::ctor
+    - unit::dtor
+    - part::dtor
+    - something wrong
+- B. 
+    - part::ctor
+    - unit::ctor
+    - something wrong
+- C. 
+    - part::ctor
+    - unit::ctor
+    - part::dtor
+    - something wrong
+- D. 
+    - part::ctor
+    - unit::ctor
+    - something wrong
+    - unit::dtor
+    - part::dtor
+
+**Answer:** C
+
+In C++ the lifetime of an object is said to begin when the constructor runs to completion. And it ends right when the destructor is called. If the ctor throws, then the dtor is not called. 
+
+**See also:** [Bjarne Stroustrup's FAQ](http://www.stroustrup.com/bs_faq2.html#ctor-exceptions)
+
+**Relatives:** 
+
 
 
