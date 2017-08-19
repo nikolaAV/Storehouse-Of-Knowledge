@@ -564,4 +564,38 @@ In C++ the lifetime of an object is said to begin when the constructor runs to c
 **Relatives:** [ctor::member](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#object-construction) 
 
 
+# Template type deduction.
+**complexity:** basic
+```cpp
+template<typename T>
+void f(T param)
+{
+   cout << "param type: " << typeid(param).name() << endl;
+}
+
+const char* const ptr =  "Fun with pointers";
+
+int main()
+{
+   f(ptr);
+}
+```
+Regarding code above what should be present in output? 
+- A. const char* const  
+- B. const char*
+- C. char* const
+- D. char*
+
+**Answer:** B
+
+Qualifiers `const` and `volatile` are ignored only for _by-value_ parameters.
+For parameters that are _references-to-_ or _pointers-to-const_, the constness of _expr_ (input argument) is preserved during type deduction.
+In our case, _expr_ (ptr) is a const pointer to a const object, and _expr_ is passed to a _by-value_ param.
+Thus, the constness of 'ptr' will be ignored, but the constness of what 'ptr' points to is preserved. 
+
+**See also:** [S. Meyers. Effective Modern C++, item 1.1](https://www.safaribooksonline.com/library/view/effective-modern-c/9781491908419/ch01.html)
+
+**Relatives:** 
+
+
 
