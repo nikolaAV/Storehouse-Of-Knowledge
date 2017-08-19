@@ -597,5 +597,37 @@ Thus, the constness of 'ptr' will be ignored, but the constness of what 'ptr' po
 
 **Relatives:** 
 
+# 'C' array as function parameter. Decay
+**complexity:** professional
+```cpp
+void foo(int arg[3])
+{
+   arg[0] = 100;
+   arg[1] = 200;
+   arg[2] = 300;
+}
+
+int main()
+{
+   int arr[] = {1,2,3};
+   foo(arr);
+   cout << "arr[3]: " << arr[0] << ", " << arr[1] << ", "<< arr[2] << endl;
+}
+```
+Regarding code above what should be present in output? 
+- A. arr[3]: 1, 2, 3 
+- B. arr[3]: 100, 200, 300
+- C. compiler error. 'foo(int [])' parameter 'arg' passed by-value cannot be copied.
+
+**Answer:** B
+
+It's an illusion that 'arg' passed _by-value_. In this context, an array __decays__ into a pointer to its first element (C language legacy).
+A legal syntax of function declaration `void foo(int arg[3])` is equivalent to `void foo(int* arg)`.
+Thus, an array argument is passed into 'foo' as a pointer, not by-value i.e. there is no copying.
+Moreover, 'C' array is not copyable.
+
+**See also:** [S. Meyers. Effective Modern C++, item 1.1](https://www.safaribooksonline.com/library/view/effective-modern-c/9781491908419/ch01.html)
+
+**Relatives:** 
 
 
