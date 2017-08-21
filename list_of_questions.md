@@ -677,3 +677,31 @@ In a constructor, the virtual call mechanism __is disabled__ because overriding 
 **Relatives:** [ctor::basic](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#object-construction)
 
 
+# Deducing Types. Auto by-value.
+**complexity:** basic
+```cpp
+int main()
+{
+	const int  theNumber {44};
+	
+	auto   x  = theNumber;
+	auto   y  = &theNumber;
+
+   cout << typeid(x).name() << " - " << typeid(y).name() << endl;
+}
+```
+Regarding code above what should be present in output? 
+- A. const int - const int *
+- B. int - const int *
+- C. int - int *
+- D. const int - int *
+
+**Answer:** B
+
+`auto` type deduction is usually the same as template type deduction. types 'x' and 'y' are deduced based on passing _left-hand expression_ `by-value`.
+That means: `const` and/or `volatile` _expression_ are treated as non-`const` and non-`volatile`.
+In our case, type of _expression_ for 'x' is const int; type of _expression_ for 'y' is a __pointer to__ const int and this pointer is passed `by-value`.
+
+**See also:** [S. Meyers. Effective Modern C++, item 1.1](https://www.safaribooksonline.com/library/view/effective-modern-c/9781491908419/ch01.html)
+
+**Relatives:** [template_param::by_value](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#deducing-types-template-parameter)
