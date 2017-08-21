@@ -564,7 +564,7 @@ In C++ the lifetime of an object is said to begin when the constructor runs to c
 **Relatives:** [ctor::member](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#object-construction) 
 
 
-# Template type deduction.
+# Deducing Types. Template parameter.
 **complexity:** basic
 ```cpp
 template<typename T>
@@ -597,7 +597,7 @@ Thus, the constness of 'ptr' will be ignored, but the constness of what 'ptr' po
 
 **Relatives:** 
 
-# 'C' array as function parameter. Decay
+# 'C' array as function parameter. Decay of types.
 **complexity:** professional
 ```cpp
 void foo(int arg[3])
@@ -629,5 +629,51 @@ Moreover, 'C' array is not copyable.
 **See also:** [S. Meyers. Effective Modern C++, item 1.1](https://www.safaribooksonline.com/library/view/effective-modern-c/9781491908419/ch01.html)
 
 **Relatives:** 
+
+# Object construction. Virtual call
+**complexity:** basic
+```cpp
+struct base
+{
+   string name_;
+
+   virtual string name() const { return "base"; }
+   base() { name_ = name(); }
+   virtual ~base() {}
+};
+
+struct derived : base
+{
+   string name_;
+
+   virtual string name() const override { return "derived"; }
+   derived() { name_ = name(); }
+};
+
+int main()
+{
+   derived d;
+   cout << d.base::name_ << endl
+        << d.name_       << endl;
+}
+```
+Regarding code above what should be present in output? 
+- A. 
+    - base
+    - derived
+- B. 
+    - base
+    - base
+- C. 
+    - derived
+    - derived
+ 
+**Answer:** A 
+
+In a constructor, the virtual call mechanism __is disabled__ because overriding from derived classes hasn't yet happened. Objects are constructed from the base up, "base before derived".
+
+**See also:** [Bjarne Stroustrup's FAQ](http://www.stroustrup.com/bs_faq2.html#vcall)
+
+**Relatives:** [ctor::basic](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#object-construction)
 
 
