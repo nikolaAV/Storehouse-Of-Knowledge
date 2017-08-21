@@ -677,7 +677,7 @@ In a constructor, the virtual call mechanism __is disabled__ because overriding 
 **Relatives:** [ctor::basic](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#object-construction)
 
 
-# Deducing Types. Auto by-value.
+# Deducing Types. 'auto' by-value.
 **complexity:** basic
 ```cpp
 int main()
@@ -705,3 +705,31 @@ In our case, type of _expression_ for 'x' is const int; type of _expression_ for
 **See also:** [S. Meyers. Effective Modern C++, item 1.1](https://www.safaribooksonline.com/library/view/effective-modern-c/9781491908419/ch01.html)
 
 **Relatives:** [template_param::by_value](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#deducing-types-template-parameter)
+
+# Deducing Types. 'auto' by-reference.
+**complexity:** professional
+```cpp
+int main()
+{
+	const char name[] = "R. N. Briggs";
+	
+	auto   x  = name;
+	auto&  y  = name;
+
+   cout << typeid(x).name() << " - " << typeid(y).name() << endl;
+}
+```
+Regarding code above what should be present in output? 
+- A. const char* - const char*
+- B. const char* - const char (&)[13]
+- C. const char [13] - const char(&) [13]
+- D. const char [13] - const char* 
+
+**Answer:** B
+
+type of 'x' is deduced `by-value` rule. The expression on the right side of `operator=` is pointer to const char (see [type decaying](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#c-array-as-function-parameter-decay-of-types))
+type of 'y' is deduced `by-reference` rule, i.e. it is the actual type of the array.
+
+**See also:** [S. Meyers. Effective Modern C++, item 2](https://www.safaribooksonline.com/library/view/effective-modern-c/9781491908419/ch01.html)
+
+**Relatives:** [C array vs pointer](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#c-array-as-function-parameter-decay-of-types)
