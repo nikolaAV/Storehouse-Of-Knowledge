@@ -733,3 +733,39 @@ Type of 'y' is deduced `by-reference` rule, i.e. it is the actual type of the ar
 **See also:** [S. Meyers. Effective Modern C++, item 2](https://www.safaribooksonline.com/library/view/effective-modern-c/9781491908419/ch01.html)
 
 **Relatives:** [C array vs pointer](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#c-array-as-function-parameter-decay-of-types), [deducing_type::by-value](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#deducing-types-auto-by-value)
+
+# new/delete vs. new[]/delete[].
+**complexity:** basic
+```cpp
+struct widget
+{
+   widget()  { cout << "ctor" << endl; }
+   ~widget() { cout << "dtor" << endl; }
+};
+
+int main()
+{
+   auto p = new widget[2];
+   delete p;
+}
+```
+Regarding code above what should be present in output? 
+- A. 
+    - ctor
+    - ctor
+    - dtor
+    - dtor
+- B. 
+    - ctor
+    - ctor
+    - dtor
+- C. run-time error 
+
+**Answer:** C (B)
+
+According to the Standatd, the program's behaviour is undefined.
+At the very least, only one of 2 (N, the arbitrary number of  array dimension) widgets pointed to by 'p' will be properly destroyed, because destructors for rest of them will never be called.
+
+**See also:** [S. Meyers. Effective C++, item 16](https://books.google.com.ua/books?id=U7lTySXdFk0C&pg=PT101&dq=Use+the+same+form+in+corresponding+uses+of+new+and+delete.&hl=en&sa=X&redir_esc=y#v=onepage&q&f=false)
+
+**Relatives:** 
