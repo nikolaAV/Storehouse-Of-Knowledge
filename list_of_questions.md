@@ -559,7 +559,7 @@ Regarding code above what should be present in output?
 
 In C++ the lifetime of an object is said to begin when the constructor runs to completion. And it ends right when the destructor is called. If the ctor throws, then the dtor is not called. 
 
-**See also:** [Bjarne Stroustrup's FAQ](http://www.stroustrup.com/bs_faq2.html#ctor-exceptions)
+**See also:** [Bjarne Stroustrup's FAQ](http://www.stroustrup.com/bs_faq2.html#ctor-exceptions), [Herb Sutter’s Mill](https://herbsutter.com/2008/07/25/constructor-exceptions-in-c-c-and-java/)
 
 **Relatives:** [ctor::member](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#object-construction) 
 
@@ -672,7 +672,7 @@ Regarding code above what should be present in output?
 
 In a constructor, the virtual call mechanism __is disabled__ because overriding from derived classes hasn't yet happened. Objects are constructed from the base up, "base before derived".
 
-**See also:** [Bjarne Stroustrup's FAQ](http://www.stroustrup.com/bs_faq2.html#vcall)
+**See also:** [Bjarne Stroustrup's FAQ](http://www.stroustrup.com/bs_faq2.html#vcall), [C++ Coding Standards, rule 49](https://books.google.com.ua/books?id=mmjVIC6WolgC&pg=PT238&lpg=PT238&dq=C%2B%2B+Sutter+destructor+direct+call&source=bl&ots=ceOoHQiMZ4&sig=s0DhJh0lBmNK8CqDNJUVgUe3bBg&hl=en&sa=X&ved=0ahUKEwiO6IDA9-zVAhUosFQKHdIABZMQ6AEISjAG#v=onepage&q&f=false)
 
 **Relatives:** [ctor::basic](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#object-construction)
 
@@ -767,5 +767,36 @@ According to the Standatd, the program's behaviour is undefined.
 At the very least, only one of 2 (N, the arbitrary number of  array dimension) widgets pointed to by 'p' will be properly destroyed, because destructors for rest of them will never be called.
 
 **See also:** [S. Meyers. Effective C++, item 16](https://books.google.com.ua/books?id=U7lTySXdFk0C&pg=PT101&dq=Use+the+same+form+in+corresponding+uses+of+new+and+delete.&hl=en&sa=X&redir_esc=y#v=onepage&q&f=false)
+
+**Relatives:** 
+
+# Object lifetime. Destructor direct call. 
+**complexity:** basic
+```cpp
+struct widget
+{
+   ~widget() { cout << "dtor" << endl; }
+};
+
+int main()
+{
+   widget w;
+   w.~widget(); // line:A
+}
+```
+Regarding code above what should be present in output? 
+- A. 
+    - dtor
+- B. 
+    - dtor
+    - dtor
+- C. run-time error: undefined behaviour
+- D. compile-time error: incorrect syntax at _//line:A_  
+
+**Answer:** B 
+
+Statement _w.~widget()_ is legal code, dcor likes a normal member-function. But it's a [bad habit](http://www.gotw.ca/gotw/022.htm) to get into.
+
+**See also:** [H. Sutter. GotW #22](http://www.gotw.ca/gotw/022.htm)
 
 **Relatives:** 
