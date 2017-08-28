@@ -247,6 +247,9 @@ Regarding code above what should be present in output?
 
 **Answer:** C
 
+In C++, __there is no overloading across scopes__ - derived class scopes are not an exception to this general rule
+The compiler looks into the scope of _'derived'_, finds the single function "foo(const char*)" and calls it. It never bothers with the (enclosing) scope of _'base'_.
+
 **See also:** [S. Meyers. Effective C++, item 33](https://books.google.com.ua/books?id=U7lTySXdFk0C&pg=PT184&dq=Avoid+hiding+inherited+names.&hl=en&sa=X&redir_esc=y#v=onepage&q&f=false), [Bjarne Stroustrup's FAQ](http://www.stroustrup.com/bs_faq2.html#overloadderived)
 
 # Inheritance. Virtual base.
