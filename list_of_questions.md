@@ -803,3 +803,27 @@ Statement _w.~widget()_ is legal code, dcor likes a normal member-function. But 
 **See also:** [H. Sutter. GotW #22](http://www.gotw.ca/gotw/022.htm)
 
 **Relatives:** 
+
+# Object lifetime. const-reference to the temporary. 
+**complexity:** professional
+```cpp
+string foo() { return "abc"; }
+
+int main()
+{
+   const string& s = foo();   // line A
+   cout << s << endl;
+}
+```
+Regarding code above what should be present in output? 
+- A. abc
+- B. compiler error: [line A] reference cannot be bound to an lvalue
+
+**Answer:**  A
+
+Function 'foo()' returns a temporary object of `string` type. Normally, a temporary object lasts only until the end of the full expression in which it appears. However, C++ deliberately specifies that binding a temporary object to a reference to const on the stack lengthens the lifetime of the temporary to the lifetime of the reference itself, and thus avoids what would otherwise be a common dangling-reference error.
+In the example above, the temporary returned by 'foo()' lives until the closing curly brace of `main`.
+
+**See also:** [H. Sutter. GotW #88](https://herbsutter.com/2008/01/01/gotw-88-a-candidate-for-the-most-important-const/)
+
+**Relatives:** 
