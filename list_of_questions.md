@@ -827,3 +827,51 @@ In the example above, the temporary returned by 'foo()' lives until the closing 
 **See also:** [H. Sutter. GotW #88](https://herbsutter.com/2008/01/01/gotw-88-a-candidate-for-the-most-important-const/)
 
 **Relatives:** 
+
+# Object lifetime. const-reference to the base. 
+**complexity:** expert
+```cpp
+struct base
+{
+   ~base() { cout << "~base()" << endl; }
+};
+
+struct derived : base
+{
+   ~derived() { cout << "~derived()" << endl; }
+};
+
+derived make_instance()
+{
+   return derived{};
+}
+
+int main()
+{
+   {
+      const base& b = make_instance(); // line A
+      cout << "end of the local scope" << endl; 
+   }
+}
+```
+Regarding code above what should be present in output? 
+- A. compiler error: [line A] reference cannot be bound to an lvalue
+- B. 
+    - ~deriver
+    - ~base
+    - end of the local scope
+- C
+    - end of the local scope
+    - ~deriver
+    - ~base
+- D
+    - end of the local scope
+    - ~base
+
+**Answer:** C
+
+If we have `const` 'base' reference to 'derived' temporary, it will be destroyed _without virtual dispatch on the destructor call_. 
+
+**See also:** [H. Sutter. GotW #88](https://herbsutter.com/2008/01/01/gotw-88-a-candidate-for-the-most-important-const/)
+
+**Relatives:** [const-reference to the temporary](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#object-lifetime-const-reference-to-the-temporary)
