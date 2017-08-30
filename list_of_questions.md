@@ -875,3 +875,52 @@ If we have `const` 'base' reference to 'derived' temporary, it will be destroyed
 **See also:** [H. Sutter. GotW #88](https://herbsutter.com/2008/01/01/gotw-88-a-candidate-for-the-most-important-const/)
 
 **Relatives:** [const-reference to the temporary](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#object-lifetime-const-reference-to-the-temporary)
+
+# std::shared_ptr. non-virtual destructor. 
+**complexity:** expert
+```cpp
+struct base_virtual
+{
+   virtual ~base_virtual() {}
+};
+
+struct base_nonvirtual
+{
+   ~base_nonvirtual() {}
+};
+
+struct derived1 : base_virtual
+{
+   ~derived1() { cout << "~derived1" << endl; }
+};
+
+struct derived2 : base_nonvirtual
+{
+   ~derived2() { cout << "~derived2" << endl; }
+};
+
+int main()
+{
+   shared_ptr<base_virtual>      d1 { new derived1 {} };
+   shared_ptr<base_nonvirtual>   d2 { new derived2 {} };
+}
+```
+Regarding code above what should be present in output? 
+- A.
+    - ~derived2
+    - ~derived1
+- B. 
+    - ~derived1
+- C
+    - ~derived1
+    - ~derived2
+
+**Answer:** A
+
+Class template `shared_ptr<T>` has function template (constructor) `shared_ptr(Y*)`, where Y* must be convertible to T*.
+This constructor with _Y=derived_ creates the appropriate deleter object based on Y type, not T type.
+This deleter is called when the shared_ptr object is about to free the pointed resource.
+
+**See also:** [stackoverflow,shared_ptr magic](https://stackoverflow.com/questions/3899790/shared-ptr-magic), [cppreference,shared_ptr ctor3](http://en.cppreference.com/w/cpp/memory/shared_ptr/shared_ptr)
+
+**Relatives:** 
