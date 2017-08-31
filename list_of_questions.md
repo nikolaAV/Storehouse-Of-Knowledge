@@ -926,7 +926,7 @@ This deleter is called when the shared_ptr object is about to free the pointed r
 **Relatives:** 
 
 # Type conversion. const-reference to the temporary. 
-**complexity:** basic
+**complexity:** professional
 ```cpp
 void display(string& s)
 {
