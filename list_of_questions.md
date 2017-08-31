@@ -924,3 +924,39 @@ This deleter is called when the shared_ptr object is about to free the pointed r
 **See also:** [stackoverflow,shared_ptr magic](https://stackoverflow.com/questions/3899790/shared-ptr-magic), [cppreference,shared_ptr ctor3](http://en.cppreference.com/w/cpp/memory/shared_ptr/shared_ptr)
 
 **Relatives:** 
+
+# Type conversion. const-reference to the temporary. 
+**complexity:** basic
+```cpp
+void display(string& s)
+{
+   cout << "[string&]-> " << s << endl;    
+}
+
+void display(const string& s)
+{
+   cout << "[const string&]-> " << s << endl;    
+}
+
+int main()
+{
+   display("hello, world!");
+}
+```
+Regarding code above what should be present in output? 
+- A. [string&]-> hello, world!
+- B. [const string&]-> hello, world!
+- C. compiler error: 'display' ambiguous call to overloaded function
+- D. compiler error: 'display' cannot convert parameter 1 from char* to string&
+
+**Answer:** B 
+
+Function 'display' parameter type (`string&`) and type (`const char*`) of the argument passed in it is mismatch.
+This call can succeed only if the type mismatch can be eliminated, the compiler will be happy to eliminate it by creating a temporary object of type `string`.
+The 's' parameter of 'display' is then bound to this temporary `string` object.
+But binding a temporary object to reference is only possible if this reference itself is `const`.  
+When 'display' returns, the temporary object is automatically destroyed. 
+
+**See also:** [S. Meyers. Effective C++, item 5,19](http://www.physics.rutgers.edu/~wksiu/C++/MoreEC++_only.pdf), [H. Sutter. GotW #88](https://herbsutter.com/2008/01/01/gotw-88-a-candidate-for-the-most-important-const/) 
+
+**Relatives:** [object lifetime referenced by const](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#object-lifetime-const-reference-to-the-temporary)
