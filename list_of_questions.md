@@ -960,3 +960,42 @@ When 'display' returns, the temporary object is automatically destroyed.
 **See also:** [S. Meyers. Effective C++, item 5,19](http://www.physics.rutgers.edu/~wksiu/C++/MoreEC++_only.pdf), [H. Sutter. GotW #88](https://herbsutter.com/2008/01/01/gotw-88-a-candidate-for-the-most-important-const/) 
 
 **Relatives:** [object lifetime referenced by const](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#object-lifetime-const-reference-to-the-temporary)
+
+# Function overriding. member template & virtuality. 
+**complexity:** expert
+```cpp
+struct base
+{
+   template <typename T>
+   virtual void foo(const T& a) const { cout << "base::foo -> " << a << endl; }
+   virtual ~base() {}
+};
+
+struct derived : base
+{
+   template <typename T>
+   void foo(const T& a) const override { cout << "derived::foo -> " << a << endl; }
+};
+
+int main()
+{
+   unique_ptr<base> b { new derived{} };
+   b->foo("hello,world!");    
+}
+```
+Regarding code above what should be present in output? 
+- A. base::foo -> hello,world! 
+- B. derived::foo -> hello,world!
+- C. compiler error: 'void base::foo(const T &) const': member function templates cannot be virtual
+
+**Answer:** C  
+
+> This _must_ be illegal, otherwise we would have to add another entry to the virtual table
+for class 'base' each time someone called base::foo() with a new
+argument type. This would imply that __only the linker__ could make virtual function
+tables and assign table positions to functions. Consequently, a member template cannot
+be `virtual`. — Bjarne Stroustrup, [D&E Of C++, ch 15.9.3](http://doc.imzlp.me/viewer.html?file=docs/cpp/TheDesignAndEvolutionOfCpp.pdf)
+
+**See also:** [StackOverflow](https://stackoverflow.com/questions/2354210/can-a-c-class-member-function-template-be-virtual) 
+
+**Relatives:** 
