@@ -3,9 +3,9 @@ Useful links, books, posts about C++
 but first ... try to [examine yourself](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md)
 
 > So far, C++ has escaped the fate of the Vasa([En](http://www.aristeia.com/TalkNotes/C++vstheVasa2-ups.pdf),[Ru](https://habrahabr.ru/company/infopulse/blog/227529/));  it has not
-keeled over and disappeared – despite much wishful
+keeled over and disappeared â€“ despite much wishful
 thinking and many dire predictions.
-— Bjarne Stroustrup, 1996
+â€” Bjarne Stroustrup, 1996
 
 ![30YearsOfC++](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/30YearsOfC%2B%2B.png)
 
@@ -22,6 +22,7 @@ thinking and many dire predictions.
 * [S. Meyers. Effective Modern C++ (O'Reilly, 2015)](https://books.google.com.ua/books?id=ZDhIBQAAQBAJ&lpg=PP1&dq=Scott%20Meyers&pg=PP1#v=onepage&q&f=false), available [in Russian](http://scanlibs.com/effektivnyiy-i-sovremennyiy-cpp-42-rekomendatsii-po-ispolzovaniyu-cpp-11-i-cpp-14/)
 * [S. Meyers. Effective STL (Addison-Wesley, 2001)](https://books.google.com.ua/books?id=RPnWe6QKnCcC&lpg=PP1&dq=Scott%20Meyers&pg=PP1#v=onepage&q&f=false)
 * [B. Stroustrup. A Tour of C++. (Addison Wesley 2014)](http://www.stroustrup.com/Tour.html)
+* [B. Stroustrup. The Design and EvolutionOf C++. (Addison Wesley 1994)](http://doc.imzlp.me/viewer.html?file=docs/cpp/TheDesignAndEvolutionOfCpp.pdf)
 * [B. Stroustrup. Programming. Principles and Practice Using C++. (Addison Wesley 2014)](https://books.google.com.ua/books?id=We21AwAAQBAJ&printsec=frontcover&dq=Principles+and+Practice+Using+C%2B%2B&hl=en&sa=X&redir_esc=y#v=onepage&q&f=false), available [in Russian](http://scanlibs.com/programmirovanie-printsipyi-i-praktika-s-ispolzovaniem-cpp-2-e-izdanie/)
 * S. Dewhurst. C++ Gotchas (Addison-Wesley, 2003), available [in Russian](http://scanlibs.com/c-svyashhennyie-znaniya/)
 * H. Sutter. Exceptional C++ (Addison-Wesley, 2000)
