@@ -3,3 +3,4 @@
 * [C++11 STL Additions](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/cheat_sheets/STL_additions_Cpp11.md)
 * [C++11 ECMA Script Regex](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/cheat_sheets/ECMA_script_regex.md)
 * [C++11, PDF slides](http://soft.vub.ac.be/~cderoove/structuur2/C++11.pdf) by Alex Sinyakov
+* [Markdown Syntax](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/cheat_sheets/markdown_syntax.md), [pdf](https://guides.github.com/features/mastering-markdown/)
