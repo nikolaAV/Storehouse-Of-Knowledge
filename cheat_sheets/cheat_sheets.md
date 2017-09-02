@@ -2,3 +2,4 @@
 * [C++98 STL Quick Reference](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/cheat_sheets/STL_quick_reference.md)
 * [C++11 STL Additions](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/cheat_sheets/STL_additions_Cpp11.md)
 * [C++11 ECMA Script Regex](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/cheat_sheets/ECMA_script_regex.md)
+* [C++11, PDF slides](http://soft.vub.ac.be/~cderoove/structuur2/C++11.pdf) by Alex Sinyakov
