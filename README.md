@@ -14,7 +14,7 @@ thinking and many dire predictions.
 * [The C++ Core Guidelines](https://github.com/isocpp/CppCoreGuidelines) are a collaborative effort led by Bjarne Stroustrup & Herb Sutter. The aim of the guidelines is to help people to use modern C++ effectively.
 * [Bjarne Stroustrup's homepage](http://stroustrup.com/), C++FAQ, style, techique, etc.
 * [Herb Satter's homepage](https://herbsutter.com/), Here, you can find well known "Guru of the Week (GotW)", a series of C++ programming problems created and written by Herb Sutter.
-* [News, Status & Discussion about Standard C++](https://isocpp.org/std/status)
+* [News, Status & Discussion about Standard C++](https://isocpp.org/std/status), [ISO/IEC 14882:2014(E)](http://doc.imzlp.me/viewer.html?file=docs/standard/isocpp2014.pdf)
 
 ## Books
 * [S. Meyers. Effective C++ (2nd Edition) (Addison-Wesley, 1997)](https://books.google.com.ua/books?id=Qx5oyB49poYC&lpg=PP1&dq=Effective%20C%2B%2B&pg=PP1#v=onepage&q&f=false), available [in Russian](http://scanlibs.com/effektivnoe-ispolzovanie-cpp/)
@@ -23,6 +23,7 @@ thinking and many dire predictions.
 * [S. Meyers. Effective STL (Addison-Wesley, 2001)](https://books.google.com.ua/books?id=RPnWe6QKnCcC&lpg=PP1&dq=Scott%20Meyers&pg=PP1#v=onepage&q&f=false)
 * [B. Stroustrup. A Tour of C++. (Addison Wesley 2014)](http://www.stroustrup.com/Tour.html)
 * [B. Stroustrup. The Design and EvolutionOf C++. (Addison Wesley 1994)](http://doc.imzlp.me/viewer.html?file=docs/cpp/TheDesignAndEvolutionOfCpp.pdf)
+* [B. Stroustrup. The C++ programming language (4th edition). (Addison Wesley 2013)](https://books.google.com.ua/books?id=PSUNAAAAQBAJ&printsec=frontcover&dq=B.+Stroustrup.+The+C%2B%2B+programming+language+(4th+edition)&hl=en&sa=X&redir_esc=y#v=onepage&q&f=false), [pdf](http://doc.imzlp.me/viewer.html?file=docs/cpp/TCPPPL4E.pdf)
 * [B. Stroustrup. Programming. Principles and Practice Using C++. (Addison Wesley 2014)](https://books.google.com.ua/books?id=We21AwAAQBAJ&printsec=frontcover&dq=Principles+and+Practice+Using+C%2B%2B&hl=en&sa=X&redir_esc=y#v=onepage&q&f=false), available [in Russian](http://scanlibs.com/programmirovanie-printsipyi-i-praktika-s-ispolzovaniem-cpp-2-e-izdanie/)
 * S. Dewhurst. C++ Gotchas (Addison-Wesley, 2003), available [in Russian](http://scanlibs.com/c-svyashhennyie-znaniya/)
 * H. Sutter. Exceptional C++ (Addison-Wesley, 2000)
