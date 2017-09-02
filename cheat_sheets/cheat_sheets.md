@@ -4,3 +4,4 @@
 * [C++11 ECMA Script Regex](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/cheat_sheets/ECMA_script_regex.md)
 * [C++11, PDF slides](http://soft.vub.ac.be/~cderoove/structuur2/C++11.pdf) by Alex Sinyakov
 * [Markdown Syntax](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/cheat_sheets/markdown_syntax.md), [pdf](https://guides.github.com/features/mastering-markdown/)
+* [C++11, Move ctor//assigment method generation](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/cheat_sheets/move_ctor_assigment_generation.md)
