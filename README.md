@@ -37,10 +37,7 @@ thinking and many dire predictions.
 * [E. Gamma, R. Helm, R. Johnson, J. Vlissides. Design Patterns: Elements of Reusable Object-Oriented Software (Addison-Wesley, 1995)](https://books.google.com.ua/books?id=6oHuKQe3TjQC&printsec=frontcover&dq=Erich+Gamma&hl=en&sa=X&ved=0ahUKEwjO0ozRip_VAhXBA5oKHY-RDn8Q6AEIIjAA#v=onepage&q&f=false), available [in Russian](http://scanlibs.com/priemyi-obektno-orientirovannogo-proektirovaniya/)
 
 ## Cheat sheets
-* [C++11 Concurrency](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/cheat_sheets/concurrency.md)
-* [C++98 STL Quick Reference](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/cheat_sheets/STL_quick_reference.md)
-* [C++11 STL Additions](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/cheat_sheets/STL_additions_Cpp11.md)
-* [C++11 ECMA Script Regex](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/cheat_sheets/ECMA_script_regex.md)
+* click [here](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/cheat_sheets/cheat_sheets.md)
 
 ## Tools, Utils & Instruments
 * [Visual Studio Express](https://www.visualstudio.com/vs/visual-studio-express/), Fully-featured IDE for students, open-source and individual developers. The up-to-date C++ compiler & [C++ Core Check code analysis](https://blogs.msdn.microsoft.com/vcblog/2016/10/12/cppcorecheck/) are included! 
