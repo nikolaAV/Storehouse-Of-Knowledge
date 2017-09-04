@@ -139,6 +139,8 @@ Regarding code above what should be present in output?
 
 **See also:** [Bjarne Stroustrup's FAQ](http://www.stroustrup.com/bs_faq2.html#null)
  
+**Relatives:**  [function overloading, nullptr](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#function-overloading-parameter-type-NULL-vs-nullptr)
+
 # Function overriding. Default parameter value.
 **complexity:** professional
 ```cpp
@@ -999,3 +1001,27 @@ be `virtual`. — Bjarne Stroustrup, [D&E Of C++, ch 15.9.3](http://doc.imzlp.me/v
 **See also:** [StackOverflow](https://stackoverflow.com/questions/2354210/can-a-c-class-member-function-template-be-virtual) 
 
 **Relatives:** 
+
+# Function overloading. Parameter type: NULL vs. nullptr
+**complexity:** basic
+```cpp
+void foo(char*) {cout << "pointer argument" << endl; }
+void foo(int)   {cout << "integer argument" << endl; }
+
+int main()
+{
+   foo(nullptr);
+}
+```
+Regarding code above what should be present in output?
+- A. pointer argument
+- B. integer argument
+- C. compiler error: ambiguous call to overloaded function
+
+**Answer:** A
+
+`nullptr` (C++11 keyword) is a literal denoting the null pointer; it is not an integer.
+
+**See also:** [Bjarne Stroustrup's C++11 FAQ](http://www.stroustrup.com/C++11FAQ.html#nullptr)
+
+**Relatives:**  [function overloading, NULL](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#function-overloading-parameter-type-integer-vs-pointer)
