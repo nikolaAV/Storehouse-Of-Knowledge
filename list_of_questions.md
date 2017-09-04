@@ -327,7 +327,7 @@ Regarding code above what should be present in output?
 
 Subobject of virtually inheritable class is **always** Initialized first regardless of the its location in the inheritance list.
 
-**See also:** [S. Meyers. Effective C++, item 40](https://books.google.com.ua/books?id=U7lTySXdFk0C&pg=PT220&dq=Item+40:+Use+multiple+inheritance+judiciously.&hl=en&sa=X&redir_esc=y#v=onepage&q&f=false)
+**See also:** [S. Meyers. Effective C++, item 40](https://books.google.com.ua/books?id=U7lTySXdFk0C&pg=PT220&dq=Item+40:+Use+multiple+inheritance+judiciously.&hl=en&sa=X&redir_esc=y#v=onepage&q&f=false), [isocpp.org,FAQ](https://isocpp.org/wiki/faq/multiple-inheritance#mi-vi-ctor-order)
 
 
 # Object construction. Member initialization list vs. member declaration ordering
@@ -1025,3 +1025,44 @@ Regarding code above what should be present in output?
 **See also:** [Bjarne Stroustrup's C++11 FAQ](http://www.stroustrup.com/C++11FAQ.html#nullptr)
 
 **Relatives:**  [function overloading, NULL](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#function-overloading-parameter-type-integer-vs-pointer)
+
+# Inheritance. Virtual base & dominance.
+**complexity:** expert
+```cpp
+struct grandparent
+{
+   virtual void foo() { cout << "grandparent::foo" << endl; }
+};
+
+struct mother : virtual grandparent
+{
+};
+
+struct father : virtual grandparent
+{
+   void foo() override { cout << "father::foo" << endl; }
+};
+
+struct child : mother, father
+{
+   child() { foo(); } // Line A
+};
+
+int main()
+{
+   child c;
+}
+```
+Regarding code above what should be present in output?
+- A. grandparent::foo 
+- B. father::foo
+- C. compiler error: [Line A], 'foo()' - ambigious call
+
+**Answer:** B
+
+Above, the classic _'diamond inheritance'_ is shown. Whome kind of behaviour has the child inherited: either from the grandpa indirectly through mother's branch or from the father directly?
+'father::foo' predominates because of an inheritance path for the child is twice as shorter (one degree) as path to grandpa (two degreees). 
+
+**See also:** [wiki:dominance](https://en.wikipedia.org/wiki/Dominance_%28C%2B%2B%29#Example_with_virtual_inheritance), [stackoverflow:dominance](https://stackoverflow.com/questions/7210860/dominance-in-virtual-inheritance)
+
+**Relatives:**
