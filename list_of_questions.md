@@ -139,7 +139,7 @@ Regarding code above what should be present in output?
 
 **See also:** [Bjarne Stroustrup's FAQ](http://www.stroustrup.com/bs_faq2.html#null)
  
-**Relatives:**  [function overloading, nullptr](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#function-overloading-parameter-type-NULL-vs-nullptr)
+**Relatives:**  [function overloading, nullptr](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#function-overloading-parameter-type-null-vs-nullptr)
 
 # Function overriding. Default parameter value.
 **complexity:** professional
