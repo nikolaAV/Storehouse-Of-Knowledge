@@ -566,7 +566,7 @@ In C++ the lifetime of an object is said to begin when the constructor runs to c
 
 **See also:** [Bjarne Stroustrup's FAQ](http://www.stroustrup.com/bs_faq2.html#ctor-exceptions), [Herb Sutter’s Mill](https://herbsutter.com/2008/07/25/constructor-exceptions-in-c-c-and-java/)
 
-**Relatives:** [ctor::member](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#object-construction) 
+**Relatives:** [ctor::member](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#object-construction), [delegating ctor](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#object-construction-exception-in-delegating-constructor)
 
 
 # Deducing Types. Template parameter.
