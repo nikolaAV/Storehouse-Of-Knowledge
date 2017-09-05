@@ -1066,3 +1066,60 @@ Above, the classic _'diamond inheritance'_ is shown. Whome kind of behaviour has
 **See also:** [wiki:dominance](https://en.wikipedia.org/wiki/Dominance_%28C%2B%2B%29#Example_with_virtual_inheritance), [stackoverflow:dominance](https://stackoverflow.com/questions/7210860/dominance-in-virtual-inheritance)
 
 **Relatives:**
+
+# Object construction. Exception in delegating constructor
+**complexity:** professional
+```cpp
+struct unit
+{
+   unit(size_t n)  { cout << "unit::ctor (principal)" << endl; }
+   unit() : unit(0) // Line A
+   { 
+      cout << "unit::ctor (delegating)" << endl;       
+      throw std::logic_error("something wrong");
+   }
+   ~unit() { cout << "unit::dtor" << endl; }
+};
+
+int main()
+{
+   try
+   {
+      unit obj;
+   }
+   catch(const exception& e)
+   {
+      cout << e.what() << endl;
+   }
+}
+```
+Regarding code above what should be present in output? 
+- A.  
+    - unit::ctor (principal)
+    - unit::ctor (delegating)
+    - unit::dtor
+    - something wrong
+- B. 
+    - unit::ctor (delegating)
+    - unit::ctor (principal)
+    - unit::dtor
+    - something wrong
+- C. 
+    - unit::ctor (principal)
+    - unit::ctor (delegating)
+    - something wrong
+- D. 
+    - compiler error: // Line A, syntax error
+
+**Answer:** A
+
+- unit::unit(size_t n) is a _'principal constructor'_
+- unit::unit() is a _delegating constructor_ which calls the principal one directly.
+- unit::~unit(), upon scope unwinding, the destructors of fully-constructed object is called. 
+
+An unit object's lifetime begins when some constructor (in our case _'principal constructor'_) has finished. (See C++ Standard, 15.2/2)
+
+**See also:** [stackoverflow, delegating constructor throws](https://stackoverflow.com/questions/14386840/destructor-called-after-throwing-from-a-constructor)
+
+**Relatives:** [ctor::exception](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#object-construction-exception) 
+
