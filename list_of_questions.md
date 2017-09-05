@@ -1022,7 +1022,7 @@ Regarding code above what should be present in output?
 
 `nullptr` (C++11 keyword) is a literal denoting the null pointer; it is not an integer.
 
-**See also:** [Bjarne Stroustrup's C++11 FAQ](http://www.stroustrup.com/C++11FAQ.html#nullptr)
+**See also:** [Bjarne Stroustrup's C++11 FAQ](http://www.stroustrup.com/C++11FAQ.html#nullptr), [S. Meyers. Effective Modern C++, item 8](https://books.google.com.ua/books?id=rjhIBQAAQBAJ&lpg=PP1&dq=meyers%20modern%20c%2B%2B%20NULL%20nullptr&pg=PA58#v=onepage&q&f=false)
 
 **Relatives:**  [function overloading, NULL](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#function-overloading-parameter-type-integer-vs-pointer)
 
