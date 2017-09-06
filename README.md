@@ -29,7 +29,7 @@ thinking and many dire predictions.
 * H. Sutter. Exceptional C++ (Addison-Wesley, 2000)
 * H. Sutter. More Exceptional C++ (Addison-Wesley, 2002), available [in Russian](http://scanlibs.com/reshenie-slozhnyih-zadach-na-c-seriya-c-in-depth/)
 * H. Sutter. Exceptional C++ Style (Addison-Wesley, 2004), available [in Russian](http://scanlibs.com/novyie-slozhnyie-zadachi-na-c/)
-* H. Sutter and A. Alexandrescu. C++ Coding Standards (Addison-Wesley 2005)
+* [H. Sutter and A. Alexandrescu. C++ Coding Standards (Addison-Wesley 2005)](http://www.gotw.ca/publications/c++cs.htm), [pdf](https://doc.lagout.org/programmation/C/CPP101.pdf)
 * A. Alexandrescu. Modern C++ Design (Addison-Wesley, 2001)
 * [A Williams. C++ Concurrency in Action (Manning, 2012)](https://books.google.com.ua/books?id=EttPPgAACAAJ&dq=C%2B%2B+Concurrency+in+Action&hl=en&sa=X&redir_esc=y), available [in Russian](http://scanlibs.com/parallelnoe-programmirovanie-na-s-v-deystvii-praktika-razrabotki-mnogopotochnyih-programm/)
 * [N. Josuttis. The C++ Standard Library. Second Edition (Addison Wesley 2013)](https://books.google.com.ua/books?id=gUhE8po4jgAC&printsec=frontcover&dq=Josuttis&hl=en&sa=X&ved=0ahUKEwio8q6giJ_VAhURS5oKHQDnCd0Q6AEIJjAA#v=onepage&q&f=false), available [in Russian](http://scanlibs.com/standartnaya-biblioteka-c-spravochnoe-rukovodstvo-2-e-izdanie/)
