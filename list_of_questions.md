@@ -1123,3 +1123,62 @@ An unit object's lifetime begins when some constructor (in our case _'principal 
 
 **Relatives:** [ctor::exception](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#object-construction-exception) 
 
+# Exception. Catch by value
+**complexity:** professional
+```cpp
+struct my_exception
+{
+   my_exception()                   { cout << "exception::ctor(default)" << endl; }   
+   my_exception(const my_exception&){ cout << "exception::ctor(copy)" << endl; }   
+   my_exception(my_exception&&)     { cout << "exception::ctor(move)" << endl; }   
+   my_exception& operator=(const my_exception&)
+                                    { cout << "exception::assigment(copy)" << endl; }   
+   my_exception& operator=(my_exception&&)
+                                    { cout << "exception::assigment(move)" << endl; }   
+};
+
+int main()
+{
+   try
+   {
+      // ...
+      my_exception e;
+      throw e;
+   }
+   catch(my_exception e)
+   {
+      // e.what();
+   }
+}
+```
+Regarding code above what should be present in output? 
+- A.  
+    - exception::ctor(default)
+    - exception::ctor(copy)
+- B. 
+    - exception::ctor(default)
+    - exception::ctor(copy)
+    - exception::ctor(copy)
+- C. 
+    - exception::ctor(default)
+    - exception::ctor(move)
+    - exception::ctor(copy)
+- D. 
+    - exception::ctor(default)
+    - exception::assigment(copy)
+    - exception::ctor(copy)
+- E. 
+    - exception::ctor(default)
+    - exception::assigment(move)
+    - exception::ctor(copy)
+
+
+**Answer:** C
+
+To avoid unnecessary copying of the exception object and object slicing, the best practice for catch clauses is to catch by reference
+
+**See also:** [C++ Coding Standards, item 73](https://doc.lagout.org/programmation/C/CPP101.pdf), [CppCoreGuidelines, E.15](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#e15-catch-exceptions-from-a-hierarchy-by-reference)
+
+**Relatives:** 
+
+
