@@ -1181,4 +1181,51 @@ To avoid unnecessary copying of the exception object and object slicing, the bes
 
 **Relatives:** 
 
+# Exception. Multiple inheritance
+**complexity:** expert
+```cpp
+struct my_exc1    : std::exception
+{ 
+   char const* what() const { return "my_exc1"; } 
+};
+
+struct my_exc2    : std::exception 
+{ 
+   char const* what() const { return "my_exc2"; } 
+};
+
+struct your_exc3  : my_exc1, my_exc2 
+{
+   char const* what() const { return "your_exc3"; } 
+};
+
+int main()
+{
+   try { throw your_exc3{}; }
+   catch(const std::exception& e) 
+   {
+      cout << e.what() << endl; 
+   }
+   catch(...) 
+   { 
+      cout << "whoops!" << endl; 
+   }
+}
+```
+Regarding code above what should be present in output? 
+- A. my_exc1  
+- B. my_exc2
+- C. your_exc3
+- D. whoops!
+- E. compiler error: std::'exception' is ambiguous.
+
+**Answer:** D
+
+The program above prints "whoops" because the C++ runtime can't resolve which `exception` instance to match in the first _catch_ clause.
+
+**See also:** [D. Abrahams, boost::exception_handling](http://www.boost.org/community/error_handling.html) 
+
+**Relatives:** 
+
+
 
