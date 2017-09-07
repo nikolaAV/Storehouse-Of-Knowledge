@@ -19,7 +19,7 @@ Regarding code above what should be present in output?
 
 When instantiating an instance of any type (including "empty"), the physical memory must be allocated to it, since `operator &` (address acquisition) can be applied to every object in C ++. The Standard does not specify size of "empty" object. The minimum possible amount of memory is 1 byte and VC++ allocates it.
 
-**See also:** [Bjarne Stroustrup's FAQ](http://www.stroustrup.com/bs_faq2.html#sizeof-empty) 
+**See also:** [Bjarne Stroustrup's FAQ](http://www.stroustrup.com/bs_faq2.html#sizeof-empty), [EBO](http://en.cppreference.com/w/cpp/language/ebo) 
 
 
 # virtual destructor
@@ -1325,6 +1325,51 @@ optimization_. In fact, the existence of a name for this optimization may explai
 
 **Relatives:** 
 
+# sizeof (\<empty>)? aggregation vs. inheritance.
+**complexity:** expert
+```cpp
+class Empty {};
 
+class Aggregator
+{
+   Empty member_;
+   int   another_;
+};
+
+class Derived : Empty
+{
+   int   another_;
+};
+
+int main()
+{
+   static_assert(sizeof(Aggregator) == sizeof(Derived),"agregator == derived");
+   static_assert(sizeof(Aggregator)  < sizeof(Derived),"agregator <  derived");
+   static_assert(sizeof(Aggregator) >  sizeof(Derived),"agregator >  derived");
+}
+```
+Regarding code above what should be present in output?
+- A. compiler error:
+    - agregator <  derived
+    - agregator >  derived
+- B. compiler error:
+    - agregator == derived
+    - agregator > derived
+- C. compiler error:
+    - agregator == derived
+    - agregator < derived
+- D. compiler error:
+    - agregator == derived
+    - agregator < derived
+    - agregator > derived
+
+**Answer:** C
+
+C++ requires empty classes to have non-zero size to ensure object identity.
+but there is a special exemption for empty classes when they are inherited from. The compiler is allowed to flatten the inheritance hierarchy in a way that the empty base class does not consume space.
+
+**See also:** [cppreference,EBO](http://en.cppreference.com/w/cpp/language/ebo), [More C++ Idioms, EBO](https://en.wikibooks.org/wiki/More_C%2B%2B_Idioms/Empty_Base_Optimization)
+
+**Relatives:** [sizeof(empty)](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#sizeof-empty)
 
 
