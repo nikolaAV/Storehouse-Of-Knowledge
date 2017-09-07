@@ -21,6 +21,8 @@ When instantiating an instance of any type (including "empty"), the physical mem
 
 **See also:** [Bjarne Stroustrup's FAQ](http://www.stroustrup.com/bs_faq2.html#sizeof-empty), [EBO](http://en.cppreference.com/w/cpp/language/ebo) 
 
+**Relatives:** [EBO](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#sizeof-empty-aggregation-vs-inheritance)
+
 
 # virtual destructor
 **complexity:** basic
