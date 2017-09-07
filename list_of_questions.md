@@ -1225,7 +1225,7 @@ The program above prints "whoops" because the C++ runtime can't resolve which `e
 
 **See also:** [D. Abrahams, boost::exception_handling](http://www.boost.org/community/error_handling.html) 
 
-**Relatives:** 
+**Relatives:** [Multiple Inheritance. Type conversion to base](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#type-conversion-base-in-multiple-inheritance)
 
 # Type conversion. Base in multiple inheritance
 **complexity:** basic
