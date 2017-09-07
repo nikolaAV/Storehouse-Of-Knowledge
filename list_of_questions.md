@@ -1227,5 +1227,51 @@ The program above prints "whoops" because the C++ runtime can't resolve which `e
 
 **Relatives:** 
 
+# Type conversion. Base in multiple inheritance
+**complexity:** basic
+```cpp
+struct grandparent
+{
+   virtual void foo() const { cout << "grandparent::foo" << endl; }
+   virtual ~grandparent() {}
+};
+
+struct mother : grandparent
+{
+   void foo() const override { cout << "mother::foo" << endl; }
+};
+
+struct father : grandparent
+{
+   void foo() const override { cout << "father::foo" << endl; }
+};
+
+struct child : mother, father
+{
+   void foo() const override { cout << "child::foo" << endl; }
+};
+
+int main()
+{
+   grandparent* p = new child{}; 
+   p->foo();
+   delete p;
+}
+```
+Regarding code above what should be present in output? 
+- A. grandparent::foo 
+- B. mother::foo
+- C. father::foo
+- D. child::foo
+- E. compiler error: ambiguous conversions from 'child *' to 'grandparent *' 
+
+**Answer:** E
+
+The compiler does not know what kind of subobject of whole 'child' you want to point out. It can be subobject of 'grandparent' comes from either 'mother' branch or 'father' branch.
+
+**See also:** [S.Meyers. Effective C++, item 40](https://books.google.com.ua/books?id=Qx5oyB49poYC&pg=PA192&dq=Use+multiple+inheritance+judiciously.&hl=en&sa=X&ved=0ahUKEwio6Ou_ypLWAhWIKGMKHVZMCGoQ6AEILjAB#v=onepage&q&f=false)
+
+**Relatives:** [exception::multiple_inheritance](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#exception-multiple-inheritance)
+
 
 
