@@ -1321,7 +1321,14 @@ Regarding code above what should be present in output?
 > This particular optimization — eliminating a local temporary by using a function's return location (and possibly replacing that with an object at
 the function's call site) — is both well-known and __commonly__ implemented. It even has a name: _the return value
 optimization_. In fact, the existence of a name for this optimization may explain why it's so widely available
-— Scott Meyers, 1996 
+— Scott Meyers, 1996
+
+But the RVO is an optimization. Compilers aren’t required to elide copy and move
+operations, even when they’re permitted to.
+
+> You can trust me when I tell you that for this
+code, every decent C++ compiler will employ the RVO to avoid copying 'w' — Scott Meyers, 2014
+ 
 
 **See also:** [Copy elision](http://en.cppreference.com/w/cpp/language/copy_elision), [RVO](https://en.wikipedia.org/wiki/Return_value_optimization), [S. Meyers. More Effective C++, item 20](https://books.google.com.ua/books?id=U7lTySXdFk0C&pg=PT439&dq=Facilitate+the+return+value+optimization.+Meyers&hl=en&sa=X&redir_esc=y#v=onepage&q&f=false)
 
@@ -1374,4 +1381,56 @@ but there is a special exemption for empty classes when they are inherited from.
 
 **Relatives:** [sizeof(empty)](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#sizeof-empty)
 
+# std::move(RVO)
+**complexity:** expert
+```cpp
+struct widget
+{
+   widget()                         { cout << "ctor(default)" << endl; }
+   widget(const widget&)            { cout << "ctor(copy)" << endl; }
+   widget(widget&&)                 { cout << "ctor(move)" << endl; }
+   widget& operator=(const widget&) { cout << "assigment(copy)" << endl; }
+   widget& operator=(widget&&)      { cout << "assigment(move)" << endl; }
+};
+
+widget make_widget()
+{
+   return std::move(widget{});
+}
+
+int main()
+{
+   auto w = make_widget();
+}
+
+```
+Regarding code above what should be present in output? 
+- A. 
+    - ctor(default)
+- B. 
+    - ctor(default)
+    - ctor(copy)
+- C. 
+    - ctor(default)
+    - ctor(move)
+- D. 
+    - ctor(default)
+    - ctor(move)
+    - ctor(move)
+- E. 
+    - ctor(default)
+    - ctor(move)
+    - assigment(move)
+
+**Answer:** C
+ 
+Compilers may elide the copying (or moving) (see [RVO](https://en.wikipedia.org/wiki/Return_value_optimization)) of a _local_ object in a function that returns _by value_ 
+- if the type of the local object is the same as that returned by the function 
+- and the local object is what’s being returned
+
+Instruction `return std::move(w);` violates the second statement above, because of the returned value is not a local object, it's a _reference_ to 'w'. 
+
+**See also:** [S. Meyers. Effective Modern C++, item 25](https://books.google.com.ua/books?id=rjhIBQAAQBAJ&pg=PA174&dq=I+can+perform+the+same+optimization+on+local+variables+that+I%E2%80%99m+returning&hl=en&sa=X&ved=0ahUKEwit19aGgJXWAhXLrlQKHdTqANQQ6AEIKTAA#v=onepage&q&f=false) 
+
+**Relatives:** [RVO](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#return-value-optimization)
 
