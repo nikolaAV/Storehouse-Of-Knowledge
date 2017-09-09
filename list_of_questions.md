@@ -1494,11 +1494,11 @@ Regarding code above what should be present in output?
 **Answer:** B
 
 The phases of the function call process:
-* 1. Name lookup
-* 2. Overload resolution
-* 3. Access control
+* (1) Name lookup
+* (2) Overload resolution
+* (3) Access control
 
-Phase '_overload resolution_' results only 'foo(int)'. The next phase says: "access violation to deleted function".
+Second phase '_overload resolution_' results only ['foo(int)'](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#function-overloading-promotion-vs-standard-conversion). The next phase says: "access violation to deleted function".
 Please take the difference between 'deleted function' and 'non-existing function'.
 
 **See also:** [S. Meyers. Effective Modern C++, item 11](https://edisciplinas.usp.br/pluginfile.php/1995323/mod_resource/content/1/Effective%20Modern%20C%2B%2B%202014.pdf), [accu.org::function selection](https://accu.org/index.php/journals/268), [D. Vandevoorde. C++ Templates, Appendix B](http://flylib.com/books/en/3.401.1.178/1/)  
