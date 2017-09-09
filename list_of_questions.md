@@ -1434,3 +1434,39 @@ Instruction `return std::move(w);` violates the second statement above, because 
 
 **Relatives:** [RVO](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#return-value-optimization)
 
+# Function overloading. Promotion vs. standard conversion 
+**complexity:** professional
+```cpp
+void foo(int)
+{
+   cout << "foo(int)" << endl;
+}
+
+void foo(char)
+{
+   cout << "foo(char)" << endl;
+}
+
+int main()
+{
+   foo(true);
+}
+```
+Regarding code above what should be present in output?
+- A. foo(int)
+- B. foo(char)
+- C. compiler error: 'foo' ambigious call
+
+**Answer:** A
+
+Argument type `bool` and function 'foo' parameter type are mismatch.
+How well a given argument `bool` matches the corresponding parameter of a viable two candidates?
+The possible matches as follows (from best to worst):
+* Match with promotion, the implicit conversion that includes the conversion of small integral types (such as `bool` , `char` , `short` , and sometimes enumerations) to `int`. 
+* Match with standard conversions only. This includes any sort of standard conversion (such as `int` to `float`)
+
+For the given case, the 'Promotion' is better because of 'Standatd Conversion' is stronger. 
+
+**See also:** [cppreference](http://en.cppreference.com/w/cpp/language/overload_resolution), [accu.org::function selection](https://accu.org/index.php/journals/268), [D. Vandevoorde. C++ Templates, Appendix B](http://flylib.com/books/en/3.401.1.178/1/)  
+ 
+**Relatives:** 
