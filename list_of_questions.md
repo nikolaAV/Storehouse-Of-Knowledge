@@ -1540,3 +1540,36 @@ Regarding code above what should be present in output?
 **See also:** [cppreference,final_specifier](http://en.cppreference.com/w/cpp/language/final)
  
 **Relatives:** 
+
+# override specifier. Member function definition. 
+**complexity:** basic
+```cpp
+struct base
+{
+   virtual void foo() const { cout << "base::foo" << endl;}
+};
+
+struct derived : base
+{
+   void foo() override { cout << "derived::foo" << endl;}
+};
+
+int main()
+{
+   std::unique_ptr<base> p { new derived{} };
+   p->foo();
+}
+```
+Regarding code above what should be present in output?
+- A. base::foo
+- B. derived::foo
+- C. compiler error: 'derived::foo' did not override any base class methods
+ 
+**Answer:** C 
+
+There are two different methods 'void foo() const' and 'void foo()' which are sequentially defined in classes: 'base', 'derived'.
+They are treated as if they have an extra parameter (_implicit object parameter_) which represents the object for which they are called and appears before the first of the actual parameters. Thus, foo(`&`) from 'derived' cannot override foo(`const&`) from 'base'. 
+
+**See also:** [cppreference, override_specifier](http://en.cppreference.com/w/cpp/language/override), [cppreference, overload_resolution](http://en.cppreference.com/w/cpp/language/overload_resolution)
+ 
+**Relatives:** 
