@@ -1504,3 +1504,39 @@ Please take the difference between 'deleted function' and 'non-existing function
 **See also:** [S. Meyers. Effective Modern C++, item 11](https://edisciplinas.usp.br/pluginfile.php/1995323/mod_resource/content/1/Effective%20Modern%20C%2B%2B%202014.pdf), [accu.org::function selection](https://accu.org/index.php/journals/268), [D. Vandevoorde. C++ Templates, Appendix B](http://flylib.com/books/en/3.401.1.178/1/)  
  
 **Relatives:** [Promotion & Standard Conversion](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#function-overloading-promotion-vs-standard-conversion)
+
+# final specifier. Member function definition. 
+**complexity:** basic
+```cpp
+struct base
+{
+   virtual void foo() const { cout << "base::foo" << endl;}
+};
+
+struct derived1 : base
+{
+   void foo() const final { cout << "derived1::foo" << endl;}
+};
+
+struct derived2 : derived1
+{
+   void foo() const  { cout << "derived2::foo" << endl;}
+};
+
+int main()
+{
+   std::unique_ptr<base> p { new derived2{} };
+   p->foo();
+}
+```
+Regarding code above what should be present in output?
+- A. base::foo
+- B. derived1::foo
+- C. derived2::foo
+- D. compiler error: derived2::foo cannot be overridden as it's final in derived1
+ 
+**Answer:** D
+
+**See also:** [cppreference,final_specifier](http://en.cppreference.com/w/cpp/language/final)
+ 
+**Relatives:** 
