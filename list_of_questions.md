@@ -1568,7 +1568,7 @@ Regarding code above what should be present in output?
 **Answer:** C 
 
 There are two different methods 'void foo() const' and 'void foo()' which are sequentially defined in classes: 'base', 'derived'.
-They are treated as if they have an extra parameter (_implicit object parameter_) which represents the object for which they are called and appears before the first of the actual parameters. Thus, foo(`&`) from 'derived' cannot override foo(`const&`) from 'base'. 
+They are treated as if they have an extra parameter (_implicit object parameter_) which represents the object for which they are called and appears before the first of the actual parameters. Thus (pseudocode), foo(`&this`) from 'derived' cannot override foo(`const&this`) from 'base'. 
 
 **See also:** [cppreference, override_specifier](http://en.cppreference.com/w/cpp/language/override), [cppreference, overload_resolution](http://en.cppreference.com/w/cpp/language/overload_resolution)
  
