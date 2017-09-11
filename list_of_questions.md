@@ -1619,6 +1619,6 @@ tried __in the order of their appearance__. Hence, it is possible for an `except
 by a `catch` clause for one of its _base_ class types — even when a `catch` clause for the _derived_ class is associated
 with the same `try` block!
 
-**See also:** [S.Meyers, More Effective C++, Item 12]()
+**See also:** [S.Meyers, More Effective C++, Item 12](https://books.google.com.ua/books?id=U7lTySXdFk0C&pg=PT405&lpg=PT405&dq=meyers+The+final+difference+between+passing+a+parameter+and+propagating+an+exception+is+that+catch+clauses+are+always+tried+in+the+order+of+their+appearance&source=bl&ots=nP1Os6t2j8&sig=bth7WHdywXWa8yuFBuvs4rWstjA&hl=en&sa=X&ved=0ahUKEwjHo9u4v5zWAhVnwFQKHXlzBUQQ6AEIKjAB#v=onepage&q&f=false)
  
 **Relatives:** 
