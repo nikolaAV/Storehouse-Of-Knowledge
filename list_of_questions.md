@@ -1573,3 +1573,52 @@ They are treated as if they have an extra parameter (_implicit object parameter_
 **See also:** [cppreference, override_specifier](http://en.cppreference.com/w/cpp/language/override), [cppreference, overload_resolution](http://en.cppreference.com/w/cpp/language/overload_resolution)
  
 **Relatives:** 
+
+# Exception. The order of 'catch'.
+**complexity:** basic
+```cpp
+struct my_exception : std::exception
+{
+};
+
+int main()
+{
+   try
+   {
+      throw my_exception{};
+   }
+   catch(const std::exception&)
+   {
+      cout << "std::exception" << endl;
+   }
+   catch(const my_exception&)
+   {
+      cout << "my_exception" << endl;
+   }
+   catch(...)
+   {
+      cout << "exception ..." << endl;
+   }
+```
+Regarding code above what should be present in output?
+- A. 
+    - std::exception
+    - my_exception
+    - exception ...
+- B. 
+    - std::exception
+- C. 
+    - my_exception
+- D. 
+    - exception ...
+ 
+**Answer:**  B
+
+The principal difference between function call resolving by its parameter and propagating an exception is that `catch` clauses are always
+tried __in the order of their appearance__. Hence, it is possible for an `exception` of a _derived_ class type to be handled
+by a `catch` clause for one of its _base_ class types — even when a `catch` clause for the _derived_ class is associated
+with the same `try` block!
+
+**See also:** [S.Meyers, More Effective C++, Item 12]()
+ 
+**Relatives:** 
