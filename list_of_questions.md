@@ -1622,3 +1622,51 @@ with the same `try` block!
 **See also:** [S.Meyers, More Effective C++, Item 12](https://books.google.com.ua/books?id=U7lTySXdFk0C&pg=PT405&lpg=PT405&dq=meyers+The+final+difference+between+passing+a+parameter+and+propagating+an+exception+is+that+catch+clauses+are+always+tried+in+the+order+of+their+appearance&source=bl&ots=nP1Os6t2j8&sig=bth7WHdywXWa8yuFBuvs4rWstjA&hl=en&sa=X&ved=0ahUKEwjHo9u4v5zWAhVnwFQKHXlzBUQQ6AEIKjAB#v=onepage&q&f=false)
  
 **Relatives:** 
+
+# Type conversion. Implicitly ...
+**complexity:** basic
+```cpp
+struct integer1
+{
+   int value;
+   integer1(int v) : value(v) {}
+};
+
+struct integer2
+{
+   int value;
+   explicit integer2(int v) : value(v) {}
+};
+
+void print(const integer1& v)
+{
+   cout << "integer1: " << v.value << endl;
+}
+
+void print(const integer2& v)
+{
+   cout << "integer2: " << v.value << endl;
+}
+
+int main()
+{
+   print(1);
+}
+```
+Regarding code above what should be present in output? 
+- A. integer1: 1
+- B. integer2: 1
+- C. compiler error: 'print' ambiguous call to overloaded function
+- D. compiler error: 'print' none of 2 overloads can convert parameter 1 from type 'int'
+
+**Answer:** A
+
+C++ allows compilers to perform _implicit_ conversions between types. It can be done if there is user-defined conversion function:
+* single-argument constructors
+* type conversion operators.
+
+In our case, there is only an implicit conversion from `int` to 'integer1', because the second candidate (single-argument constructors of 'integer2') is disabled by `explicit` specifier.   
+
+**See also:** [S.Meyers, More Effective C++, Item 5](https://books.google.com.ua/books?id=azvE8V0c-mYC&pg=PT58&lpg=PT58&dq=meyers+Two+kinds+of+functions+allow+compilers+to+perform+such+conversions:+single-argument+constructors+and+implicit+type+conversion+operators.&source=bl&ots=48af28Jh4f&sig=q62LPrB7K8hn25HmoXD787vMt1U&hl=en&sa=X&ved=0ahUKEwj7taC7mZ_WAhXhyVQKHSfKD_MQ6AEIJzAA#v=onepage&q&f=false), [cppreference::explicit](http://en.cppreference.com/w/cpp/language/explicit) 
+
+**Relatives:** [const-ref to temporary](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#type-conversion-const-reference-to-the-temporary)
