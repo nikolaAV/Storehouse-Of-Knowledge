@@ -1670,3 +1670,33 @@ In our case, there is only an implicit conversion from `int` to 'integer1', beca
 **See also:** [S.Meyers, More Effective C++, Item 5](https://books.google.com.ua/books?id=azvE8V0c-mYC&pg=PT58&lpg=PT58&dq=meyers+Two+kinds+of+functions+allow+compilers+to+perform+such+conversions:+single-argument+constructors+and+implicit+type+conversion+operators.&source=bl&ots=48af28Jh4f&sig=q62LPrB7K8hn25HmoXD787vMt1U&hl=en&sa=X&ved=0ahUKEwj7taC7mZ_WAhXhyVQKHSfKD_MQ6AEIJzAA#v=onepage&q&f=false), [cppreference::explicit](http://en.cppreference.com/w/cpp/language/explicit) 
 
 **Relatives:** [const-ref to temporary](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#type-conversion-const-reference-to-the-temporary)
+
+# Argument-dependent lookup 
+**complexity:** professional
+```cpp
+namespace A
+{
+   struct widget {};
+   void foo (const widget&)   { cout << "A::foo" << endl;}
+}
+
+void foo (const A::widget&)   { cout << "::foo" << endl;}
+void call(const A::widget& w) { foo(w); } // Line A
+
+int main()
+{
+   call(A::widget{});
+}
+```
+Regarding code above what should be present in output? 
+- A. A::foo
+- B. ::foo
+- C. compiler error: // Line A, 'foo': ambigious call
+
+**Answer:** C
+
+**See also:** [cppreference::ADL](http://en.cppreference.com/w/cpp/language/adl), [H.Sutter, The Interface Principle](http://www.gotw.ca/publications/mill02.htm)
+
+The first phase of [the function call process](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#function-overloading-deleted-function) _name lookup_ just means that, whenever you write a call like 'foo(parm)', the compiler has to figure out which function named 'foo' you want. ADL (aka. [Koenig lookup](https://en.wikipedia.org/wiki/Argument-dependent_name_lookup)) says that, if you supply a function argument of class type (here parm, of type 'A::widget'), then to find the function name the compiler is required to look, not just in the usual places like the global scope, but also in the namespace (here A) that contains the argument's type.
+
+**Relatives:** [Overload Resolution](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#function-overloading-deleted-function) 
