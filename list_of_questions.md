@@ -1735,3 +1735,48 @@ The method accessibility doesn't touch on its virtuality. Guidance: _prefer to m
 **See also:** [H.Sutter, Virtuality](http://www.gotw.ca/publications/mill18.htm), [C++Idioms, NVI](https://en.wikibooks.org/wiki/More_C%2B%2B_Idioms/Non-Virtual_Interface)
 
 **Relatives:**
+
+# virtual destructor. part 2.
+**complexity:** basic
+```cpp
+struct shape
+{
+    virtual void draw() const { cout << "shape::draw" << endl; }
+    ~shape()                  { cout << "shape::dtor" << endl; }
+};
+
+struct rectangle : shape
+{
+    virtual void draw() const { cout << "rectangle::draw" << endl; }
+   ~rectangle()               { cout << "rectangle::dtor" << endl; }
+};
+
+int main()
+{
+   shape* s = new rectangle();
+   s->draw();
+   delete s;
+}
+```
+Regarding code above what should be present in output?
+- A.
+    - rectangle::draw 
+    - rectangle::dtor
+- B.
+    - shape::draw 
+    - shape::dtor
+- C.
+    - rectangle::draw 
+    - shape::dtor
+- D.
+    - shape::draw 
+    - rectangle::dtor
+
+**Answer:** C 
+
+By mistake, `virtual` specifier for base destructor is absent.
+Guideline: A base class destructor should be either public and virtual, or protected and nonvirtual.
+
+**See also:** [S. Meyers. Effective C++, item 7](https://books.google.com.ua/books?id=U7lTySXdFk0C&lpg=PT68&dq=Effective%20C%2B%2B%20declare%20destructors%20virtual&pg=PT68#v=onepage&q&f=false)
+ 
+**Relatives:** [virtual dtor](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#virtual-destructor), [NVI](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#function-overriding-non-virtual-interface)
