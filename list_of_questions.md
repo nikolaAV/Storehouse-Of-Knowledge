@@ -1700,3 +1700,38 @@ Regarding code above what should be present in output?
 The first phase of [the function call process](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#function-overloading-deleted-function) _name lookup_ just means that, whenever you write a call like 'foo(parm)', the compiler has to figure out which function named 'foo' you want. ADL (aka. [Koenig lookup](https://en.wikipedia.org/wiki/Argument-dependent_name_lookup)) says that, if you supply a function argument of class type (here parm, of type 'A::widget'), then to find the function name the compiler is required to look, not just in the usual places like the global scope, but also in the namespace (here A) that contains the argument's type.
 
 **Relatives:** [Overload Resolution](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#function-overloading-deleted-function) 
+
+# Function overriding. Non-virtual interface.
+**complexity:** basic
+```cpp
+struct base
+{
+   void foo() const { do_foo(); }
+   ~base() {}
+private:
+   virtual void do_foo() const { cout << "base::do_foo" << endl; }
+};
+
+struct derived : base
+{
+   void do_foo() const override { cout << "derived::do_foo" << endl; };
+};
+
+int main()
+{
+   unique_ptr<base> b { new derived{} };
+   b->foo();
+}
+```
+Regarding code above what should be present in output?
+- A. base::do_foo
+- B. derived::do_foo
+- C. compiler error: 'do_foo' cannot be overridden because of its private
+
+**Answer:** B 
+
+The method accessibility doesn't touch on its virtuality. Guidance: _prefer to make base class virtual functions private_ (or protected if you really must)
+
+**See also:** [H.Sutter, Virtuality](http://www.gotw.ca/publications/mill18.htm), [C++Idioms, NVI](https://en.wikibooks.org/wiki/More_C%2B%2B_Idioms/Non-Virtual_Interface)
+
+**Relatives:**
