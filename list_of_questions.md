@@ -1781,7 +1781,7 @@ Guideline: A base class destructor should be either public and virtual, or prote
  
 **Relatives:** [virtual dtor](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#virtual-destructor), [NVI](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#function-overriding-non-virtual-interface)
 
-# Function overloading. Acceess control. 
+# Function overloading. Access control. 
 **complexity:** professional
 ```cpp
 class widget
