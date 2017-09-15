@@ -1780,3 +1780,41 @@ Guideline: A base class destructor should be either public and virtual, or prote
 **See also:** [S. Meyers. Effective C++, item 7](https://books.google.com.ua/books?id=U7lTySXdFk0C&lpg=PT68&dq=Effective%20C%2B%2B%20declare%20destructors%20virtual&pg=PT68#v=onepage&q&f=false)
  
 **Relatives:** [virtual dtor](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#virtual-destructor), [NVI](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#function-overriding-non-virtual-interface)
+
+# Function overloading. Acceess control. 
+**complexity:** professional
+```cpp
+class widget
+{
+   void foo(int)     { cout << "foo(int)" << endl; }
+public:
+   void foo(double)  { cout << "foo(double)" << endl; }
+};
+
+int main()
+{
+   widget w;
+   w.foo(1);
+}
+```
+Regarding code above what should be present in output?
+- A. foo(int)
+- B. foo(double)
+- C. compiler error: 'widget::foo' ambigious call
+- D. compiler error: 'widget::foo(int)' cannot access private member
+ 
+**Answer:** D 
+
+The phases of the function call process:
+* (1) Name lookup
+* (2) Overload resolution
+* (3) Access control
+
+After _name lookup_ there are two candidates: 'foo(int)' and 'foo(double)'.
+After _overload resolution_ there is only 'foo(int)' because of perfect match.
+The _access control_ does not allow 'foo(int)' to be called.   
+
+**See also:** [accu.org::function selection](https://accu.org/index.php/journals/268)
+ 
+**Relatives:** [deleted function](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#function-overloading-deleted-function) 
+
