@@ -1843,8 +1843,10 @@ Regarding code above what should be present in output?
     - ctor(default)
     - assigment(copy)
 
-**Answer:** A  
+**Answer:** A
 
-**See also:** [S. Meyers. Effective Modern C++, item 7](https://edisciplinas.usp.br/pluginfile.php/1995323/mod_resource/content/1/Effective%20Modern%20C%2B%2B%202014.pdf)
+For the given case, language instructions: 'widget w2=w1;', 'widget w2(w1);' and 'widget w2{w1};' are equivalent.
+  
+**See also:** [S. Meyers. Effective Modern C++, item 7](http://doc.imzlp.me/viewer.html?file=docs/effective/EffectiveModernCPP.pdf#page=67&zoom=auto,-15,290)
 
 **Relatives:** 
