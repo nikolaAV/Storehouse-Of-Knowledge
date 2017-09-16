@@ -1818,3 +1818,33 @@ The _access control_ does not allow 'foo(int)' to be called.
  
 **Relatives:** [deleted function](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#function-overloading-deleted-function) 
 
+# Object construction. Syntax
+**complexity:** basic
+```cpp
+struct widget
+{
+   widget()                         { cout << "ctor(default)" << endl;}
+   widget(const widget&)            { cout << "ctor(copy)" << endl;}
+   widget& operator=(const widget&) { cout << "assigment(copy)" << endl;}
+};
+
+int main()
+{
+   widget w1;
+   widget w2 = w1;
+}
+```
+Regarding code above what should be present in output?
+- A.
+    - ctor(default)
+    - ctor(copy)
+- B.
+    - ctor(default)
+    - ctor(default)
+    - assigment(copy)
+
+**Answer:** A  
+
+**See also:** [S. Meyers. Effective Modern C++, item 7](https://edisciplinas.usp.br/pluginfile.php/1995323/mod_resource/content/1/Effective%20Modern%20C%2B%2B%202014.pdf)
+
+**Relatives:** 
