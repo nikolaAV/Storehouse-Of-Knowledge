@@ -1818,7 +1818,7 @@ The _access control_ does not allow 'foo(int)' to be called.
  
 **Relatives:** [deleted function](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#function-overloading-deleted-function) 
 
-# Object construction. Syntax
+# Object construction. Initialization syntax
 **complexity:** basic
 ```cpp
 struct widget
@@ -1850,3 +1850,65 @@ For the given case, language instructions: 'widget w2=w1;', 'widget w2(w1);' and
 **See also:** [S. Meyers. Effective Modern C++, item 7](http://doc.imzlp.me/viewer.html?file=docs/effective/EffectiveModernCPP.pdf#page=67&zoom=auto,-15,290)
 
 **Relatives:** 
+
+
+# Exception. Rethrow vs. propagation.
+**complexity:** basic
+```cpp
+struct my_exception
+{
+   my_exception()                               { cout << "ctor(default)" << endl; }
+   my_exception(const my_exception&)            { cout << "ctor(copy)" << endl; }
+   my_exception(my_exception&&)                 { cout << "ctor(move)" << endl; }
+   const char* what() const                     { return "my_exception"; }
+};
+
+void something_wrong()
+{
+   // ...
+   throw my_exception{};
+}
+
+void do_something()
+{
+   try { something_wrong(); }
+   catch(const my_exception& e)
+   {
+      cout << "try to cure: " << e.what() << endl;
+      throw e; // Line A
+   }
+}
+
+int main()
+{
+   try {do_something(); }
+   catch(const my_exception& e)
+   {
+      cout << "complete handling: " << e.what() << endl;
+   }
+}
+```
+Regarding code above what should be present in output?
+- A.
+    - ctor(default)
+    - try to cure: my_exception
+    - ctor(move)
+    - complete handling: my_exception
+- B.
+    - ctor(default)
+    - try to cure: my_exception
+    - complete handling: my_exception
+- C.
+    - ctor(default)
+    - try to cure: my_exception
+    - ctor(copy)
+    - complete handling: my_exception
+
+**Answer:** C
+
+The only difference (see _// Line A_) between `throw;` and `throw e;` is that 
+the first one rethrows the current exception, while the second one throws a new copy of the current exception.  
+  
+**See also:** [S. Meyers. Move Effective C++, item 12]()
+
+**Relatives:** [catch-by-value](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#exception-catch-by-value)
