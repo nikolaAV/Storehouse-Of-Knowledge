@@ -64,7 +64,7 @@ Regarding code above what should be present in output?
 
 **Answer:** C
 
-**See also:** [S. Meyers. Effective C++, item 7](https://books.google.com.ua/books?id=U7lTySXdFk0C&lpg=PT68&dq=Effective%20C%2B%2B%20declare%20destructors%20virtual&pg=PT68#v=onepage&q&f=false)
+**See also:** [S. Meyers. Effective C++, item 7](https://books.google.com.ua/books?id=U7lTySXdFk0C&lpg=PT68&dq=Effective%20C%2B%2B%20declare%20destructors%20virtual&pg=PT68#v=onepage&q&f=false), [H.Sutter, GotW#5](https://herbsutter.com/2013/05/22/gotw-5-solution-overriding-virtual-functions/)
  
 **Relatives:** [virtual dtor2](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#virtual-destructor-part-2), [virtuality](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#cost-of-the-virtuality)
 
@@ -1537,7 +1537,7 @@ Regarding code above what should be present in output?
  
 **Answer:** D
 
-**See also:** [cppreference,final_specifier](http://en.cppreference.com/w/cpp/language/final)
+**See also:** [cppreference,final_specifier](http://en.cppreference.com/w/cpp/language/final), [H.Sutter, GotW#5](https://herbsutter.com/2013/05/22/gotw-5-solution-overriding-virtual-functions/)
  
 **Relatives:** 
 
@@ -1570,7 +1570,7 @@ Regarding code above what should be present in output?
 There are two different methods 'void foo() const' and 'void foo()' which are sequentially defined in classes: 'base', 'derived'.
 They are treated as if they have an extra parameter (_implicit object parameter_) which represents the object for which they are called and appears before the first of the actual parameters. Thus (pseudocode), foo(`&this`) from 'derived' cannot override foo(`const&this`) from 'base'. 
 
-**See also:** [cppreference, override_specifier](http://en.cppreference.com/w/cpp/language/override), [cppreference, overload_resolution](http://en.cppreference.com/w/cpp/language/overload_resolution)
+**See also:** [cppreference, override_specifier](http://en.cppreference.com/w/cpp/language/override), [cppreference, overload_resolution](http://en.cppreference.com/w/cpp/language/overload_resolution), [H.Sutter, GotW#5](https://herbsutter.com/2013/05/22/gotw-5-solution-overriding-virtual-functions/)
  
 **Relatives:** 
 
@@ -1777,7 +1777,7 @@ Regarding code above what should be present in output?
 By mistake, `virtual` specifier for base destructor is absent.
 Guideline: A base class destructor should be either public and virtual, or protected and nonvirtual.
 
-**See also:** [S. Meyers. Effective C++, item 7](https://books.google.com.ua/books?id=U7lTySXdFk0C&lpg=PT68&dq=Effective%20C%2B%2B%20declare%20destructors%20virtual&pg=PT68#v=onepage&q&f=false)
+**See also:** [S. Meyers. Effective C++, item 7](https://books.google.com.ua/books?id=U7lTySXdFk0C&lpg=PT68&dq=Effective%20C%2B%2B%20declare%20destructors%20virtual&pg=PT68#v=onepage&q&f=false), [H.Sutter, GotW#5](https://herbsutter.com/2013/05/22/gotw-5-solution-overriding-virtual-functions/)
  
 **Relatives:** [virtual dtor](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#virtual-destructor), [NVI](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#function-overriding-non-virtual-interface)
 
