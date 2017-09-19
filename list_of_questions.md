@@ -256,6 +256,8 @@ The compiler looks into the scope of _'derived'_, finds the single function "foo
 
 **See also:** [S. Meyers. Effective C++, item 33](https://books.google.com.ua/books?id=U7lTySXdFk0C&pg=PT184&dq=Avoid+hiding+inherited+names.&hl=en&sa=X&redir_esc=y#v=onepage&q&f=false), [Bjarne Stroustrup's FAQ](http://www.stroustrup.com/bs_faq2.html#overloadderived), [ISOC++FAQ](https://isocpp.org/wiki/faq/strange-inheritance#hiding-rule)
 
+**Relatives:** [scopes::hiding_names](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#scopes-hiding-names)
+
 # Inheritance. Virtual base.
 **complexity:** expert
 ```cpp
@@ -1940,7 +1942,7 @@ Regarding code above what should be present in output?
  
 **Answer:** B
 
-Two identifiers named 'foo' are defined in different scopes: in the global and 'widget' ones. Before overload resolution, the _name lookup_ phase is fulfilled starting with 'widget' scope, where 'bar' is defined. Once the compiler finds that struct 'widget' has 'foo', it stops climbing up to wider scopes ('global', in our case), so the free-standing function 'foo' is hidden.
+Two identifiers named 'foo' are defined in different scopes: in the global and 'widget' ones. Before [overload resolution](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#function-overloading-deleted-function), the _name lookup_ phase is fulfilled starting with 'widget' scope, where 'bar' is defined. Once the compiler finds that struct 'widget' has 'foo', it stops climbing up to wider scopes ('global', in our case), so the free-standing function 'foo' is hidden.
 
 **See also:** [The Standard, #3.4.1/1](http://doc.imzlp.me/viewer.html?file=docs/standard/isocpp2014.pdf#page=58&zoom=auto,-76,39), [Bjarne Stroustrup's FAQ](http://www.stroustrup.com/bs_faq2.html#overloadderived), [ISOC++FAQ](https://isocpp.org/wiki/faq/strange-inheritance#hiding-rule)
 
