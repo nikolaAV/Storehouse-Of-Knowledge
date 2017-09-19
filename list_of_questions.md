@@ -254,7 +254,7 @@ Regarding code above what should be present in output?
 In C++, __there is no overloading across scopes__ - derived class scopes are not an exception to this general rule
 The compiler looks into the scope of _'derived'_, finds the single function "foo(const char*)" and calls it. It never bothers with the (enclosing) scope of _'base'_.
 
-**See also:** [S. Meyers. Effective C++, item 33](https://books.google.com.ua/books?id=U7lTySXdFk0C&pg=PT184&dq=Avoid+hiding+inherited+names.&hl=en&sa=X&redir_esc=y#v=onepage&q&f=false), [Bjarne Stroustrup's FAQ](http://www.stroustrup.com/bs_faq2.html#overloadderived)
+**See also:** [S. Meyers. Effective C++, item 33](https://books.google.com.ua/books?id=U7lTySXdFk0C&pg=PT184&dq=Avoid+hiding+inherited+names.&hl=en&sa=X&redir_esc=y#v=onepage&q&f=false), [Bjarne Stroustrup's FAQ](http://www.stroustrup.com/bs_faq2.html#overloadderived), [ISOC++FAQ](https://isocpp.org/wiki/faq/strange-inheritance#hiding-rule)
 
 # Inheritance. Virtual base.
 **complexity:** expert
@@ -679,7 +679,7 @@ Regarding code above what should be present in output?
 
 In a constructor, the virtual call mechanism __is disabled__ because overriding from derived classes hasn't yet happened. Objects are constructed from the base up, "base before derived".
 
-**See also:** [Bjarne Stroustrup's FAQ](http://www.stroustrup.com/bs_faq2.html#vcall), [C++ Coding Standards, rule 49](https://books.google.com.ua/books?id=mmjVIC6WolgC&pg=PT238&lpg=PT238&dq=C%2B%2B+Sutter+destructor+direct+call&source=bl&ots=ceOoHQiMZ4&sig=s0DhJh0lBmNK8CqDNJUVgUe3bBg&hl=en&sa=X&ved=0ahUKEwiO6IDA9-zVAhUosFQKHdIABZMQ6AEISjAG#v=onepage&q&f=false)
+**See also:** [Bjarne Stroustrup's FAQ](http://www.stroustrup.com/bs_faq2.html#vcall), [C++ Coding Standards, rule 49](https://books.google.com.ua/books?id=mmjVIC6WolgC&pg=PT238&lpg=PT238&dq=C%2B%2B+Sutter+destructor+direct+call&source=bl&ots=ceOoHQiMZ4&sig=s0DhJh0lBmNK8CqDNJUVgUe3bBg&hl=en&sa=X&ved=0ahUKEwiO6IDA9-zVAhUosFQKHdIABZMQ6AEISjAG#v=onepage&q&f=false), [ISOC++FAQ](https://isocpp.org/wiki/faq/strange-inheritance#calling-virtuals-from-ctors)
 
 **Relatives:** [ctor::basic](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#object-construction)
 
@@ -1912,3 +1912,36 @@ the first one rethrows the current exception, while the second one throws a new 
 **See also:** [S. Meyers. Move Effective C++, item 12](http://doc.imzlp.me/viewer.html?file=docs/effective/MoreEffectiveCPP.pdf#page=80&zoom=auto,-54,344)
 
 **Relatives:** [catch-by-value](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#exception-catch-by-value)
+
+
+# Scopes. Hiding names.
+**complexity:** professional
+```cpp
+void foo(int)
+{
+   cout << "::foo(int)" << endl;
+}
+
+struct widget
+{
+   void foo() { cout << "widget::foo(void)" << endl; }
+   void bar() { foo(123); }
+};
+
+int main()
+{
+   widget w;
+   w.bar();
+}
+```
+Regarding code above what should be present in output?
+- A. ::foo(int)
+- B. compiler error: 'widget::foo(void)' does not take an argument 
+ 
+**Answer:** B
+
+Two identifiers named 'foo' are defined in different scopes: in the global and 'widget' ones. Before overload resolution, the _name lookup_ phase is fulfilled starting with 'widget' scope, where 'bar' is defined. Once the compiler finds that struct 'widget' has 'foo', it stops climbing up to wider scopes ('global', in our case), so the free-standing function 'foo' is hidden.
+
+**See also:** [The Standard, #3.4.1/1](http://doc.imzlp.me/viewer.html?file=docs/standard/isocpp2014.pdf#page=58&zoom=auto,-76,39), [Bjarne Stroustrup's FAQ](http://www.stroustrup.com/bs_faq2.html#overloadderived), [ISOC++FAQ](https://isocpp.org/wiki/faq/strange-inheritance#hiding-rule)
+
+**Relatives:** [Inheritance::hiding_names](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#inheritance-hiding-names)
