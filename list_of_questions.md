@@ -1847,7 +1847,7 @@ Regarding code above what should be present in output?
 
 **Answer:** A
 
-For the given case, language instructions: 'widget w2=w1;', 'widget w2(w1);' and 'widget w2{w1};' are equivalent.
+For the given case, language instructions: 'widget w2=w1;', 'widget w2(w1);', 'widget w2{w1};' and 'widget w2={w1};' are equivalent.
   
 **See also:** [S. Meyers. Effective Modern C++, item 7](http://doc.imzlp.me/viewer.html?file=docs/effective/EffectiveModernCPP.pdf#page=67&zoom=auto,-15,290)
 
@@ -1947,3 +1947,52 @@ Two identifiers named 'foo' are defined in different scopes: in the global and '
 **See also:** [The Standard, #3.4.1/1](http://doc.imzlp.me/viewer.html?file=docs/standard/isocpp2014.pdf#page=58&zoom=auto,-76,39), [Bjarne Stroustrup's FAQ](http://www.stroustrup.com/bs_faq2.html#overloadderived), [ISOC++FAQ](https://isocpp.org/wiki/faq/strange-inheritance#hiding-rule)
 
 **Relatives:** [Inheritance::hiding_names](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#inheritance-hiding-names)
+
+# Temlates. Non-dependent name.
+**complexity:** expert
+```cpp
+void foo(double)  { cout << "foo(double)" << endl; }
+
+template <typename T>
+struct widget
+{
+   void call() const { foo(123); }  // Line A
+};
+
+void foo(int)     { cout << "foo(int)" << endl; }
+
+int main()
+{
+   foo(123);
+   widget<int> w;
+   w.call();
+}
+```
+Regarding code above what should be present in output?
+- A. 
+    - foo(double)
+    - foo(int)
+- B. 
+    - foo(int)
+    - foo(double)
+- C. 
+    - foo(int)
+    - foo(int)
+- D. 
+    - foo(double)
+    - foo(double)
+ 
+**Answer:** B
+
+At _// Line A_ name 'foo' is _non-dependent name_ e.i. it does not depend on type template parameter ('T') inside the definition of template '`struct` widget<T>'.
+C++ compliant compilers implement two phases _name lookup_
+* At the point of definition, parse the template, determine all non-dependent names and bind them
+* At the point of instantiation, bind rest of names that depend on template patrameter,  check that the template produces valid code
+
+'foo(double)' is only definition available at phase 1.
+
+Note: [Visual C++ is incomplient to the Standard](https://stackoverflow.com/questions/2974780/visual-c-compiler-allows-dependent-name-as-a-type-without-typename). It has never implemented the first phase
+
+**See also:** [cppreference::dependent_names](http://en.cppreference.com/w/cpp/language/dependent_name), 
+
+**Relatives:** [function_overloading](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#function-overloading-deleted-function)
