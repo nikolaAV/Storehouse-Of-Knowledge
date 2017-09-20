@@ -1948,7 +1948,7 @@ Two identifiers named 'foo' are defined in different scopes: in the global and '
 
 **Relatives:** [Inheritance::hiding_names](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#inheritance-hiding-names)
 
-# Temlates. Non-dependent name.
+# Templates. Non-dependent name.
 **complexity:** expert
 ```cpp
 void foo(double)  { cout << "foo(double)" << endl; }
@@ -1985,7 +1985,7 @@ Regarding code above what should be present in output?
 **Answer:** B
 
 At _// Line A_ name 'foo' is _non-dependent name_ e.i. it does not depend on type template parameter ('T') inside the definition of template '`struct` widget<T>'.
-C++ compliant compilers implement two phases _name lookup_
+C++ compliant compilers implement two phases [_name lookup_](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#function-overloading-deleted-function)
 * At the point of definition, parse the template, determine all non-dependent names and bind them
 * At the point of instantiation, bind rest of names that depend on template patrameter,  check that the template produces valid code
 
