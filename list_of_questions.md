@@ -2042,7 +2042,7 @@ int main()
 Regarding code above what should be present in output?
 - A. foo(int)
 - B. foo(T)
-- C. foo<int>()
+- C. foo\<int\>()
 - D. compiler error: 'foo' ambigious call
 
 **Answer:** A
