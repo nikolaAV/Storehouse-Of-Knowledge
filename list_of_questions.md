@@ -2017,7 +2017,7 @@ Regarding code above what should be present in output?
 
 **Answer:** B
 
-'foo(T)' where T is `int` is the best match. 'foo(double)' requires the [standard conversion](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#function-overloading-promotion-vs-standard-conversion).
+'foo(T)' where T is `int` is __the best match__. 'foo(double)' requires the [standard conversion](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#function-overloading-promotion-vs-standard-conversion).
 
 **See also:** [H. Sutter, GotW#49](http://www.gotw.ca/gotw/049.htm)
 
@@ -2047,8 +2047,8 @@ Regarding code above what should be present in output?
 
 **Answer:** A
 
-'foo(int)' is an exact match for invocation 'foo(123);'. Such non-templates functions are always preferred over templates.
+'foo(int)' is an __exact match__ for invocation 'foo(123);'. Such non-templates functions are always preferred over templates.
 
 **See also:** [H. Sutter, GotW#49](http://www.gotw.ca/gotw/049.htm), [The Standard, 13.3.3](http://doc.imzlp.me/viewer.html?file=docs/standard/isocpp2014.pdf#page=312&zoom=page-fit,-231,792)
 
-**Relatives:**  
+**Relatives:** [function_template::best_match](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#function-template-overloading) 
