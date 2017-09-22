@@ -1996,3 +1996,59 @@ Note: [Visual C++ is incomplient to the Standard](https://stackoverflow.com/ques
 **See also:** [cppreference::dependent_names](http://en.cppreference.com/w/cpp/language/dependent_name), 
 
 **Relatives:** [function_overloading](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#function-overloading-deleted-function)
+
+# Function template. Overloading.
+**complexity:** basic
+```cpp
+void foo(double)  { cout << "foo(double)" << endl; }
+
+template <typename T>
+void foo(T)       { cout << "foo(T)" << endl; }
+
+int main()
+{
+   foo(123);
+}
+```
+Regarding code above what should be present in output?
+- A. foo(double)
+- B. foo(T)
+- C. compiler error: 'foo' ambigious call
+
+**Answer:** B
+
+'foo(T)' where T is `int` is the best match. 'foo(double)' requires the [standard conversion](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#function-overloading-promotion-vs-standard-conversion).
+
+**See also:** [H. Sutter, GotW#49](http://www.gotw.ca/gotw/049.htm)
+
+**Relatives:** [standard_conversion](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#function-overloading-promotion-vs-standard-conversion) 
+
+# Function template. Spesialization vs. Overloading. 
+**complexity:** basic
+```cpp
+void foo(int)     { cout << "foo(int)" << endl; }
+
+template <typename T>
+void foo(T)       { cout << "foo(T)" << endl; }
+
+template <>
+void foo<int>(int){ cout << "foo<int>()" << endl; }
+
+int main()
+{
+   foo(123);
+}
+```
+Regarding code above what should be present in output?
+- A. foo(int)
+- B. foo(T)
+- C. foo<int>()
+- D. compiler error: 'foo' ambigious call
+
+**Answer:** A
+
+'foo(int)' is an exact match for invocation 'foo(123);'. Such non-templates functions are always preferred over templates.
+
+**See also:** [H. Sutter, GotW#49](http://www.gotw.ca/gotw/049.htm), [The Standard, 13.3.3](http://doc.imzlp.me/viewer.html?file=docs/standard/isocpp2014.pdf#page=312&zoom=page-fit,-231,792)
+
+**Relatives:**  
