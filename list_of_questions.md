@@ -2052,3 +2052,40 @@ Regarding code above what should be present in output?
 **See also:** [H. Sutter, GotW#49](http://www.gotw.ca/gotw/049.htm), [The Standard, 13.3.3](http://doc.imzlp.me/viewer.html?file=docs/standard/isocpp2014.pdf#page=312&zoom=page-fit,-231,792)
 
 **Relatives:** [function_template::best_match](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#function-template-overloading) 
+
+# Most verxing parse. 
+**complexity:** professional
+```cpp
+class widget
+{
+   int v_;
+public:
+   widget()      : v_{0} {} 
+   widget(int v) : v_{v} {}
+   void foo() const { cout << v_ << endl; }
+};
+
+int main()
+{
+   widget w1();
+   widget w2(1);
+   w1.foo();
+   w2.foo();
+}
+```
+Regarding code above what should be present in output?
+- A. 
+    - 0
+    - 1
+- B. 
+    - compiler error: 'w1' left of '.foo' must have class/struct/union    
+
+**Answer:** B
+
+[The Standard says](http://doc.imzlp.me/viewer.html?file=docs/standard/isocpp2014.pdf#page=199&zoom=page-actual,-52,792): anything that can be parsed as a declaration must be interpreted as one
+* 'widget w2(1)' is a variable __definition__ for variable 'w2' of type 'widget', initialized with `1`
+* 'widget w1()' is a function __declaration__ named 'w1' that returns a 'widget'.
+
+**See also:** [wikipedia](https://en.wikipedia.org/wiki/Most_vexing_parse), [The Standard, §8.2](http://doc.imzlp.me/viewer.html?file=docs/standard/isocpp2014.pdf#page=199&zoom=page-actual,-52,792)  
+
+**Relatives:** 
