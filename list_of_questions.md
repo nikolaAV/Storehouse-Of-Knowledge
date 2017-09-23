@@ -2089,3 +2089,63 @@ Regarding code above what should be present in output?
 **See also:** [wikipedia](https://en.wikipedia.org/wiki/Most_vexing_parse), [The Standard, §8.2](http://doc.imzlp.me/viewer.html?file=docs/standard/isocpp2014.pdf#page=199&zoom=page-actual,-52,792)  
 
 **Relatives:** 
+
+# Deducing Types. 'auto' by-braced-init-list. 
+**complexity:** expert
+```cpp
+void foo(int)
+{
+   cout << "int" << endl;
+}
+
+void foo(std::initializer_list<int> v)
+{
+   cout << "initializer_list<int>::size " << v.size() << endl;
+}
+
+int main()
+{
+   auto a1   (123);
+   auto a2 =  123;
+   auto a3   {123};
+   auto a4 = {123};
+
+   foo(a1);
+   foo(a2);
+   foo(a3);
+   foo(a4);
+}
+```
+Regarding code above what should be present in output?
+- A. 
+    - int
+    - int
+    - int
+    - int
+- B. 
+    - int
+    - int
+    - initializer_list\<int\>::size 1
+    - initializer_list\<int\>::size 1
+- C. 
+    - int
+    - int
+    - int
+    - initializer_list\<int\>::size 1
+- D. 
+    - compiler error: incorrect syntax in braced-init-list
+
+**Answer:** C 
+
+* _a1   (123)_ - ill-formed [direct initialization](http://en.cppreference.com/w/cpp/language/direct_initialization)
+* _a2 =  123_ - ill-formed [copy initialization](http://en.cppreference.com/w/cpp/language/copy_initialization)
+* _a3   {123}_ - braced-init_list direct initialization
+* _a4 = {123}_ - braced-init_list copy initialization
+
+C++17 introduces the following rules:
+* for __braced-init_list copy initialization__ `auto` deduction will deduce a `std::initializer_list\<T\>` if all elements in the list have the same type, or be ill-formed.
+* for __braced-init_list direct initialization__ `auto` deduction will deduce a T if the list has a single element, or be ill-formed if there is more than one element. 
+
+**See also:** [cppreference::list_initialization](http://en.cppreference.com/w/cpp/language/list_initialization), [habrahabr::raced-init-list](https://habrahabr.ru/post/330402/), [ISOC++::deduction_rules](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n3922.html) 
+
+**Relatives:** [initialization_syntax](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#object-construction-initialization-syntax)
