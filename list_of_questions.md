@@ -1851,7 +1851,7 @@ For the given case, language instructions: 'widget w2=w1;', 'widget w2(w1);', 'w
   
 **See also:** [S. Meyers. Effective Modern C++, item 7](http://doc.imzlp.me/viewer.html?file=docs/effective/EffectiveModernCPP.pdf#page=67&zoom=auto,-15,290)
 
-**Relatives:** 
+**Relatives:** [auto::braced-init-list](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#deducing-types-auto-by-braced-init-list)
 
 
 # Exception. Rethrow vs. propagation.
@@ -2143,7 +2143,7 @@ Regarding code above what should be present in output?
 * _a4 = {123}_ - braced-init_list copy initialization
 
 C++17 introduces the following rules:
-* for __braced-init_list copy initialization__ `auto` deduction will deduce a `std::initializer_list\<T\>` if all elements in the list have the same type, or be ill-formed.
+* for __braced-init_list copy initialization__ `auto` deduction will deduce a `std::initializer_list<T>` if all elements in the list have the same type, or be ill-formed.
 * for __braced-init_list direct initialization__ `auto` deduction will deduce a T if the list has a single element, or be ill-formed if there is more than one element. 
 
 **See also:** [cppreference::list_initialization](http://en.cppreference.com/w/cpp/language/list_initialization), [habrahabr::raced-init-list](https://habrahabr.ru/post/330402/), [ISOC++::deduction_rules](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n3922.html) 
