@@ -2149,3 +2149,41 @@ C++17 introduces the following rules:
 **See also:** [cppreference::list_initialization](http://en.cppreference.com/w/cpp/language/list_initialization), [habrahabr::raced-init-list](https://habrahabr.ru/post/330402/), [ISOC++::deduction_rules](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n3922.html) 
 
 **Relatives:** [initialization_syntax](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#object-construction-initialization-syntax)
+
+# rvalue reference. 
+**complexity:** professional
+```cpp
+void foo(int& n)
+{
+   cout << "int&: " << n << endl;
+}
+
+void foo(int&& n)
+{
+   cout << "int&&: " << n << endl;
+}
+
+int main()
+{
+   int&& v = 0; // Line A
+   foo(v);
+}
+```
+Regarding code above what should be present in output?
+- A. int& 
+- B. int&&
+- C. compiler error: 'foo' ambigious call
+- D. compiler error: _// Line A_ 'v' reference cannot be initialized
+
+**Answer:** A
+
+The rule of thumb to remember is:
+* whatever has a name is a `lvalue` (const or not)
+* whatever has a no name is a `rvalue`
+* parameter types with `&&` bind to `rvalue`
+
+In the other words, a named object 'v' of '`rvalue`-refernce-to-int' type, cannot be bound with `rvalue`-reference parameter in 'foo'.
+
+**See also:** [S. Meyers, Effective Modern C++, chapter 5](http://doc.imzlp.me/viewer.html?file=docs/effective/EffectiveModernCPP.pdf#page=175&zoom=auto,-14,109)
+
+**Relatives:** 
