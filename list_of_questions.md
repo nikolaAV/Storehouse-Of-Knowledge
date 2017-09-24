@@ -178,7 +178,7 @@ Regarding code above what should be present in output?
 
 `Static type` of 'obj' is base* but its `dynamic type` is derived*. Missed argument in the point of call is substituted by the compiler in compile-time based on static type information. Function 'print' is virtual (polymorphic) i.e. a decision which of them shoul be called will be resolved at run-time based on dymamic type information.   
 
-**See also:** [S. Meyers. Effective C++, item 37](https://books.google.com.ua/books?id=U7lTySXdFk0C&pg=PT208&dq=Effective+C%2B%2B+Never+redefine+a+function’s+inherited+default+parameter+value&hl=en&sa=X&redir_esc=y#v=onepage&q&f=false)
+**See also:** [S. Meyers. Effective C++, item 37](https://books.google.com.ua/books?id=U7lTySXdFk0C&pg=PT208&dq=Effective+C%2B%2B+Never+redefine+a+functionâ€™s+inherited+default+parameter+value&hl=en&sa=X&redir_esc=y#v=onepage&q&f=false)
  
 # Object construction. Member initialization list.
 **complexity:** basic
@@ -568,7 +568,7 @@ Regarding code above what should be present in output?
 
 In C++ the lifetime of an object is said to begin when the constructor runs to completion. And it ends right when the destructor is called. If the ctor throws, then the dtor is not called. 
 
-**See also:** [Bjarne Stroustrup's FAQ](http://www.stroustrup.com/bs_faq2.html#ctor-exceptions), [Herb Sutter’s Mill](https://herbsutter.com/2008/07/25/constructor-exceptions-in-c-c-and-java/)
+**See also:** [Bjarne Stroustrup's FAQ](http://www.stroustrup.com/bs_faq2.html#ctor-exceptions), [Herb Sutterâ€™s Mill](https://herbsutter.com/2008/07/25/constructor-exceptions-in-c-c-and-java/)
 
 **Relatives:** [ctor::member](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#object-construction), [delegating ctor](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#object-construction-exception-in-delegating-constructor)
 
@@ -957,7 +957,7 @@ Regarding code above what should be present in output?
 
 **Answer:** B 
 
-Function 'display' parameter type (`string&`) and type (`const char*`) of the argument passed in it is mismatch.
+Function 'display' parameter type (`string&`) and type (`const char*`) of the argument passed in it are mismatch.
 This call can succeed only if the type mismatch can be eliminated, the compiler will be happy to eliminate it by creating a temporary object of type `string`.
 The 's' parameter of 'display' is then bound to this temporary `string` object.
 But binding a temporary object to reference is only possible if this reference itself is `const`.  
@@ -1000,7 +1000,7 @@ Regarding code above what should be present in output?
 for class 'base' each time someone called base::foo() with a new
 argument type. This would imply that __only the linker__ could make virtual function
 tables and assign table positions to functions. Consequently, a member template cannot
-be `virtual`. — Bjarne Stroustrup, [D&E Of C++, ch 15.9.3](http://doc.imzlp.me/viewer.html?file=docs/cpp/TheDesignAndEvolutionOfCpp.pdf)
+be `virtual`. â€” Bjarne Stroustrup, [D&E Of C++, ch 15.9.3](http://doc.imzlp.me/viewer.html?file=docs/cpp/TheDesignAndEvolutionOfCpp.pdf)
 
 **See also:** [StackOverflow](https://stackoverflow.com/questions/2354210/can-a-c-class-member-function-template-be-virtual) 
 
@@ -1320,16 +1320,16 @@ Regarding code above what should be present in output?
 
 **Answer:** A (but all others are also possible)
  
-> This particular optimization — eliminating a local temporary by using a function's return location (and possibly replacing that with an object at
-the function's call site) — is both well-known and __commonly__ implemented. It even has a name: _the return value
+> This particular optimization â€” eliminating a local temporary by using a function's return location (and possibly replacing that with an object at
+the function's call site) â€” is both well-known and __commonly__ implemented. It even has a name: _the return value
 optimization_. In fact, the existence of a name for this optimization may explain why it's so widely available
-— Scott Meyers, 1996
+â€” Scott Meyers, 1996
 
-But the RVO is an optimization. Compilers aren’t required to elide copy and move
-operations, even when they’re permitted to.
+But the RVO is an optimization. Compilers arenâ€™t required to elide copy and move
+operations, even when theyâ€™re permitted to.
 
 > You can trust me when I tell you that for this
-code, every decent C++ compiler will employ the RVO to avoid copying 'w' — Scott Meyers, 2014
+code, every decent C++ compiler will employ the RVO to avoid copying 'w' â€” Scott Meyers, 2014
  
 
 **See also:** [Copy elision](http://en.cppreference.com/w/cpp/language/copy_elision), [RVO](https://en.wikipedia.org/wiki/Return_value_optimization), [S. Meyers. More Effective C++, item 20](https://books.google.com.ua/books?id=U7lTySXdFk0C&pg=PT439&dq=Facilitate+the+return+value+optimization.+Meyers&hl=en&sa=X&redir_esc=y#v=onepage&q&f=false)
@@ -1428,7 +1428,7 @@ Regarding code above what should be present in output?
  
 Compilers may elide the copying (or moving) (see [RVO](https://en.wikipedia.org/wiki/Return_value_optimization)) of a _local_ object in a function that returns _by value_ 
 - if the type of the local object is the same as that returned by the function 
-- and the local object is what’s being returned
+- and the local object is whatâ€™s being returned
 
 Instruction `return std::move(w);` violates the second statement above, because of the returned value is not a local object, it's a _reference_ to 'w'. 
 
@@ -1618,7 +1618,7 @@ Regarding code above what should be present in output?
 
 The principal difference between function call resolving by its parameter and propagating an exception is that `catch` clauses are always
 tried __in the order of their appearance__. Hence, it is possible for an `exception` of a _derived_ class type to be handled
-by a `catch` clause for one of its _base_ class types — even when a `catch` clause for the _derived_ class is associated
+by a `catch` clause for one of its _base_ class types â€” even when a `catch` clause for the _derived_ class is associated
 with the same `try` block!
 
 **See also:** [S.Meyers, More Effective C++, Item 12](https://books.google.com.ua/books?id=U7lTySXdFk0C&pg=PT405&lpg=PT405&dq=meyers+The+final+difference+between+passing+a+parameter+and+propagating+an+exception+is+that+catch+clauses+are+always+tried+in+the+order+of+their+appearance&source=bl&ots=nP1Os6t2j8&sig=bth7WHdywXWa8yuFBuvs4rWstjA&hl=en&sa=X&ved=0ahUKEwjHo9u4v5zWAhVnwFQKHXlzBUQQ6AEIKjAB#v=onepage&q&f=false)
@@ -2086,7 +2086,7 @@ Regarding code above what should be present in output?
 * 'widget w2(1)' is a variable __definition__ for variable 'w2' of type 'widget', initialized with `1`
 * 'widget w1()' is a function __declaration__ named 'w1' that returns a 'widget'.
 
-**See also:** [wikipedia](https://en.wikipedia.org/wiki/Most_vexing_parse), [The Standard, §8.2](http://doc.imzlp.me/viewer.html?file=docs/standard/isocpp2014.pdf#page=199&zoom=page-actual,-52,792)  
+**See also:** [wikipedia](https://en.wikipedia.org/wiki/Most_vexing_parse), [The Standard, Â§8.2](http://doc.imzlp.me/viewer.html?file=docs/standard/isocpp2014.pdf#page=199&zoom=page-actual,-52,792)  
 
 **Relatives:** 
 
