@@ -2018,6 +2018,7 @@ Regarding code above what should be present in output?
 **Answer:** B
 
 'foo(T)' where T is `int` is __the best match__. 'foo(double)' requires the [standard conversion](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#function-overloading-promotion-vs-standard-conversion).
+You might think that 'foo(double)' is very close -- and it is -- but a nontemplate function is preferred only if it is an [__exact match__](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#function-template-spesialization-vs-overloading).
 
 **See also:** [H. Sutter, GotW#49](http://www.gotw.ca/gotw/049.htm)
 
@@ -2187,3 +2188,30 @@ In the other words, a named object 'v' of '`rvalue`-refernce-to-int' type, canno
 **See also:** [S. Meyers, Effective Modern C++, chapter 5](http://doc.imzlp.me/viewer.html?file=docs/effective/EffectiveModernCPP.pdf#page=175&zoom=auto,-14,109)
 
 **Relatives:** 
+
+# Function template. Overloading. Part 2
+**complexity:** basic
+```cpp
+template <typename T>
+void foo(T,T)       { cout << "foo<T>(a1,a2)" << endl; }
+
+template <typename T1, typename T2>
+void foo(T1,T2)     { cout << "foo<T1,T2>(a1,a2)" << endl; }
+
+int main()
+{
+   foo(1,2);   // Line A 
+}
+```
+Regarding code above what should be present in output?
+- A. foo\<T\>(a1,a2)
+- B. foo\<T1,T2\>(a1,a2)
+- C. compiler error: 'foo' _// Line A_ ambigious call
+
+**Answer:** A
+
+'foo\<T\>' is the closest overload. 'foo\<T1,T2\>' is more general.
+
+**See also:** [H. Sutter, GotW#49](http://www.gotw.ca/gotw/049.htm)
+
+**Relatives:** [template::overloading](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#function-template-overloading) 
