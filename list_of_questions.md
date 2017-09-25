@@ -711,7 +711,7 @@ Regarding code above what should be present in output?
 That means: `const` and/or `volatile` _expression_ are treated as non-`const` and non-`volatile`.
 In our case, type of _expression_ for 'x' is const int; type of _expression_ for 'y' is a __pointer to__ const int and this pointer is passed `by-value`.
 
-**See also:** [S. Meyers. Effective Modern C++, item 1.1](https://www.safaribooksonline.com/library/view/effective-modern-c/9781491908419/ch01.html)
+**See also:** [S. Meyers. Effective Modern C++, item 1.1](https://www.safaribooksonline.com/library/view/effective-modern-c/9781491908419/ch01.html), [auto and decltype Explained](http://thbecker.net/articles/auto_and_decltype/section_01.html)
 
 **Relatives:** [template_param::by_value](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#deducing-types-template-parameter)
 
@@ -739,7 +739,7 @@ Regarding code above what should be present in output?
 Type of 'x' is deduced `by-value` rule. The expression on the right side of `operator=` is pointer to const char (see [type decaying](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#c-array-as-function-parameter-decay-of-types)).
 Type of 'y' is deduced `by-reference` rule, i.e. it is the actual type of the array.
 
-**See also:** [S. Meyers. Effective Modern C++, item 2](https://www.safaribooksonline.com/library/view/effective-modern-c/9781491908419/ch01.html)
+**See also:** [S. Meyers. Effective Modern C++, item 2](https://www.safaribooksonline.com/library/view/effective-modern-c/9781491908419/ch01.html), [auto and decltype Explained](http://thbecker.net/articles/auto_and_decltype/section_01.html)
 
 **Relatives:** [C array vs pointer](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#c-array-as-function-parameter-decay-of-types), [deducing_type::by-value](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#deducing-types-auto-by-value)
 
@@ -2185,7 +2185,7 @@ The rule of thumb to remember is:
 
 In the other words, a named object 'v' of '`rvalue`-refernce-to-int' type, cannot be bound with `rvalue`-reference parameter in 'foo'.
 
-**See also:** [S. Meyers, Effective Modern C++, chapter 5](http://doc.imzlp.me/viewer.html?file=docs/effective/EffectiveModernCPP.pdf#page=175&zoom=auto,-14,109)
+**See also:** [S. Meyers, Effective Modern C++, chapter 5](http://doc.imzlp.me/viewer.html?file=docs/effective/EffectiveModernCPP.pdf#page=175&zoom=auto,-14,109), [Rvalue References Explained](http://thbecker.net/articles/rvalue_references/section_01.html)
 
 **Relatives:** 
 
