@@ -2252,7 +2252,7 @@ Regarding code above what should be present in output?
 **Answer:** D
 
 'foo(T)/bar(T)' and 'foo(T*)/bar(T*)' are base (or primary) function templates.
-Pair 'foo(T)' and 'foo(T*)'/'bar(T)' and 'bar(T*)' is two overloads of base (or primary) function template.
+Pair: 'foo(T)','foo(T*)' (and pair: 'bar(T)','bar(T*)') is two overloads of base (or primary) function template.
 * 'foo\<int\>' - explicit spezialization of foo(T)
 * 'bar\<int\>' - explicit spezialization of bar(T*)
 
