@@ -2260,6 +2260,6 @@ The overload resolution rules are pretty simple:
 * at the first step, [_name lookup_](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#function-overloading-deleted-function) considers only function base (or promary) templates
 * at the second step, depending on which base function template was selected "more specialized" is applicable.
 
-**See also:** [H. Sutter, Why Not Specialize Function Templates?](http://www.gotw.ca/publications/mill17.htm), [habrahabr](https://habrahabr.ru/post/237323/)
+**See also:** [H. Sutter, Why Not Specialize Function Templates?](http://www.gotw.ca/publications/mill17.htm), [habrahabr](https://habrahabr.ru/post/237323/), [CppCoreGuidlines::T144](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#t144-dont-specialize-function-templates)
 
 **Relatives:** [template::overloading & spesialization](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#function-template-spesialization-vs-overloading) 
