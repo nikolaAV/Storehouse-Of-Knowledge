@@ -2215,3 +2215,51 @@ Regarding code above what should be present in output?
 **See also:** [H. Sutter, GotW#49](http://www.gotw.ca/gotw/049.htm)
 
 **Relatives:** [template::overloading](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#function-template-overloading) 
+
+
+# Function template. Overloading vs. Specialization. Part 2
+**complexity:** expert
+```cpp
+template <typename T>   void foo(T)    { cout << "foo(T)" << endl; }
+template <>             void foo(int*) { cout << "foo(int*)" << endl; }
+template <typename T>   void foo(T*)   { cout << "foo(T*)" << endl; }
+
+template <typename T>   void bar(T)    { cout << "bar(T)" << endl; }
+template <typename T>   void bar(T*)   { cout << "bar(T*)" << endl; }
+template <>             void bar(int*) { cout << "bar(int*)" << endl; }
+
+int main()
+{
+   int v {0};
+   foo(&v);
+   bar(&v);
+}
+```
+Regarding code above what should be present in output?
+- A.
+    - foo(int*)
+    - bar(int*)
+- B.
+    - foo(T*)
+    - bar(T*)
+- C.
+    - foo(int*)
+    - bar(T*)
+- D.
+    - foo(T*)
+    - bar(int*)
+
+**Answer:** D
+
+'foo(T)/bar(T)' and 'foo(T*)/bar(T*)' are base (or primary) function templates.
+Pair 'foo(T)' and 'foo(T*)'/'bar(T)' and 'bar(T*)' is two overloads of base (or primary) function template.
+* 'foo\<int\>' - explicit spezialization of foo(T)
+* 'bar\<int\>' - explicit spezialization of bar(T*)
+
+The overload resolution rules are pretty simple:
+* at the first step, [_name lookup_](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#function-overloading-deleted-function) considers only function base (or promary) templates
+* at the second step, depending on which base function template was selected "more specialized" is applicable.
+
+**See also:** [H. Sutter, Why Not Specialize Function Templates?](http://www.gotw.ca/publications/mill17.htm), [habrahabr](https://habrahabr.ru/post/237323/)
+
+**Relatives:** [template::overloading & spesialization](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#function-template-spesialization-vs-overloading) 
