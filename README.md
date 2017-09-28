@@ -17,6 +17,12 @@ thinking and many dire predictions.
 * [News, Status & Discussion about Standard C++](https://isocpp.org/std/status), [ISO/IEC 14882:2014(E)](http://doc.imzlp.me/viewer.html?file=docs/standard/isocpp2014.pdf)
 * [clang](http://clang.llvm.org/cxx_status.html) and [gcc](https://gcc.gnu.org/projects/cxx-status.html)'s standards support pages.
 
+## Online compilers
+* [wandbox](https://wandbox.org/), Social Compilation Service that supports GCC and Clang compilers of the up-to-date version
+* [Visual C++](http://webcompiler.cloudapp.net/), compiler version: up-to-date
+* [tutorialspoint.com](https://www.tutorialspoint.com/compile_cpp_online.php), GCC of latest stable version
+* [C++ shell](http://cpp.sh/) is a simple frontend for a GCC 4.9.2. with Boost 1.55. Easily & Lightly
+
 ## Books
 * [S. Meyers. Effective C++ (2nd Edition) (Addison-Wesley, 1997)](https://books.google.com.ua/books?id=Qx5oyB49poYC&lpg=PP1&dq=Effective%20C%2B%2B&pg=PP1#v=onepage&q&f=false), [pdf](http://doc.imzlp.me/viewer.html?file=docs/effective/EffectiveCPP.pdf), available [in Russian](http://scanlibs.com/effektivnoe-ispolzovanie-cpp/)
 * [S. Meyers. More Effective C++ (Addison-Wesley, 1996)](https://books.google.com.ua/books?id=azvE8V0c-mYC&lpg=PP1&dq=Scott%20Meyers&pg=PP1#v=onepage&q&f=false), [pdf](http://doc.imzlp.me/viewer.html?file=docs/effective/MoreEffectiveCPP.pdf)
