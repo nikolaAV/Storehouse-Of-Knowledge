@@ -2263,3 +2263,43 @@ The overload resolution rules are pretty simple:
 **See also:** [H. Sutter, Why Not Specialize Function Templates?](http://www.gotw.ca/publications/mill17.htm), [habrahabr](https://habrahabr.ru/post/237323/), [CppCoreGuidlines::T144](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#t144-dont-specialize-function-templates)
 
 **Relatives:** [template::overloading & spesialization](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#function-template-spesialization-vs-overloading) 
+
+# Type conversion. User-defined
+**complexity:** basic
+```cpp
+struct widget 
+{
+   widget(int)        { cout << "widget(int)" << endl; }   
+};
+ 
+struct bar 
+{
+   bar(const widget&) { cout << "bar(widget)" << endl; }   
+};
+
+void foo(const bar&)  {}
+
+int main()
+{
+   bar b(123); // Line A
+   foo(123);   // Line B 
+}
+```
+Regarding code above what should be present in output?
+- A.
+    - widget(int)
+    - bar(widget)
+    - widget(int)
+    - bar(widget)
+- B.
+    - compiler error: _// Line A_ cannot convert argument 1 from 'int' to 'bar'
+- C.
+    - compiler error: _// Line B_ cannot convert argument 1 from 'int' to 'bar'
+
+**Answer:** C
+
+only one level of [user-defined](http://en.cppreference.com/w/cpp/language/converting_constructor) implicit conversion is legal
+
+**See also:** [The Standard, §12.3](http://doc.imzlp.me/viewer.html?file=docs/standard/isocpp2014.pdf#page=274&zoom=page-fit,-246,792)  
+
+**Relatives:** [implicit_conversion](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#type-conversion-implicitly-)
