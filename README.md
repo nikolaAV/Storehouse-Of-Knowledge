@@ -16,6 +16,8 @@ thinking and many dire predictions.
 * [Herb Satter's homepage](https://herbsutter.com/), Here, you can find well known "Guru of the Week (GotW)", a series of C++ programming problems created and written by Herb Sutter.
 * [News, Status & Discussion about Standard C++](https://isocpp.org/std/status), [ISO/IEC 14882:2014(E)](http://doc.imzlp.me/viewer.html?file=docs/standard/isocpp2014.pdf)
 * [clang](http://clang.llvm.org/cxx_status.html) and [gcc](https://gcc.gnu.org/projects/cxx-status.html)'s standards support pages.
+* [C++ Tutorial](http://www.tutorialspoint.com/cplusplus/) has been prepared for the beginners to help them understand the basic to advanced concepts related to C++.
+* [The C++ Standard Library Tutorial](https://www.tutorialspoint.com/cpp_standard_library/index.htm)
 
 ## Online compilers
 * [wandbox](https://wandbox.org/), Social Compilation Service that supports GCC and Clang compilers of the up-to-date version
