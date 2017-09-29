@@ -1,6 +1,6 @@
 # Storehouse-Of-Knowledge
 Useful links, books, posts about C++
-but first ... try to [examine yourself](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md)
+but first ... try to examine yourself. Click [here](https://www.tutorialspoint.com/cplusplus/cpp_questions_answers.htm) or [here](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md).
 
 > So far, C++ has escaped the fate of the Vasa([En](http://www.aristeia.com/TalkNotes/C++vstheVasa2-ups.pdf),[Ru](https://habrahabr.ru/company/infopulse/blog/227529/));  it has not
 keeled over and disappeared – despite much wishful
