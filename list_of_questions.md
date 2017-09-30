@@ -1847,9 +1847,9 @@ Regarding code above what should be present in output?
 
 **Answer:** A
 
-For the given case, language instructions: 'widget w2=w1;', 'widget w2(w1);', 'widget w2{w1};' and 'widget w2={w1};' are equivalent.
+For the given case, language instructions: 'widget w2=w1;', 'widget w2(w1);', 'widget w2{w1};' and 'widget w2={w1};' are equivalent that mean _'initialization'_: [_direct_](http://en.cppreference.com/w/cpp/language/direct_initialization) or [_copy_](http://en.cppreference.com/w/cpp/language/copy_initialization).
   
-**See also:** [S. Meyers. Effective Modern C++, item 7](http://doc.imzlp.me/viewer.html?file=docs/effective/EffectiveModernCPP.pdf#page=67&zoom=auto,-15,290)
+**See also:** [S. Meyers. Effective Modern C++, item 7](http://doc.imzlp.me/viewer.html?file=docs/effective/EffectiveModernCPP.pdf#page=67&zoom=auto,-15,290), [H.Sutter,GotW#1 ](https://herbsutter.com/2013/05/09/gotw-1-solution/)
 
 **Relatives:** [auto::braced-init-list](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#deducing-types-auto-by-braced-init-list)
 
@@ -2303,3 +2303,18 @@ only one level of [user-defined](http://en.cppreference.com/w/cpp/language/conve
 **See also:** [The Standard, §12.3](http://doc.imzlp.me/viewer.html?file=docs/standard/isocpp2014.pdf#page=274&zoom=page-fit,-246,792)  
 
 **Relatives:** [implicit_conversion](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#type-conversion-implicitly-)
+
+# Object construction. Initialization syntax. Part 2.
+**complexity:** professional
+```cpp
+```
+Regarding code above what should be present in output?
+- A.
+- B.
+- C.
+
+**Answer:** 
+
+**See also:** [H.Sutter,GotW#1](https://herbsutter.com/2013/05/09/gotw-1-solution/)  
+
+**Relatives:** [Initialization_syntax_1](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#object-construction-initialization-syntax), [auto_braced_init_list](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#deducing-types-auto-by-braced-init-list)
