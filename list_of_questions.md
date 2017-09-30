@@ -2307,13 +2307,38 @@ only one level of [user-defined](http://en.cppreference.com/w/cpp/language/conve
 # Object construction. Initialization syntax. Part 2.
 **complexity:** professional
 ```cpp
+struct widget
+{
+   widget()    { cout << "ctor(default)" << endl; }
+   widget(int) { cout << "ctor(int)" << endl; }
+   widget(std::initializer_list<int> v) 
+               { cout << "ctor(initializer_list)::size " << v.size() << endl; }
+};
+
+int main()
+{
+   widget w1{};
+   widget w2{123};
+}
 ```
 Regarding code above what should be present in output?
 - A.
+    - ctor(default)
+    - ctor(int)
 - B.
+    - ctor(default)
+    - ctor(initializer_list)::size 1
 - C.
+    - ctor(initializer_list)::size 0
+    - ctor(initializer_list)::size 1
+- D.
+    - ctor(initializer_list)::size 0
+    - ctor(int)
 
-**Answer:** 
+**Answer:** B
+
+* an __empty__ `{}` list means to call the default constructor if available.
+* syntax `{..x..}` creates `std::initializer_list`. If 'widget' has a constructor that takes an `std::initializer_list`, that constructor is preferred; otherwise, if 'widget' has a constructor that takes whatever `..x..`, that constructor is used.
 
 **See also:** [H.Sutter,GotW#1](https://herbsutter.com/2013/05/09/gotw-1-solution/)  
 
