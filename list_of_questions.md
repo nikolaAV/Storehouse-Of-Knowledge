@@ -2343,3 +2343,33 @@ Regarding code above what should be present in output?
 **See also:** [H.Sutter,GotW#1](https://herbsutter.com/2013/05/09/gotw-1-solution/)  
 
 **Relatives:** [Initialization_syntax_1](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#object-construction-initialization-syntax), [auto_braced_init_list](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#deducing-types-auto-by-braced-init-list)
+
+# Object construction. Initialization syntax. Part 3.
+**complexity:** basic
+```cpp
+struct widget 
+{
+   explicit widget(int)        { cout << "widget(int)" << endl; }   
+};
+ 
+int main()
+{
+   widget w1   {1};
+   widget w2 = {2};
+}
+```
+Regarding code above what should be present in output?
+- A.
+    - widget(int)
+    - widget(int)
+- B.
+    - compiler error: copy-list-initialization of 'widget' cannot use an explicit constructor
+
+**Answer:** B
+
+*  widget w{1}; - direct list-initialization
+*  widget w={1}; - copy list-initialization
+
+**See also:** [cppreference::converting_constructor](http://en.cppreference.com/w/cpp/language/converting_constructor)  
+
+**Relatives:** [syntax_1](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#object-construction-initialization-syntax), [syntax_2](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#object-construction-initialization-syntax-part-2), [implcit_type_convesion](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#type-conversion-implicitly-)
