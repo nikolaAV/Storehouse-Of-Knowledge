@@ -1671,7 +1671,7 @@ In our case, there is only an implicit conversion from `int` to 'integer1', beca
 
 **See also:** [S.Meyers, More Effective C++, Item 5](https://books.google.com.ua/books?id=azvE8V0c-mYC&pg=PT58&lpg=PT58&dq=meyers+Two+kinds+of+functions+allow+compilers+to+perform+such+conversions:+single-argument+constructors+and+implicit+type+conversion+operators.&source=bl&ots=48af28Jh4f&sig=q62LPrB7K8hn25HmoXD787vMt1U&hl=en&sa=X&ved=0ahUKEwj7taC7mZ_WAhXhyVQKHSfKD_MQ6AEIJzAA#v=onepage&q&f=false), [cppreference::explicit](http://en.cppreference.com/w/cpp/language/explicit) 
 
-**Relatives:** [const-ref to temporary](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#type-conversion-const-reference-to-the-temporary)
+**Relatives:** [const-ref to temporary](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#type-conversion-const-reference-to-the-temporary), [copy_list_initialization](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#object-construction-initialization-syntax-part-3)
 
 # Argument-dependent lookup 
 **complexity:** professional
