@@ -11,7 +11,7 @@ thinking and many dire predictions.
 
 ## Online resources
 * [C++ reference](http://en.cppreference.com/w/) provides programmers with a complete online reference for the C and C++ languages and standard libraries, i.e. a more convenient version of the C and C++ standards. Especially useful for finding examples and documentation of new library features.
-* [The C++ Core Guidelines](https://github.com/isocpp/CppCoreGuidelines) are a collaborative effort led by Bjarne Stroustrup & Herb Sutter. The aim of the guidelines is to help people to use modern C++ effectively.
+* [The C++ Core Guidelines](https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines.html) are a collaborative effort led by Bjarne Stroustrup & Herb Sutter. The aim of the guidelines is to help people to use modern C++ effectively. (The same is on [GitHub](https://github.com/isocpp/CppCoreGuidelines))
 * [Bjarne Stroustrup's homepage](http://stroustrup.com/), C++FAQ, style, techique, etc.
 * [Herb Satter's homepage](https://herbsutter.com/), Here, you can find well known "Guru of the Week (GotW)", a series of C++ programming problems created and written by Herb Sutter.
 * [News, Status & Discussion about Standard C++](https://isocpp.org/std/status), [ISO/IEC 14882:2014(E)-pdf](http://doc.imzlp.me/viewer.html?file=docs/standard/isocpp2014.pdf)
