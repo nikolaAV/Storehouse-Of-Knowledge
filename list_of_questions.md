@@ -1471,7 +1471,7 @@ For the given case, the '__promotion__' is better because of '__standatd convers
 
 **See also:** [cppreference::ranking](http://en.cppreference.com/w/cpp/language/overload_resolution), [accu.org::function selection](https://accu.org/index.php/journals/268), [D. Vandevoorde. C++ Templates, Appendix B](http://flylib.com/books/en/3.401.1.178/1/)  
  
-**Relatives:** 
+**Relatives:** [user-defined conversion](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#type-conversion-user-defined-vs-standard-conversion) 
 
 # Function overloading. Deleted function 
 **complexity:** expert
@@ -2390,7 +2390,8 @@ void display(bool b)
 int main()
 {
    display("hello, world!");
-}```
+}
+```
 Regarding code above what should be present in output?
 - A. [string]-> hello, world!
 - B. [bool]-> 1
