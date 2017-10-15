@@ -62,6 +62,7 @@ thinking and many dire predictions.
 
 ## Video trainings & courses
 * [CppCon YouTube Channel](https://www.youtube.com/user/CppCon/)
+* [C++ User Group YouTube Channel](https://www.youtube.com/channel/UCJ9v015sPgEi0jJXe_zanjA/playlists) in russian
 * [Learning C++. Best practices](http://scanlibs.com/learning-cpp-best-practices/) with  Jason Turner. This course is designed for users that already have a basic working knowledge of C++. Skill level: 'Intermediate' is required.
 * [Modern C++. Design Patterns](http://scanlibs.com/modern-c-design-patterns/) with Juilian Templeman. This course provides beginning to intermediate C++ developers with the knowledge required for up-to-date C++ programming. Exploring Design Patterns, Idioms, Functional Programming Techniques, and the Key Features of C++ 11 and C++ 14
 
