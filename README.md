@@ -19,11 +19,16 @@ thinking and many dire predictions.
 * [C++ Tutorial](http://www.tutorialspoint.com/cplusplus/) has been prepared for the beginners to help them understand the basic to advanced concepts related to C++.
 * [The C++ Standard Library Tutorial](https://www.tutorialspoint.com/cpp_standard_library/index.htm)
 
+## Popular Blogs
+* [Bartek's coding blog](http://www.bfilipek.com/p/start-here.html), C++ and native programming stories.
+* [Andrzej's C++ blog](https://akrzemi1.wordpress.com/), Guidelines and thoughts about C++
+
 ## Online compilers
 * [wandbox](https://wandbox.org/), Social Compilation Service that supports GCC and Clang compilers of the up-to-date version
 * [Visual C++](http://webcompiler.cloudapp.net/), compiler version: up-to-date
 * [tutorialspoint.com](https://www.tutorialspoint.com/compile_cpp_online.php), GCC of latest stable version
 * [C++ shell](http://cpp.sh/) is a simple frontend for a GCC 4.9.2. with Boost 1.55. Easily & Lightly
+* The following [list](https://arne-mertz.de/2017/05/online-compilers/) provides information about available online compilers and their most important features.
 
 ## Books
 * [S. Meyers. Effective C++ (2nd Edition) (Addison-Wesley, 1997)](https://books.google.com.ua/books?id=Qx5oyB49poYC&lpg=PP1&dq=Effective%20C%2B%2B&pg=PP1#v=onepage&q&f=false), [pdf](http://doc.imzlp.me/viewer.html?file=docs/effective/EffectiveCPP.pdf), available [in Russian](http://scanlibs.com/effektivnoe-ispolzovanie-cpp/)
