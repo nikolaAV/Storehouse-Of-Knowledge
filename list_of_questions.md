@@ -2373,3 +2373,37 @@ Regarding code above what should be present in output?
 **See also:** [cppreference::converting_constructor](http://en.cppreference.com/w/cpp/language/converting_constructor)  
 
 **Relatives:** [syntax_1](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#object-construction-initialization-syntax), [syntax_2](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#object-construction-initialization-syntax-part-2), [implcit_type_convesion](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#type-conversion-implicitly-)
+
+# Type conversion. User-defined vs. standard conversion
+**complexity:** professional
+```cpp
+void display(const string& s)
+{
+   cout << "[string]-> " << s << endl;    
+}
+
+void display(bool b)
+{
+   cout << "[bool]-> " << b << endl;    
+}
+
+int main()
+{
+   display("hello, world!");
+}```
+Regarding code above what should be present in output?
+- A. [string]-> hello, world!
+- B. [bool]-> 1
+- C. compiler error: 'display' ambiguous call to overloaded function
+- D. compiler error: 'display' cannot convert argument from 'const char*' to ...
+
+**Answer:** B
+
+- conversion from `const char*` to `bool` is a [__boolean conversion__](http://en.cppreference.com/w/cpp/language/implicit_conversion) which is a sub-type of [__standard conversion__](http://en.cppreference.com/w/cpp/language/overload_resolution)
+- conversion from `const char*` to `std::string` is a __user-defined conversion__ by means [converting constructor](http://en.cppreference.com/w/cpp/language/converting_constructor)  
+
+During overload function resolution, 'display(bool)' is preferable, because the rank of __standard conversion__ is always _better_ than the rank of __user-defined conversion__.
+
+**See also:** [Ranking of implicit conversion sequences](http://en.cppreference.com/w/cpp/language/overload_resolution), [Boolean conversions](http://en.cppreference.com/w/cpp/language/implicit_conversion)
+
+**Relatives:** [user_defined_conversion](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#type-conversion-const-reference-to-the-temporary), [promotion](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#function-overloading-promotion-vs-standard-conversion), [user_defined_conversion2](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#type-conversion-user-defined)
