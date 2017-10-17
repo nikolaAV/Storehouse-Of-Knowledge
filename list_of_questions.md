@@ -2444,7 +2444,7 @@ Yet  specification  of  a  default `[=]` by-value  capture mode can lend the imp
 
 **See also:** [S. Meyers. Effective Modern C++. Item 31](http://doc.imzlp.me/viewer.html?file=docs/effective/EffectiveModernCPP.pdf#page=240&zoom=auto,-128,58)
 
-**Relatives:** 
+**Relatives:** [Lambda capture of data-members](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#lambda-capture-of-data-members)
 
 # Lambda capture of data-members
 **complexity:** professional
@@ -2482,7 +2482,7 @@ Regarding code above what should be present in output?
 
 Captures  apply  only  to  non-`static`  local  variables  (including  parameters)  visible  inthe scope where the lambda is created.
 'x_' is a data member of the 'widget' class. It can't be captured and therefore it does not matter which capture mode is set.
-Every non-`static` member function ('foo') has a `this` pointer an it uses it every time if access to data member is needed.
+Every non-`static` member function ('foo') has a `this` pointer an it uses it every time if an access to data member is needed.
 Compilers internally replace uses of 'x_' with `this`->'x_'. 
 
 **See also:** [S. Meyers. Effective Modern C++. Item 31](http://doc.imzlp.me/viewer.html?file=docs/effective/EffectiveModernCPP.pdf#page=238&zoom=auto,-128,583), [Lambda capture of *this](http://www.bfilipek.com/2017/01/cpp17features.html#lambda-capture-of-this)
