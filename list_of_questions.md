@@ -2408,3 +2408,40 @@ During overload function resolution, 'display(bool)' is preferable, because the 
 **See also:** [Ranking of implicit conversion sequences](http://en.cppreference.com/w/cpp/language/overload_resolution), [Boolean conversions](http://en.cppreference.com/w/cpp/language/implicit_conversion)
 
 **Relatives:** [user_defined_conversion](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#type-conversion-const-reference-to-the-temporary), [promotion](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#function-overloading-promotion-vs-standard-conversion), [user_defined_conversion2](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#type-conversion-user-defined)
+
+# Lambda capture of globals
+**complexity:** professional
+```cpp
+size_t global_value {0};
+
+int main()
+{
+   size_t   local_value = 0;
+   auto     total_value = [=]() { return global_value + local_value; };
+
+   cout << total_value() << endl;
+   global_value = local_value = 1;
+   cout << total_value() << endl;
+}
+```
+Regarding code above what should be present in output?
+- A. 
+    - 0
+    - 0
+- B. 
+    - 0
+    - 1
+- C. 
+    - 0
+    - 2
+
+**Answer:** B
+
+Captures  apply  only  to  non-`static`  local  variables  (including  parameters)  visible  inthe scope where the lambda is created.
+'global_value' is defined in the global scope i.e. it has _static  storage  duration_.
+'global_value' can be used inside lambdas __by-reference__, it can't be captured.
+Yet  specification  of  a  default `[=]` by-value  capture mode can lend the impression that they are. 
+
+**See also:** [S. Meyers. Effective Modern C++. Item 31](http://doc.imzlp.me/viewer.html?file=docs/effective/EffectiveModernCPP.pdf#page=240&zoom=auto,-128,58)
+
+**Relatives:** 
