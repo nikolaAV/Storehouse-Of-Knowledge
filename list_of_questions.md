@@ -2022,7 +2022,7 @@ You might think that 'foo(double)' is very close -- and it is -- but a nontempla
 
 **See also:** [H. Sutter, GotW#49](http://www.gotw.ca/gotw/049.htm)
 
-**Relatives:** [standard_conversion](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#function-overloading-promotion-vs-standard-conversion) 
+**Relatives:** [standard_conversion](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#function-overloading-promotion-vs-standard-conversion), [constructor_template](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#special-member-function-generation-constructor-template) 
 
 # Function template. Spesialization vs. Overloading. 
 **complexity:** basic
