@@ -2568,7 +2568,7 @@ However, it is rather common to overload a function on both kinds of references.
 
 **See also:** [D. Vandevoorde. C++ Templates, Appendix B.2.2 Refining the Perfect Match](http://flylib.com/books/en/3.401.1.178/1/)
 
-**Relatives:** [function_overloading_phases](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#function-overloading-deleted-function), [exact_match](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#function-overloading-parameter-type-integer-vs-pointer)
+**Relatives:** [constructor_template_part2](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#special-member-function-generation-constructor-template-part-2), [function_overloading_phases](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#function-overloading-deleted-function), [exact_match](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#function-overloading-parameter-type-integer-vs-pointer)
 
 # Special member function generation. Constructor template. Part 2
 **complexity:** expert
