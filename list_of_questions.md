@@ -2531,7 +2531,7 @@ Non-templates 'widget(`const` widget&)' are preferred to template specialization
 
 **See also:** [S. Meyers. Effective Modern C++. Item 17](http://doc.imzlp.me/viewer.html?file=docs/effective/EffectiveModernCPP.pdf#page=133&zoom=auto,-123,586), [wiki::special_mem_functions](https://en.wikipedia.org/wiki/Special_member_functions), [cppreference::the_rule_of...](http://en.cppreference.com/w/cpp/language/rule_of_three) 
 
-**Relatives:** [best match & function template](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#function-template-overloading), [best match & template_specialization](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#function-template-spesialization-vs-overloading)
+**Relatives:** [constructor_template_part2](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#special-member-function-generation-constructor-template-part-2), [best match & function template](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#function-template-overloading), [best match & template_specialization](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#function-template-spesialization-vs-overloading)
 
 # Function overloading. The exact match for lvalue & rvalue.
 **complexity:** professional
@@ -2568,7 +2568,7 @@ However, it is rather common to overload a function on both kinds of references.
 
 **See also:** [D. Vandevoorde. C++ Templates, Appendix B.2.2 Refining the Perfect Match](http://flylib.com/books/en/3.401.1.178/1/)
 
-**Relatives:** [constructor_template_part2](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#special-member-function-generation-constructor-template-part-2), [function_overloading_phases](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#function-overloading-deleted-function), [exact_match](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#function-overloading-parameter-type-integer-vs-pointer)
+**Relatives:** [function_overloading_phases](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#function-overloading-deleted-function), [exact_match](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#function-overloading-parameter-type-integer-vs-pointer)
 
 # Special member function generation. Constructor template. Part 2
 **complexity:** expert
