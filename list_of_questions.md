@@ -2532,3 +2532,40 @@ Non-templates 'widget(const widget&)' are preferred to template specializations 
 **See also:** [S. Meyers. Effective Modern C++. Item 17](http://doc.imzlp.me/viewer.html?file=docs/effective/EffectiveModernCPP.pdf#page=133&zoom=auto,-123,586), [wiki::special_mem_functions](https://en.wikipedia.org/wiki/Special_member_functions), [cppreference::the_rule_of...](http://en.cppreference.com/w/cpp/language/rule_of_three) 
 
 **Relatives:** [best match & function template](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#function-template-overloading), [best match & template_specialization](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#function-template-spesialization-vs-overloading)
+
+# Function overloading. The exact match for lvalue & rvalue.
+**complexity:** professional
+```cpp
+void foo(int&)       { cout << "int&" << endl; }
+void foo(const int&) { cout << "const int&" << endl; }
+
+int main()
+{
+   auto v{42};
+
+   foo(v);
+   foo(42);
+} 
+```
+Regarding code above what should be present in output?
+- A. 
+    - int&
+    - const int&
+- B. 
+    - const int&
+    - const int&
+- C. 
+    - int&
+    - int&
+- D. 
+    - int&
+
+
+**Answer:** A
+
+For an argument of type `int` there are three parameter types that constitute __the exact match__: `int`, `int&`, `const int&`.
+However, it is rather common to overload a function on both kinds of references. In such cases the version without extra `const` is preferred for `lvalue`, whereas the version with `const` is preferred for `rvalue`.
+
+**See also:** [D. Vandevoorde. C++ Templates, Appendix B.2.2 Refining the Perfect Match](http://flylib.com/books/en/3.401.1.178/1/)
+
+**Relatives:** [function_overloading_phases](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#function-overloading-deleted-function), [exact_match](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#function-overloading-parameter-type-integer-vs-pointer)
