@@ -2558,7 +2558,7 @@ Regarding code above what should be present in output?
     - int&
     - int&
 - D. 
-    - int&
+    - compiler error: ambiguous call to overloaded function
 
 
 **Answer:** A
@@ -2569,3 +2569,50 @@ However, it is rather common to overload a function on both kinds of references.
 **See also:** [D. Vandevoorde. C++ Templates, Appendix B.2.2 Refining the Perfect Match](http://flylib.com/books/en/3.401.1.178/1/)
 
 **Relatives:** [function_overloading_phases](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#function-overloading-deleted-function), [exact_match](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#function-overloading-parameter-type-integer-vs-pointer)
+
+# Special member function generation. Constructor template. Part 2
+**complexity:** expert
+```cpp
+struct widget
+{
+   static size_t instance_count;
+
+   widget()                { ++instance_count; }
+   template <typename T>
+   widget(T&)              { ++instance_count; }
+};
+
+size_t widget::instance_count = 0;
+
+int main()
+{
+   widget w1;
+   cout << w1.instance_count << endl;
+   widget w2 {w1};
+   cout << w2.instance_count << endl;
+}
+```
+Regarding code above what should be present in output?
+- A. 
+    - 0
+    - 1
+- B. 
+    - 1
+    - 2
+- C. 
+    - 1
+    - 1
+
+**Answer:** B
+
+Member function templates __never__ suppress generation of special member function.
+Thus, there are two candidates to be invoked
+* imlicitly generated _copy constructor_ 'widget(`const` widget&)'
+* template instantiation 'widget\<widget\>(widget&)' 
+
+C++ rules for call resolution of overloaded functions say to apply a function with the best match.
+Calling _the copy constructor_ would require adding `const` to 'w1' to match the copy constructor's parameter's type, but calling _the instantiated template_ requires no such addition, i.e. the second candidate is a better-matching function.
+
+**See also:** [S. Meyers. Effective Modern C++. Item 26](http://doc.imzlp.me/viewer.html?file=docs/effective/EffectiveModernCPP.pdf#page=199&zoom=auto,-17,321) 
+
+**Relatives:** [constructor_template_part1](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#special-member-function-generation-constructor-template), [exact_match_for_r-lvalue](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#function-overloading-the-exact-match-for-lvalue--rvalue)
