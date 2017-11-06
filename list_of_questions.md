@@ -2533,7 +2533,7 @@ Non-templates 'widget(`const` widget&)' are preferred to template specialization
 
 **Relatives:** [constructor_template_part2](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#special-member-function-generation-constructor-template-part-2), [best match & function template](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#function-template-overloading), [best match & template_specialization](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#function-template-spesialization-vs-overloading)
 
-# Function overloading. The exact match for lvalue & rvalue.
+# Function overloading. Perfect match for lvalue & rvalue.
 **complexity:** professional
 ```cpp
 void foo(int&)       { cout << "int&" << endl; }
@@ -2563,7 +2563,7 @@ Regarding code above what should be present in output?
 
 **Answer:** A
 
-For an argument of type `int` there are three parameter types that constitute __the exact match__: `int`, `int&`, `const int&`.
+For an argument of type `int` there are three parameter types that constitute __perfect match__: `int`, `int&`, `const int&`.
 However, it is rather common to overload a function on both kinds of references. In such cases the version without extra `const` is preferred for `lvalue`, whereas the version with `const` is preferred for `rvalue`.
 
 **See also:** [D. Vandevoorde. C++ Templates, Appendix B.2.2 Refining the Perfect Match](http://flylib.com/books/en/3.401.1.178/1/)
