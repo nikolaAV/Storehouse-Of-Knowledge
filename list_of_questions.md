@@ -1911,7 +1911,7 @@ Regarding code above what should be present in output?
 The only difference (see _// Line A_) between `throw;` and `throw e;` is that 
 the first one rethrows the current exception, while the second one throws a new copy of the current exception.  
   
-**See also:** [S. Meyers. Move Effective C++, item 12](http://doc.imzlp.me/viewer.html?file=docs/effective/MoreEffectiveCPP.pdf#page=80&zoom=auto,-54,344)
+**See also:** [S. Meyers. More Effective C++, item 12](http://doc.imzlp.me/viewer.html?file=docs/effective/MoreEffectiveCPP.pdf#page=80&zoom=auto,-54,344)
 
 **Relatives:** [catch-by-value](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#exception-catch-by-value)
 
