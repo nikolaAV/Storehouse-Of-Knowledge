@@ -2616,3 +2616,40 @@ Calling _the copy constructor_ would require adding `const` to 'w1' to match the
 **See also:** [S. Meyers. Effective Modern C++. Item 26](http://doc.imzlp.me/viewer.html?file=docs/effective/EffectiveModernCPP.pdf#page=199&zoom=auto,-17,321) 
 
 **Relatives:** [constructor_template_part1](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#special-member-function-generation-constructor-template), [perfect_match_for_r-lvalue](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#function-overloading-perfect-match-for-lvalue--rvalue)
+
+# std::move(const)
+**complexity:** basic
+```cpp
+struct widget
+{
+   widget() = default;
+   widget(const widget&)   { cout << "const widget&"  << endl; }
+   widget(widget&&)        { cout << "widget&&"       << endl; }
+};
+
+void foo(widget)
+{
+   // ...
+}
+
+int main()
+{
+   const auto w = widget{};  
+   foo(std::move(w));
+}
+```
+Regarding code above what should be present in output?
+- A. const widget&
+- B. widget&&
+- C. compiler error: const object cannot be movable
+
+**Answer:** A
+
+__std::move__ unconditionally casts its argument to an `rvalue` i.e. in our case 'w' of type: `const` widget is transformed into an `rvalue` `const` widget.
+That `rvalue` cannnot be passed to 'widget''s _move constructor_ because it takes an `rvalue` reference to _non_-`const`.
+Such behavior is essential to maintaining `const`-correctness. Moving a value out of an object generally modifies the object, so the language should not permit `const` objects to be passed to functions
+(such as move constructors) that could modify them. The `rvalue` reference to `const` is copyed by means _the copy constructor_.    
+
+**See also:** [S. Meyers. Effective Modern C++. Item 23](https://edisciplinas.usp.br/pluginfile.php/1995323/mod_resource/content/1/Effective%20Modern%20C%2B%2B%202014.pdf)
+
+**Relatives:** [std::move::RVO](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#stdmovervo)
