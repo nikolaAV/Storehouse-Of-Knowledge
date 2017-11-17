@@ -811,19 +811,20 @@ Statement _w.~widget()_ is legal code, dcor likes a normal member-function. But 
 **Relatives:** 
 
 # Object lifetime. const-reference to the temporary. 
-**complexity:** professional
+**complexity:** expert
 ```cpp
 string foo() { return "abc"; }
 
 int main()
 {
-   const string& s = foo();   // line A
-   cout << s << endl;
+   const string& s = foo();   // line B
+   cout << s << endl;         // line C
 }
 ```
 Regarding code above what should be present in output? 
 - A. abc
-- B. compiler error: [line A] reference cannot be bound to an lvalue
+- B. compiler error: [line B] reference cannot be bound to an lvalue
+- C. run-time error: [line C] memory violation
 
 **Answer:**  A
 
@@ -2653,3 +2654,36 @@ Such behavior is essential to maintaining `const`-correctness. Moving a value ou
 **See also:** [S. Meyers. Effective Modern C++. Item 23](https://edisciplinas.usp.br/pluginfile.php/1995323/mod_resource/content/1/Effective%20Modern%20C%2B%2B%202014.pdf)
 
 **Relatives:** [std::move::RVO](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#stdmovervo)
+
+# Object lifetime. const-reference to the temporary. part 2. 
+**complexity:** expert
+```cpp
+class widget
+{
+   string   name_ = {"abc"}; 
+public:
+   const string& name()       const { return name_; }
+   const string& operator*()  const { return name(); }
+};
+
+widget foo()   { return widget{}; }
+
+int main()
+{
+   const auto& s = *foo(); // line B
+   cout << s << endl;      // line C
+}
+```
+Regarding code above what should be present in output? 
+- A. abc
+- B. compiler error: [line B] reference cannot be bound to an lvalue
+- C. run-time error: [line C] memory violation
+
+**Answer:** C
+
+In _the line B_, 'foo' returns a temporary widget, then unary * returns a `const` reference to the member of the temporary widget, which is just destroyed right after foo() goes out.
+[The lengthening of widget lifetime](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#object-lifetime-const-reference-to-the-temporary) does not work because `const` reference 's' referenses to __non__-widget object.   
+ 
+**See also:** [H.Sutter, Lifetimes I and II, page 33](https://github.com/isocpp/CppCoreGuidelines/tree/master/docs), [stackoverflow::Dereferencing a temporary unique_ptr](https://stackoverflow.com/questions/30858850/dereferencing-a-temporary-unique-ptr)
+
+**Relatives:** [part_1](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#object-lifetime-const-reference-to-the-temporary)
