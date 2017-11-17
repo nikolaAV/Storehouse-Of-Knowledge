@@ -833,7 +833,7 @@ In the example above, the temporary returned by 'foo()' lives until the closing 
 
 **See also:** [H. Sutter. GotW #88](https://herbsutter.com/2008/01/01/gotw-88-a-candidate-for-the-most-important-const/)
 
-**Relatives:** 
+**Relatives:** [part_2](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#object-lifetime-const-reference-to-the-temporary-part-2) 
 
 # Object lifetime. const-reference to the base. 
 **complexity:** expert
