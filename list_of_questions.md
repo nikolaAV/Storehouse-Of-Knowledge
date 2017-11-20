@@ -2658,20 +2658,20 @@ Such behavior is essential to maintaining `const`-correctness. Moving a value ou
 # Object lifetime. const-reference to the temporary. part 2. 
 **complexity:** expert
 ```cpp
-class widget
+class proxy
 {
-   string   name_ = {"abc"}; 
+   string s_;
 public:
-   const string& name()       const { return name_; }
-   const string& operator*()  const { return name(); }
+   proxy(const char* s):s_(s) {}   
+   operator const string&() const { return s_; }
 };
 
-widget foo()   { return widget{}; }
+proxy foo() { return "abc"; }
 
 int main()
 {
-   const auto& s = *foo(); // line B
-   cout << s << endl;      // line C
+   const string& s = foo(); // line B
+   cout << s << endl;       // line C
 }
 ```
 Regarding code above what should be present in output? 
@@ -2681,8 +2681,8 @@ Regarding code above what should be present in output?
 
 **Answer:** C
 
-In _the line B_, 'foo' returns a temporary widget, then unary * returns a `const` reference to the member of the temporary widget, which is just destroyed right after foo() goes out.
-[The lengthening of widget lifetime](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#object-lifetime-const-reference-to-the-temporary) does not work because `const` reference 's' referenses to __non__-widget object.   
+In _the line B_, 'foo' returns a __temporary__ object of 'proxy' type, then user-defined conversion function returns a `const` reference to the member (`std::string`) of the temporary proxy, which is just destroyed right after foo() goes out.
+[The lengthening of the proxy object lifetime](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#object-lifetime-const-reference-to-the-temporary) does not work here because `const` reference 's' referenses to __non__-proxy object.   
  
 **See also:** [H.Sutter, Lifetimes I and II, page 33](https://github.com/isocpp/CppCoreGuidelines/tree/master/docs), [stackoverflow::Dereferencing a temporary unique_ptr](https://stackoverflow.com/questions/30858850/dereferencing-a-temporary-unique-ptr)
 
