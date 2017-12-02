@@ -831,7 +831,7 @@ Regarding code above what should be present in output?
 Function 'foo()' returns a temporary object of `string` type. Normally, a temporary object lasts only until the end of the full expression in which it appears. However, C++ deliberately specifies that binding a temporary object to a reference to const on the stack lengthens the lifetime of the temporary to the lifetime of the reference itself, and thus avoids what would otherwise be a common dangling-reference error.
 In the example above, the temporary returned by 'foo()' lives until the closing curly brace of `main`.
 
-**See also:** [H. Sutter. GotW #88](https://herbsutter.com/2008/01/01/gotw-88-a-candidate-for-the-most-important-const/)
+**See also:** [H. Sutter. GotW #88](https://herbsutter.com/2008/01/01/gotw-88-a-candidate-for-the-most-important-const/), [Lifetime of a temporary](http://en.cppreference.com/w/cpp/language/reference_initialization#Lifetime_of_a_temporary)
 
 **Relatives:** [part_2](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#object-lifetime-const-reference-to-the-temporary-part-2) 
 
