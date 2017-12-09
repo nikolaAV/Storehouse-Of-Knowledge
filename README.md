@@ -24,6 +24,7 @@ thinking and many dire predictions.
 * [Bartek's coding blog](http://www.bfilipek.com/p/start-here.html), C++ and native programming stories.
 * [Andrzej's C++ blog](https://akrzemi1.wordpress.com/), Guidelines and thoughts about C++
 * [scrutator.me](http://scrutator.me/) by Evgeniy Shcherbina
+* [Simon Brand's blog](https://blog.tartanllama.xyz/), template metaprogramming and the dark corners of C++ 
 
 ## Online compilers
 * [wandbox](https://wandbox.org/), Social Compilation Service that supports GCC and Clang compilers of the up-to-date version
