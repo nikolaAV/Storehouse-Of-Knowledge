@@ -2687,3 +2687,32 @@ In _the line B_, 'foo' returns a __temporary__ object of 'proxy' type, then user
 **See also:** [H.Sutter, Lifetimes I and II, page 33](https://github.com/isocpp/CppCoreGuidelines/tree/master/docs), [stackoverflow::Dereferencing a temporary unique_ptr](https://stackoverflow.com/questions/30858850/dereferencing-a-temporary-unique-ptr)
 
 **Relatives:** [part_1](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#object-lifetime-const-reference-to-the-temporary)
+
+# string_view. 
+**complexity:** basic
+```cpp
+string_view s1("Hello, World!");
+string_view s2("Hello, World!"s);
+
+int main()
+{
+   cout << s1 << endl; // Line S1
+   cout << s2 << endl; // Line S2
+}
+```
+Regarding code above what should be present in output? 
+- A. abc
+    - Hello, World!
+    - Hello, World!
+- B. run-time error: [line S1] memory violation
+- C. run-time error: [line S2] memory violation 
+
+**Answer:** C
+
+`string_view` describes an object that can refer to a constant contiguous sequence of char-like objects with the first element of the sequence at position zero.
+- 's1' points to a static array (a string literal)
+- 's2' holds a dangling pointer to  a temporary object of `std::string` type which has already been destroyed. 
+
+**See also:** [cppreference.com](http://en.cppreference.com/w/cpp/string/basic_string_view) 
+
+**Relatives:** 
