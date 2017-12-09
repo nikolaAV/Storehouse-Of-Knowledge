@@ -18,6 +18,7 @@ thinking and many dire predictions.
 * [clang](http://clang.llvm.org/cxx_status.html) and [gcc](https://gcc.gnu.org/projects/cxx-status.html)'s standards support pages.
 * [C++ Tutorial](http://www.tutorialspoint.com/cplusplus/) has been prepared for the beginners to help them understand the basic to advanced concepts related to C++.
 * [The C++ Standard Library Tutorial](https://www.tutorialspoint.com/cpp_standard_library/index.htm)
+* [More C++ Idioms](https://en.wikibooks.org/wiki/More_C%2B%2B_Idioms) is aimed toward anyone with an intermediate level of knowledge in C++ and supported language paradigms
 
 ## Popular Blogs
 * [Bartek's coding blog](http://www.bfilipek.com/p/start-here.html), C++ and native programming stories.
