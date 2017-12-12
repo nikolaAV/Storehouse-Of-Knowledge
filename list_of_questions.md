@@ -2716,3 +2716,35 @@ Regarding code above what should be present in output?
 **See also:** [cppreference.com](http://en.cppreference.com/w/cpp/string/basic_string_view) 
 
 **Relatives:** 
+
+# Reference initialization. 
+**complexity:** basic
+```cpp
+short       v {0};
+const int&  r {v};
+
+int main()
+{
+   cout << r << endl;
+   ++v;
+   cout << r << endl;
+}
+```
+Regarding code above what should be present in output? 
+- A. 
+    - 0
+    - 1
+- B. 
+    - 0
+    - 0
+- C. compile-time error: 'r' cannot be initialized: different types.  
+
+**Answer:** B
+
+A reference has to be initialized with an `lvalue`, basically this means that its initializer must have an address as well as value.
+In case when the type of the initializer is different from the type of the `const` reference it initializes, the compiler is willing to create a __temporary__ of the requested type.
+The Standard guarantees that the temporary will exist as long as the reference it initializes.
+
+**See also:** [reference_initialization](http://en.cppreference.com/w/cpp/language/reference_initialization) 
+
+**Relatives:** [const_reference_to_temporary](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#object-lifetime-const-reference-to-the-temporary)
