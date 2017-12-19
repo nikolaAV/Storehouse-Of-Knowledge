@@ -1702,7 +1702,7 @@ Regarding code above what should be present in output?
 
 The first phase of [the function call process](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#function-overloading-deleted-function) _name lookup_ just means that, whenever you write a call like 'foo(parm)', the compiler has to figure out which function named 'foo' you want. ADL (aka. [Koenig lookup](https://en.wikipedia.org/wiki/Argument-dependent_name_lookup)) says that, if you supply a function argument of class type (here parm, of type 'A::widget'), then to find the function name the compiler is required to look, not just in the usual places like the global scope, but also in the namespace (here A) that contains the argument's type.
 
-**Relatives:** [Overload Resolution](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#function-overloading-deleted-function) 
+**Relatives:** [Overload Resolution](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#function-overloading-deleted-function), [ADL & operaror function](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#argument-dependent-lookup-operator-function) 
 
 # Function overriding. Non-virtual interface.
 **complexity:** basic
