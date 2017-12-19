@@ -2792,3 +2792,63 @@ In case if a pointer is faceless (`void*`), the compiler does not know about obj
 **See also:** [cppref::pointer_conversions](http://en.cppreference.com/w/cpp/language/implicit_conversion#Pointer_conversions), [cppref::pointer_comparison](http://en.cppreference.com/w/cpp/language/operator_comparison#Pointer_comparison_operators)  
 
 **Relatives:** 
+
+# Argument-dependent lookup. Operator function.  
+**complexity:** professional
+```cpp
+struct widget
+{
+   widget& operator+=(double);   
+   void foo();
+};
+
+widget& widget::operator+=(double) 
+{
+   cout << "double" << endl; 
+   return *this; 
+}   
+
+widget& operator+=(widget& w, int) 
+{ 
+   cout << "int" << endl; 
+   return w;
+}   
+
+void widget::foo()
+{
+   *this+=1;            // Line A
+   this->operator+=(2); // Line B
+};
+
+int main()
+{
+   widget{}.foo();
+}
+```
+Regarding code above what should be present in output? 
+- A 
+    - double
+    - double 
+- B  
+    - int
+    - int 
+- C 
+    - double
+    - int 
+- D 
+    - int
+    - double 
+ 
+**Answer:** D  
+
+There are two [oveloaded operator](http://en.cppreference.com/w/cpp/language/operators) functions:  
+- member function `operator+=`(`double`)
+- non-member function `operator+=`(widget&,`int`)
+
+Using the infix notation (_Line A_) of the function call causes the compiler to search in the scope indicated by the left operand (`class` widget) for a member `operator+=` and to search for a non-member `operator+=` in the scope where `class` widget is defined.  
+Accepting two candidates, it chooses the second one because of the best match. 
+The use of the function call syntax (_Line B_) follows the standard lookup sequence in searching for the function name. In this case, the compiler will first look in the `class` widget. Once it finds the name, it won't continue looking in outer scopes.
+
+**See also:** [cppref::adl](http://en.cppreference.com/w/cpp/language/adl)  
+
+**Relatives:** [ADL&namespace](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#argument-dependent-lookup), [name lookup](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#function-overloading-access-control)
