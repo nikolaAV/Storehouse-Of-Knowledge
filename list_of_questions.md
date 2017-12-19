@@ -2748,3 +2748,47 @@ The Standard guarantees that the temporary will exist as long as the reference i
 **See also:** [reference_initialization](http://en.cppreference.com/w/cpp/language/reference_initialization) 
 
 **Relatives:** [const_reference_to_temporary](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#object-lifetime-const-reference-to-the-temporary)
+
+# Pointer arithmetic. Polymorphic types. 
+**complexity:** professional
+```cpp
+struct base1 { int x; };
+struct base2 { int y; };
+
+struct derived : base1, base2
+{
+};
+
+const auto is_address_equal = [](const void* p1, const void* p2) 
+{
+   return p1==p2; 
+};
+
+int main()
+{
+   derived d;
+   const derived* pd  = &d;
+   const base2*   pb2 = &d;
+
+   cout  << boolalpha 
+         << is_address_equal(pd,pb2) << ", "
+         << (pd==pb2? "pd==pb2":"pd!=pb2")  
+         << endl;
+}
+```
+Regarding code above what should be present in output? 
+- A true, pd==pb2 
+- B true, pd!=pb2 
+- C false, pd==pb2 
+- D false, pd!=pb2 
+
+**Answer:** C 
+
+Under multiple inheritance, an object may have many valid addresses.
+Each base class subobject of a complete (derived) object may have a unique address, and each of these addresses is a valid address for the complete object.
+Before a [pointer comparison](http://en.cppreference.com/w/cpp/language/operator_comparison#Pointer_comparison_operators) 'pd`==`pb2', the compiler performs [pointer conversion](http://en.cppreference.com/w/cpp/language/implicit_conversion#Pointer_conversions) that respects _delta arithmetic_ on class object addresses.
+In case if a pointer is faceless (`void*`), the compiler does not know about object type and is not able to perform delta correction.
+
+**See also:** [cppref::pointer_conversions](http://en.cppreference.com/w/cpp/language/implicit_conversion#Pointer_conversions), [cppref::pointer_comparison](http://en.cppreference.com/w/cpp/language/operator_comparison#Pointer_comparison_operators)  
+
+**Relatives:** 
