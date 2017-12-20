@@ -2852,3 +2852,31 @@ The use of the function call syntax (_Line B_) follows the standard lookup seque
 **See also:** [cppref::adl](http://en.cppreference.com/w/cpp/language/adl)  
 
 **Relatives:** [ADL&namespace](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#argument-dependent-lookup), [name lookup](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#function-overloading-access-control)
+
+# const-reference to the temporary. part 3.  
+**complexity:** professional
+```cpp
+const string& select(bool cond, const string& first, const string& second)
+{
+   return cond? first:second;
+}
+
+int main()
+{
+   const auto& result = select(true,"first","second");
+   cout << result << endl;
+}
+```
+Regarding code above what should be present in output? 
+- A first
+- B second 
+- C run-time error, UB
+ 
+**Answer:** C   
+
+Parameters 'first', 'second' to the 'select'  function are references to constant `string`. Passing arguments at the function call are C-string litarals i.e. they are of different type: `const char*`.
+So, the parameters will be initialized with temporary `string` objects. While these temporaries aren't local to the 'select' function, they will live until the end of the lagest enclosing expression, which is after the return from 'select', but before the return value is used.
+
+**See also:** [cppref::Lifetime of a temporary](http://en.cppreference.com/w/cpp/language/reference_initialization) 
+
+**Relatives:** [part 1](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#type-conversion-const-reference-to-the-temporary) 
