@@ -966,7 +966,7 @@ When 'display' returns, the temporary object is automatically destroyed.
 
 **See also:** [S. Meyers. Effective C++, item 5,19](http://www.physics.rutgers.edu/~wksiu/C++/MoreEC++_only.pdf), [H. Sutter. GotW #88](https://herbsutter.com/2008/01/01/gotw-88-a-candidate-for-the-most-important-const/) 
 
-**Relatives:** [object lifetime referenced by const](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#object-lifetime-const-reference-to-the-temporary), [implicit conversion](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#type-conversion-implicitly-)
+**Relatives:** [part 3](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#const-reference-to-the-temporary-part-3), [object lifetime referenced by const](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#object-lifetime-const-reference-to-the-temporary), [implicit conversion](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#type-conversion-implicitly-)
 
 # Function overriding. member template & virtuality. 
 **complexity:** expert
