@@ -2369,8 +2369,8 @@ Regarding code above what should be present in output?
 
 **Answer:** B
 
-*  widget w{1}; - direct list-initialization
-*  widget w={1}; - copy list-initialization
+*  widget w{1}; - direct list-initialization, Ok
+*  widget w={1}; - copy list-initialization, Error
 
 **See also:** [cppreference::converting_constructor](http://en.cppreference.com/w/cpp/language/converting_constructor)  
 
