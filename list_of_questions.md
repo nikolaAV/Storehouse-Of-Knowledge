@@ -1428,15 +1428,17 @@ Regarding code above what should be present in output?
 
 **Answer:** C
  
-Compilers may elide the copying (or moving) (see [RVO](https://en.wikipedia.org/wiki/Return_value_optimization)) of a _local_ object in a function that returns _by value_ 
+Compilers may elide (since C++17, [must elide](http://en.cppreference.com/w/cpp/language/copy_elision)) the copying (or moving) (see [RVO](https://en.wikipedia.org/wiki/Return_value_optimization)) of a _local_ object in a function that returns _by value_ 
 - if the type of the local object is the same as that returned by the function 
 - and the local object is what’s being returned
 
-Instruction `return std::move(w);` violates the second statement above, because of the returned value is not a local object, it's a _reference_ to 'w'. 
+Instruction `return std::move(w);` violates the second statement above, because of the returned value is not a local object, it's a _reference_ to 'w'.
+This manual negative optimization remains in C++17, moving a temporary object prevents [copy elision](http://en.cppreference.com/w/cpp/language/copy_elision). 
+
 
 **See also:** [S. Meyers. Effective Modern C++, item 25](https://books.google.com.ua/books?id=rjhIBQAAQBAJ&pg=PA174&dq=I+can+perform+the+same+optimization+on+local+variables+that+I%E2%80%99m+returning&hl=en&sa=X&ved=0ahUKEwit19aGgJXWAhXLrlQKHdTqANQQ6AEIKTAA#v=onepage&q&f=false) 
 
-**Relatives:** [RVO](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#return-value-optimization)
+**Relatives:** [RVO](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#return-value-optimization), [C++17 copy_elision](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#object-construction-copy-elision)
 
 # Function overloading. Promotion vs. standard conversion 
 **complexity:** professional
