@@ -2887,21 +2887,21 @@ So, the parameters will be initialized with temporary `string` objects. While th
 ```cpp
 struct widget
 {
-   size_t   count_ {0};
-public:
-   widget()                         { ++count_; }
-   widget(const widget&)            { ++count_; }
-   widget(widget&&)                 { ++count_; }
-   widget& operator=(const widget&) { ++count_; return *this; }
-   widget& operator=(widget&&)      { ++count_; return *this; }
+   static size_t   count;
 
-   size_t instance_count() const        { return count_; }
+   widget()                         { ++count; }
+   widget(const widget&)            { ++count; }
+   widget(widget&&)                 { ++count; }
+   widget& operator=(const widget&) { ++count; return *this; }
+   widget& operator=(widget&&)      { ++count; return *this; }
 };
+
+size_t widget::count {0};
 
 int main()
 {
    widget w = widget{widget{widget{}}};
-   cout << w.instance_count() << endl;
+   cout << w.count << endl;
 }
 ```
 Regarding code above what should be present in output? 
