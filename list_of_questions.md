@@ -2920,3 +2920,63 @@ Only one call to default constructor of 'widget', to initialize 'w'.
 **See also:** [cppref::copy_elision](http://en.cppreference.com/w/cpp/language/copy_elision) 
 
 **Relatives:** [RVO](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#return-value-optimization)
+
+# Object construction in the Heap. Exception.  
+**complexity:** basic
+```cpp
+struct widget
+{
+   widget() {
+      cout << "widget::ctor" << endl; 
+      throw logic_error("something wrong"); 
+   }
+
+   ~widget() {
+      cout << "widget::dtor" << endl; 
+   }
+
+   void* operator new(size_t s) { 
+      cout << "memory::alloc" << endl; 
+      return ::operator new(s); 
+   }
+   void operator delete(void* p, size_t s ) { 
+      ::operator delete(p,s);   
+      cout << "memory::free" << endl; 
+   }
+};
+
+int main()
+{
+   try {
+      widget* w = new widget{};
+      delete w;
+   }
+   catch(...) {
+   }
+}
+```
+Regarding code above what should be present in output? 
+- A
+    - memory::alloc
+    - widget::ctor
+    - widget::dtor
+    - memory::free
+- B
+    - memory::alloc
+    - widget::ctor
+    - widget::dtor
+- C
+    - memory::alloc
+    - widget::ctor
+    - memory::free
+- D
+    - memory::alloc
+    - widget::ctor
+ 
+**Answer:** C
+- the destructor for the object being constructed will __not__ be called. 
+- the memory for the object that was being constructed will be freed. 
+
+**See also:** [Super C++ FAQ, does the memory “leak” if the constructor throws an exception?](https://isocpp.org/wiki/faq/freestore-mgmt#new-doesnt-leak-if-ctor-throws)
+
+**Relatives:** [ctor::exception, part1](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#object-construction-exception)
