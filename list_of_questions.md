@@ -2148,7 +2148,7 @@ C++17 introduces the following rules:
 * for __braced-init_list copy initialization__ `auto` deduction will deduce a `std::initializer_list<T>` if all elements in the list have the same type, or be ill-formed.
 * for __braced-init_list direct initialization__ `auto` deduction will deduce a T if the list has a single element, or be ill-formed if there is more than one element. 
 
-**See also:** [cppreference::list_initialization](http://en.cppreference.com/w/cpp/language/list_initialization), [habrahabr::raced-init-list](https://habrahabr.ru/post/330402/), [ISOC++::deduction_rules](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n3922.html), [Bartek's Blog::N3922](http://www.bfilipek.com/2017/01/cpp17features.html#new-auto-rules-for-direct-list-initialization) 
+**See also:** [cppreference::list_initialization](http://en.cppreference.com/w/cpp/language/list_initialization), [Scott Meyers, Thoughts on the Vagaries of C++ Initialization](http://scottmeyers.blogspot.com/2015/09/thoughts-on-vagaries-of-c-initialization.html), [habrahabr::raced-init-list](https://habrahabr.ru/post/330402/), [ISOC++::deduction_rules](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n3922.html), [Bartek's Blog::N3922](http://www.bfilipek.com/2017/01/cpp17features.html#new-auto-rules-for-direct-list-initialization) 
 
 **Relatives:** [initialization_syntax](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#object-construction-initialization-syntax)
 
