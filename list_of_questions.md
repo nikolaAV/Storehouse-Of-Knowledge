@@ -1,4 +1,4 @@
-# sizeof (\<empty>)?
+Return value optimization# sizeof (\<empty>)?
 **complexity:** professional
 ```cpp
 class Empty {};
@@ -1336,7 +1336,7 @@ Starting from C++17, another way to describe this mechanics is "unmaterialized v
 
 **See also:** [Copy elision](http://en.cppreference.com/w/cpp/language/copy_elision), [RVO](https://en.wikipedia.org/wiki/Return_value_optimization), [S. Meyers. More Effective C++, item 20](https://books.google.com.ua/books?id=U7lTySXdFk0C&pg=PT439&dq=Facilitate+the+return+value+optimization.+Meyers&hl=en&sa=X&redir_esc=y#v=onepage&q&f=false)
 
-**Relatives:** [RVO & std::move](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#stdmovervo)
+**Relatives:** [RVO & std::move](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#stdmovervo), [ObjectConstructionOneCopy](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#object-construction-copy-elision).
 
 # sizeof (\<empty>)? aggregation vs. inheritance.
 **complexity:** expert
