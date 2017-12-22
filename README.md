@@ -15,13 +15,13 @@ thinking and many dire predictions.
 * [The C++ Core Guidelines](https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines.html) are a collaborative effort led by Bjarne Stroustrup & Herb Sutter. The aim of the guidelines is to help people to use modern C++ effectively. (The same is on [GitHub](https://github.com/isocpp/CppCoreGuidelines))
 * [The home of Standard C++ on the web](https://isocpp.org/std/status) Standard C++ Foundation is a Washington 501(c)(6) not-for-profit organization whose purpose is to support the C++ software developer community and promote the understanding and use of modern Standard C++ on all compilers and platforms.
 * Tutorials: [C++ Language](http://www.tutorialspoint.com/cplusplus/) has been prepared for the beginners to help them understand the basic to advanced concepts related to C++ & [The Standard Library](https://www.tutorialspoint.com/cpp_standard_library/index.htm)
-* [More C++ Idioms](https://en.wikibooks.org/wiki/More_C%2B%2B_Idioms) is aimed toward anyone with an intermediate level of knowledge in C++ and supported language paradigms
-* [clang](http://clang.llvm.org/cxx_status.html) and [gcc](https://gcc.gnu.org/projects/cxx-status.html)'s standards support pages.
+* [clang](http://clang.llvm.org/cxx_status.html) and [gcc](https://gcc.gnu.org/projects/cxx-status.html)'s support pages.
 
 ## Popular Blogs
 * [Bjarne Stroustrup's homepage](http://stroustrup.com/), C++FAQ, style, techique, etc.
 * [Herb Satter's homepage](https://herbsutter.com/), Here, you can find well known "Guru of the Week (GotW)", a series of C++ programming problems created and written by Herb Sutter.
 * [C++ Super-FAQ](https://isocpp.org/faq)
+* [Wikibook: More C++ Idioms](https://en.wikibooks.org/wiki/More_C%2B%2B_Idioms) a catalog reusable pieces of C++ knowledge (similar to the book on design patterns by GoF). It is aimed toward anyone with an intermediate level of knowledge in C++ and supported language paradigms.
 * [Bartek's coding blog](http://www.bfilipek.com/p/start-here.html), C++ and native programming stories.
 * [Andrzej's C++ blog](https://akrzemi1.wordpress.com/), Guidelines and thoughts about C++
 * [scrutator.me](http://scrutator.me/) by Evgeniy Shcherbina
