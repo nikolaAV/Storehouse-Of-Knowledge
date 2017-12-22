@@ -1319,7 +1319,7 @@ Regarding code above what should be present in output?
     - ctor(move)
     - assigment(move)
 
-**Answer:** A (but all others are also possible)
+**Answer:** A (since C++17, but all others are also possible)
  
 > This particular optimization — eliminating a local temporary by using a function's return location (and possibly replacing that with an object at
 the function's call site) — is both well-known and __commonly__ implemented. It even has a name: _the return value
@@ -1332,6 +1332,7 @@ operations, even when they’re permitted to.
 > You can trust me when I tell you that for this
 code, every decent C++ compiler will employ the RVO to avoid copying 'w' — Scott Meyers, 2014
  
+Starting from C++17, another way to describe this mechanics is "unmaterialized value passing": prvalues are returned and used without ever materializing a temporary.
 
 **See also:** [Copy elision](http://en.cppreference.com/w/cpp/language/copy_elision), [RVO](https://en.wikipedia.org/wiki/Return_value_optimization), [S. Meyers. More Effective C++, item 20](https://books.google.com.ua/books?id=U7lTySXdFk0C&pg=PT439&dq=Facilitate+the+return+value+optimization.+Meyers&hl=en&sa=X&redir_esc=y#v=onepage&q&f=false)
 
