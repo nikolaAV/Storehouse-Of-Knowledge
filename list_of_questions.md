@@ -2881,3 +2881,40 @@ So, the parameters will be initialized with temporary `string` objects. While th
 **See also:** [cppref::Lifetime of a temporary](http://en.cppreference.com/w/cpp/language/reference_initialization) 
 
 **Relatives:** [part 1](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#type-conversion-const-reference-to-the-temporary) 
+
+# Object construction. Copy elision.  
+**complexity:** basic
+```cpp
+struct widget
+{
+   size_t   count_ {0};
+public:
+   widget()                         { ++count_; }
+   widget(const widget&)            { ++count_; }
+   widget(widget&&)                 { ++count_; }
+   widget& operator=(const widget&) { ++count_; return *this; }
+   widget& operator=(widget&&)      { ++count_; return *this; }
+
+   size_t instance_count() const        { return count_; }
+};
+
+int main()
+{
+   widget w = widget{widget{widget{}}};
+   cout << w.instance_count() << endl;
+}
+```
+Regarding code above what should be present in output? 
+- A 1
+- B 2
+- C 3
+- D 4
+ 
+**Answer:** A
+
+Only one call to default constructor of 'widget', to initialize 'w'.
+> Note: Since C++17, according to the core language specificatin the rule above does not specify an optimization. There is no longer a temporary to copy/move from if the initializer expression is a [pvalue](http://en.cppreference.com/w/cpp/language/value_category).
+
+**See also:** [cppref::copy_elision](http://en.cppreference.com/w/cpp/language/copy_elision) 
+
+**Relatives:** [RVO](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#return-value-optimization)
