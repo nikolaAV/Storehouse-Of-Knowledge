@@ -2984,16 +2984,20 @@ Regarding code above what should be present in output?
 # Increment/Decrement operator function.  
 **complexity:** basic
 ```cpp
+#include <iostream>
+
+using namespace std;
+
 class integer
 {
-   long v_ = 0;
+   long v_ {0};
 public:
    integer() = default;
    integer(const integer& i) : v_(i.v_) { ++copy_count; }
    integer& operator=(const integer& i) { v_=i.v_; ++copy_count; return *this; }
    
-   integer& operator++()      { ++v_; return *this; }
-   integer  operator++(int)   {const integer prev{*this}; ++v_; return prev; }
+   integer& operator++()      { ++v_; return *this; }                         // Line A
+   integer  operator++(int)   {const integer prev{*this}; ++v_; return prev; }// Line B
    operator long() const      { return v_; }
 
    static size_t copy_count;
@@ -3004,28 +3008,29 @@ size_t integer::copy_count {0};
 int main()
 {
    integer v;
-   cout << "prefix:  " << ++v << "," << v << " copy->" << v.copy_count << endl;
-   cout << "postfix: " << v++ << "," << v << " copy->" << v.copy_count << endl;
+   cout << ++v << "," << v << " copy->" << v.copy_count << endl; // Line C
+   cout << v++ << "," << v << " copy->" << v.copy_count << endl; // Line D
 }
 ```
 Regarding code above what should be present in output? 
 - A 
-    - prefix:  1,1 copy->0
-    - postfix: 1,2 copy->1
+    - 1,1 copy->0
+    - 1,2 copy->1
 - B 
-    - prefix:  1,1 copy->0
-    - postfix: 1,2 copy->0
+    - 0,1 copy->1
+    - 2,2 copy->1
 - C 
-    - prefix:  0,1 copy->0
-    - postfix: 1,2 copy->1
+    - 1,1 copy->1
+    - 1,2 copy->2
 - D 
-    - prefix:  1,1 copy->0
-    - postfix: 2,2 copy->1
+    - 0,1 copy->1
+    - 2,2 copy->2
  
 **Answer:** A
 
-The prefix forms should return a modifiable `lvalue` i.e. a reference to its object.
-The postfix forms must return a __copy__ of its object containing the object's value before the increment operation.
+The prefix forms (_Line A,C_) should return a modifiable `lvalue` i.e. a reference to its object.
+The postfix forms (_Line B,D_) must return a __copy__ of its object containing the object's value before the increment operation.
+This is a requirement that the postfix operator returns by value. Even with the possible application of common program transformation like [RVO](https://isocpp.org/wiki/faq/myths#copy-elision) (until C++17, see also [Copy Elision](http://en.cppreference.com/w/cpp/language/copy_elision)), use of a postfix increment is likely to be slower than that the corresponding prefix version if the argument is of class type.
 
 **See also:** [Sutter&Alexandrescu, Rule 28](https://doc.lagout.org/programmation/C/CPP101.pdf), [cppref::incr_decr](http://en.cppreference.com/w/cpp/language/operator_incdec) 
 
