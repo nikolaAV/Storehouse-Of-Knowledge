@@ -1,4 +1,4 @@
-Return value optimization# sizeof (\<empty>)?
+# sizeof (\<empty>)?
 **complexity:** professional
 ```cpp
 class Empty {};
@@ -2980,3 +2980,53 @@ Regarding code above what should be present in output?
 **See also:** [Super C++ FAQ, does the memory “leak” if the constructor throws an exception?](https://isocpp.org/wiki/faq/freestore-mgmt#new-doesnt-leak-if-ctor-throws)
 
 **Relatives:** [ctor::exception, part1](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#object-construction-exception)
+
+# Increment/Decrement operator function.  
+**complexity:** basic
+```cpp
+class integer
+{
+   long v_ = 0;
+public:
+   integer() = default;
+   integer(const integer& i) : v_(i.v_) { ++copy_count; }
+   integer& operator=(const integer& i) { v_=i.v_; ++copy_count; return *this; }
+   
+   integer& operator++()      { ++v_; return *this; }
+   integer  operator++(int)   {const integer prev{*this}; ++v_; return prev; }
+   operator long() const      { return v_; }
+
+   static size_t copy_count;
+};
+
+size_t integer::copy_count {0};
+
+int main()
+{
+   integer v;
+   cout << "prefix:  " << ++v << "," << v << " copy->" << v.copy_count << endl;
+   cout << "postfix: " << v++ << "," << v << " copy->" << v.copy_count << endl;
+}
+```
+Regarding code above what should be present in output? 
+- A 
+    - prefix:  1,1 copy->0
+    - postfix: 1,2 copy->1
+- B 
+    - prefix:  1,1 copy->0
+    - postfix: 1,2 copy->0
+- C 
+    - prefix:  0,1 copy->0
+    - postfix: 1,2 copy->1
+- D 
+    - prefix:  1,1 copy->0
+    - postfix: 2,2 copy->1
+ 
+**Answer:** A
+
+The prefix forms should return a modifiable `lvalue` i.e. a reference to its object.
+The postfix forms must return a __copy__ of its object containing the object's value before the increment operation.
+
+**See also:** [Sutter&Alexandrescu, Rule 28](https://doc.lagout.org/programmation/C/CPP101.pdf), [cppref::incr_decr](http://en.cppreference.com/w/cpp/language/operator_incdec) 
+
+**Relatives:** 
