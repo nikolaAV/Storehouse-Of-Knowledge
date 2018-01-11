@@ -33,22 +33,8 @@ thinking and many dire predictions.
 * [scrutator.me](http://scrutator.me/) by Evgeniy Shcherbina
 * [Simon Brand's blog](https://blog.tartanllama.xyz/), template metaprogramming and the dark corners of C++ 
 
+## [Tutorials, video trainings & courses](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/tutorials/list.md)
+## [Tools, Utils & Instruments](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/tools/list.md)
 ## [Cheat sheets](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/cheat_sheets/cheat_sheets.md)
-
 ## [Books](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/books/list.md)
-
-## Tools, Utils & Instruments
-* [Visual Studio Express](https://www.visualstudio.com/vs/visual-studio-express/), Fully-featured IDE for students, open-source and individual developers. The up-to-date C++ compiler & [C++ Core Check code analysis](https://blogs.msdn.microsoft.com/vcblog/2016/10/12/cppcorecheck/) are included! 
-* [GSL: Guideline Support Library](https://github.com/Microsoft/GSL) contains functions and types that are suggested for use by [the C++ Core Guidelines](https://github.com/isocpp/CppCoreGuidelines)
-* [TUT for C++](https://github.com/mrzechonek/tut-framework) is a small and portable unit test framework for C++.
-
-## Tutorials, video trainings & courses
-* Tutorials: [C++ Language](http://www.tutorialspoint.com/cplusplus/) has been prepared for the beginners to help them understand the basic to advanced concepts related to C++ & [The Standard Library](https://www.tutorialspoint.com/cpp_standard_library/index.htm)
-* [CppCon YouTube Channel](https://www.youtube.com/user/CppCon/)
-* [C++ User Group YouTube Channel](https://www.youtube.com/channel/UCJ9v015sPgEi0jJXe_zanjA/playlists) in russian
-* [Learning C++. Best practices](http://scanlibs.com/learning-cpp-best-practices/) with  Jason Turner. This course is designed for users that already have a basic working knowledge of C++. Skill level: 'Intermediate' is required.
-* [Modern C++. Design Patterns](http://scanlibs.com/modern-c-design-patterns/) with Juilian Templeman. This course provides beginning to intermediate C++ developers with the knowledge required for up-to-date C++ programming. Exploring Design Patterns, Idioms, Functional Programming Techniques, and the Key Features of C++ 11 and C++ 14
-* Youtube. Nicolai Josuttis. С++17. The Language Features. [Part 1](https://www.youtube.com/watch?v=WDGP5pO1TyM&feature=youtu.be), [Part 2](https://www.youtube.com/watch?v=_PEgl63V7wc&feature=youtu.be).
-
-## Miscellaneous
-* [Markdown Tutorial](http://commonmark.org/help/tutorial/) - a plain text format for writing structured documents
+## [Miscellaneous](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/miscellaneous/list.md)
