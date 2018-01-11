@@ -8,6 +8,14 @@ practices were introduced by [Bob Martin](https://en.wikipedia.org/wiki/Robert_C
 Even so, these practices are not as widely known as they could
 be — and perhaps should be.
 
+First Header | Second Header | Third Header
+-------------|---------------| ------------
+SRP | [The Single Responsibility Principle](https://drive.google.com/file/d/0ByOwmqah_nuGNHEtcU5OekdDMkk/view) | A class should have one, and only one, reason to change.
+OCP	| [The Open Closed Principle](https://drive.google.com/file/d/0BwhCYaYDn8EgN2M5MTkwM2EtNWFkZC00ZTI3LWFjZTUtNTFhZGZiYmUzODc1/view)	| You should be able to extend a classes behavior, without modifying it.
+LSP	| [The Liskov Substitution Principle](https://drive.google.com/file/d/0BwhCYaYDn8EgNzAzZjA5ZmItNjU3NS00MzQ5LTkwYjMtMDJhNDU5ZTM0MTlh/view)	| Derived classes must be substitutable for their base classes.
+ISP	| [The Interface Segregation Principle](https://drive.google.com/file/d/0BwhCYaYDn8EgOTViYjJhYzMtMzYxMC00MzFjLWJjMzYtOGJiMDc5N2JkYmJi/view) |	Make fine grained interfaces that are client specific.
+DIP	| [The Dependency Inversion Principle](https://drive.google.com/file/d/0BwhCYaYDn8EgMjdlMWIzNGUtZTQ0NC00ZjQ5LTkwYzQtZjRhMDRlNTQ3ZGMz/view) |	Depend on abstractions, not on concretions.
+
 ### package cohesion
 
 ### couplings between packages
