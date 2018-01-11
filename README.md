@@ -33,6 +33,8 @@ thinking and many dire predictions.
 * [scrutator.me](http://scrutator.me/) by Evgeniy Shcherbina
 * [Simon Brand's blog](https://blog.tartanllama.xyz/), template metaprogramming and the dark corners of C++ 
 
+## [Cheat sheets](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/cheat_sheets/cheat_sheets.md)
+
 ## Books
 * [S. Meyers. Effective C++ (2nd Edition) (Addison-Wesley, 1997)](https://books.google.com.ua/books?id=Qx5oyB49poYC&lpg=PP1&dq=Effective%20C%2B%2B&pg=PP1#v=onepage&q&f=false), [pdf](http://doc.imzlp.me/viewer.html?file=docs/effective/EffectiveCPP.pdf), available [in Russian](http://scanlibs.com/effektivnoe-ispolzovanie-cpp/)
 * [S. Meyers. More Effective C++ (Addison-Wesley, 1996)](https://books.google.com.ua/books?id=azvE8V0c-mYC&lpg=PP1&dq=Scott%20Meyers&pg=PP1#v=onepage&q&f=false), [pdf](http://doc.imzlp.me/viewer.html?file=docs/effective/MoreEffectiveCPP.pdf)
@@ -54,9 +56,6 @@ thinking and many dire predictions.
 * [N. Josuttis. The C++ Standard Library. Second Edition (Addison Wesley 2013)](https://books.google.com.ua/books?id=gUhE8po4jgAC&printsec=frontcover&dq=Josuttis&hl=en&sa=X&ved=0ahUKEwio8q6giJ_VAhURS5oKHQDnCd0Q6AEIJjAA#v=onepage&q&f=false), available [in Russian](http://scanlibs.com/standartnaya-biblioteka-c-spravochnoe-rukovodstvo-2-e-izdanie/)
 * [P. Gottschling. Discovering Modern C++(Addison-Wesley, 2016)](https://books.google.com.ua/books?id=KFdCCwAAQBAJ&pg=PT618&dq=Gottschling&hl=en&sa=X&ved=0ahUKEwil8tT_iJ_VAhUJSJoKHcWhA1wQ6AEIIjAA#v=onepage&q&f=false)
 * [E. Gamma, R. Helm, R. Johnson, J. Vlissides. Design Patterns: Elements of Reusable Object-Oriented Software (Addison-Wesley, 1995)](https://books.google.com.ua/books?id=6oHuKQe3TjQC&printsec=frontcover&dq=Erich+Gamma&hl=en&sa=X&ved=0ahUKEwjO0ozRip_VAhXBA5oKHY-RDn8Q6AEIIjAA#v=onepage&q&f=false), available [in Russian](http://scanlibs.com/priemyi-obektno-orientirovannogo-proektirovaniya/)
-
-## Cheat sheets
-* click [here](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/cheat_sheets/cheat_sheets.md)
 
 ## Tools, Utils & Instruments
 * [Visual Studio Express](https://www.visualstudio.com/vs/visual-studio-express/), Fully-featured IDE for students, open-source and individual developers. The up-to-date C++ compiler & [C++ Core Check code analysis](https://blogs.msdn.microsoft.com/vcblog/2016/10/12/cppcorecheck/) are included! 
