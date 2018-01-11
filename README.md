@@ -9,13 +9,19 @@ thinking and many dire predictions.
 
 ![30YearsOfC++](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/30YearsOfC%2B%2B.png)
 
-## Online resources
+## Official online resources
 * [Programming languages - C++. ISO/IEC 14882:2014(E)](http://doc.imzlp.me/viewer.html?file=docs/standard/isocpp2014.pdf)
 * [C++ reference](http://en.cppreference.com/w/) provides programmers with a complete online reference for the C and C++ languages and standard libraries, i.e. a more convenient version of the C and C++ standards. Especially useful for finding examples and documentation of new library features.
 * [The C++ Core Guidelines](https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines.html) are a collaborative effort led by Bjarne Stroustrup & Herb Sutter. The aim of the guidelines is to help people to use modern C++ effectively. (The same is on [GitHub](https://github.com/isocpp/CppCoreGuidelines))
 * [The home of Standard C++ on the web](https://isocpp.org/std/status) Standard C++ Foundation is a Washington 501(c)(6) not-for-profit organization whose purpose is to support the C++ software developer community and promote the understanding and use of modern Standard C++ on all compilers and platforms.
-* Tutorials: [C++ Language](http://www.tutorialspoint.com/cplusplus/) has been prepared for the beginners to help them understand the basic to advanced concepts related to C++ & [The Standard Library](https://www.tutorialspoint.com/cpp_standard_library/index.htm)
 * [clang](http://clang.llvm.org/cxx_status.html) and [gcc](https://gcc.gnu.org/projects/cxx-status.html)'s support pages.
+
+## Online compilers
+* [wandbox](https://wandbox.org/), Social Compilation Service that supports GCC and Clang compilers of the up-to-date version
+* [Visual C++](http://webcompiler.cloudapp.net/), compiler version: up-to-date
+* [tutorialspoint.com](https://www.tutorialspoint.com/compile_cpp_online.php), GCC of latest stable version
+* [C++ shell](http://cpp.sh/) is a simple frontend for a GCC 4.9.2. with Boost 1.55. Easily & Lightly
+* The following [list](https://arne-mertz.de/2017/05/online-compilers/) provides information about available online compilers and their most important features.
 
 ## Popular Blogs
 * [Bjarne Stroustrup's homepage](http://stroustrup.com/), C++FAQ, style, techique, etc.
@@ -26,13 +32,6 @@ thinking and many dire predictions.
 * [Andrzej's C++ blog](https://akrzemi1.wordpress.com/), Guidelines and thoughts about C++
 * [scrutator.me](http://scrutator.me/) by Evgeniy Shcherbina
 * [Simon Brand's blog](https://blog.tartanllama.xyz/), template metaprogramming and the dark corners of C++ 
-
-## Online compilers
-* [wandbox](https://wandbox.org/), Social Compilation Service that supports GCC and Clang compilers of the up-to-date version
-* [Visual C++](http://webcompiler.cloudapp.net/), compiler version: up-to-date
-* [tutorialspoint.com](https://www.tutorialspoint.com/compile_cpp_online.php), GCC of latest stable version
-* [C++ shell](http://cpp.sh/) is a simple frontend for a GCC 4.9.2. with Boost 1.55. Easily & Lightly
-* The following [list](https://arne-mertz.de/2017/05/online-compilers/) provides information about available online compilers and their most important features.
 
 ## Books
 * [S. Meyers. Effective C++ (2nd Edition) (Addison-Wesley, 1997)](https://books.google.com.ua/books?id=Qx5oyB49poYC&lpg=PP1&dq=Effective%20C%2B%2B&pg=PP1#v=onepage&q&f=false), [pdf](http://doc.imzlp.me/viewer.html?file=docs/effective/EffectiveCPP.pdf), available [in Russian](http://scanlibs.com/effektivnoe-ispolzovanie-cpp/)
@@ -64,8 +63,8 @@ thinking and many dire predictions.
 * [GSL: Guideline Support Library](https://github.com/Microsoft/GSL) contains functions and types that are suggested for use by [the C++ Core Guidelines](https://github.com/isocpp/CppCoreGuidelines)
 * [TUT for C++](https://github.com/mrzechonek/tut-framework) is a small and portable unit test framework for C++.
 
-
-## Video trainings & courses
+## Tutorials, video trainings & courses
+* Tutorials: [C++ Language](http://www.tutorialspoint.com/cplusplus/) has been prepared for the beginners to help them understand the basic to advanced concepts related to C++ & [The Standard Library](https://www.tutorialspoint.com/cpp_standard_library/index.htm)
 * [CppCon YouTube Channel](https://www.youtube.com/user/CppCon/)
 * [C++ User Group YouTube Channel](https://www.youtube.com/channel/UCJ9v015sPgEi0jJXe_zanjA/playlists) in russian
 * [Learning C++. Best practices](http://scanlibs.com/learning-cpp-best-practices/) with  Jason Turner. This course is designed for users that already have a basic working knowledge of C++. Skill level: 'Intermediate' is required.
