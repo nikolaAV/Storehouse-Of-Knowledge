@@ -2984,10 +2984,6 @@ Regarding code above what should be present in output?
 # Increment/Decrement operator function.  
 **complexity:** basic
 ```cpp
-#include <iostream>
-
-using namespace std;
-
 class integer
 {
    long v_ {0};
@@ -3035,3 +3031,36 @@ This is a requirement that the postfix operator returns by value. Even with the 
 **See also:** [Sutter&Alexandrescu, Rule 28](https://doc.lagout.org/programmation/C/CPP101.pdf), [cppref::incr_decr](http://en.cppreference.com/w/cpp/language/operator_incdec) 
 
 **Relatives:** 
+
+# std::variant. Converting constructor 
+**complexity:** professional
+```cpp
+auto foo(const char*)         { return "const char*"; }
+auto foo(const std::string&)  { return "std::string"; }
+auto foo(bool)                { return "bool"; }
+auto foo(...)                 { return "unknown"; }
+
+int main()
+{
+   const std::variant<std::string, bool> x{"Hello, World!"};
+   std::visit([](const auto& v){
+         std::cout << "my type is " << foo(v) << std::endl;
+      }
+      ,x
+   );
+}
+```
+Regarding code (C++17 compliant) above what should be present in output? 
+- A my type is const char*
+- B my type is std::string
+- C my type is bool
+- D my type is unknown
+- E compiler error: 'variant::variant' cannot convert argument from 'const char*' to ...
+ 
+**Answer:** C
+
+The rank of standard conversion ("Hello, World!"->`bool`) is _always better_ than the rank of user-defined conversion ("Hello, World!"->`std::string`).  
+
+**See also:** [cppref::variant::ctor4](http://en.cppreference.com/w/cpp/utility/variant/variant)
+
+**Relatives:** [type_conversion::standard_vs_user-defined](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#type-conversion-user-defined-vs-standard-conversion) 
