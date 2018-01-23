@@ -6,7 +6,7 @@ __SOLID__ is the acronym for a [set of practices](http://butunclebob.com/Article
 together, make code adaptive to change. The SOLID
 practices were introduced by [Bob Martin](https://en.wikipedia.org/wiki/Robert_C._Martin) almost 15 years ago.
 Even so, these practices are not as widely known as they could
-be — and perhaps should be.
+be â€” and perhaps should be.
 
 acronym | name | description
 -------------|---------------| ------------
@@ -37,3 +37,4 @@ SAP	| [The Stable Abstractions Principle](https://drive.google.com/file/d/0BwhCY
 
 ## Idioms
 * [More C++ Idioms - Wikibooks](https://en.wikibooks.org/wiki/More_C%2B%2B_Idioms)
+* [C++ Patterns](https://cpppatterns.com/) by Joseph Mansfield
