@@ -33,9 +33,9 @@ thinking and many dire predictions.
 * [scrutator.me](http://scrutator.me/) by Evgeniy Shcherbina
 * [Simon Brand's blog](https://blog.tartanllama.xyz/), template metaprogramming and the dark corners of C++ 
 
-## [Tutorials, video trainings & courses](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/tutorials/list.md)
-## [Principles, Patterns & Idioms](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/patterns/list.md)
-## [Tools, Utils & Instruments](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/tools/list.md)
-## [Cheat sheets](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/cheat_sheets/cheat_sheets.md)
-## [Books](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/books/list.md)
-## [Miscellaneous](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/miscellaneous/list.md)
+## [Tutorials, video trainings & courses](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/tutorials/README.md)
+## [Principles, Patterns & Idioms](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/patterns/README.md)
+## [Tools, Utils & Instruments](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/tools/README.md)
+## [Cheat sheets](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/cheat_sheets/README.md)
+## [Books](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/books/README.md)
+## [Miscellaneous](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/miscellaneous/README.md)
