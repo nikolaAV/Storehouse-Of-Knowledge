@@ -3114,3 +3114,29 @@ On the other hand, `rvalue` can be __only__ bound with __`const`-reference__ to 
 **See also:** [cppref::reference_initialization](http://en.cppreference.com/w/cpp/language/reference_initialization)
 
 **Relatives:** [const-reference to the temporary](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#type-conversion-const-reference-to-the-temporary), [perfect match for lvalue & lvalue](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#function-overloading-perfect-match-for-lvalue--rvalue)
+
+# Function overloading. const vs. constexpr
+**complexity:** expert
+```cpp
+struct widget
+{
+   constexpr int foo()        { return 1; }
+             int foo() const  { return 2; }
+};
+
+int main()
+{
+   constexpr widget w;
+   cout << w.foo() << endl;
+}
+```
+Regarding code (C++14 compliant) above what should be present in output? 
+- A 1
+- B 2 
+- C compiler error: ambiguous call.
+
+**Answer:** B
+
+**See also:** [“constexpr” function is not “const”](https://akrzemi1.wordpress.com/2013/06/20/constexpr-function-is-not-const/)
+
+**Relatives:** 
