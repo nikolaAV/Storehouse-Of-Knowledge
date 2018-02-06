@@ -3064,3 +3064,53 @@ The rank of standard conversion ("Hello, World!"->`bool`) is _always better_ tha
 **See also:** [cppref::variant::ctor4](http://en.cppreference.com/w/cpp/utility/variant/variant)
 
 **Relatives:** [type_conversion::standard_vs_user-defined](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#type-conversion-user-defined-vs-standard-conversion) 
+
+# The temporary. Function overloading and const-reference to lvalue. 
+**complexity:** professional
+```cpp
+struct widget
+{
+   void foo()        { cout << "[this] widget is mutable" << endl; }
+   void foo() const  { cout << "[this] widget is const" << endl; }
+};
+
+void bar(widget&)       { cout << "[bar] widget is mutable" << endl; }
+void bar(widget const&) { cout << "[bar] widget is const" << endl; }
+
+widget w;
+
+int main()
+{
+   w.foo();
+   widget{}.foo(); // Line A
+   
+   bar(w);
+   bar(widget{});  // Line B
+}
+```
+Regarding code above what should be present in output? 
+- A 
+    - [this] widget is mutable
+    - [this] widget is mutable
+    - [bar] widget is mutable
+    - [bar] widget is mutable
+- B 
+    - [this] widget is mutable
+    - [this] widget is mutable
+    - [bar] widget is mutable
+    - [bar] widget is const
+ 
+- C 
+    - [this] widget is mutable
+    - [this] widget is const
+    - [bar] widget is mutable
+    - [bar] widget is const
+
+**Answer:** B
+
+Expression 'widget{}' is a temporary object i.e. `rvalue`. This temporary is not `const`. The is why non-`const` version of 'foo' is choosen at _Line A_.
+On the other hand, `rvalue` can be __only__ bound with __`const`-reference__ to `lvalue` during invokation of 'bar' at _Line B_.
+
+**See also:** [cppref::reference_initialization](http://en.cppreference.com/w/cpp/language/reference_initialization)
+
+**Relatives:** [const-reference to the temporary](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#type-conversion-const-reference-to-the-temporary), [perfect match for lvalue & lvalue](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#function-overloading-perfect-match-for-lvalue--rvalue)
