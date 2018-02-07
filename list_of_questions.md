@@ -3140,3 +3140,57 @@ Regarding code (C++14 compliant) above what should be present in output?
 **See also:** [“constexpr” function is not “const”](https://akrzemi1.wordpress.com/2013/06/20/constexpr-function-is-not-const/)
 
 **Relatives:** 
+
+# Argument-dependent lookup. Friend function definition. 
+**complexity:** expert
+```cpp
+struct widget
+{
+   operator int() const { return 0; } 
+
+   friend void foo(const widget&)
+   {
+      cout << "friend foo(widget&)" << endl;   
+   }
+   friend void foo(int)
+   {
+      cout << "friend foo(int)" << endl;   
+   }
+};
+
+void foo(double)
+{
+   cout << "free-standing foo(double)" << endl;   
+}
+
+int main()
+{
+   const widget w;
+   foo(w); // Line A
+   ::foo(w); // Line B
+}
+```
+Regarding code above what should be present in output? 
+- A
+    - friend foo(widget&)
+    - friend foo(int)
+- B 
+    - friend foo(widget&)
+    - free-standing foo(double)
+- C
+    - free-standing foo(double)
+    - free-standing foo(double)
+- D
+    - comiler error: 'foo' ambiguous call.
+
+**Answer:** B
+
+'foo(widget&)' and 'foo(int)' are [friend function definition](http://en.cppreference.com/w/cpp/language/friend) (a friend function has a body entirely inside a class) that introduces name ('foo') into enclosing namespace i.e. in our case, the global namespace where 'widget' is defined.
+The introduced name __is invisible to usual name lookup except [ADL](http://en.cppreference.com/w/cpp/language/adl)__.
+Thus, foo(widget&) and foo(int) are only accessible trough ADL.
+At _line A_ the compiler sees two candidates: 'foo(double)' and, by througth ADL, 'foo(const widget&)'. The second function has the best match.
+At _line B_ there is only choise from the global namespace (`::`) - 'foo(double)'. This case requires an user-defined conversion 'widget' to `int` (`operator int()`).
+
+**See also:** [The name of a friend](http://b.atch.se/posts/non-constant-constant-expressions/#friends), [ The Standard, #7.3.1.2.3](http://doc.imzlp.me/viewer.html?file=docs/standard/isocpp2014.pdf#page=58&zoom=auto,-76,39)
+
+**Relatives:** [ADL, part1](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#argument-dependent-lookup) 
