@@ -6,5 +6,5 @@
 * [C++11, Move ctor\\assigment method generation](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/cheat_sheets/move_ctor_assigment_generation.md)
 * [Concept: TriviallyCopyable](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/cheat_sheets/trivially_copyable.md)
 * [C++11, STL Container Choice](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/cheat_sheets/STL_container_choice.md)
-* [C++17 Features](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/cheat_sheets/Cpp17RedCard.md)
+* [C++17 Features](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/cheat_sheets/cpp17RedCard.md)
 * [Markdown Syntax](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/cheat_sheets/markdown_syntax.md), [pdf](https://guides.github.com/features/mastering-markdown/)
