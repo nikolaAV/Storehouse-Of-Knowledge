@@ -3194,3 +3194,35 @@ At _line B_ there is only choise from the global namespace (`::`) - 'foo(double)
 **See also:** [The name of a friend](http://b.atch.se/posts/non-constant-constant-expressions/#friends), [ The Standard, #7.3.1.2.3](http://doc.imzlp.me/viewer.html?file=docs/standard/isocpp2014.pdf#page=58&zoom=auto,-76,39)
 
 **Relatives:** [ADL, part1](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#argument-dependent-lookup) 
+
+# Inheritance. Constructors.
+**complexity:** basic
+```cpp
+class person
+{
+public:
+    person(string_view name)      { cout << "person: " << name << endl; }
+    // ...
+};
+
+class student : public person
+{
+};
+
+int main()
+{
+    student s("Tom Sawyer");
+}
+```
+Regarding code above what should be present in output? 
+- A person: Tom Sawyer
+- B compiler error: no matching constructor for initialization of 'student'.
+
+The class 'student' inherits all methods from 'person' except the 'string_view' constructor. Methods that are __not inherited__ implicitly ftom the base class are its constructors. C++11 allows us to inherit all constructors from a base class with `using` declaration. 
+
+**Answer:** B
+
+**See also:** [cppref::Inheriting_constructors](http://en.cppreference.com/w/cpp/language/using_declaration)
+
+**Relatives:** 
+
