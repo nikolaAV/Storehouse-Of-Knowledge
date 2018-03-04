@@ -1184,7 +1184,7 @@ To avoid unnecessary copying of the exception object and object slicing, the bes
 
 **See also:** [C++ Coding Standards, item 73](https://doc.lagout.org/programmation/C/CPP101.pdf), [CppCoreGuidelines, E.15](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#e15-catch-exceptions-from-a-hierarchy-by-reference)
 
-**Relatives:** 
+**Relatives:** [Type slicing](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#polymorphic-objects-slicing)
 
 # Exception. Multiple inheritance
 **complexity:** expert
