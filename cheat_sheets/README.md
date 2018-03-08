@@ -7,4 +7,5 @@
 * [Concept: TriviallyCopyable](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/cheat_sheets/trivially_copyable.md)
 * [C++11, STL Container Choice](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/cheat_sheets/STL_container_choice.md)
 * [C++17 Features](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/cheat_sheets/cpp17RedCard.md) by Bartlomiej Filipek
+* [Smart Pointers](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/cheat_sheets/smart_ptr.md) by Bartlomiej Filipek
 * [Markdown Syntax](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/cheat_sheets/markdown_syntax.md), [pdf](https://guides.github.com/features/mastering-markdown/)
