@@ -3226,3 +3226,38 @@ The class 'student' inherits all methods from 'person' except the 'string_view' 
 
 **Relatives:** 
 
+# Object construction. zero initialization.
+**complexity:** expert
+```cpp
+struct widget {
+    int x;
+};
+
+widget w1;
+
+int main()
+{
+    widget w2;
+    widget w3{};
+
+    cout << "['x' initialization]" << boolalpha 
+         <<  " w1:" << (w1.x==0) 
+         <<  " w2:" << (w2.x==0) 
+         <<  " w3:" << (w3.x==0)
+         << endl;
+}
+```
+Regarding code above what should be present in output? 
+- A w1:false w2:false w3:false
+- B w1:true w2:true w3:true
+- C w1:false w2:false w3:true
+- D w1:true w2:false w3:true
+
+**Answer:** D 
+
+It's a quite exotic case which is applicable for _aggregate_ types with the _compiler-generated default constructor_. If you create an instance of 'widget' without an initializer, the contained `int` (x) is _default initilized_. If the object has static storage duration ('w1'), it's initialized to zero; otherwise, it ('w2') has an inderterminate value that can potentially cause [undefined behaviour](http://en.cppreference.com/w/cpp/language/ub). And, finally, if you initialize your instance ('w3') of 'widget' by explicitly invoking the default constructor, then it's initialized to zero.
+
+**See also:** [cppref::zero_initialization](http://en.cppreference.com/w/cpp/language/zero_initialization) 
+
+**Relatives:** [object_construction_3](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#object-construction-initialization-syntax-part-3)
+
