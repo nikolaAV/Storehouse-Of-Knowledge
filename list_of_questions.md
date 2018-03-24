@@ -3261,3 +3261,43 @@ It's a quite exotic case which is applicable for _aggregate_ types with the _com
 
 **Relatives:** [object_construction_3](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#object-construction-initialization-syntax-part-3)
 
+# Function overloading. const-object & const-function.
+**complexity:** professional
+```cpp
+struct widget
+{
+   void foo()        { cout << "widget is mutable"; }
+   void foo() const  { cout << "widget is const"; }
+};
+
+class bar
+{
+    widget* w_;
+public:
+    bar() : w_(new widget{}) {}
+    ~bar() { delete w_; }
+
+   void foo()        { cout << "bar is mutable, "; w_->foo(); }
+   void foo() const  { cout << "bar is const, "; w_->foo(); }
+};
+
+int main()
+{
+   const bar b;
+   b.foo();
+}
+```
+Regarding code above what should be present in output? 
+- A bar is const, widget is const
+- B bar is const, widget is mutable
+- C bar is mutable, widget is mutable
+- D bar is mutable, widget is const
+
+**Answer:**  B
+
+Instruction 'b.foo()' invokes 'widget::foo() `const`' which is a `const` method, so any member of the object cannot be modified. Members are also `const`. In case of 'w_', the value of it cannot be changed and the value of a pointer is an address i.e. the address is `const`. But there's nothing wrong with changing value that it's pointing to.  
+
+**See also:** [cppref::propagate_const](http://en.cppreference.com/w/cpp/experimental/propagate_const) 
+
+**Relatives:** [Function overloading and const-ref](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#the-temporary-function-overloading-and-const-reference-to-lvalue)
+
