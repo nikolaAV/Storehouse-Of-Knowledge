@@ -3301,3 +3301,41 @@ Instruction 'b.foo()' invokes 'widget::foo() `const`' which is a `const` method,
 
 **Relatives:** [Function overloading and const-ref](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#the-temporary-function-overloading-and-const-reference-to-lvalue)
 
+# auto vs. decltype with an expression by-reference
+**complexity:** professional
+```cpp
+struct singleton 
+{
+   static size_t& counter() 
+   {
+      static size_t the_instance{0};
+      return the_instance;
+   }
+};
+
+ 
+int main()
+{
+   auto c1           = singleton::counter();
+   decltype(auto) c2 = singleton::counter();
+
+   c1 += 1;
+   c2 += 2;
+
+   cout << singleton::counter() << endl;
+}
+```
+Regarding code above what should be present in output? 
+- A 0
+- B 1
+- C 2
+- D 3
+
+**Answer:** C 
+
+- `decltype` inspects the __declared__ type of an entity or the type and value category of an expression. 
+- `auto` specifies a type which is automatically deduced from its initializer using the rules for [template argument deduction](http://en.cppreference.com/w/cpp/language/template_argument_deduction). Doing this, qualificators (const, volatile, reference) of the deducted type might be ommited. 
+
+**See also:** [S. Meyers. Effective Modern C++, item 3](https://www.safaribooksonline.com/library/view/effective-modern-c/9781491908419/ch01.html), [auto and decltype Explained](http://thbecker.net/articles/auto_and_decltype/section_01.html)
+
+**Relatives:** [Deducing Type, auto](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#deducing-types-auto-by-reference)
