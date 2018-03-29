@@ -741,7 +741,7 @@ Type of 'y' is deduced `by-reference` rule, i.e. it is the actual type of the ar
 
 **See also:** [S. Meyers. Effective Modern C++, item 2](https://www.safaribooksonline.com/library/view/effective-modern-c/9781491908419/ch01.html), [auto and decltype Explained](http://thbecker.net/articles/auto_and_decltype/section_01.html)
 
-**Relatives:** [C array vs pointer](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#c-array-as-function-parameter-decay-of-types), [deducing_type::by-value](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#deducing-types-auto-by-value)
+**Relatives:** [C array vs pointer](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#c-array-as-function-parameter-decay-of-types), [deducing_type::by-value](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#deducing-types-auto-by-value), [decltype of reference](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#auto-vs-decltype-with-an-expression-by-reference)
 
 # new/delete vs. new[]/delete[].
 **complexity:** basic
@@ -3334,7 +3334,7 @@ Regarding code above what should be present in output?
 **Answer:** C 
 
 - `decltype` inspects the __declared__ type of an entity or the type and value category of an expression. 
-- `auto` specifies a type which is automatically deduced from its initializer using the rules for [template argument deduction](http://en.cppreference.com/w/cpp/language/template_argument_deduction). Doing this, qualificators (const, volatile, reference) of the deducted type might be ommited. 
+- `auto` specifies a type which is automatically deduced from its initializer using the rules for [template argument deduction](http://en.cppreference.com/w/cpp/language/template_argument_deduction). Doing this, qualificators (`const`, `volatile`, reference) of the deducted type might be ommited. 
 
 **See also:** [S. Meyers. Effective Modern C++, item 3](https://www.safaribooksonline.com/library/view/effective-modern-c/9781491908419/ch01.html), [auto and decltype Explained](http://thbecker.net/articles/auto_and_decltype/section_01.html)
 
