@@ -3339,3 +3339,43 @@ Regarding code above what should be present in output?
 **See also:** [S. Meyers. Effective Modern C++, item 3](https://www.safaribooksonline.com/library/view/effective-modern-c/9781491908419/ch01.html), [auto and decltype Explained](http://thbecker.net/articles/auto_and_decltype/section_01.html)
 
 **Relatives:** [Deducing Type, auto](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#deducing-types-auto-by-reference)
+
+# Emplacement functions with explicit constructors  
+**complexity:** professional
+```cpp
+class widget
+{
+   const char* p_;
+public:
+   explicit widget(const char* p) : p_(p) {
+      assert(p_ && "widget(nullptr)");
+   }
+};
+
+int main()
+{
+   vector<widget> v;
+   v.push_back(nullptr);      // Line A
+   v.emplace_back(nullptr);   // Line B
+}
+```
+Regarding code above what might be present in output (imagine Line A & B are compiled and executed separately)?
+- A
+    - Line A. run-time error: assertion "widget(nullptr)"
+    - Line B. run-time error: assertion "widget(nullptr)"
+- B 
+    - Line A. compile-time error: no matching function for call 'push_back(nullptr)'
+    - Line B. run-time error: assertion "widget(nullptr)"
+- C 
+    - Line A. run-time error: assertion "widget(nullptr)"
+    - Line B. compile-time error: no matching function for call 'emplace_back(nullptr)'
+- D 
+    - Line A. compile-time error: no matching function for call 'push_back(nullptr)'
+    - Line B. compile-time error: no matching function for call 'emplace_back(nullptr)'
+
+**Answer:**  B
+Function 'vector::push_back' is declared with input parameter of 'reference to a widget' type (forwarding reference to `rvalue` or `const` reference to `lvalue`). The argument ('nullptr') passed in Line A is not of 'widget' type. Thus an implicit conversion from a pointer to 'widget' type is required. Such conversions are based on [**_copy initialization_**](http://en.cppreference.com/w/cpp/language/copy_initialization) that corresponds 'employing the equals sign' (widget w = nullptr) syntax and the _explicitness_ of the constructor prevents such conversions. However, at Line B type of the parameter of 'vector::emplace_back' is equal to a type of input parameter of a constructor for 'widged' object creation. That's not considered as implicit conversion request. Inside 'vector' a widget object will be created by means [**_direct initialization_**](http://en.cppreference.com/w/cpp/language/direct_initialization) with syntax construct like that 'widget w{nullptr}'.  
+
+**See also:** [S. Meyers. Effective Modern C++, item 42](http://doc.imzlp.me/viewer.html?file=docs/effective/EffectiveModernCPP.pdf#page=317&zoom=auto,-17,549) 
+
+**Relatives:** [implicit type conversion](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#type-conversion-implicitly-), [object construction. initialization syntax](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#object-construction-initialization-syntax-part-3)
