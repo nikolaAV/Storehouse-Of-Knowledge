@@ -3341,7 +3341,7 @@ Regarding code above what should be present in output?
 **Relatives:** [Deducing Type, auto](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#deducing-types-auto-by-reference)
 
 # Emplacement functions with explicit constructors  
-**complexity:** professional
+**complexity:** expert
 ```cpp
 class widget
 {
@@ -3379,3 +3379,52 @@ Function 'vector::push_back' is declared with input parameter of 'reference to a
 **See also:** [S. Meyers. Effective Modern C++, item 42](http://doc.imzlp.me/viewer.html?file=docs/effective/EffectiveModernCPP.pdf#page=317&zoom=auto,-17,549) 
 
 **Relatives:** [implicit type conversion](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#type-conversion-implicitly-), [object construction. initialization syntax](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#object-construction-initialization-syntax-part-3)
+
+# Emplacement functions vs. Insertion functions
+**complexity:** professional
+```cpp
+struct widget
+{
+   size_t ctor_counter_;
+
+   widget(size_t init_val) : ctor_counter_(init_val) {
+      ++ctor_counter_;
+   }
+   widget(const widget& other) : ctor_counter_(other.ctor_counter_) {
+      ++ctor_counter_;  ctor_counter_ += 100;
+   }
+   widget(widget&& other) : ctor_counter_(other.ctor_counter_) {
+      ++ctor_counter_;
+   }
+};
+
+int main()
+{
+   list<widget> l;
+   l.push_back(0); // Line A
+   cout  << "push: " << l.back().ctor_counter_ << endl;
+   l.emplace_back(0);
+   cout  << "emplace: " << l.back().ctor_counter_ << endl;
+}
+```
+Regarding code above what should be present in output? 
+- A 
+    - push: 1
+    - emplace : 1
+- B 
+    - push: 2
+    - emplace : 1
+- C 
+    - push: 101
+    - emplace : 1
+- D 
+    - push: 101
+    - emplace : 2
+
+**Answer:**  B
+
+Insertion functions (e.g. list::push_back) take _objects to be inserted_, while emplacement functions (e.g. list::emplace_back) take _constructor arguments for objects to be inserted_. At Line A, the agrument which are passed to 'push_back' is not of the type held by the container, i.e. 'size_t' is passed into where 'widget' is expected. These type mismatch makes the compiler generate a temporaty widget object from size_t and then pass it to 'push_back'. Because it's a temporary object, it is an `rvalue`. Thus a copy of 'widget' is then constructed in the memory for 'std::list' by means widget move constructor.
+
+**See also:** [S. Meyers. Effective Modern C++, item 42](http://doc.imzlp.me/viewer.html?file=docs/effective/EffectiveModernCPP.pdf#page=311&zoom=auto,-17,623) 
+
+**Relatives:** [implicit type conversion](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#type-conversion-const-reference-to-the-temporary), [emplacement with explicit](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#emplacement-functions-with-explicit-constructors) 
