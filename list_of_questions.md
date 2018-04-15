@@ -2191,7 +2191,7 @@ In the other words, a named object 'v' of '`rvalue`-refernce-to-int' type, canno
 
 **See also:** [S. Meyers, Effective Modern C++, chapter 5](http://doc.imzlp.me/viewer.html?file=docs/effective/EffectiveModernCPP.pdf#page=175&zoom=auto,-14,109), [Rvalue References Explained](http://thbecker.net/articles/rvalue_references/section_01.html)
 
-**Relatives:** 
+**Relatives:** [std::unique_ptr](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#stdunique_ptr-copyable)
 
 # Function template. Overloading. Part 2
 **complexity:** basic
@@ -2656,7 +2656,7 @@ Such behavior is essential to maintaining `const`-correctness. Moving a value ou
 
 **See also:** [S. Meyers. Effective Modern C++. Item 23](https://edisciplinas.usp.br/pluginfile.php/1995323/mod_resource/content/1/Effective%20Modern%20C%2B%2B%202014.pdf)
 
-**Relatives:** [std::move::RVO](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#stdmovervo)
+**Relatives:** [std::move::RVO](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#stdmovervo), [std::unique_ptr](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#stdunique_ptr-copyable)
 
 # Object lifetime. const-reference to the temporary. part 2. 
 **complexity:** expert
@@ -3460,10 +3460,10 @@ Regarding code above what output will be generated  by the compiler (imagine Lin
 
 **Answer:** B
 
-'by_value' is a _copyable parameter_. At the invokation points, function 'foo' always makes a copy:
+'by_value' is a _copyable parameter_. At the invocation points, function 'foo' always makes a copy:
 * at Line 1, the copy must be created by the _copy constructor_
-* at Line 2, the copy must be created by the _move constructor_
-`std::unique_ptr` is a move-only type i.e. its _copy constructor_ is deleted.
+* at Line 2, the copy must be created by the _move constructor_\
+`std::unique_ptr` is a move-only type i.e. its _copy constructor_ is implicitly-deleted.
 
 **See also:** [cppref::unique_ptr](http://en.cppreference.com/w/cpp/memory/unique_ptr)
 
