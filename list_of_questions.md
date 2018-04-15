@@ -3428,3 +3428,44 @@ Insertion functions (e.g. list::push_back) take _objects to be inserted_, while 
 **See also:** [S. Meyers. Effective Modern C++, item 42](http://doc.imzlp.me/viewer.html?file=docs/effective/EffectiveModernCPP.pdf#page=311&zoom=auto,-17,623) 
 
 **Relatives:** [implicit type conversion](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#type-conversion-const-reference-to-the-temporary), [emplacement with explicit](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#emplacement-functions-with-explicit-constructors) 
+
+# std::unique_ptr. Copyable?
+**complexity:** basic
+```cpp
+void foo(unique_ptr<string> by_value)
+{
+	...
+}
+
+int main()
+{
+    auto up = make_unique<string>("C++14");
+    foo(  		          up);	// Line 1
+    foo(make_unique<string>("C++14"));	// Line 2
+}
+```
+Regarding code above what output will be generated  by the compiler (imagine Line 1 & Line 2 are compiled separately)? 
+- A 
+    - Line 1 : Error of passing argument to parameter 'by_value'. A copy is not allowed.
+    - Line 2 : Error of passing argument to parameter 'by_value'. A copy is not allowed.
+- B 
+    - Line 1 : Error of passing argument to parameter 'by_value'. A copy is not allowed.
+    - Line 2 : Ok
+- C 
+    - Line 1 : Ok
+    - Line 2 : Error of passing argument to parameter 'by_value'. A copy is not allowed.
+- D 
+    - Line 1 : Ok
+    - Line 2 : Ok
+
+**Answer:** B
+
+'by_value' is a _copyable parameter_. At the invokation points, function 'foo' always makes a copy:
+* at Line 1, the copy must be created by the _copy constructor_
+* at Line 2, the copy must be created by the _move constructor_
+`std::unique_ptr` is a move-only type i.e. its _copy constructor_ is deleted.
+
+**See also:** [cppref::unique_ptr](http://en.cppreference.com/w/cpp/memory/unique_ptr)
+
+**Relatives:** [std::move](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#stdmoveconst), [variable of type&&](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#rvalue-reference) 
+
