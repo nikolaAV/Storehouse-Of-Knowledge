@@ -3462,7 +3462,8 @@ Regarding code above what output will be generated  by the compiler (imagine Lin
 
 'by_value' is a _copyable parameter_. At the invocation points, function 'foo' always makes a copy:
 * at Line 1, the copy must be created by the _copy constructor_
-* at Line 2, the copy must be created by the _move constructor_\
+* at Line 2, the copy must be created by the _move constructor_
+
 `std::unique_ptr` is a move-only type i.e. its _copy constructor_ is implicitly-deleted.
 
 **See also:** [cppref::unique_ptr](http://en.cppreference.com/w/cpp/memory/unique_ptr)
