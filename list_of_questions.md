@@ -3470,3 +3470,34 @@ Regarding code above what output will be generated  by the compiler (imagine Lin
 
 **Relatives:** [std::move](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#stdmoveconst), [variable of type&&](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#rvalue-reference) 
 
+
+# Function overloading. const vs. volatile
+**complexity:** professional 
+```cpp
+struct widget
+{
+   void foo() const     { cout << "foo() const" << endl; }
+   void foo() volatile  { cout << "foo() volatile" << endl; }	// Line A
+};
+
+int main()
+{
+   volatile const widget w;	// Line B
+   w.foo();			// Line C
+}
+```
+Regarding code above what should be present in output? 
+- A foo() const
+- B foo() volatile
+- C compile error: [Line A] function member cannot be declared as volatile 
+- D compile error: [Line B] const variable cannot be volatile 
+- F compile error: [Line C] 'widget::foo': ambiguous call to overloaded function
+
+**Answer:** F
+
+In general, almost anything that applies to `const` qualifiers also applies to `volatile` qualifiers. The standard mostly refers to them collectively as [`cv-qualifiers`](http://en.cppreference.com/w/cpp/language/cv). Like a case with `const`, if an object is `volatile`-qualified than only `volatile` function may be called on it. In our case widjet object 'w' is `const` and `volatile` at the same time, that means both 'foo' canditates my be called on an equal footing. 
+
+**See also:** [volatile: The Multithreaded Programmer's Best Friend](http://www.drdobbs.com/cpp/volatile-the-multithreaded-programmers-b/184403766) by Andrei Alexandrescu, [cppref::cv-qualifiers](http://en.cppreference.com/w/cpp/language/cv)
+
+**Relatives:** [Function overloading & const](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#the-temporary-function-overloading-and-const-reference-to-lvalue) 
+
