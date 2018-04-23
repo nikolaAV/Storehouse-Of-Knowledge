@@ -3495,7 +3495,7 @@ Regarding code above what should be present in output?
 
 **Answer:** F
 
-In general, almost anything that applies to `const` qualifiers also applies to `volatile` qualifiers. The standard mostly refers to them collectively as [`cv-qualifiers`](http://en.cppreference.com/w/cpp/language/cv). Like a case with `const`, if an object is `volatile`-qualified than only `volatile` function may be called on it. In our case widjet object 'w' is `const` and `volatile` at the same time, that means both 'foo' canditates my be called on an equal footing. 
+In general, almost anything that applies to `const` qualifiers also applies to `volatile` qualifiers. The standard mostly refers to them collectively as [`cv-qualifiers`](http://en.cppreference.com/w/cpp/language/cv). Like a case with `const`, if an object is `volatile`-qualified than only `volatile` function may be called on it. In our case widjet object 'w' is `const` and `volatile` at the same time, that means both 'foo' candidates my be called on an equal footing. 
 
 **See also:** [volatile: The Multithreaded Programmer's Best Friend](http://www.drdobbs.com/cpp/volatile-the-multithreaded-programmers-b/184403766) by Andrei Alexandrescu, [cppref::cv-qualifiers](http://en.cppreference.com/w/cpp/language/cv)
 
