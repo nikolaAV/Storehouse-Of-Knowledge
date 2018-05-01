@@ -3501,3 +3501,35 @@ In general, almost anything that applies to `const` qualifiers also applies to `
 
 **Relatives:** [Function overloading & const](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#the-temporary-function-overloading-and-const-reference-to-lvalue) 
 
+# map::insert failure & movable argument
+**complexity:** expert 
+```cpp
+struct widget {};
+
+int main() {
+    map<int, unique_ptr<widget>> m; // <-- unique-keyed (!!!) map container
+    auto p1 = make_unique<widget>(); 
+    auto p2 = make_unique<widget>(); 
+
+    m.insert({1,move(p1)});
+    m.insert({1,move(p2)});
+
+    cout << "size:" << m.size() 
+         << ", p1:" << (p1? "widget" : "null") 
+         << ", p2:" << (p2? "widget" : "null") 
+         << endl;
+}
+```
+Regarding code above what should be present in output? 
+- A size:1, p1:null, p2:widget 
+- B size:2, p1:null, p2:null
+- C size:1, p1:null, p2:null
+
+**Answer:** C
+
+Bad news! The widget object which is owned by 'p2' is lost. 'map::insert' accepts `rvalue` of 'value_type' which is std::pair<int,unique_ptr<widget>>. That means a temporary value_type will be constructed with arguments: 1 and 'unique_ptr<widget>' using its moveable constructor. But this temporary will not be inserted because of the requested key existance, it will be destroyed at the instruction 'm.insert(...)' goes out. Refer to [map::try_emplace](http://en.cppreference.com/w/cpp/container/map/try_emplace) that does not move from rvalue argument if the insertion does not happen.
+
+**See also:** [cppref::try_emplace](http://en.cppreference.com/w/cpp/container/map/try_emplace), [what happens with a movable object if insertion fails](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4006.html) by Thomas Köppe
+
+**Relatives:** [rvalue reference](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#rvalue-reference), [std::move(const)](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#stdmoveconst), [emplacement vs. insertion](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#emplacement-functions-vs-insertion-functions) 
+
