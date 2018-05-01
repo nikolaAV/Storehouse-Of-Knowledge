@@ -3427,7 +3427,7 @@ Insertion functions (e.g. list::push_back) take _objects to be inserted_, while 
 
 **See also:** [S. Meyers. Effective Modern C++, item 42](http://doc.imzlp.me/viewer.html?file=docs/effective/EffectiveModernCPP.pdf#page=311&zoom=auto,-17,623) 
 
-**Relatives:** [implicit type conversion](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#type-conversion-const-reference-to-the-temporary), [emplacement with explicit](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#emplacement-functions-with-explicit-constructors) 
+**Relatives:** [implicit type conversion](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#type-conversion-const-reference-to-the-temporary), [emplacement with explicit](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#emplacement-functions-with-explicit-constructors), [insertion failure of movable argument](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#mapinsert-failure--movable-argument) 
 
 # std::unique_ptr. Copyable?
 **complexity:** basic
@@ -3527,7 +3527,7 @@ Regarding code above what should be present in output?
 
 **Answer:** C
 
-Bad news! The widget object which is owned by 'p2' is lost. 'map::insert' accepts `rvalue` of 'value_type' which is std::pair<int,unique_ptr<widget>>. That means a temporary value_type will be constructed with arguments: 1 and 'unique_ptr<widget>' using its moveable constructor. But this temporary will not be inserted because of the requested key existance, it will be destroyed at the instruction 'm.insert(...)' goes out. Refer to [map::try_emplace](http://en.cppreference.com/w/cpp/container/map/try_emplace) that does not move from rvalue argument if the insertion does not happen.
+Bad news! The widget object which is owned by 'p2' is lost. 'map::insert' accepts `rvalue` of 'value_type' which is std::pair<int,unique_ptr<widget>>. That means a temporary value_type will be constructed with arguments: 1 and 'unique_ptr<widget>' using its moveable constructor. But this temporary will not be inserted because of the requested key existance, it will be destroyed when the instruction 'm.insert(...)' goes out. Refer to [map::try_emplace](http://en.cppreference.com/w/cpp/container/map/try_emplace) that does not move from rvalue argument if the insertion does not happen.
 
 **See also:** [cppref::try_emplace](http://en.cppreference.com/w/cpp/container/map/try_emplace), [what happens with a movable object if insertion fails](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4006.html) by Thomas Köppe
 
