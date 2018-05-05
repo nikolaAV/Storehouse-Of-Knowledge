@@ -32,6 +32,7 @@ thinking and many dire predictions.
 * [Andrzej's C++ blog](https://akrzemi1.wordpress.com/), Guidelines and thoughts about C++
 * [scrutator.me](http://scrutator.me/) by Evgeniy Shcherbina
 * [Simon Brand's blog](https://blog.tartanllama.xyz/), template metaprogramming and the dark corners of C++ 
+* [Arne Mertz's Simplify C++](https://arne-mertz.de/), Write clean and maintainable C++ 
 
 ## [Tutorials, video trainings & courses](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/tutorials/README.md)
 ## [Principles, Patterns & Idioms](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/patterns/README.md)
