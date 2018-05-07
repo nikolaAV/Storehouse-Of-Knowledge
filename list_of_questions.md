@@ -3533,3 +3533,41 @@ Bad news! The widget object which is owned by 'p2' is lost. 'map::insert' accept
 
 **Relatives:** [rvalue reference](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#rvalue-reference), [std::move(const)](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#stdmoveconst), [emplacement vs. insertion](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#emplacement-functions-vs-insertion-functions) 
 
+# Fold expression
+**complexity:** basic 
+```cpp
+template <typename container, typename... values>
+void insert_1st_way(container& c, values... vs)
+{
+   (c.push_back(vs), ...);
+}
+
+template <typename container, typename... values>
+void insert_2nd_way(container& c, values... vs)
+{
+   (...,c.push_back(vs));
+}
+
+int main()
+{
+   vector<int> s;
+   insert_1st_way(s,1,2,3);
+   insert_2nd_way(s,4,5,6);
+   for(const auto i:s) cout << i << ",";
+   cout << endl;   
+}
+```
+Regarding code (C++17 compliant) above what should be present in output? 
+- A 1,2,3,4,5,6, 
+- B 1,2,3,6,5,4
+- C 3,2,1,4,5,6
+- D 3,2,1,6,5,4
+
+**Answer:** A
+* In insert_1st_way, _right_ fold (dots are on the right of the operaror ',') expands to (push_back(1),(push_back(2),(push_back(3))))
+* In insert_2nd_way, _left_ fold (dots are on the left of the operaror ',') expands to (((push_back(4)),push_back(5)),push_back(6))
+
+**See also:** [fold expressions](https://www.bfilipek.com/2017/06/cpp17-details-templates.html#fold-expressions) by Bartlomiej Filipek  , [cpp_ref::fold](http://en.cppreference.com/w/cpp/language/fold)
+
+**Relatives:** 
+
