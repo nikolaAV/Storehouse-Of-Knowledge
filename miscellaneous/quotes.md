@@ -174,7 +174,81 @@
 >
 > -- _Steve McConnell, Code Complete_
 
+> __The Scrum idea of a separated Scrum Master is good for Scrum, but not appropriate for most projects. Good development requires not just talkers but doers.__
+>
+> -- _Bertrand Meyer_
 
+> __If you’re not at all interested in performance, shouldn’t you be in the Python room down the hall?__
+>
+> -- _Scott Meyers, Effective Modern C++_
+
+> __Don't be a slave to history. Don't let existing code dictate future code. All code can be replaced if it is no longer appropriate. Even within one program, don't let what you've already done constrain what you do next -- be ready to refactor... This decision may impact the project schedule. The assumption is that the impact will be less than the cost of /not/ making the change.__
+>
+> -- _Andrew Hunt, The Pragmatic Programmer: From Journeyman to Master_
+
+> __You Can't Write Perfect Software. Did that hurt? It shouldn't. Accept it as an axiom of life. Embrace it. Celebrate it. Because perfect software doesn't exist. No one in the brief history of computing has ever written a piece of perfect software. It's unlikely that you'll be the first. And unless you accept this as a fact, you'll end up wasting time and energy chasing an impossible dream.__
+>
+> -- _Andrew Hunt, The Pragmatic Programmer: From Journeyman to Master_
+
+> __The greatest of all weaknesses is the fear of appearing weak.__
+>
+> -- _Jacques-Bénigne Bossuet, 1709_
+
+> __Names are deeply meaningful to your brain, and misleading names add chaos to your code.__
+>
+> -- _Andrew Hunt, The Pragmatic Programmer: From Journeyman to Master_
+
+> __Great software today is often preferable to perfect software tomorrow.__
+>
+> -- _Andrew Hunt, The Pragmatic Programmer: From Journeyman to Master_
+
+> __Entropy is a term from physics that refers to the amount of "disorder" in a system.__
+>
+> -- _Andrew Hunt, The Pragmatic Programmer: From Journeyman to Master_
+
+> __But while you can always write 'spaghetti code' in a procedural language, object-oriented languages used poorly can add meatballs to your spaghetti.__
+>
+> -- _Andrew Hunt_
+
+> __Don't Gather Requirements — Dig for Them__
+>
+> -- _Andrew Hunt, The Pragmatic Programmer: From Journeyman to Master_
+
+> __Most people assume that maintenance begins when an application is released, that maintenance means fixing bugs and enhancing features. We think these people are wrong.__
+>
+> -- _Andrew Hunt, The Pragmatic Programmer: From Journeyman to Master_
+
+> __Pragmatic Programmers are different. We are driven to find our bugs now, so we don't have to endure the shame of others finding our bugs later.__
+>
+> -- _Andrew Hunt, The Pragmatic Programmer: From Journeyman to Master_
+
+> __Nothing is more dangerous than an idea, when it’s the only one we have.__
+>
+> -- _Emil-Auguste Chartier, Propos sur la religion, 1938 Engineers_
+
+> __A Pragmatic Programmer takes charge of his or her own career, and isn't afraid to admit ignorance or error.__
+>
+> -- _Andrew Hunt, The Pragmatic Programmer: From Journeyman to Master_
+
+> __In an abstract sense, an application is successful if it correctly implements its specifications. Unfortunately, this pays only abstract bills. In reality, the success of a project is measured by how well it meets the expectations of its users.__
+>
+> -- _Andrew Hunt, The Pragmatic Programmer: From Journeyman to Master_
+
+> __There are many factors that can contribute to software rot. The most important one seems to be the psychology, or culture, at work on a project.__
+>
+> -- _Andrew Hunt, The Pragmatic Programmer: From Journeyman to Master_
+
+> __If it isn't easy, people won't do it.__
+>
+> -- _Andrew Hunt, The Pragmatic Programmer: From Journeyman to Master_
+
+> __We just don't have the time to go chasing after bugs that the automated tests could have found for us. We have to spend our time writing new code - and new bugs.__
+>
+> -- _Andrew Hunt, The Pragmatic Programmer: From Journeyman to Master_
+
+> __Striving to better, oft we mar what's well.__
+>
+> -- _Shakespeare, King Lear(Act 1, Scene 4)_
 
 
 
