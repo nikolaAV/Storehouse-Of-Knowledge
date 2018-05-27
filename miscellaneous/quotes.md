@@ -66,6 +66,10 @@
 >
 > -- _Bjarne Stroustrup_
 
+> __Physics is like sex: sure, it may give some practical results, but that's not why we do it.__
+>
+> -- _Richard Feynman_
+
 > __Programming is like sex: It may give some concrete results, but that is not why we do it.__
 >
 > -- _Bjarne Stroustrup_
@@ -93,6 +97,83 @@
 > __Computers are useless. They can only give you answers.__
 >
 > -- _Pablo Picasso_
+
+> __I am not optimistic or pessimistic. I feel that optimism and pessimism are very unbalanced. I am a very hard engineer. I am a mechanic. I am a sailor. I am an air pilot. I don't tell people I can get you across the ocean with my ship unless I know what I'm talking about.__
+>
+> -- _R. Buckminster Fuller (Only Integrity Is Going to Count: Integrity Day, Los Angeles February 26, 1983_
+
+> __The scientist is not a person who gives the right answers, he's one who asks the right questions.__
+>
+> -- _Claude Lévi-Strauss_
+
+> __I think computer viruses should count as life ... I think it says something about human nature that the only form of life we have created so far is purely destructive. We've created life in our own image.__
+>
+> -- _Stephen Hawking_
+
+> __Don't explain computers to laymen. Simpler to explain sex to a virgin.__
+>
+> -- _Robert A. Heinlein, The Moon is a Harsh Mistress_
+
+> __There are 10 kinds of people in the world: those who understand binary numerals, and those who don't.__
+>
+> -- _Ian Stewart, Professor Stewart's Cabinet of Mathematical Curiosities_
+
+> __Man is a slow, sloppy, and brilliant thinker; computers are fast, accurate, and stupid.__
+>
+> -- _John Pfeiffer_
+
+> __Good judgement comes from experience, and experience comes from bad judgement.__
+>
+> -- _Frederick P. Brooks Jr._
+
+> __By far the greatest danger of Artificial Intelligence is that people conclude too early that they understand it.__
+>
+> -- _Eliezer Yudkowsky_
+
+> __Truth can only be found in one place: the code.__
+>
+> -- _Robert C. Martin, Clean Code: A Handbook of Agile Software Craftsmanship_
+
+> __Any fool can write code that a computer can understand. Good programmers write code that humans can understand.__
+>
+> -- _Martin Fowler_
+
+> __Walking on water and developing software from a specification are easy if both are frozen.__
+>
+> -- _Edward Berard_
+
+> __The most disastrous thing that you can ever learn is your first programming language.__
+>
+> -- _Alan Kay_
+
+> __Remember that code is really the language in which we ultimately express the requirements. We may create languages that are closer to the requirements. We may create tools that help us parse and assemble those requirements into formal structures. But we will never eliminate necessary precision—so there will always be code.__
+>
+> -- _Robert C. Martin_
+
+> __Don't gloss over a routine or piece of code involved in the bug because you "know" it works. Prove it. Prove it in this context, with this data, with these boundary conditions.__
+>
+> -- _Andrew Hunt, The Pragmatic Programmer: From Journeyman to Master_
+
+> __The only way to reduce the variability in the estimate is to reduce the variability in the project.__
+>
+> -- _Steve McConnell, Software Estimation: Demystifying the Black Art_
+
+> __Spend your time on the 20 percent of the refactorings that provide 80 percent of the benefit.__
+>
+> -- _Steve McConnell, Code Complete_
+
+> __Study after study has shown that motivation probably has a larger effect on productivity and quality than any other factor.__
+>
+> -- _Steve McConnell, Rapid Development_
+
+> __Reduce complexity. The single most important reason to create a routine is to reduce a program's complexity. Create a routine to hide information so that you won't need to think about it.__
+>
+> -- _Steve McConnell, Code Complete_
+
+> __Managing complexity is the most important technical topic in software development. In my view, it's so important that Software's Primary Technical Imperative has to be managing complexity. Complexity is not a new feature of software development.__
+>
+> -- _Steve McConnell, Code Complete_
+
 
 
 
