@@ -1,0 +1,2 @@
+![dunning_kruger_effect](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/miscellaneous/funnies/dunning_kruger_effect.jpeg)
+![production](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/miscellaneous/funnies/production.jpg)
