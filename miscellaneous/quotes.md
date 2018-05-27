@@ -38,3 +38,68 @@
 >
 > -- _Rick Cook, The Wizardry Compiled_
 
+> __Every extension proposal should be required to be accompanied by a kidney. People would submit only serious proposals, and nobody would submit more than two.__
+>
+> -- _Jim Waldo_
+
+> __That's the thing about people who think they hate computers. What they really hate is lousy programmers.__
+>
+> -- _Larry Niven_
+
+> __An algorithm must be seen to be believed.__
+>
+> -- _Donald Ervin Knuth, Leaders in Computing: Changing the digital world_
+
+> __A language that doesn't affect the way you think about programming is not worth knowing.__
+>
+> -- _Alan J. Perlis_
+
+> __If you think it's simple, then you have misunderstood the problem.__
+>
+> -- _Bjarne Stroustrup_
+
+> __Design and programming are human activities; forget that and all is lost.__
+>
+> -- _Bjarne Stroustrup_
+
+> __The standard library saves programmers from having to reinvent the wheel.__
+>
+> -- _Bjarne Stroustrup_
+
+> __Programming is like sex: It may give some concrete results, but that is not why we do it.__
+>
+> -- _Bjarne Stroustrup_
+
+> __C++ protects against accident, not against fraud.__
+>
+> -- _Bjarne Stroustrup_
+
+> __I would advise students to pay more attention to the fundamental ideas rather than latest technology. The technology will be out-of-date before they graduate. Fundamental ideas never get out of date.__
+>
+> -- _David Parnas_
+
+> __When I'm working on a problem, I never think about beauty. I think only how to solve the problem. But when I have finished, if the solution is not beautiful, I know it is wrong.__
+>
+> -- _R. Buckminster Fuller_
+
+> __A program that has not been tested does not work.__
+>
+> -- _Bjarne Stroustrup_
+
+> __Anybody who comes to you and says he has a perfect language is either naive or a salesman.__
+>
+> -- _Bjarne Stroustrup_
+
+> __Computers are useless. They can only give you answers.__
+>
+> -- _Pablo Picasso_
+
+
+
+
+
+
+
+
+
+
