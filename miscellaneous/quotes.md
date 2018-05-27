@@ -1,5 +1,4 @@
 > Talk is cheap. Show me the code.
->
 > -- <cite>Linus Torvalds</cite>
 			
 > Programs must be written for people to read, and only incidentally for machines to execute.
