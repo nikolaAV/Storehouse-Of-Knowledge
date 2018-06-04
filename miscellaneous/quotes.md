@@ -254,7 +254,83 @@
 >
 > -- _Jonas Salk_
 
+> __The gods do not protect fools. Fools are protected by more capable fools.__
+>
+> -- _Larry Niven, Ringworld_
 
+> __Love is the key to a life well lived.__
+>
+> -- _Rasheed Ogunlaru_
+
+> __Peace of mind arrives the moment you come to peace with the contents of your mind.__
+>
+> -- Rasheed Ogunlaru
+
+> __I have had dreams, and I've had nightmares. I overcame the nightmares because of my dreams.__
+>
+> -- _Jonas Salk_
+
+> __When things get bad enough, then something happens to correct the course. And it's for that reason that I speak about evolution as an error-making and an error-correcting process. And if we can be ever so much better - ever so much slightly better - at error correcting than at error making, then we'll make it.__
+>
+> -- _Jonas Salk_
+
+> __Our greatest responsibility is to be good ancestors.__
+>
+> -- _Jonas Salk_
+
+> __What we do not understand we do not possess.__
+>
+> -- _Goethe_
+
+> __The competent programmer is fully aware of strictly limited size of his own skull; therefore he approaches the programming task in full humility, and among other things he avoids clever tricks like the plague.
+[…] We shall do a much better programming job, provided that we approach the task with a full appreciation of its tremendous difficulty, provided that we stick to modest and elegant programming languages, provided that we respect the intrinsic limitations of the human mind and approach the task as Very Humble Programmers.__
+>
+> -- _Edsger W.Dijkstra, “The Humble Programmer”, 1972_
+
+
+> __Guns don’t kill people, people kill people.__
+>
+> -- _Eddie Izzard_
+
+> __When art critics get together they talk about Form and Structure and Meaning. When artists get together they talk about where you can buy cheap turpentine.__
+>
+> -- _Pablo Picasso_
+
+> __Action is the foundational key to all success.__
+>
+> -- _Pablo Picasso_
+
+> __People want to find a meaning in everything and everyone. That's the disease of our age...__
+>
+> -- _Pablo Picasso_
+
+> __I do not seek. I find.__
+>
+> -- _Pablo Picasso_
+
+> __I'd like to live as a poor man with lots of money.__
+>
+> -- _Pablo Picasso_
+
+> __Only put off until tomorrow what you are willing to die having left undone.__
+>
+> -- _Pablo Picasso_
+
+> __When I was a child my mother said to me, 'If you become a soldier, you'll be a general. If you become a monk, you'll be the pope.' Instead I became a painter and wound up as Picasso.__
+>
+> -- _Pablo Picasso_
+
+> __Inspiration exists, but it has to find you working.__
+>
+> -- _Pablo Picasso_
+
+> __The meaning of life is to find your gift. The purpose of life is to give it away.__
+>
+> -- _Pablo Picasso_
+
+
+- - -
+visit [GoodReads](https://www.goodreads.com/)
 
 
 
