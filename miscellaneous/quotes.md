@@ -250,6 +250,10 @@
 >
 > -- _Shakespeare, King Lear(Act 1, Scene 4)_
 
+> __Intuition will tell the thinking mind where to look next.__
+>
+> -- _Jonas Salk_
+
 
 
 
