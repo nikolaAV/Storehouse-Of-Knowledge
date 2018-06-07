@@ -98,17 +98,9 @@
 >
 > -- _Pablo Picasso_
 
-> __I am not optimistic or pessimistic. I feel that optimism and pessimism are very unbalanced. I am a very hard engineer. I am a mechanic. I am a sailor. I am an air pilot. I don't tell people I can get you across the ocean with my ship unless I know what I'm talking about.__
->
-> -- _R. Buckminster Fuller (Only Integrity Is Going to Count: Integrity Day, Los Angeles February 26, 1983_
-
 > __The scientist is not a person who gives the right answers, he's one who asks the right questions.__
 >
 > -- _Claude Lévi-Strauss_
-
-> __I think computer viruses should count as life ... I think it says something about human nature that the only form of life we have created so far is purely destructive. We've created life in our own image.__
->
-> -- _Stephen Hawking_
 
 > __Don't explain computers to laymen. Simpler to explain sex to a virgin.__
 >
@@ -150,10 +142,6 @@
 >
 > -- _Robert C. Martin_
 
-> __Don't gloss over a routine or piece of code involved in the bug because you "know" it works. Prove it. Prove it in this context, with this data, with these boundary conditions.__
->
-> -- _Andrew Hunt, The Pragmatic Programmer: From Journeyman to Master_
-
 > __The only way to reduce the variability in the estimate is to reduce the variability in the project.__
 >
 > -- _Steve McConnell, Software Estimation: Demystifying the Black Art_
@@ -170,7 +158,7 @@
 >
 > -- _Steve McConnell, Code Complete_
 
-> __Managing complexity is the most important technical topic in software development. In my view, it's so important that Software's Primary Technical Imperative has to be managing complexity. Complexity is not a new feature of software development.__
+> __Managing complexity is the most important technical topic in software development. Complexity is not a new feature of software development.__
 >
 > -- _Steve McConnell, Code Complete_
 
