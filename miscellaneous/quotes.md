@@ -372,6 +372,25 @@
 >
 > -- _Peter F. Drucker_
 
+> __Managing yourself requires taking responsibility for relationships.__
+>
+> -- _Peter F. Drucker (Managing Oneself (Harvard Business Review Classics))_
+
+> __A decision without an alternative is a desperate gambler’s throw.__
+>
+> -- _Peter F. Drucker (The Effective Executive)_
+
+> __Many brilliant people believe that ideas move mountains. But bulldozers move mountains; ideas show where the bulldozers should go to work.__
+>
+> -- _Peter F. Drucker_
+
+> __The less an organization has to do to produce results, the better it does its job.__
+>
+> -- _Peter F. Drucker (The Effective Executive)_
+
+> __Until we can manage time, we can manage nothing else.__
+>
+> -- _Peter F. Drucker_
 
 
 - - -
