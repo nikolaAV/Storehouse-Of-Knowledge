@@ -328,6 +328,51 @@
 >
 > -- _Pablo Picasso_
 
+> __My grandfather once told me that there were two kinds of people; those who do the work and those who take the credit. He told me to try to be in the first group; there was much less competition.__
+>
+> -- _Indira Gandhi_
+
+> __Forgiveness is a virtue of the brave.__
+>
+> -- _Indira Gandhi_
+
+> __Whenever you take a step forward, you are bound to disturb something.__
+>
+> -- _Indira Gandhi_
+
+> __Every enterprise is a learning and teaching institution. Training and development must be built into it on all levels—training and development that never stop.__
+>
+> -- _Peter F. Drucker (The Essential Drucker)_
+
+> __Knowledge has to be improved, challenged, and increased constantly, or it vanishes.__
+>
+> -- _Peter F. Drucker_
+
+> __The best way to predict your future is to create it.__
+>
+> -- _Peter F. Drucker_
+
+> __Unless commitment is made, there are only promises and hopes; but no plans.__
+>
+> -- _Peter F. Drucker_
+
+> __No one learns as much about a subject as one who is forced to teach it.__
+>
+> -- _Peter F. Drucker_
+
+> __There is nothing quite so useless, as doing with great efficiency, something that should not be done at all.__
+>
+> -- _Peter F. Drucker_
+
+> __What's measured improves.__
+>
+> -- _Peter F. Drucker_
+
+> __Rank does not confer privilege or give power. It imposes responsibility.__
+>
+> -- _Peter F. Drucker_
+
+
 
 - - -
 visit [GoodReads](https://www.goodreads.com/)
