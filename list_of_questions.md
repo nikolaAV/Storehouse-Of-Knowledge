@@ -21,7 +21,7 @@ When instantiating an instance of any type (including "empty"), the physical mem
 
 **See also:** [Bjarne Stroustrup's FAQ](http://www.stroustrup.com/bs_faq2.html#sizeof-empty), [EBO](http://en.cppreference.com/w/cpp/language/ebo) 
 
-**Relatives:** [EBO](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#sizeof-empty-aggregation-vs-inheritance)
+**Relatives:** [EBO](./list_of_questions.md#sizeof-empty-aggregation-vs-inheritance)
 
 
 # virtual destructor
@@ -66,7 +66,7 @@ Regarding code above what should be present in output?
 
 **See also:** [S. Meyers. Effective C++, item 7](https://books.google.com.ua/books?id=U7lTySXdFk0C&lpg=PT68&dq=Effective%20C%2B%2B%20declare%20destructors%20virtual&pg=PT68#v=onepage&q&f=false), [H.Sutter, GotW#5](https://herbsutter.com/2013/05/22/gotw-5-solution-overriding-virtual-functions/)
  
-**Relatives:** [virtual dtor2](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#virtual-destructor-part-2), [virtuality](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#cost-of-the-virtuality)
+**Relatives:** [virtual dtor2](./list_of_questions.md#virtual-destructor-part-2), [virtuality](./list_of_questions.md#cost-of-the-virtuality)
 
 # Object construction
 **complexity:** basic
