@@ -2656,7 +2656,7 @@ Such behavior is essential to maintaining `const`-correctness. Moving a value ou
 
 **See also:** [S. Meyers. Effective Modern C++. Item 23](https://edisciplinas.usp.br/pluginfile.php/1995323/mod_resource/content/1/Effective%20Modern%20C%2B%2B%202014.pdf)
 
-**Relatives:** [std::move::RVO](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#stdmovervo), [std::unique_ptr](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#stdunique_ptr-copyable)
+**Relatives:** [std::move::RVO](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#stdmovervo), [std::unique_ptr](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#stdunique_ptr-copyable), [lambda with move return](./list_of_questions.md#lambda-expressions-move-capture-and-move-return)
 
 # Object lifetime. const-reference to the temporary. part 2. 
 **complexity:** expert
