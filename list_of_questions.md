@@ -3571,3 +3571,42 @@ Regarding code (C++17 compliant) above what should be present in output?
 
 **Relatives:** 
 
+# Lambda expressions. Move capture and move return
+**complexity:** expert 
+```cpp
+struct widget
+{
+   widget() = default;
+   widget(const widget&)   { cout << "ctor(copy)" << endl; }   
+   widget(widget&&)        { cout << "ctor(move)" << endl; }   
+};
+
+int main()
+{
+   auto w      { widget{} };
+   auto lambda { [w=std::move(w)] { return std::move(w); } };
+   auto w2     { lambda() };
+}
+```
+Regarding code above what should be present in output? 
+- A 
+    - ctor(copy)
+    - ctor(move)
+- B 
+    - ctor(move)
+    - ctor(move)
+- C 
+    - ctor(copy)
+    - ctor(copy)
+- D 
+    - ctor(move)
+    - ctor(copy)
+
+**Answer:** 
+
+If the keyword `mutable` is absent a lambda expression produces a closure as immutable functional object i.e. the closure type has following member: ret `operator()`(params) `const` {body}. This `const`- method returns __rvalue reference__ to `const` 'widget'. Reference to `const` is immutable, it cannot be used to move an object because moving a value out of the object modifies it.
+Thus, __rvalue reference__ to `const` is copied by means __the copy constructor__ 'widget(const widget&)'.
+
+**See also:** [Lambda expressions](http://en.cppreference.com/w/cpp/language/lambda) on cppreference.com
+
+**Relatives:** [std::move(const)](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#stdmoveconst)
