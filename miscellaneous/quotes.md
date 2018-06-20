@@ -380,6 +380,125 @@
 >
 > -- _Peter F. Drucker_
 
+> __If you tell the truth, you don't have to remember anything.__
+>
+> -- _Mark Twain_
+
+> __Twenty years from now you will be more disappointed by the things that you didn't do than by the ones you did do. So throw off the bowlines. Sail away from the safe harbor. Catch the trade winds in your sails. Explore. Dream. Discover.__
+>
+> -- _H. Jackson Brown Jr._
+
+> __The man who does not read has no advantage over the man who cannot read.__
+>
+> -- _Mark Twain_
+
+> __Never put off till tomorrow what may be done day after tomorrow just as well.__
+>
+> -- _Mark Twain_
+
+> __I have never let my schooling interfere with my education.__
+>
+> -- _Mark Twain_
+
+> __The fear of death follows from the fear of life. A man who lives fully is prepared to die at any time.__
+>
+> -- _Mark Twain_
+
+> __Be careful about reading health books. Some fine day you'll die of a misprint.__
+>
+> -- _Markus Herz_
+
+> __Keep away from people who try to belittle your ambitions. Small people always do that, but the really great make you feel that you, too, can become great.__
+>
+> -- _Mark Twain_
+
+> __The difference between the almost right word and the right word is really a large matter. ’tis the difference between the lightning bug and the lightning.__
+>
+> -- _Mark Twain (The Wit and Wisdom of Mark Twain)_
+
+> __Wrinkles should merely indicate where the smiles have been.__
+>
+> -- _Mark Twain_
+
+> __I do not fear death. I had been dead for billions and billions of years before I was born, and had not suffered the slightest inconvenience from it.__
+>
+> -- _Mark Twain_
+
+> __Sanity and happiness are an impossible combination.__
+>
+> -- _Mark Twain_
+
+> __There are three types of lies -- lies, damn lies, and statistics.__
+>
+> -- _Benjamin Disraeli_
+
+> __When I was a boy of 14, my father was so ignorant I could hardly stand to have the old man around. But when I got to be 21, I was astonished at how much the old man had learned in seven years.__
+>
+> -- _Mark Twain_
+
+> __Clothes make the man. Naked people have little or no influence on society.__
+>
+> -- _Mark Twain_
+
+> __You can't depend on your eyes when your imagination is out of focus.__
+>
+> -- _Mark Twain_
+
+> __If you pick up a starving dog and make him prosperous he will not bite you. This is the principal difference between a dog and man.__
+>
+> -- _Mark Twain_
+
+> __The two most important days in your life are the day you are born and the day you find out why.__
+>
+> -- _Mark Twain_
+
+> __Sometimes I wonder whether the world is being run by smart people who are putting us on or by imbeciles who really mean it.__
+>
+> -- _Laurence J. Peter (The Peter Principle)_
+
+> __Never argue with stupid people, they will drag you down to their level and then beat you with experience.__
+>
+> -- _Mark Twain_
+
+> __The human race has only one really effective weapon and that is laughter.__
+>
+> -- _Mark Twain_
+
+> __Giving up smoking is the easiest thing in the world. I know because I've done it thousands of times.__
+>
+> -- _Mark Twain_
+
+> __It is better to deserve honors and not have them than to have them and not deserve them.__
+>
+> -- _Mark Twain_
+
+> __Action speaks louder than words but not nearly as often.__
+>
+> -- _Mark Twain_
+
+> __The right word may be effective, but no word was ever as effective as a rightly timed pause.__
+>
+> -- _Mark Twain_
+
+> __It's better to keep your mouth shut and appear stupid than open it and remove all doubt.__
+>
+> -- _Mark Twain_
+
+> __A half-truth is the most cowardly of lies.__
+>
+> -- _Mark Twain_
+
+> __It's easier to fool people than to convince them that they have been fooled.__
+>
+> -- _Mark Twain_
+
+> __Too much of anything is bad, but too much good whiskey is barely enough.__
+>
+> -- _Mark Twain_
+
+
+
+
 
 - - -
 visit [GoodReads](https://www.goodreads.com/)
