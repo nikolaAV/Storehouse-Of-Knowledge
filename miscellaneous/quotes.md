@@ -496,9 +496,29 @@
 >
 > -- _Mark Twain_
 
+> __There's one technique that you must use if you want people to listen to you: listen to them.__
+>
+> -- _Andrew Hunt (The Pragmatic Programmer: From Journeyman to Master)_
 
+> __If you are doing very detailed implementation and coding, read a book on design and architecture. If you are doing high-level design, read a book on coding techniques.__
+>
+> -- _Andrew Hunt (The Pragmatic Programmer: From Journeyman to Master)_
 
+> __I believe that it is better to be looked over than it is to be overlooked.__
+>
+> -- _Mae West, Belle of the Nineties, 1934_
 
+> __Don't blame someone or something else, or make up an excuse. Don't blame all the problems on a vendor, a programming language, management, or your coworkers.__
+>
+> -- _Andrew Hunt (The Pragmatic Programmer: From Journeyman to Master)_
+
+> __We can be proud of our abilities, but we must be honest about our shortcomings—our ignorance as well as our mistakes.__
+>
+> -- _Andrew Hunt (The Pragmatic Programmer: From Journeyman to Master)_
+
+> __Don't let entropy win.__
+>
+> -- _Andrew Hunt (The Pragmatic Programmer: From Journeyman to Master)_
 
 - - -
 visit [GoodReads](https://www.goodreads.com/)
