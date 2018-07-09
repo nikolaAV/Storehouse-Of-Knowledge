@@ -3608,3 +3608,43 @@ Thus, __rvalue reference__ to `const` is copied by means __the copy constructor_
 **See also:** [Lambda expressions](http://en.cppreference.com/w/cpp/language/lambda) on cppreference.com
 
 **Relatives:** [std::move(const)](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#stdmoveconst)
+
+# std::async. Ignoring std::future<>.
+**complexity:** professional
+```cpp
+int main()
+{
+   auto foo = [](char ch){
+      cout << "Thread [" << ch << "] is started\n";
+      this_thread::sleep_for(1s);
+      cout << "Thread [" << ch << "] is about to terminate\n";
+   };
+
+   async(launch::async, foo, 'A');   // Line 'A'
+   async(launch::async, foo, 'B');   // Lene 'B'
+}
+```
+Regarding code above what should be present in output?
+- A 
+    - Thread [A] is started
+    - Thread [B] is started
+    - Thread [A] is about to terminate
+    - Thread [B] is about to terminate
+- B
+    - Thread [A] is started
+    - Thread [A] is about to terminate
+    - Thread [B] is started
+    - Thread [B] is about to terminate
+- C
+    - Undefined Behaviour, [UB](https://en.cppreference.com/w/cpp/language/ub)
+- D
+    - Undetermined Behaviour, i.e. the ordering is not specified
+
+**Answer:** B
+
+_Lines 'A','B'_ block on the call, which is most propably not what we want. That is because the lifetime of the fututres 'std::async' return ends in the each line _'A','B'_ correspondently. There is one special peculiarity: if a future (in our case, it's the tempotary) was obtained from 'std::async' with 'launch::async' policy, then its destructor performs a blocking wait (by means callinh 'get()'). 
+
+**See also:** [std::futures from std::async aren't special!](http://scottmeyers.blogspot.com/2013/03/stdfutures-from-stdasync-arent-special.html) by Scott Meyers 
+
+**Relatives:** 
+
