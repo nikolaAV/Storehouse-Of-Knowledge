@@ -3642,7 +3642,7 @@ Regarding code above what should be present in output?
 
 **Answer:** B
 
-_Lines 'A','B'_ block on the call, which is most propably not what we want. That is because the lifetime of the fututres 'std::async' return ends in the each line _'A','B'_ correspondently. There is one special peculiarity: if a future (in our case, it's the tempotary) was obtained from 'std::async' with 'launch::async' policy, then its destructor performs a blocking wait (by means callinh 'get()'). 
+_Lines 'A','B'_ block on the call, which is most propably not what we want. That is because the lifetime of the futures ['std::async'](https://en.cppreference.com/w/cpp/thread/async) return ends in the each line _'A','B'_ correspondently. There is one special peculiarity: if a future (in our case, it's the tempotary) was obtained from 'std::async' with 'launch::async' policy, then its destructor performs a blocking wait (by means calling 'get()'). 
 
 **See also:** [std::futures from std::async aren't special!](http://scottmeyers.blogspot.com/2013/03/stdfutures-from-stdasync-arent-special.html) by Scott Meyers 
 
