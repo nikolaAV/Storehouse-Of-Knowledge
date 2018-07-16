@@ -452,10 +452,6 @@
 >
 > -- _Mark Twain_
 
-> __Sometimes I wonder whether the world is being run by smart people who are putting us on or by imbeciles who really mean it.__
->
-> -- _Laurence J. Peter (The Peter Principle)_
-
 > __Never argue with stupid people, they will drag you down to their level and then beat you with experience.__
 >
 > -- _Mark Twain_
