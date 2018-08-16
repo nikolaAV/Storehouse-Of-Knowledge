@@ -1381,7 +1381,7 @@ but there is a special exemption for empty classes when they are inherited from.
 
 **See also:** [cppreference,EBO](http://en.cppreference.com/w/cpp/language/ebo), [More C++ Idioms, EBO](https://en.wikibooks.org/wiki/More_C%2B%2B_Idioms/Empty_Base_Optimization)
 
-**Relatives:** [sizeof(empty)](./list_of_questions.md#sizeof-empty), [EBCO multiple inheritance](./list_of_questions.md#sizeof-empty-aggregation-vs-inheritance)
+**Relatives:** [sizeof(empty)](./list_of_questions.md#sizeof-empty), [EBCO multiple inheritance](./list_of_questions.md#sizeof-empty-multiple-inheritance)
 
 # std::move(RVO)
 **complexity:** expert
