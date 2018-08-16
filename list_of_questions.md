@@ -1381,7 +1381,7 @@ but there is a special exemption for empty classes when they are inherited from.
 
 **See also:** [cppreference,EBO](http://en.cppreference.com/w/cpp/language/ebo), [More C++ Idioms, EBO](https://en.wikibooks.org/wiki/More_C%2B%2B_Idioms/Empty_Base_Optimization)
 
-**Relatives:** [sizeof(empty)](./list_of_questions.md#sizeof-empty)
+**Relatives:** [sizeof(empty)](./list_of_questions.md#sizeof-empty), [EBCO multiple inheritance](./list_of_questions.md#sizeof-empty-aggregation-vs-inheritance)
 
 # std::move(RVO)
 **complexity:** expert
@@ -3726,4 +3726,4 @@ Even though there are no zero-size types in C++, the C++ standard does specify t
 [Templates and Inheritance Interacting in C++](http://www.informit.com/articles/article.aspx?p=31473&seqNum=2) By Nicolai M. Josuttis and David Vandevoorde, [cppreference::ebo](https://en.cppreference.com/w/cpp/language/ebo)
 
 **Relatives:** 
-[empty base inheritance](./list_of_questions.md#sizeof-empty-aggregation-vs-inheritance), [sizeof(<empty>)](./list_of_questions.md#sizeof-empty)
+[empty base inheritance](./list_of_questions.md#sizeof-empty-aggregation-vs-inheritance), [sizeof(\<empty>)](./list_of_questions.md#sizeof-empty)
