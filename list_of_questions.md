@@ -3696,7 +3696,7 @@ A `const` function member may modify what the data member refers to, it does not
 
 **Relatives:** 
 
-# sizeof (<empty>)? multiple inheritance
+# sizeof (\<empty>)? multiple inheritance
 **complexity:** expert
 ```cpp
 struct Empty {}; 
