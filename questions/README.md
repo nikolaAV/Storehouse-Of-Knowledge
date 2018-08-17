@@ -734,7 +734,7 @@ Regarding code above what should be present in output?
 
 **Answer:** B
 
-Type of 'x' is deduced `by-value` rule. The expression on the right side of `operator=` is pointer to const char (see [type decaying](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#c-array-as-function-parameter-decay-of-types)).
+Type of 'x' is deduced `by-value` rule. The expression on the right side of `operator=` is pointer to const char (see [type decaying](./README.md#c-array-as-function-parameter-decay-of-types)).
 Type of 'y' is deduced `by-reference` rule, i.e. it is the actual type of the array.
 
 **See also:** [S. Meyers. Effective Modern C++, item 2](https://www.safaribooksonline.com/library/view/effective-modern-c/9781491908419/ch01.html), [auto and decltype Explained](http://thbecker.net/articles/auto_and_decltype/section_01.html)
@@ -831,7 +831,7 @@ In the example above, the temporary returned by 'foo()' lives until the closing 
 
 **See also:** [H. Sutter. GotW #88](https://herbsutter.com/2008/01/01/gotw-88-a-candidate-for-the-most-important-const/), [Lifetime of a temporary](http://en.cppreference.com/w/cpp/language/reference_initialization#Lifetime_of_a_temporary)
 
-**Relatives:** [part_2](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#object-lifetime-const-reference-to-the-temporary-part-2) , [reference initialization](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#reference-initialization)
+**Relatives:** [part_2](./README.md#object-lifetime-const-reference-to-the-temporary-part-2) , [reference initialization](./README.md#reference-initialization)
 
 # Object lifetime. const-reference to the base. 
 **complexity:** expert
@@ -3336,7 +3336,7 @@ Regarding code above what should be present in output?
 
 **See also:** [S. Meyers. Effective Modern C++, item 3](https://www.safaribooksonline.com/library/view/effective-modern-c/9781491908419/ch01.html), [auto and decltype Explained](http://thbecker.net/articles/auto_and_decltype/section_01.html)
 
-**Relatives:** [Deducing Type, auto](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#deducing-types-auto-by-reference)
+**Relatives:** [Deducing Type, auto](./README.md#deducing-types-auto-by-reference)
 
 # Emplacement functions with explicit constructors  
 **complexity:** expert
@@ -3376,7 +3376,7 @@ Function 'vector::push_back' is declared with input parameter of 'reference to a
 
 **See also:** [S. Meyers. Effective Modern C++, item 42](http://doc.imzlp.me/viewer.html?file=docs/effective/EffectiveModernCPP.pdf#page=317&zoom=auto,-17,549) 
 
-**Relatives:** [implicit type conversion](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#type-conversion-implicitly-), [object construction. initialization syntax](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#object-construction-initialization-syntax-part-3), [emplacement vs. insertions](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#emplacement-functions-vs-insertion-functions)
+**Relatives:** [implicit type conversion](./README.md#type-conversion-implicitly-), [object construction. initialization syntax](./README.md#object-construction-initialization-syntax-part-3), [emplacement vs. insertions](./README.md#emplacement-functions-vs-insertion-functions)
 
 # Emplacement functions vs. Insertion functions
 **complexity:** professional
@@ -3425,7 +3425,7 @@ Insertion functions (e.g. list::push_back) take _objects to be inserted_, while 
 
 **See also:** [S. Meyers. Effective Modern C++, item 42](http://doc.imzlp.me/viewer.html?file=docs/effective/EffectiveModernCPP.pdf#page=311&zoom=auto,-17,623) 
 
-**Relatives:** [implicit type conversion](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#type-conversion-const-reference-to-the-temporary), [emplacement with explicit](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#emplacement-functions-with-explicit-constructors), [insertion failure of movable argument](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#mapinsert-failure--movable-argument) 
+**Relatives:** [implicit type conversion](./README.md#type-conversion-const-reference-to-the-temporary), [emplacement with explicit](./README.md#emplacement-functions-with-explicit-constructors), [insertion failure of movable argument](./README.md#mapinsert-failure--movable-argument) 
 
 # std::unique_ptr. Copyable?
 **complexity:** basic
@@ -3466,7 +3466,7 @@ Regarding code above what output will be generated  by the compiler (imagine Lin
 
 **See also:** [cppref::unique_ptr](http://en.cppreference.com/w/cpp/memory/unique_ptr)
 
-**Relatives:** [std::move](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#stdmoveconst), [variable of type&&](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#rvalue-reference) 
+**Relatives:** [std::move](./README.md#stdmoveconst), [variable of type&&](./README.md#rvalue-reference) 
 
 
 # Function overloading. const vs. volatile
@@ -3497,7 +3497,7 @@ In general, almost anything that applies to `const` qualifiers also applies to `
 
 **See also:** [volatile: The Multithreaded Programmer's Best Friend](http://www.drdobbs.com/cpp/volatile-the-multithreaded-programmers-b/184403766) by Andrei Alexandrescu, [cppref::cv-qualifiers](http://en.cppreference.com/w/cpp/language/cv)
 
-**Relatives:** [Function overloading & const](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#the-temporary-function-overloading-and-const-reference-to-lvalue) 
+**Relatives:** [Function overloading & const](./README.md#the-temporary-function-overloading-and-const-reference-to-lvalue) 
 
 # map::insert failure & movable argument
 **complexity:** expert 
@@ -3529,7 +3529,7 @@ Bad news! The widget object which is owned by 'p2' is lost. 'map::insert' accept
 
 **See also:** [cppref::try_emplace](http://en.cppreference.com/w/cpp/container/map/try_emplace), [what happens with a movable object if insertion fails](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4006.html) by Thomas Köppe
 
-**Relatives:** [rvalue reference](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#rvalue-reference), [std::move(const)](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#stdmoveconst), [emplacement vs. insertion](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#emplacement-functions-vs-insertion-functions) 
+**Relatives:** [rvalue reference](./README.md#rvalue-reference), [std::move(const)](./README.md#stdmoveconst), [emplacement vs. insertion](./README.md#emplacement-functions-vs-insertion-functions) 
 
 # Fold expression
 **complexity:** basic 
@@ -3607,7 +3607,7 @@ Thus, __rvalue reference__ to `const` is copied by means __the copy constructor_
 
 **See also:** [Lambda expressions](http://en.cppreference.com/w/cpp/language/lambda) on cppreference.com
 
-**Relatives:** [std::move(const)](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/list_of_questions.md#stdmoveconst)
+**Relatives:** [std::move(const)](./README.md#stdmoveconst)
 
 # std::async. Ignoring std::future<>.
 **complexity:** professional
