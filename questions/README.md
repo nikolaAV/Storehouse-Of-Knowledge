@@ -21,7 +21,7 @@ When instantiating an instance of any type (including "empty"), the physical mem
 
 **See also:** [Bjarne Stroustrup's FAQ](http://www.stroustrup.com/bs_faq2.html#sizeof-empty), [EBO](http://en.cppreference.com/w/cpp/language/ebo) 
 
-**Relatives:** [EBO](./list_of_questions.md#sizeof-empty-aggregation-vs-inheritance)
+**Relatives:** [EBO](./README.md#sizeof-empty-aggregation-vs-inheritance)
 
 
 # virtual destructor
@@ -66,7 +66,7 @@ Regarding code above what should be present in output?
 
 **See also:** [S. Meyers. Effective C++, item 7](https://books.google.com.ua/books?id=U7lTySXdFk0C&lpg=PT68&dq=Effective%20C%2B%2B%20declare%20destructors%20virtual&pg=PT68#v=onepage&q&f=false), [H.Sutter, GotW#5](https://herbsutter.com/2013/05/22/gotw-5-solution-overriding-virtual-functions/)
  
-**Relatives:** [virtual dtor2](./list_of_questions.md#virtual-destructor-part-2), [virtuality](./list_of_questions.md#cost-of-the-virtuality)
+**Relatives:** [virtual dtor2](./README.md#virtual-destructor-part-2), [virtuality](./README.md#cost-of-the-virtuality)
 
 # Object construction
 **complexity:** basic
@@ -116,7 +116,7 @@ Regarding code above what should be present in output?
 
 **See also:** ???
 
-**Relatives:** [ctor::exception](./list_of_questions.md#object-construction-exception)
+**Relatives:** [ctor::exception](./README.md#object-construction-exception)
  
 
 # Function overloading. Parameter type: integer vs. pointer
@@ -141,7 +141,7 @@ Regarding code above what should be present in output?
 
 **See also:** [Bjarne Stroustrup's FAQ](http://www.stroustrup.com/bs_faq2.html#null)
  
-**Relatives:**  [function overloading, nullptr](./list_of_questions.md#function-overloading-parameter-type-null-vs-nullptr)
+**Relatives:**  [function overloading, nullptr](./README.md#function-overloading-parameter-type-null-vs-nullptr)
 
 # Function overriding. Default parameter value.
 **complexity:** professional
@@ -223,7 +223,7 @@ Regarding code above what should be present in output? Which of proposed constru
 
 **See also:** [S. Meyers. Effective C++, item 4](https://books.google.com.ua/books?id=U7lTySXdFk0C&pg=PT56&dq=A+better+way+to+write+the+ABEntry+constructor+is+to+use+the+member+initialization+list+instead+of+assignments:&hl=en&sa=X&redir_esc=y#v=onepage&q&f=false)
 
-**Relatives:** [ctor::member_ordering](./list_of_questions.md#object-construction-member-initialization-list-vs-member-declaration-ordering)
+**Relatives:** [ctor::member_ordering](./README.md#object-construction-member-initialization-list-vs-member-declaration-ordering)
 
 # Inheritance. Hiding names.
 **complexity:** professional
@@ -256,7 +256,7 @@ The compiler looks into the scope of _'derived'_, finds the single function "foo
 
 **See also:** [S. Meyers. Effective C++, item 33](https://books.google.com.ua/books?id=U7lTySXdFk0C&pg=PT184&dq=Avoid+hiding+inherited+names.&hl=en&sa=X&redir_esc=y#v=onepage&q&f=false), [Bjarne Stroustrup's FAQ](http://www.stroustrup.com/bs_faq2.html#overloadderived), [ISOC++FAQ](https://isocpp.org/wiki/faq/strange-inheritance#hiding-rule)
 
-**Relatives:** [scopes::hiding_names](./list_of_questions.md#scopes-hiding-names)
+**Relatives:** [scopes::hiding_names](./README.md#scopes-hiding-names)
 
 # Inheritance. Virtual base.
 **complexity:** expert
@@ -371,7 +371,7 @@ list. __D__ is the right answer in common case. For the the given test, __B__ is
 
 **See also:** [S. Meyers. Effective C++, item 4](https://books.google.com.ua/books?id=U7lTySXdFk0C&pg=PT56&dq=A+better+way+to+write+the+ABEntry+constructor+is+to+use+the+member+initialization+list+instead+of+assignments:&hl=en&sa=X&redir_esc=y#v=onepage&q&f=false), [CppCoreGuidelines](https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines.html#discussion-define-and-initialize-member-variables-in-the-order-of-member-declaration)
 
-**Relatives:** [ctor::member_initialization_list](./list_of_questions.md#object-construction-member-initialization-list)
+**Relatives:** [ctor::member_initialization_list](./README.md#object-construction-member-initialization-list)
 
 # Polymorphic objects. Slicing
 **complexity:** basic
@@ -464,7 +464,7 @@ The Standard does not say how the virtual table and the pointer to it should be 
 
 **See also:** [S. Meyers. Effective C++, item 7](https://books.google.com.ua/books?id=U7lTySXdFk0C&pg=PT72&dq=destructors+virtual+in+polymorphic+base+classes.%5C&hl=en&sa=X&redir_esc=y#v=onepage&q&f=false), [Bjarne Stroustrup's FAQ](http://www.stroustrup.com/bs_faq2.html#layout-obj)
 
-**Relatives:** [virtual destructor](./list_of_questions.md#virtual-destructor)
+**Relatives:** [virtual destructor](./README.md#virtual-destructor)
 
 # Size Of C++ object (members only)?
 **complexity:** basic
@@ -570,7 +570,7 @@ In C++ the lifetime of an object is said to begin when the constructor runs to c
 
 **See also:** [Bjarne Stroustrup's FAQ](http://www.stroustrup.com/bs_faq2.html#ctor-exceptions), [Herb Sutter’s Mill](https://herbsutter.com/2008/07/25/constructor-exceptions-in-c-c-and-java/)
 
-**Relatives:** [ctor::member](./list_of_questions.md#object-construction), [delegating ctor](./list_of_questions.md#object-construction-exception-in-delegating-constructor), [ctor::exception, part2](./list_of_questions.md#object-construction-in-the-heap-exception)
+**Relatives:** [ctor::member](./README.md#object-construction), [delegating ctor](./README.md#object-construction-exception-in-delegating-constructor), [ctor::exception, part2](./README.md#object-construction-in-the-heap-exception)
 
 # Deducing Types. Template parameter.
 **complexity:** basic
@@ -682,7 +682,7 @@ In a constructor, the virtual call mechanism __is disabled__ because overriding 
 
 **See also:** [Bjarne Stroustrup's FAQ](http://www.stroustrup.com/bs_faq2.html#vcall), [C++ Coding Standards, rule 49](https://books.google.com.ua/books?id=mmjVIC6WolgC&pg=PT238&lpg=PT238&dq=C%2B%2B+Sutter+destructor+direct+call&source=bl&ots=ceOoHQiMZ4&sig=s0DhJh0lBmNK8CqDNJUVgUe3bBg&hl=en&sa=X&ved=0ahUKEwiO6IDA9-zVAhUosFQKHdIABZMQ6AEISjAG#v=onepage&q&f=false), [ISOC++FAQ](https://isocpp.org/wiki/faq/strange-inheritance#calling-virtuals-from-ctors)
 
-**Relatives:** [ctor::basic](./list_of_questions.md#object-construction)
+**Relatives:** [ctor::basic](./README.md#object-construction)
 
 # Deducing Types. 'auto' by-value.
 **complexity:** basic
@@ -711,7 +711,7 @@ In our case, type of _expression_ for 'x' is const int; type of _expression_ for
 
 **See also:** [S. Meyers. Effective Modern C++, item 1.1](https://www.safaribooksonline.com/library/view/effective-modern-c/9781491908419/ch01.html), [auto and decltype Explained](http://thbecker.net/articles/auto_and_decltype/section_01.html)
 
-**Relatives:** [template_param::by_value](./list_of_questions.md#deducing-types-template-parameter)
+**Relatives:** [template_param::by_value](./README.md#deducing-types-template-parameter)
 
 # Deducing Types. 'auto' by-reference.
 **complexity:** professional
@@ -739,7 +739,7 @@ Type of 'y' is deduced `by-reference` rule, i.e. it is the actual type of the ar
 
 **See also:** [S. Meyers. Effective Modern C++, item 2](https://www.safaribooksonline.com/library/view/effective-modern-c/9781491908419/ch01.html), [auto and decltype Explained](http://thbecker.net/articles/auto_and_decltype/section_01.html)
 
-**Relatives:** [C array vs pointer](./list_of_questions.md#c-array-as-function-parameter-decay-of-types), [deducing_type::by-value](./list_of_questions.md#deducing-types-auto-by-value), [decltype of reference](./list_of_questions.md#auto-vs-decltype-with-an-expression-by-reference)
+**Relatives:** [C array vs pointer](./README.md#c-array-as-function-parameter-decay-of-types), [deducing_type::by-value](./README.md#deducing-types-auto-by-value), [decltype of reference](./README.md#auto-vs-decltype-with-an-expression-by-reference)
 
 # new/delete vs. new[]/delete[].
 **complexity:** basic
@@ -879,7 +879,7 @@ If we have `const` 'base' reference to 'derived' temporary, it will be destroyed
 
 **See also:** [H. Sutter. GotW #88](https://herbsutter.com/2008/01/01/gotw-88-a-candidate-for-the-most-important-const/)
 
-**Relatives:** [const-reference to the temporary](./list_of_questions.md#object-lifetime-const-reference-to-the-temporary)
+**Relatives:** [const-reference to the temporary](./README.md#object-lifetime-const-reference-to-the-temporary)
 
 # std::shared_ptr. non-virtual destructor. 
 **complexity:** expert
@@ -964,7 +964,7 @@ When 'display' returns, the temporary object is automatically destroyed.
 
 **See also:** [S. Meyers. Effective C++, item 5,19](http://www.physics.rutgers.edu/~wksiu/C++/MoreEC++_only.pdf), [H. Sutter. GotW #88](https://herbsutter.com/2008/01/01/gotw-88-a-candidate-for-the-most-important-const/) 
 
-**Relatives:** [part 3](./list_of_questions.md#const-reference-to-the-temporary-part-3), [object lifetime referenced by const](./list_of_questions.md#object-lifetime-const-reference-to-the-temporary), [implicit conversion](./list_of_questions.md#type-conversion-implicitly-)
+**Relatives:** [part 3](./README.md#const-reference-to-the-temporary-part-3), [object lifetime referenced by const](./README.md#object-lifetime-const-reference-to-the-temporary), [implicit conversion](./README.md#type-conversion-implicitly-)
 
 # Function overriding. member template & virtuality. 
 **complexity:** expert
@@ -1027,7 +1027,7 @@ Regarding code above what should be present in output?
 
 **See also:** [Bjarne Stroustrup's C++11 FAQ](http://www.stroustrup.com/C++11FAQ.html#nullptr), [S. Meyers. Effective Modern C++, item 8](https://books.google.com.ua/books?id=rjhIBQAAQBAJ&lpg=PP1&dq=meyers%20modern%20c%2B%2B%20NULL%20nullptr&pg=PA58#v=onepage&q&f=false)
 
-**Relatives:**  [function overloading, NULL](./list_of_questions.md#function-overloading-parameter-type-integer-vs-pointer)
+**Relatives:**  [function overloading, NULL](./README.md#function-overloading-parameter-type-integer-vs-pointer)
 
 # Inheritance. Virtual base & dominance.
 **complexity:** expert
@@ -1124,7 +1124,7 @@ An unit object's lifetime begins when some constructor (in our case _'principal 
 
 **See also:** [stackoverflow, delegating constructor throws](https://stackoverflow.com/questions/14386840/destructor-called-after-throwing-from-a-constructor)
 
-**Relatives:** [ctor::exception](./list_of_questions.md#object-construction-exception) 
+**Relatives:** [ctor::exception](./README.md#object-construction-exception) 
 
 # Exception. Catch by value
 **complexity:** professional
@@ -1182,7 +1182,7 @@ To avoid unnecessary copying of the exception object and object slicing, the bes
 
 **See also:** [C++ Coding Standards, item 73](https://doc.lagout.org/programmation/C/CPP101.pdf), [CppCoreGuidelines, E.15](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#e15-catch-exceptions-from-a-hierarchy-by-reference)
 
-**Relatives:** [Type slicing](./list_of_questions.md#polymorphic-objects-slicing)
+**Relatives:** [Type slicing](./README.md#polymorphic-objects-slicing)
 
 # Exception. Multiple inheritance
 **complexity:** expert
@@ -1228,7 +1228,7 @@ The program above prints "whoops" because the C++ runtime can't resolve which `e
 
 **See also:** [D. Abrahams, boost::exception_handling](http://www.boost.org/community/error_handling.html) 
 
-**Relatives:** [Multiple Inheritance. Type conversion to base](./list_of_questions.md#type-conversion-base-in-multiple-inheritance)
+**Relatives:** [Multiple Inheritance. Type conversion to base](./README.md#type-conversion-base-in-multiple-inheritance)
 
 # Type conversion. Base in multiple inheritance
 **complexity:** basic
@@ -1274,7 +1274,7 @@ The compiler does not know what kind of subobject of whole 'child' you want to p
 
 **See also:** [S.Meyers. Effective C++, item 40](https://books.google.com.ua/books?id=Qx5oyB49poYC&pg=PA192&dq=Use+multiple+inheritance+judiciously.&hl=en&sa=X&ved=0ahUKEwio6Ou_ypLWAhWIKGMKHVZMCGoQ6AEILjAB#v=onepage&q&f=false)
 
-**Relatives:** [exception::multiple_inheritance](./list_of_questions.md#exception-multiple-inheritance)
+**Relatives:** [exception::multiple_inheritance](./README.md#exception-multiple-inheritance)
 
 # Return value optimization
 **complexity:** professional
@@ -1334,7 +1334,7 @@ Starting from C++17, another way to describe this mechanics is "unmaterialized v
 
 **See also:** [Copy elision](http://en.cppreference.com/w/cpp/language/copy_elision), [RVO](https://en.wikipedia.org/wiki/Return_value_optimization), [S. Meyers. More Effective C++, item 20](https://books.google.com.ua/books?id=U7lTySXdFk0C&pg=PT439&dq=Facilitate+the+return+value+optimization.+Meyers&hl=en&sa=X&redir_esc=y#v=onepage&q&f=false)
 
-**Relatives:** [RVO & std::move](./list_of_questions.md#stdmovervo), [ObjectConstructionOneCopy](./list_of_questions.md#object-construction-copy-elision).
+**Relatives:** [RVO & std::move](./README.md#stdmovervo), [ObjectConstructionOneCopy](./README.md#object-construction-copy-elision).
 
 # sizeof (\<empty>)? aggregation vs. inheritance.
 **complexity:** expert
@@ -1381,7 +1381,7 @@ but there is a special exemption for empty classes when they are inherited from.
 
 **See also:** [cppreference,EBO](http://en.cppreference.com/w/cpp/language/ebo), [More C++ Idioms, EBO](https://en.wikibooks.org/wiki/More_C%2B%2B_Idioms/Empty_Base_Optimization)
 
-**Relatives:** [sizeof(empty)](./list_of_questions.md#sizeof-empty), [EBCO multiple inheritance](./list_of_questions.md#sizeof-empty-multiple-inheritance)
+**Relatives:** [sizeof(empty)](./README.md#sizeof-empty), [EBCO multiple inheritance](./README.md#sizeof-empty-multiple-inheritance)
 
 # std::move(RVO)
 **complexity:** expert
@@ -1436,7 +1436,7 @@ This manual negative optimization remains in C++17, moving a temporary object pr
 
 **See also:** [S. Meyers. Effective Modern C++, item 25](https://books.google.com.ua/books?id=rjhIBQAAQBAJ&pg=PA174&dq=I+can+perform+the+same+optimization+on+local+variables+that+I%E2%80%99m+returning&hl=en&sa=X&ved=0ahUKEwit19aGgJXWAhXLrlQKHdTqANQQ6AEIKTAA#v=onepage&q&f=false) 
 
-**Relatives:** [RVO](./list_of_questions.md#return-value-optimization), [C++17 copy_elision](./list_of_questions.md#object-construction-copy-elision)
+**Relatives:** [RVO](./README.md#return-value-optimization), [C++17 copy_elision](./README.md#object-construction-copy-elision)
 
 # Function overloading. Promotion vs. standard conversion 
 **complexity:** professional
@@ -1473,7 +1473,7 @@ For the given case, the '__promotion__' is better because of '__standatd convers
 
 **See also:** [cppreference::ranking](http://en.cppreference.com/w/cpp/language/overload_resolution), [accu.org::function selection](https://accu.org/index.php/journals/268), [D. Vandevoorde. C++ Templates, Appendix B](http://flylib.com/books/en/3.401.1.178/1/)  
  
-**Relatives:** [user-defined conversion](./list_of_questions.md#type-conversion-user-defined-vs-standard-conversion) 
+**Relatives:** [user-defined conversion](./README.md#type-conversion-user-defined-vs-standard-conversion) 
 
 # Function overloading. Deleted function 
 **complexity:** expert
@@ -1502,12 +1502,12 @@ The phases of the function call process:
 * (2) Overload resolution
 * (3) Access control
 
-Second phase '_overload resolution_' results only ['foo(int)'](./list_of_questions.md#function-overloading-promotion-vs-standard-conversion). The next phase says: "access violation to deleted function".
+Second phase '_overload resolution_' results only ['foo(int)'](./README.md#function-overloading-promotion-vs-standard-conversion). The next phase says: "access violation to deleted function".
 Please take the difference between 'deleted function' and 'non-existing function'.
 
 **See also:** [S. Meyers. Effective Modern C++, item 11](https://edisciplinas.usp.br/pluginfile.php/1995323/mod_resource/content/1/Effective%20Modern%20C%2B%2B%202014.pdf), [accu.org::function selection](https://accu.org/index.php/journals/268), [D. Vandevoorde. C++ Templates, Appendix B](http://flylib.com/books/en/3.401.1.178/1/)  
  
-**Relatives:** [Promotion & Standard Conversion](./list_of_questions.md#function-overloading-promotion-vs-standard-conversion), [access control](./list_of_questions.md#function-overloading-access-control)
+**Relatives:** [Promotion & Standard Conversion](./README.md#function-overloading-promotion-vs-standard-conversion), [access control](./README.md#function-overloading-access-control)
 
 # final specifier. Member function definition. 
 **complexity:** basic
@@ -1673,7 +1673,7 @@ In our case, there is only an implicit conversion from `int` to 'integer1', beca
 
 **See also:** [S.Meyers, More Effective C++, Item 5](https://books.google.com.ua/books?id=azvE8V0c-mYC&pg=PT58&lpg=PT58&dq=meyers+Two+kinds+of+functions+allow+compilers+to+perform+such+conversions:+single-argument+constructors+and+implicit+type+conversion+operators.&source=bl&ots=48af28Jh4f&sig=q62LPrB7K8hn25HmoXD787vMt1U&hl=en&sa=X&ved=0ahUKEwj7taC7mZ_WAhXhyVQKHSfKD_MQ6AEIJzAA#v=onepage&q&f=false), [cppreference::explicit](http://en.cppreference.com/w/cpp/language/explicit) 
 
-**Relatives:** [const-ref to temporary](./list_of_questions.md#type-conversion-const-reference-to-the-temporary), [copy_list_initialization](./list_of_questions.md#object-construction-initialization-syntax-part-3)
+**Relatives:** [const-ref to temporary](./README.md#type-conversion-const-reference-to-the-temporary), [copy_list_initialization](./README.md#object-construction-initialization-syntax-part-3)
 
 # Argument-dependent lookup 
 **complexity:** professional
@@ -1701,9 +1701,9 @@ Regarding code above what should be present in output?
 
 **See also:** [cppreference::ADL](http://en.cppreference.com/w/cpp/language/adl), [H.Sutter, The Interface Principle](http://www.gotw.ca/publications/mill02.htm)
 
-The first phase of [the function call process](./list_of_questions.md#function-overloading-deleted-function) _name lookup_ just means that, whenever you write a call like 'foo(parm)', the compiler has to figure out which function named 'foo' you want. ADL (aka. [Koenig lookup](https://en.wikipedia.org/wiki/Argument-dependent_name_lookup)) says that, if you supply a function argument of class type (here parm, of type 'A::widget'), then to find the function name the compiler is required to look, not just in the usual places like the global scope, but also in the namespace (here A) that contains the argument's type.
+The first phase of [the function call process](./README.md#function-overloading-deleted-function) _name lookup_ just means that, whenever you write a call like 'foo(parm)', the compiler has to figure out which function named 'foo' you want. ADL (aka. [Koenig lookup](https://en.wikipedia.org/wiki/Argument-dependent_name_lookup)) says that, if you supply a function argument of class type (here parm, of type 'A::widget'), then to find the function name the compiler is required to look, not just in the usual places like the global scope, but also in the namespace (here A) that contains the argument's type.
 
-**Relatives:** [Overload Resolution](./list_of_questions.md#function-overloading-deleted-function), [ADL & operaror function](./list_of_questions.md#argument-dependent-lookup-operator-function), [ADL & friends](./list_of_questions.md#argument-dependent-lookup-friend-function-definition) 
+**Relatives:** [Overload Resolution](./README.md#function-overloading-deleted-function), [ADL & operaror function](./README.md#argument-dependent-lookup-operator-function), [ADL & friends](./README.md#argument-dependent-lookup-friend-function-definition) 
 
 # Function overriding. Non-virtual interface.
 **complexity:** basic
@@ -1783,7 +1783,7 @@ Guideline: A base class destructor should be either public and virtual, or prote
 
 **See also:** [S. Meyers. Effective C++, item 7](https://books.google.com.ua/books?id=U7lTySXdFk0C&lpg=PT68&dq=Effective%20C%2B%2B%20declare%20destructors%20virtual&pg=PT68#v=onepage&q&f=false), [H.Sutter, GotW#5](https://herbsutter.com/2013/05/22/gotw-5-solution-overriding-virtual-functions/)
  
-**Relatives:** [virtual dtor](./list_of_questions.md#virtual-destructor), [NVI](./list_of_questions.md#function-overriding-non-virtual-interface)
+**Relatives:** [virtual dtor](./README.md#virtual-destructor), [NVI](./README.md#function-overriding-non-virtual-interface)
 
 # Function overloading. Access control. 
 **complexity:** professional
@@ -1820,7 +1820,7 @@ The _access control_ does not allow 'foo(int)' to be called.
 
 **See also:** [accu.org::function selection](https://accu.org/index.php/journals/268)
  
-**Relatives:** [deleted function](./list_of_questions.md#function-overloading-deleted-function) 
+**Relatives:** [deleted function](./README.md#function-overloading-deleted-function) 
 
 # Object construction. Initialization syntax
 **complexity:** basic
@@ -1853,7 +1853,7 @@ For the given case, language instructions: 'widget w2=w1;', 'widget w2(w1);', 'w
   
 **See also:** [S. Meyers. Effective Modern C++, item 7](http://doc.imzlp.me/viewer.html?file=docs/effective/EffectiveModernCPP.pdf#page=67&zoom=auto,-15,290), [H.Sutter,GotW#1 ](https://herbsutter.com/2013/05/09/gotw-1-solution/)
 
-**Relatives:** [auto::braced-init-list](./list_of_questions.md#deducing-types-auto-by-braced-init-list)
+**Relatives:** [auto::braced-init-list](./README.md#deducing-types-auto-by-braced-init-list)
 
 
 # Exception. Rethrow vs. propagation.
@@ -1915,7 +1915,7 @@ the first one rethrows the current exception, while the second one throws a new 
   
 **See also:** [S. Meyers. More Effective C++, item 12](http://doc.imzlp.me/viewer.html?file=docs/effective/MoreEffectiveCPP.pdf#page=80&zoom=auto,-54,344)
 
-**Relatives:** [catch-by-value](./list_of_questions.md#exception-catch-by-value)
+**Relatives:** [catch-by-value](./README.md#exception-catch-by-value)
 
 
 # Scopes. Hiding names.
@@ -1944,11 +1944,11 @@ Regarding code above what should be present in output?
  
 **Answer:** B
 
-Two identifiers named 'foo' are defined in different scopes: in the global and 'widget' ones. Before [overload resolution](./list_of_questions.md#function-overloading-deleted-function), the _name lookup_ phase is fulfilled starting with 'widget' scope, where 'bar' is defined. Once the compiler finds that struct 'widget' has 'foo', it stops climbing up to wider scopes ('global', in our case), so the free-standing function 'foo' is hidden.
+Two identifiers named 'foo' are defined in different scopes: in the global and 'widget' ones. Before [overload resolution](./README.md#function-overloading-deleted-function), the _name lookup_ phase is fulfilled starting with 'widget' scope, where 'bar' is defined. Once the compiler finds that struct 'widget' has 'foo', it stops climbing up to wider scopes ('global', in our case), so the free-standing function 'foo' is hidden.
 
 **See also:** [The Standard, #3.4.1/1](http://doc.imzlp.me/viewer.html?file=docs/standard/isocpp2014.pdf#page=58&zoom=auto,-76,39), [Bjarne Stroustrup's FAQ](http://www.stroustrup.com/bs_faq2.html#overloadderived), [ISOC++FAQ](https://isocpp.org/wiki/faq/strange-inheritance#hiding-rule)
 
-**Relatives:** [Inheritance::hiding_names](./list_of_questions.md#inheritance-hiding-names)
+**Relatives:** [Inheritance::hiding_names](./README.md#inheritance-hiding-names)
 
 # Templates. Non-dependent name.
 **complexity:** expert
@@ -1987,7 +1987,7 @@ Regarding code above what should be present in output?
 **Answer:** B
 
 At _// Line A_ name 'foo' is _non-dependent name_ e.i. it does not depend on type template parameter ('T') inside the definition of template '`struct` widget<T>'.
-C++ compliant compilers implement two phases [_name lookup_](./list_of_questions.md#function-overloading-deleted-function)
+C++ compliant compilers implement two phases [_name lookup_](./README.md#function-overloading-deleted-function)
 * At the point of definition, parse the template, determine all non-dependent names and bind them
 * At the point of instantiation, bind rest of names that depend on template patrameter,  check that the template produces valid code
 
@@ -1997,7 +1997,7 @@ Note: [Visual C++ is incomplient to the Standard](https://stackoverflow.com/ques
 
 **See also:** [cppreference::dependent_names](http://en.cppreference.com/w/cpp/language/dependent_name), 
 
-**Relatives:** [function_overloading](./list_of_questions.md#function-overloading-deleted-function)
+**Relatives:** [function_overloading](./README.md#function-overloading-deleted-function)
 
 # Function template. Overloading.
 **complexity:** basic
@@ -2019,12 +2019,12 @@ Regarding code above what should be present in output?
 
 **Answer:** B
 
-'foo(T)' where T is `int` is __the best match__. 'foo(double)' requires the [standard conversion](./list_of_questions.md#function-overloading-promotion-vs-standard-conversion).
-You might think that 'foo(double)' is very close -- and it is -- but a nontemplate function is preferred only if it is an [__exact match__](./list_of_questions.md#function-template-spesialization-vs-overloading).
+'foo(T)' where T is `int` is __the best match__. 'foo(double)' requires the [standard conversion](./README.md#function-overloading-promotion-vs-standard-conversion).
+You might think that 'foo(double)' is very close -- and it is -- but a nontemplate function is preferred only if it is an [__exact match__](./README.md#function-template-spesialization-vs-overloading).
 
 **See also:** [H. Sutter, GotW#49](http://www.gotw.ca/gotw/049.htm)
 
-**Relatives:** [standard_conversion](./list_of_questions.md#function-overloading-promotion-vs-standard-conversion), [constructor_template](./list_of_questions.md#special-member-function-generation-constructor-template) 
+**Relatives:** [standard_conversion](./README.md#function-overloading-promotion-vs-standard-conversion), [constructor_template](./README.md#special-member-function-generation-constructor-template) 
 
 # Function template. Spesialization vs. Overloading. 
 **complexity:** basic
@@ -2054,7 +2054,7 @@ Regarding code above what should be present in output?
 
 **See also:** [H. Sutter, GotW#49](http://www.gotw.ca/gotw/049.htm), [The Standard, 13.3.3](http://doc.imzlp.me/viewer.html?file=docs/standard/isocpp2014.pdf#page=312&zoom=page-fit,-231,792)
 
-**Relatives:** [function_template::best_match](./list_of_questions.md#function-template-overloading) 
+**Relatives:** [function_template::best_match](./README.md#function-template-overloading) 
 
 # Most verxing parse. 
 **complexity:** professional
@@ -2151,7 +2151,7 @@ C++17 introduces the following rules:
 
 **See also:** [cppreference::list_initialization](http://en.cppreference.com/w/cpp/language/list_initialization), [Scott Meyers, Thoughts on the Vagaries of C++ Initialization](http://scottmeyers.blogspot.com/2015/09/thoughts-on-vagaries-of-c-initialization.html), [habrahabr::raced-init-list](https://habrahabr.ru/post/330402/), [ISOC++::deduction_rules](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n3922.html), [Bartek's Blog::N3922](http://www.bfilipek.com/2017/01/cpp17features.html#new-auto-rules-for-direct-list-initialization) 
 
-**Relatives:** [initialization_syntax](./list_of_questions.md#object-construction-initialization-syntax)
+**Relatives:** [initialization_syntax](./README.md#object-construction-initialization-syntax)
 
 # rvalue reference. 
 **complexity:** professional
@@ -2189,7 +2189,7 @@ In the other words, a named object 'v' of '`rvalue`-refernce-to-int' type, canno
 
 **See also:** [S. Meyers, Effective Modern C++, chapter 5](http://doc.imzlp.me/viewer.html?file=docs/effective/EffectiveModernCPP.pdf#page=175&zoom=auto,-14,109), [Rvalue References Explained](http://thbecker.net/articles/rvalue_references/section_01.html)
 
-**Relatives:** [std::unique_ptr](./list_of_questions.md#stdunique_ptr-copyable)
+**Relatives:** [std::unique_ptr](./README.md#stdunique_ptr-copyable)
 
 # Function template. Overloading. Part 2
 **complexity:** basic
@@ -2216,7 +2216,7 @@ Regarding code above what should be present in output?
 
 **See also:** [H. Sutter, GotW#49](http://www.gotw.ca/gotw/049.htm)
 
-**Relatives:** [template::overloading](./list_of_questions.md#function-template-overloading) 
+**Relatives:** [template::overloading](./README.md#function-template-overloading) 
 
 
 # Function template. Overloading vs. Specialization. Part 2
@@ -2259,12 +2259,12 @@ Pair: 'foo(T)','foo(T*)' (and pair: 'bar(T)','bar(T*)') is two overloads of base
 * 'bar\<int\>' - explicit spezialization of bar(T*)
 
 The overload resolution rules are pretty simple:
-* at the first step, [_name lookup_](./list_of_questions.md#function-overloading-deleted-function) considers only function base (or promary) templates
+* at the first step, [_name lookup_](./README.md#function-overloading-deleted-function) considers only function base (or promary) templates
 * at the second step, depending on which base function template was selected "more specialized" is applicable.
 
 **See also:** [H. Sutter, Why Not Specialize Function Templates?](http://www.gotw.ca/publications/mill17.htm), [habrahabr](https://habrahabr.ru/post/237323/), [CppCoreGuidlines::T144](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#t144-dont-specialize-function-templates)
 
-**Relatives:** [template::overloading & spesialization](./list_of_questions.md#function-template-spesialization-vs-overloading) 
+**Relatives:** [template::overloading & spesialization](./README.md#function-template-spesialization-vs-overloading) 
 
 # Type conversion. User-defined
 **complexity:** basic
@@ -2304,7 +2304,7 @@ only one level of [user-defined](http://en.cppreference.com/w/cpp/language/conve
 
 **See also:** [The Standard, §12.3](http://doc.imzlp.me/viewer.html?file=docs/standard/isocpp2014.pdf#page=274&zoom=page-fit,-246,792)  
 
-**Relatives:** [implicit_conversion](./list_of_questions.md#type-conversion-implicitly-)
+**Relatives:** [implicit_conversion](./README.md#type-conversion-implicitly-)
 
 # Object construction. Initialization syntax. Part 2.
 **complexity:** professional
@@ -2344,7 +2344,7 @@ Regarding code above what should be present in output?
 
 **See also:** [H.Sutter,GotW#1](https://herbsutter.com/2013/05/09/gotw-1-solution/)  
 
-**Relatives:** [Initialization_syntax_1](./list_of_questions.md#object-construction-initialization-syntax), [auto_braced_init_list](./list_of_questions.md#deducing-types-auto-by-braced-init-list)
+**Relatives:** [Initialization_syntax_1](./README.md#object-construction-initialization-syntax), [auto_braced_init_list](./README.md#deducing-types-auto-by-braced-init-list)
 
 # Object construction. Initialization syntax. Part 3.
 **complexity:** basic
@@ -2374,7 +2374,7 @@ Regarding code above what should be present in output?
 
 **See also:** [cppreference::converting_constructor](http://en.cppreference.com/w/cpp/language/converting_constructor)  
 
-**Relatives:** [syntax_1](./list_of_questions.md#object-construction-initialization-syntax), [syntax_2](./list_of_questions.md#object-construction-initialization-syntax-part-2), [implcit_type_convesion](./list_of_questions.md#type-conversion-implicitly-)
+**Relatives:** [syntax_1](./README.md#object-construction-initialization-syntax), [syntax_2](./README.md#object-construction-initialization-syntax-part-2), [implcit_type_convesion](./README.md#type-conversion-implicitly-)
 
 # Type conversion. User-defined vs. standard conversion
 **complexity:** professional
@@ -2409,7 +2409,7 @@ During overload function resolution, 'display(bool)' is preferable, because the 
 
 **See also:** [Ranking of implicit conversion sequences](http://en.cppreference.com/w/cpp/language/overload_resolution), [Boolean conversions](http://en.cppreference.com/w/cpp/language/implicit_conversion)
 
-**Relatives:** [user_defined_conversion](./list_of_questions.md#type-conversion-const-reference-to-the-temporary), [promotion](./list_of_questions.md#function-overloading-promotion-vs-standard-conversion), [user_defined_conversion2](./list_of_questions.md#type-conversion-user-defined)
+**Relatives:** [user_defined_conversion](./README.md#type-conversion-const-reference-to-the-temporary), [promotion](./README.md#function-overloading-promotion-vs-standard-conversion), [user_defined_conversion2](./README.md#type-conversion-user-defined)
 
 # Lambda capture of globals
 **complexity:** professional
@@ -2446,7 +2446,7 @@ Yet  specification  of  a  default `[=]` by-value  capture mode can lend the imp
 
 **See also:** [S. Meyers. Effective Modern C++. Item 31](http://doc.imzlp.me/viewer.html?file=docs/effective/EffectiveModernCPP.pdf#page=240&zoom=auto,-128,58)
 
-**Relatives:** [Lambda capture of data-members](./list_of_questions.md#lambda-capture-of-data-members)
+**Relatives:** [Lambda capture of data-members](./README.md#lambda-capture-of-data-members)
 
 # Lambda capture of data-members
 **complexity:** professional
@@ -2489,7 +2489,7 @@ Compilers internally replace uses of 'x_' with `this`->'x_'.
 
 **See also:** [S. Meyers. Effective Modern C++. Item 31](http://doc.imzlp.me/viewer.html?file=docs/effective/EffectiveModernCPP.pdf#page=238&zoom=auto,-128,583), [Lambda capture of *this](http://www.bfilipek.com/2017/01/cpp17features.html#lambda-capture-of-this)
 
-**Relatives:** [Lambda capture of globals](./list_of_questions.md#lambda-capture-of-globals)
+**Relatives:** [Lambda capture of globals](./README.md#lambda-capture-of-globals)
 
 # Special member function generation. Constructor template.
 **complexity:** professional
@@ -2533,7 +2533,7 @@ Non-templates 'widget(`const` widget&)' are preferred to template specialization
 
 **See also:** [S. Meyers. Effective Modern C++. Item 17](http://doc.imzlp.me/viewer.html?file=docs/effective/EffectiveModernCPP.pdf#page=133&zoom=auto,-123,586), [wiki::special_mem_functions](https://en.wikipedia.org/wiki/Special_member_functions), [cppreference::the_rule_of...](http://en.cppreference.com/w/cpp/language/rule_of_three) 
 
-**Relatives:** [constructor_template_part2](./list_of_questions.md#special-member-function-generation-constructor-template-part-2), [best match & function template](./list_of_questions.md#function-template-overloading), [best match & template_specialization](./list_of_questions.md#function-template-spesialization-vs-overloading)
+**Relatives:** [constructor_template_part2](./README.md#special-member-function-generation-constructor-template-part-2), [best match & function template](./README.md#function-template-overloading), [best match & template_specialization](./README.md#function-template-spesialization-vs-overloading)
 
 # Function overloading. Perfect match for lvalue & rvalue.
 **complexity:** professional
@@ -2570,7 +2570,7 @@ However, it is rather common to overload a function on both kinds of references.
 
 **See also:** [D. Vandevoorde. C++ Templates, Appendix B.2.2 Refining the Perfect Match](http://flylib.com/books/en/3.401.1.178/1/)
 
-**Relatives:** [function_overloading_phases](./list_of_questions.md#function-overloading-deleted-function), [exact_match](./list_of_questions.md#function-overloading-parameter-type-integer-vs-pointer)
+**Relatives:** [function_overloading_phases](./README.md#function-overloading-deleted-function), [exact_match](./README.md#function-overloading-parameter-type-integer-vs-pointer)
 
 # Special member function generation. Constructor template. Part 2
 **complexity:** expert
@@ -2617,7 +2617,7 @@ Calling _the copy constructor_ would require adding `const` to 'w1' to match the
 
 **See also:** [S. Meyers. Effective Modern C++. Item 26](http://doc.imzlp.me/viewer.html?file=docs/effective/EffectiveModernCPP.pdf#page=199&zoom=auto,-17,321) 
 
-**Relatives:** [constructor_template_part1](./list_of_questions.md#special-member-function-generation-constructor-template), [perfect_match_for_r-lvalue](./list_of_questions.md#function-overloading-perfect-match-for-lvalue--rvalue)
+**Relatives:** [constructor_template_part1](./README.md#special-member-function-generation-constructor-template), [perfect_match_for_r-lvalue](./README.md#function-overloading-perfect-match-for-lvalue--rvalue)
 
 # std::move(const)
 **complexity:** basic
@@ -2654,7 +2654,7 @@ Such behavior is essential to maintaining `const`-correctness. Moving a value ou
 
 **See also:** [S. Meyers. Effective Modern C++. Item 23](https://edisciplinas.usp.br/pluginfile.php/1995323/mod_resource/content/1/Effective%20Modern%20C%2B%2B%202014.pdf)
 
-**Relatives:** [std::move::RVO](./list_of_questions.md#stdmovervo), [std::unique_ptr](./list_of_questions.md#stdunique_ptr-copyable), [lambda with move return](./list_of_questions.md#lambda-expressions-move-capture-and-move-return)
+**Relatives:** [std::move::RVO](./README.md#stdmovervo), [std::unique_ptr](./README.md#stdunique_ptr-copyable), [lambda with move return](./README.md#lambda-expressions-move-capture-and-move-return)
 
 # Object lifetime. const-reference to the temporary. part 2. 
 **complexity:** expert
@@ -2683,11 +2683,11 @@ Regarding code above what should be present in output?
 **Answer:** C
 
 In _the line B_, 'foo' returns a __temporary__ object of 'proxy' type, then user-defined conversion function returns a `const` reference to the member (`std::string`) of the temporary proxy, which is just destroyed right after foo() goes out.
-[The lengthening of the proxy object lifetime](./list_of_questions.md#object-lifetime-const-reference-to-the-temporary) does not work here because `const` reference 's' referenses to __non__-proxy object.   
+[The lengthening of the proxy object lifetime](./README.md#object-lifetime-const-reference-to-the-temporary) does not work here because `const` reference 's' referenses to __non__-proxy object.   
  
 **See also:** [H.Sutter, Lifetimes I and II, page 33](https://github.com/isocpp/CppCoreGuidelines/tree/master/docs), [stackoverflow::Dereferencing a temporary unique_ptr](https://stackoverflow.com/questions/30858850/dereferencing-a-temporary-unique-ptr)
 
-**Relatives:** [part_1](./list_of_questions.md#object-lifetime-const-reference-to-the-temporary)
+**Relatives:** [part_1](./README.md#object-lifetime-const-reference-to-the-temporary)
 
 # string_view. 
 **complexity:** basic
@@ -2748,7 +2748,7 @@ The Standard guarantees that the temporary will exist as long as the reference i
 
 **See also:** [reference_initialization](http://en.cppreference.com/w/cpp/language/reference_initialization) 
 
-**Relatives:** [const_reference_to_temporary](./list_of_questions.md#object-lifetime-const-reference-to-the-temporary)
+**Relatives:** [const_reference_to_temporary](./README.md#object-lifetime-const-reference-to-the-temporary)
 
 # Pointer arithmetic. Polymorphic types. 
 **complexity:** professional
@@ -2852,7 +2852,7 @@ The use of the function call syntax (_Line B_) follows the standard lookup seque
 
 **See also:** [cppref::adl](http://en.cppreference.com/w/cpp/language/adl)  
 
-**Relatives:** [ADL&namespace](./list_of_questions.md#argument-dependent-lookup), [name lookup](./list_of_questions.md#function-overloading-access-control)
+**Relatives:** [ADL&namespace](./README.md#argument-dependent-lookup), [name lookup](./README.md#function-overloading-access-control)
 
 # const-reference to the temporary. part 3.  
 **complexity:** professional
@@ -2880,7 +2880,7 @@ So, the parameters will be initialized with temporary `string` objects. While th
 
 **See also:** [cppref::Lifetime of a temporary](http://en.cppreference.com/w/cpp/language/reference_initialization) 
 
-**Relatives:** [part 1](./list_of_questions.md#type-conversion-const-reference-to-the-temporary) 
+**Relatives:** [part 1](./README.md#type-conversion-const-reference-to-the-temporary) 
 
 # Object construction. Copy elision.  
 **complexity:** basic
@@ -2917,7 +2917,7 @@ Only one call to default constructor of 'widget', to initialize 'w'.
 
 **See also:** [cppref::copy_elision](http://en.cppreference.com/w/cpp/language/copy_elision) 
 
-**Relatives:** [RVO](./list_of_questions.md#return-value-optimization)
+**Relatives:** [RVO](./README.md#return-value-optimization)
 
 # Object construction in the Heap. Exception.  
 **complexity:** basic
@@ -2977,7 +2977,7 @@ Regarding code above what should be present in output?
 
 **See also:** [Super C++ FAQ, does the memory “leak” if the constructor throws an exception?](https://isocpp.org/wiki/faq/freestore-mgmt#new-doesnt-leak-if-ctor-throws)
 
-**Relatives:** [ctor::exception, part1](./list_of_questions.md#object-construction-exception)
+**Relatives:** [ctor::exception, part1](./README.md#object-construction-exception)
 
 # Increment/Decrement operator function.  
 **complexity:** basic
@@ -3061,7 +3061,7 @@ The rank of standard conversion ("Hello, World!"->`bool`) is _always better_ tha
 
 **See also:** [cppref::variant::ctor4](http://en.cppreference.com/w/cpp/utility/variant/variant)
 
-**Relatives:** [type_conversion::standard_vs_user-defined](./list_of_questions.md#type-conversion-user-defined-vs-standard-conversion) 
+**Relatives:** [type_conversion::standard_vs_user-defined](./README.md#type-conversion-user-defined-vs-standard-conversion) 
 
 # The temporary. Function overloading and const-reference to lvalue. 
 **complexity:** professional
@@ -3111,7 +3111,7 @@ On the other hand, `rvalue` can be __only__ bound with __`const`-reference__ to 
 
 **See also:** [cppref::reference_initialization](http://en.cppreference.com/w/cpp/language/reference_initialization)
 
-**Relatives:** [const-reference to the temporary](./list_of_questions.md#type-conversion-const-reference-to-the-temporary), [perfect match for lvalue & lvalue](./list_of_questions.md#function-overloading-perfect-match-for-lvalue--rvalue)
+**Relatives:** [const-reference to the temporary](./README.md#type-conversion-const-reference-to-the-temporary), [perfect match for lvalue & lvalue](./README.md#function-overloading-perfect-match-for-lvalue--rvalue)
 
 # Function overloading. const vs. constexpr
 **complexity:** expert
@@ -3191,7 +3191,7 @@ At _line B_ there is only choise from the global namespace (`::`) - 'foo(double)
 
 **See also:** [The name of a friend](http://b.atch.se/posts/non-constant-constant-expressions/#friends), [ The Standard, #7.3.1.2.3](http://doc.imzlp.me/viewer.html?file=docs/standard/isocpp2014.pdf#page=58&zoom=auto,-76,39)
 
-**Relatives:** [ADL, part1](./list_of_questions.md#argument-dependent-lookup) 
+**Relatives:** [ADL, part1](./README.md#argument-dependent-lookup) 
 
 # Inheritance. Constructors.
 **complexity:** basic
@@ -3257,7 +3257,7 @@ It's a quite exotic case which is applicable for _aggregate_ types with the _com
 
 **See also:** [cppref::zero_initialization](http://en.cppreference.com/w/cpp/language/zero_initialization) 
 
-**Relatives:** [object_construction_3](./list_of_questions.md#object-construction-initialization-syntax-part-3)
+**Relatives:** [object_construction_3](./README.md#object-construction-initialization-syntax-part-3)
 
 # Function overloading. const-object & const-function.
 **complexity:** professional
@@ -3297,7 +3297,7 @@ Instruction 'b.foo()' invokes 'widget::foo() `const`' which is a `const` method,
 
 **See also:** [cppref::propagate_const](http://en.cppreference.com/w/cpp/experimental/propagate_const) 
 
-**Relatives:** [Function overloading and const-ref](./list_of_questions.md#the-temporary-function-overloading-and-const-reference-to-lvalue)
+**Relatives:** [Function overloading and const-ref](./README.md#the-temporary-function-overloading-and-const-reference-to-lvalue)
 
 # auto vs. decltype with an expression by-reference
 **complexity:** professional
@@ -3726,4 +3726,4 @@ Even though there are no zero-size types in C++, the C++ standard does specify t
 [Templates and Inheritance Interacting in C++](http://www.informit.com/articles/article.aspx?p=31473&seqNum=2) By Nicolai M. Josuttis and David Vandevoorde, [cppreference::ebo](https://en.cppreference.com/w/cpp/language/ebo)
 
 **Relatives:** 
-[empty base inheritance](./list_of_questions.md#sizeof-empty-aggregation-vs-inheritance), [sizeof(\<empty>)](./list_of_questions.md#sizeof-empty)
+[empty base inheritance](./README.md#sizeof-empty-aggregation-vs-inheritance), [sizeof(\<empty>)](./README.md#sizeof-empty)
