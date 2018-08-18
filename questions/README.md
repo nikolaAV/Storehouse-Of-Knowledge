@@ -3191,7 +3191,9 @@ At _line B_ there is only choise from the global namespace (`::`) - 'foo(double)
 
 **See also:** [The name of a friend](http://b.atch.se/posts/non-constant-constant-expressions/#friends), [ The Standard, #7.3.1.2.3](http://doc.imzlp.me/viewer.html?file=docs/standard/isocpp2014.pdf#page=58&zoom=auto,-76,39)
 
-**Relatives:** [ADL, part1](./README.md#argument-dependent-lookup) 
+**Relatives:** [ADL, part1](./README.md#argument-dependent-lookup)
+
+**Examples:** [Operator Implementations](https://github.com/nikolaAV/skeleton/tree/master/rel_ops_auto)
 
 # Inheritance. Constructors.
 **complexity:** basic
