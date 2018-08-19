@@ -201,7 +201,7 @@ private:
 
 int main()
 {
-   unit obj;
+   unit obj{"exemplar"};
 }
 ```
 Regarding code above what should be present in output? Which of proposed constructors above (`[1]`,`[2]`) is more effective? Why?
