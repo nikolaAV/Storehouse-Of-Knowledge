@@ -3729,3 +3729,35 @@ Even though there are no zero-size types in C++, the C++ standard does specify t
 
 **Relatives:** 
 [empty base inheritance](./README.md#sizeof-empty-aggregation-vs-inheritance), [sizeof(\<empty>)](./README.md#sizeof-empty)
+
+# Inheritance. Constructors. Part 2.
+**complexity:** basic
+```cpp
+class person
+{
+    string name_ {"Tom Sawyer"} ;
+public:
+    person(string_view name) : name_(name) { cout << "person: " << name_ << endl; }
+    // ...
+};
+
+class student : public person
+{
+   using person::person;
+};
+
+int main()
+{
+    student s;
+}
+```
+Regarding code above what should be present in output? 
+- A person: Tom Sawyer
+- B compiler error: no matching constructor for initialization of 'student'.
+
+**Answer:** B
+Default constructor of 'student' is implicitly deleted because base class 'person' has no default constructor.
+
+**See also:** [cppref::Inheriting_constructors](http://en.cppreference.com/w/cpp/language/using_declaration)
+
+**Relatives:** [part 1](./README.md#inheritance-constructors)
