@@ -3224,7 +3224,7 @@ The class 'student' inherits all methods from 'person' except the 'string_view' 
 
 **See also:** [cppref::Inheriting_constructors](http://en.cppreference.com/w/cpp/language/using_declaration)
 
-**Relatives:** 
+**Relatives:** [part 2](./README.md#inheritance-constructors-part-2)
 
 # Object construction. zero initialization.
 **complexity:** expert
@@ -3755,7 +3755,7 @@ Regarding code above what should be present in output?
 - A person: Tom Sawyer
 - B compiler error: no matching constructor for initialization of 'student'.
 
-**Answer:** B
+**Answer:** B  
 Default constructor of 'student' is implicitly deleted because base class 'person' has no default constructor.
 
 **See also:** [cppref::Inheriting_constructors](http://en.cppreference.com/w/cpp/language/using_declaration)
