@@ -258,10 +258,6 @@
 >
 > -- _Jonas Salk_
 
-> __When things get bad enough, then something happens to correct the course. And it's for that reason that I speak about evolution as an error-making and an error-correcting process. And if we can be ever so much better - ever so much slightly better - at error correcting than at error making, then we'll make it.__
->
-> -- _Jonas Salk_
-
 > __Our greatest responsibility is to be good ancestors.__
 >
 > -- _Jonas Salk_
