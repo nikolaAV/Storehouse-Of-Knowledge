@@ -3798,7 +3798,7 @@ Regarding code above what should be present in output?
     - min:w1, max:w2
     - minmax:w1,w1
 
-**Answer:** C
+**Answer:** C  
 Yes, it's a quite annoying defect in `std::max` implementation. According to the Standard it should return a reference to the first value if both arguments passed to the function are _equivalent_. 
 
 **See also:** ["Grill the Committee"](http://youtu.be/7P536lci5po?t=1h18m13s) session from CppCon 2014, [Notes on Programming](http://stepanovpapers.com/notes.pdf), Lecture 7 by Alexander Stepanov 
