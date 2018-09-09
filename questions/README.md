@@ -3761,3 +3761,46 @@ Default constructor of 'student' is implicitly deleted because base class 'perso
 **See also:** [cppref::Inheriting_constructors](http://en.cppreference.com/w/cpp/language/using_declaration)
 
 **Relatives:** [part 1](./README.md#inheritance-constructors)
+
+# `std::max` returns the wrong value?.
+**complexity:** expert
+```cpp
+struct widget
+{
+   size_t      number;
+   std::string name;
+};
+
+bool operator<(const widget& left, const widget& right) {
+   return left.number < right.number;
+}
+
+int main()
+{
+   widget w1{1,"w1"}, w2{1,"w2"}; 
+   std::cout << "min:" << std::min(w1,w2).name << ", max:" << std::max(w1,w2).name << std::endl;
+
+   const auto&[min,max] = std::minmax(w1,w2);
+   std::cout << "minmax:" << min.name << "," << max.name << std::endl;
+}
+```
+Regarding code above what should be present in output? 
+- A
+    - min:w1, max:w2
+    - minmax:w1,w2
+- B
+    - min:w1, max:w1
+    - minmax:w1,w1
+- C
+    - min:w1, max:w1
+    - minmax:w1,w2
+- D
+    - min:w1, max:w2
+    - minmax:w1,w1
+
+**Answer:** C
+Yes, it's a quite annoying defect in `std::max` implementation. According to the Standard it should return a reference to the first value if both arguments passed to the function are _equivalent_. 
+
+**See also:** ["Grill the Committee"](http://youtu.be/7P536lci5po?t=1h18m13s) session from CppCon 2014, [Notes on Programming](http://stepanovpapers.com/notes.pdf), Lecture 7 by Alexander Stepanov 
+
+**Relatives:** 
