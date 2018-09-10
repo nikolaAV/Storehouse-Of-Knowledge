@@ -3804,3 +3804,38 @@ Yes, it's a quite annoying defect in `std::max` implementation. According to the
 **See also:** ["Grill the Committee"](http://youtu.be/7P536lci5po?t=1h18m13s) session from CppCon 2014, [Notes on Programming](http://stepanovpapers.com/notes.pdf), Lecture 7 by Alexander Stepanov 
 
 **Relatives:** 
+
+# rvalue arguments in pass-by-value parameters.
+**complexity:** professional
+```cpp
+struct widget
+{
+   widget()          { cout << "ctor(default)" << endl; }
+   widget(const widget&)   = delete;
+   widget(widget&&)  { cout << "ctor(move)" << endl; }
+};
+
+void foo(widget by_value)
+{
+   // ...
+}
+
+int main()
+{
+   foo(widget{});
+}
+```
+Regarding code above what should be present in output? 
+- A compiler error: initializing argument 'by_value' failed, type 'widget' is not copyable 
+- B 
+    - ctor(default)
+    - ctor(move)
+- C 
+    - ctor(default)
+
+**Answer:** C (since C++17), the old compilers may raise A  
+Before C++17, type 'widget' had to be copyable to be able to pass in arguments, but since C++17 you can pass temporaries ([`rvalues`](https://en.cppreference.com/w/cpp/language/value_category)) even if neither a copy nor a move constructor is valid.
+
+**See also:** [Abseil,TotW#117](https://abseil.io/tips/117), [wiki,Copy elision](https://en.wikipedia.org/wiki/Copy_elision)
+
+**Relatives:** [ctor-copy-elision](./README.md#object-construction-copy-elision), [RVO](./README.md#return-value-optimization)
