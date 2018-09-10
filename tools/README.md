@@ -5,3 +5,4 @@
 * [TUT for C++](https://github.com/mrzechonek/tut-framework) is a small and portable unit test framework for C++.
 * [Clang Power Tools](https://marketplace.visualstudio.com/items?itemName=vs-publisher-690586.ClangPowerTools) A tool bringing clang-tidy magic to Visual Studio C++ developers.
 * [Visual Studio Code](https://code.visualstudio.com/) combines the simplicity of a source code editor with powerful developer tooling, like IntelliSense code completion, debugging, Git commands built-in and more.
+* [Abseil](https://abseil.io/about/intro) is an open-source collection of C++ library code designed to augment the C++ standard library. The Abseil library code is collected from Google’s own C++ code base. 
