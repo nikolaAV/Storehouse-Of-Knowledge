@@ -508,6 +508,72 @@
 >
 > -- _Andrew Hunt (The Pragmatic Programmer: From Journeyman to Master)_
 
+> __No one can make you feel inferior without your consent.__
+>
+> -- _Eleanor Roosevelt, This is My Story_
+
+> __A friend is someone who knows all about you and still loves you.__
+>
+> -- _Elbert Hubbard_
+
+> __I've learned that people will forget what you said, people will forget what you did, but people will never forget how you made them feel.__
+>
+> -- _Maya Angelou_
+
+> __Always forgive your enemies; nothing annoys them so much.__
+>
+> -- _Oscar Wilde_
+
+> __Don't cry because it's over, smile because it happened.__
+>
+> -- _Dr. Seuss_
+
+> __Be yourself; everyone else is already taken.__
+>
+> -- _Oscar Wilde_
+
+> __Two things are infinite: the universe and human stupidity; and I'm not sure about the universe.__
+>
+> -- _Albert Einstein_
+
+> __So many books, so little time.__
+>
+> -- _Frank Zappa_
+
+> __You know you're in love when you can't fall asleep because reality is finally better than your dreams.__
+>
+> -- _Dr. Seuss_
+
+> __You only live once, but if you do it right, once is enough.__
+>
+> -- _Mae West_
+
+> __Be the change that you wish to see in the world.__
+>
+> -- _Mahatma Gandhi_
+
+> __In three words I can sum up everything I've learned about life: it goes on.__
+>
+> -- _J.K. Rowling, Harry Potter and the Goblet of Fire_
+
+> __Don’t walk in front of me… I may not follow__
+> __Don’t walk behind me… I may not lead__
+> __Walk beside me… just be my friend__
+>
+> -- _Albert Camus_
+
+
+
+
+
+
+
+
+
+
+
+
+
 - - -
 visit [GoodReads](https://www.goodreads.com/)
 
