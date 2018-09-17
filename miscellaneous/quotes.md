@@ -496,10 +496,6 @@
 >
 > -- _Andrew Hunt (The Pragmatic Programmer: From Journeyman to Master)_
 
-> __I believe that it is better to be looked over than it is to be overlooked.__
->
-> -- _Mae West, Belle of the Nineties, 1934_
-
 > __Don't blame someone or something else, or make up an excuse. Don't blame all the problems on a vendor, a programming language, management, or your coworkers.__
 >
 > -- _Andrew Hunt (The Pragmatic Programmer: From Journeyman to Master)_
