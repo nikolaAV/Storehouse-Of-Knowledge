@@ -556,30 +556,12 @@
 >
 > -- _J.K. Rowling, Harry Potter and the Goblet of Fire_
 
-> __Don’t walk in front of me… I may not follow__
-> __Don’t walk behind me… I may not lead__
+> __Don’t walk in front of me… I may not follow__  
+> __Don’t walk behind me… I may not lead__  
 > __Walk beside me… just be my friend__
 >
 > -- _Albert Camus_
 
-
-
-
-
-
-
-
-
-
-
-
-
 - - -
 visit [GoodReads](https://www.goodreads.com/)
-
-
-
-
-
-
 
