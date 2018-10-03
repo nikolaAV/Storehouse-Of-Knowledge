@@ -3861,7 +3861,7 @@ Regarding code above what should be present in output?
 
 **Answer:** C  
 There are different effects for templates parameters when using string literals and raw arrays:
-- Call-by-value decays so that they become pointers to the element type
+- Call-by-value [decays](./README.md#c-array-as-function-parameter-decay-of-types) so that they become pointers to the element type
 - Any form of call-by-reference does not decay so that the arguments become references that still refer to arrays  
 Here, lexicographical_first("123","1234") fails to compile, because "123" has type `char const`[4], while "1234" has type `char const`[4], but the template requires them to have the same type __T__.
 
