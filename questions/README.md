@@ -603,7 +603,7 @@ Thus, the constness of 'ptr' will be ignored, but the constness of what 'ptr' po
 
 **See also:** [S. Meyers. Effective Modern C++, item 1.1](https://www.safaribooksonline.com/library/view/effective-modern-c/9781491908419/ch01.html)
 
-**Relatives:** 
+**Relatives:** [template parameter by reference](./README.md#deducing-types-template-parameter-by-reference)
 
 # 'C' array as function parameter. Decay of types.
 **complexity:** professional
@@ -739,7 +739,7 @@ Type of 'y' is deduced `by-reference` rule, i.e. it is the actual type of the ar
 
 **See also:** [S. Meyers. Effective Modern C++, item 2](https://www.safaribooksonline.com/library/view/effective-modern-c/9781491908419/ch01.html), [auto and decltype Explained](http://thbecker.net/articles/auto_and_decltype/section_01.html), [Type Deduction and Why You Care](https://www.aristeia.com/TalkNotes/C++TypeDeductionandWhyYouCareCppCon2014.pdf)
 
-**Relatives:** [C array vs pointer](./README.md#c-array-as-function-parameter-decay-of-types), [deducing_type::by-value](./README.md#deducing-types-auto-by-value), [decltype of reference](./README.md#auto-vs-decltype-with-an-expression-by-reference)
+**Relatives:** [C array vs pointer](./README.md#c-array-as-function-parameter-decay-of-types), [deducing_type::by-value](./README.md#deducing-types-auto-by-value), [decltype of reference](./README.md#auto-vs-decltype-with-an-expression-by-reference), [template parameter by reference](./README.md#deducing-types-template-parameter-by-reference)
 
 # new/delete vs. new[]/delete[].
 **complexity:** basic
