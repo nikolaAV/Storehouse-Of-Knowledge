@@ -709,7 +709,7 @@ Regarding code above what should be present in output?
 That means: `const` and/or `volatile` _expression_ are treated as non-`const` and non-`volatile`.
 In our case, type of _expression_ for 'x' is const int; type of _expression_ for 'y' is a __pointer to__ const int and this pointer is passed `by-value`.
 
-**See also:** [S. Meyers. Effective Modern C++, item 1.1](https://www.safaribooksonline.com/library/view/effective-modern-c/9781491908419/ch01.html), [auto and decltype Explained](http://thbecker.net/articles/auto_and_decltype/section_01.html)
+**See also:** [S. Meyers. Effective Modern C++, item 1.1](https://www.safaribooksonline.com/library/view/effective-modern-c/9781491908419/ch01.html), [auto and decltype Explained](http://thbecker.net/articles/auto_and_decltype/section_01.html), [Type Deduction and Why You Care](https://www.aristeia.com/TalkNotes/C++TypeDeductionandWhyYouCareCppCon2014.pdf)
 
 **Relatives:** [template_param::by_value](./README.md#deducing-types-template-parameter)
 
@@ -737,7 +737,7 @@ Regarding code above what should be present in output?
 Type of 'x' is deduced `by-value` rule. The expression on the right side of `operator=` is pointer to const char (see [type decaying](./README.md#c-array-as-function-parameter-decay-of-types)).
 Type of 'y' is deduced `by-reference` rule, i.e. it is the actual type of the array.
 
-**See also:** [S. Meyers. Effective Modern C++, item 2](https://www.safaribooksonline.com/library/view/effective-modern-c/9781491908419/ch01.html), [auto and decltype Explained](http://thbecker.net/articles/auto_and_decltype/section_01.html)
+**See also:** [S. Meyers. Effective Modern C++, item 2](https://www.safaribooksonline.com/library/view/effective-modern-c/9781491908419/ch01.html), [auto and decltype Explained](http://thbecker.net/articles/auto_and_decltype/section_01.html), [Type Deduction and Why You Care](https://www.aristeia.com/TalkNotes/C++TypeDeductionandWhyYouCareCppCon2014.pdf)
 
 **Relatives:** [C array vs pointer](./README.md#c-array-as-function-parameter-decay-of-types), [deducing_type::by-value](./README.md#deducing-types-auto-by-value), [decltype of reference](./README.md#auto-vs-decltype-with-an-expression-by-reference)
 
