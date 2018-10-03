@@ -3839,3 +3839,36 @@ Before C++17, type 'widget' had to be copyable to be able to pass in arguments, 
 **See also:** [Abseil,TotW#117](https://abseil.io/tips/117), [wiki,Copy elision](https://en.wikipedia.org/wiki/Copy_elision)
 
 **Relatives:** [ctor-copy-elision](./README.md#object-construction-copy-elision), [RVO](./README.md#return-value-optimization)
+
+# Deducing Types. Template parameter by reference.
+**complexity:** professional
+```cpp
+template <typename T>
+T lexicographical_first(T const& left, T const& right)
+{
+   return 0<=::strcmp(left,right)? right : left; 
+}
+
+int main()
+{
+   cout << lexicographical_first("123","1234") << endl;   
+}
+```
+Regarding code above what should be present in output? 
+- A 123
+- B 1234
+- C compile error: deduced conflicting types for parameter
+
+**Answer:** C  
+There are different effects for templates parameters when using string literals and raw arrays:
+- Call-by-value decays so that they become pointers to the element type
+- Any form of call-by-reference does not decay so that the arguments become references that still refer to arrays  
+Here, lexicographical_first("123","1234") fails to compile, because "123" has type `char const`[4], while "1234" has type `char const`[4], but the template requires them to have the same type __T__.
+
+**See also:** 
+[Type Deduction and Why You Care](https://www.aristeia.com/TalkNotes/C++TypeDeductionandWhyYouCareCppCon2014.pdf)
+[Template argument deduction](https://en.cppreference.com/w/cpp/language/template_argument_deduction) on cppreference.com
+
+**Relatives:** 
+[template parameter::by_value](./README.md#deducing-types-template-parameter)
+[auto::by)reference](./README.md#deducing-types-auto-by-reference)
