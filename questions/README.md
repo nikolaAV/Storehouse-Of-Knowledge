@@ -3866,9 +3866,9 @@ There are different effects for templates parameters when using string literals 
 Here, lexicographical_first("123","1234") fails to compile, because "123" has type `char const`[4], while "1234" has type `char const`[4], but the template requires them to have the same type __T__.
 
 **See also:** 
-[Type Deduction and Why You Care](https://www.aristeia.com/TalkNotes/C++TypeDeductionandWhyYouCareCppCon2014.pdf)
+[Type Deduction and Why You Care](https://www.aristeia.com/TalkNotes/C++TypeDeductionandWhyYouCareCppCon2014.pdf), 
 [Template argument deduction](https://en.cppreference.com/w/cpp/language/template_argument_deduction) on cppreference.com
 
 **Relatives:** 
-[template parameter::by_value](./README.md#deducing-types-template-parameter)
-[auto::by)reference](./README.md#deducing-types-auto-by-reference)
+[template parameter::by_value](./README.md#deducing-types-template-parameter), 
+[auto::by_reference](./README.md#deducing-types-auto-by-reference)
