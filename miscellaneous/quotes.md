@@ -562,6 +562,47 @@
 >
 > -- _Albert Camus_
 
+> __"Entities are not to be multiplied without necessity." (Simpler explanations are more likely to be correct. Avoid unnecessary assumptions)__
+>
+> -- _Occam's razor_
+
+> __Never attribute to malice that which can be adequately explained by stupidity.__
+>
+> -- _Hanlon's razor_
+
+> __What can be asserted without evidence can be dismissed without evidence.__
+>
+> -- _Alder's razor (Newton's flaming laser sword)_
+
+> __Extraordinary claims require extraordinary evidence.__
+>
+> -- _Sagan standard_
+
+> __Anything that can go wrong will go wrong.__
+>
+> -- _Murphy's law_
+
+> __Let no act be done without purpose.__
+>
+> -- _Marcus Aurelius_
+
+> __For many events, roughly 80% of the effects come from 20% of the causes. (20% of the input creates 80% of the result and rest 80% of the inputs gives only 20% of the result)__
+>
+> -- _Pareto principle (80/20 rule)_
+
+> __Work expands so as to fill the time available for its completion.__
+>
+> -- _Parkinson's law_
+
+> __People in a hierarchy rise to their level of incompetence.__
+>
+> -- _Peter principle_
+
+> __Software project becomes too complex to be understood even by its creators.__
+>
+> -- _Software Peter principle_
+
+
 - - -
 visit [GoodReads](https://www.goodreads.com/)
 
