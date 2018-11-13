@@ -602,7 +602,64 @@
 >
 > -- _Software Peter principle_
 
+> __The fact that man knows right from wrong proves his intellectual superiority to the other creatures; but the fact that he can do wrong proves his moral inferiority to any creature that cannot.__
+>
+> -- _What Is Man?, Mark Twain_
 
+> __If the “box” is the boundary of constraints and conditions, then the trick is to find the box.... Don’t think outside the box — find the box.__
+>
+> -- _Andy Hunt and Dave Thomas_
+
+> __If you can’t explain something to a six-year-old, you really don’t understand it yourself.__
+>
+> -- _Albert Einstein_
+
+> __Design bugs are often subtle and occur by evolution with early assumptions being forgotten as new features or uses are added to a system.__
+>
+> -- _Fernando J. Corbató_
+
+> __The picture of the software designer deriving his design in a rational, error-free way from a statement of requirements is quite unrealistic. No system has ever been developed in that way, and probably none ever will. Even the small program developments shown in textbooks and papers are unreal. They have been revised and polished until the author has shown us what he wishes he had done, not what actually did happen.__
+>
+> -- _David Parnas and Paul Clements_
+
+> __There are two ways of constructing a software design: one way is to make it so simple that there are obviously no deficiencies, and the other is to make it so complicated that there are no obvious deficiencies.__
+>
+> -- _C. A. R. Hoare_
+
+> __One symptom that you have bogged down in complexity overload is when you find yourself doggedly applying a method that is clearly irrelevant, at least to any outside observer. It is like the mechanically inept person whose car breaks down—so he puts water in the battery and empties the ashtrays.__
+>
+> -- _P. J. Plauger_
+
+> __Strive for class interfaces that are complete and minimal.__
+>
+> -- _Scott Meyers_
+
+> __When in doubt, use brute force.__
+>
+> -- _Butler Lampson_
+
+> __More alarming, the same programmer is quite capable of doing the same task himself in two or three ways, sometimes unconsciously, but quite often simply for a  change, or to provide elegant variation.__
+>
+> -- _A. R. Brown and W. A. Sampson_
+
+> __We try to solve the problem by rushing through the design process so that enough time is left at the end of the project to uncover the errors that were made because we rushed through the design process.__
+>
+> -- _Glenford Myers_
+
+> __I've never met a human being who would want to read 17,000 pages of  documentation, and if there was, I'd kill him to get him out of the gene pool.__
+>
+> -- _Joseph Costello_
+
+> __The bad news is that, in our opinion, we will never find the philosopher’s stone. We will never find a process that allows us to design software in a perfectly rational way. The good news is that we can fake it.__
+>
+> -- _David Parnas and Paul Clements_
+
+> __People who preach software design as a disciplined activity spend considerable
+energy making us all feel guilty. We can never be structured enough or  object-oriented enough to achieve nirvana in this lifetime. We all truck around a kind of original sin from having learned Basic at an impressionable age. But my bet is that most of us are better designers than the purists will ever acknowledge.__
+>
+> -- _P. J. Plauger_
+
+p.125 +
 - - -
 visit [GoodReads](https://www.goodreads.com/)
 
