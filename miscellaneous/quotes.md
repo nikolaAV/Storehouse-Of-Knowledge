@@ -659,7 +659,49 @@ energy making us all feel guilty. We can never be structured enough or  object-o
 >
 > -- _P. J. Plauger_
 
-p.125 +
+> __The single most important factor that distinguishes a well-designed module from a poorly designed one is the degree to which the module hides its internal data and other implementation details from other modules.__
+>
+> -- _Joshua Bloch_
+
+> __It ain’t abstract if you have to look at the underlying implementation to understand what’s going on.__
+>
+> -- _P. J. Plauger_
+
+> __The single most important rule in object-oriented programming with C++ is this: public inheritance means “is a.” Commit this rule to
+memory.__
+>
+> -- _Scott Meyers_
+
+> __The one indisputable fact about multiple inheritance in C++ is that it opens up a Pandora’s box of complexities that simply do not exist under single inheritance.__
+>
+> -- _Scott Meyers_
+
+> __Programs that use exceptions as part of their normal processing suffer from all the readability and maintainability problems of classic spaghetti code.__
+>
+> -- _Andy Hunt and Dave Thomas_
+
+> __A dead program normally does a lot less damage than a crippled one.__
+>
+> -- _Andy Hunt and Dave Thomas_
+
+> __The evidence suggests only that deliberately chaotic control structure degrades (programmer) performance. These experiments provide virtually no evidence for the beneficial effect of any specific method of structuring control flow.__
+>
+> -- _B. A. Sheil_
+
+> __Make things as simple as possible — but no simpler.__
+>
+> -- _Albert Einstein_
+
+> __If builders built buildings the way programmers wrote programs, then the first woodpecker that came along would destroy civilization.__
+>
+> -- _Gerald Weinberg_
+
+> __Informal review procedures were passed on from person to person in the general culture of computing for many years before they were acknowledged in print. The need for reviewing was so obvious to the best programmers that they rarely mentioned it in print, while the worst programmers believed they were so good that  their work did not need reviewing.__
+>
+> -- _Daniel Freedman and Gerald Weinberg_
+
+p. 499
+
 - - -
 visit [GoodReads](https://www.goodreads.com/)
 
