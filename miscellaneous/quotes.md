@@ -700,7 +700,68 @@ memory.__
 >
 > -- _Daniel Freedman and Gerald Weinberg_
 
-p. 499
+> __Programs do not acquire bugs as people acquire germs, by hanging around other buggy programs. Programmers must insert them.__
+>
+> -- _Harlan Mills_
+
+> __Programmers do not always use available data to constrain their reasoning. They carry out minor and irrational repairs, and they often don’t undo the incorrect repairs.__
+>
+> -- _Iris Vessey_
+
+> __Never debug standing up.__
+>
+> -- _Gerald Weinberg_
+
+> __An interactive debugger is an outstanding example of what is not needed—it  encourages trial-and-error hacking rather than systematic design, and also hides  marginal people barely qualified for precision programming.__
+>
+> -- _Harlan Mills_
+
+> __All successful software gets changed.__
+>
+> -- _Fred Brooks_
+
+> __There is no code so big, twisted, or complex that maintenance can’t make it worse.__
+>
+> -- _Gerald Weinberg_
+
+> __Opening up a working system is more like opening up a human brain and replacing a nerve than opening up a sink and replacing a washer. Would maintenance be easier if it was called “Software Brain Surgery?”.__
+>
+> -- _Gerald Weinberg_
+
+> __Do not partially write a feature with the intent of refactoring to get it complete later.__
+>
+> -- _John Manzo_
+
+> __A big refactoring is a recipe for disaster.__
+>
+> -- _Kent Beck_
+
+> __More computing sins are committed in the name of efficiency (without necessarily achieving it) than for any other single reason - including blind stupidity.__
+>
+> -- _W. A. Wulf_
+
+> __We should forget about small efficiencies, say about 97% of the time: premature optimization is the root of all evil.__
+>
+> -- _Donald Knuth_
+
+> __Jackson’s Rules of Optimization: Rule 1. Don’t do it. Rule 2 (for experts only). Don’t do it yet—that is, not until you have a perfectly clear and unoptimized solution.__
+>
+> -- _M. A. Jackson_
+
+> __No programmer has ever been able to predict or analyze where performance bottlenecks are without data. No matter where you think it’s going, you will be surprised to discover that it is going somewhere else.__
+>
+> -- _Joseph M. Newcomer_
+
+> __The important question is, do you want prediction, or do you want control?__
+>
+> -- _Tom Gilb_
+
+> __What gets measured, gets done.__
+>
+> -- _Tom Peters_
+
+
+
 
 - - -
 visit [GoodReads](https://www.goodreads.com/)
