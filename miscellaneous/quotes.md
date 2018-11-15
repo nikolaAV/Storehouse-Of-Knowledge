@@ -761,7 +761,7 @@ memory.__
 > -- _Tom Peters_
 
 
-
+p 729
 
 - - -
 visit [GoodReads](https://www.goodreads.com/)
