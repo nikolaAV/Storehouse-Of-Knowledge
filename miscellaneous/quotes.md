@@ -760,8 +760,59 @@ memory.__
 >
 > -- _Tom Peters_
 
+> __The results point out the fragility of programming expertise: advanced programmers have strong expectations about what programs should look like, and when those expectations are violated - in seemingly innocuous ways—their performance drops drastically.__
+>
+> -- _Elliot Soloway and Kate Ehrlich_
 
-p 729
+> __Goto labels should be left aligned in all caps and should include the programmer’s name, home phone number, and credit card number.__
+>
+> -- _Abdul Nizar_
+
+> __Clearly, at some level comments have to be useful. To believe otherwise would be to believe that the comprehensibility of a program is independent of how much information the reader might already have about it.__
+>
+> -- _B. A. Sheil_
+
+> __As long as there are illdefined goals, bizarre bugs, and unrealistic schedules, there will be Real Programmers willing to jump in and Solve The Problem, saving the documentation for later. Long live Fortran!__
+>
+> -- _Ed Post_
+
+> __I wonder how many great novelists have never read someone else’s work, how many great painters have never studied another’s brush strokes, how many skilled surgeons never learned by looking over a colleague’s shoulder.... And yet that’s what we expect programmers to do.__
+>
+> -- _Dave Thomas_
+
+> __We become authorities and experts in the practical and scientific spheres by so many separate acts and hours of work. If a person keeps faithfully busy each hour of the working day, he can count on waking up some morning to find himself one of the competent ones of his generation.__
+>
+> -- _William James_
+
+> __Any fool can defend his or her mistakes - and most fools do.__
+>
+> -- _Dale Carnegie_
+
+> __The first 90 percent of the code accounts for the first 90 percent of the development time. The remaining 10 percent of the code accounts for the other 90 percent of the development time.__
+>
+> -- _Tom Cargill_
+
+> __Laziness: The quality that makes you go to great effort to reduce overall energy expenditure. It makes you write labor-saving programs that other people will find useful, and document what you wrote so that you don’t have to answer so many questions about it.__
+>
+> -- _Larry Wall_
+
+> __If you haven’t spent at least a month working on the same program—working 16 hours a day, dreaming about it during the remaining 8 hours of restless sleep, working several nights straight through trying to eliminate that “one last bug” from the program—then you haven’t really written a complicated computer program. And you may not have the sense that there is something exhilarating about programming.__
+>
+> -- _Edward Yourdon_
+
+> __The moral virtues, then, are engendered in us neither by nor contrary to nature...their full development in us is due to habit....Anything that we have to learn to do we learn by the actual doing of it....Men will become good builders as a result of building well and bad ones as a result of building badly....So it is a matter of no little importance what sort of habits we form from the earliest age - it makes a vast difference, or rather all the difference in the world.__
+>
+> -- _Aristotle_
+
+> __My message to the serious programmer is: spend a part of your working day examining and refining your own methods. Even though programmers are always struggling to meet some future or past deadline, methodological abstraction is a wise
+long-term investment.__
+>
+> -- _Robert W. Floyd_
+
+> __In the early years of programming, a program was regarded as the private property of the programmer. One would no more think of reading a colleague’s program unbidden than of picking up a love letter and reading it. This is essentially what a program was, a love letter from the programmer to the hardware, full of the intimate details known only to partners in an affair. Consequently, programs became larded with the pet names and verbal shorthand so popular with lovers who live in the blissful abstraction that assumes that theirs is the only existence in the universe. Such programs are unintelligible to those outside the partnership.__
+>
+> -- _Michael Marcotty_
+
 
 - - -
 visit [GoodReads](https://www.goodreads.com/)
