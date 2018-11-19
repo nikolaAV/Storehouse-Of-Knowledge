@@ -813,6 +813,94 @@ long-term investment.__
 >
 > -- _Michael Marcotty_
 
+> __I have made this letter longer than usual, because I lack the time to make it short.__
+>
+> -- _Blaise Pascal_
+
+> __Fools ignore complexity. Pragmatists suffer it. Some can avoid it. Geniuses remove it.__
+>
+> -- _Alan Perlis_
+
+> __But I also knew, and forgot, Hoare's dictum that premature optimization is the root of all evil in programming.__
+>
+> -- _Donald Knuth, The Errors ofTeX_
+
+> __Write programs for people first, computers second.__
+>
+> -- _Steve McConnell_
+
+> __The cheapest, fastest and most reliable components of a computer system are those that aren't there.__
+>
+> -- _Gordon Bell_
+
+> __Those missing components are also the most accurate (they never make mistakes), the most secure (they can't be broken into), and the easiest to design, document, test and maintain. The importance of a simple design can't be overemphasized.__
+>
+> -- _Jon Bentley_
+
+> __It is far, far easier to make a correct program fast than it is to make a fast program correct.__
+>
+> -- _Herb Sutter, Andrei Alexandrescu, C++ Coding Standards_
+
+> __One man's constant is another man's variable.__
+>
+> -- _Alan Perlis_
+
+> __The first rule about macros is: Don't use them unless you have to. Almost every macro demonstrates a flaw in the programming language, in the program, or in the programmer.__
+>
+> -- _Bjarne Stroustrup, The C++ Programming Language_
+
+> __If you have a procedure with ten parameters, you probably missed some.__
+>
+> -- _Alan Perlis_
+
+> __The most important single aspect of software development is to be clear about what you are trying to build.__
+>
+> -- _Bjarne Stroustrup_
+
+> __High-level modules should not depend upon low-level modules. Rather, both should depend upon abstractions. Abstractions should not depend upon details. Rather, details should depend upon abstractions__
+>
+> -- _Rober Martin, Dependency Inversion Principle_
+
+> __The most important thing to get right is the interface. Everything else can be fixed later. Get the interface wrong, and you may never be allowed to fix it.__
+>
+> -- _Herb Sutter_
+
+> __Just because the standard provides a cliff in front of you, you are not necessarily required to jump off it.__
+>
+> -- _Norman Diamond_
+
+> __Systems have sub-systems and sub-systems have subsystems and so on ad infinitum—which is why we're always starting over.__
+>
+> -- _Alan Perlis_
+
+> __It's hard enough to find an error in your code when you're looking for it; it's even harder when you've assumed your code is error-free.__
+>
+> -- _Steve McConnell_
+
+> __Trying to outsmart a compiler defeats much of the purpose of using one.__
+>
+> -- _Brian Kernighan & P.J. Plauger_
+
+> __If you lie to the compiler, it will get its revenge.__
+>
+> -- _Henry Spencer_
+
+> __There will always be things we wish to say in our programs that in all known languages can only be said poorly.__
+>
+> -- _Alan Perlis_
+
+> __Say only what needs saying: Don't enforce personal tastes or obsolete practices.__
+>
+> -- _Herb Sutter, Andrei Alexandrescu, C++ Coding Standards_
+
+> __Say only what needs saying: Don't enforce personal tastes or obsolete practices.__
+>
+> -- _Herb Sutter, Andrei Alexandrescu, C++ Coding Standards_
+
+> __KISS (Keep It Simple Software): Correct is better than fast. Simple is better than complex. Clear is better than cute. Safe is better than insecure.__
+>
+> -- _Herb Sutter, Andrei Alexandrescu, C++ Coding Standards_
+
 
 - - -
 visit [GoodReads](https://www.goodreads.com/)
