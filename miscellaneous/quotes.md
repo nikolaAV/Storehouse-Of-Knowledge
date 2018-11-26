@@ -901,6 +901,49 @@ long-term investment.__
 >
 > -- _Herb Sutter, Andrei Alexandrescu, C++ Coding Standards_
 
+> __If the map and the terrain disagree, trust the terrain.__
+>
+> -- _Swiss army aphorism_
+
+> __Some languages are designed to solve a problem; others are designed to prove a point.__
+>
+> -- _Dennis M. Ritchie_
+
+> __Life can only be understood backwards, but it must be lived forwards.__
+>
+> -- _S0ren Kierkegaard_
+
+> __You cannot bathe in the same river twice.__
+>
+> -- _Heraclitus_
+
+> __No amount of genius can overcome obsession with detail.__
+>
+> -- _traditional_
+
+> __The Devil is in the details.__
+>
+> -- _traditional_
+
+> __Say what you mean, simply and directly.__
+>
+> -- _Brian Kernighan_
+
+> __Writing is the only art that must be learned by wrote.__
+>
+> -- _anon_
+
+> __Reasonable men do not change the world.__
+>
+> -- _G.B.Shaw_
+
+> __There is nothing more difficult to carry out, nor more doubtful of success, nor  more dangerous to handle, than to initiate a new order of things.__
+>
+> -- _Niccolo Macchiavelli_
+
+
+
+
 
 - - -
 visit [GoodReads](https://www.goodreads.com/)
