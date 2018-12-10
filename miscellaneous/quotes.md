@@ -941,6 +941,40 @@ long-term investment.__
 >
 > -- _Niccolo Macchiavelli_
 
+> __When you wish to instruct, be brief.__
+>
+> -- _Cicero_
+
+> __Don’t interrupt me while I’m interrupting.__
+>
+> -- _Winston S. Churchill_
+
+> __Why waste time learning when ignorance is instantaneous?.__
+>
+> -- _Hobbes_
+
+> __Prefer the standard to the offbeat.__
+>
+> -- _Strunk & White_
+
+> __What you see is all you get.__
+>
+> -- _Brian W. Kernighan_
+
+> __The time you enjoy wasting is not wasted time.__
+>
+> -- _Bertrand Russell_
+
+> __The purpose of computing is insight, not numbers.__
+>
+> -- _R. W. Hamming_
+
+> __... but for the student, numbers are often the best road to insight.__
+>
+> -- _A. Ralston_
+
+
+
 
 
 
