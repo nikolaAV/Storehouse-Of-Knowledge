@@ -973,6 +973,10 @@ long-term investment.__
 >
 > -- _A. Ralston_
 
+> __Knowledge is of two kinds. We know a subject ourselves, or we know where we can find information on it.__
+>
+> -- _Samuel Johnson_
+
 
 
 
