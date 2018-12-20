@@ -1853,8 +1853,7 @@ For the given case, language instructions: 'widget w2=w1;', 'widget w2(w1);', 'w
   
 **See also:** [S. Meyers. Effective Modern C++, item 7](http://doc.imzlp.me/viewer.html?file=docs/effective/EffectiveModernCPP.pdf#page=67&zoom=auto,-15,290), [H.Sutter,GotW#1 ](https://herbsutter.com/2013/05/09/gotw-1-solution/)
 
-**Relatives:** [auto::braced-init-list](./README.md#deducing-types-auto-by-braced-init-list)
-
+**Relatives:** [auto::braced-init-list](./README.md#deducing-types-auto-by-braced-init-list), [Explicit copy constructor](./README.md#explicit-copy-constructor)
 
 # Exception. Rethrow vs. propagation.
 **complexity:** basic
