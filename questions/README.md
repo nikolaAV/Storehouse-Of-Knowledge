@@ -2023,7 +2023,7 @@ You might think that 'foo(double)' is very close -- and it is -- but a nontempla
 
 **See also:** [H. Sutter, GotW#49](http://www.gotw.ca/gotw/049.htm)
 
-**Relatives:** [standard_conversion](./README.md#function-overloading-promotion-vs-standard-conversion), [constructor_template](./README.md#special-member-function-generation-constructor-template) 
+**Relatives:** [standard_conversion](./README.md#function-overloading-promotion-vs-standard-conversion), [constructor_template](./README.md#special-member-function-generation-constructor-template), [template-nonconst-reference](./README.md#function-template-overloading-reference-to-const) 
 
 # Function template. Spesialization vs. Overloading. 
 **complexity:** basic
