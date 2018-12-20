@@ -2569,7 +2569,7 @@ However, it is rather common to overload a function on both kinds of references.
 
 **See also:** [D. Vandevoorde. C++ Templates, Appendix B.2.2 Refining the Perfect Match](http://flylib.com/books/en/3.401.1.178/1/)
 
-**Relatives:** [function_overloading_phases](./README.md#function-overloading-deleted-function), [exact_match](./README.md#function-overloading-parameter-type-integer-vs-pointer)
+**Relatives:** [function_overloading_phases](./README.md#function-overloading-deleted-function), [exact_match](./README.md#function-overloading-parameter-type-integer-vs-pointer), [template-nonconst-reference](./README.md#function-template-overloading-reference-to-const)
 
 # Special member function generation. Constructor template. Part 2
 **complexity:** expert
