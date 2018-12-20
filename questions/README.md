@@ -3900,3 +3900,27 @@ In C++11 the way of initialization like `T x{};` is called _value initialization
 
 **Relatives:** [initialization syntax](./README.md#object-construction-initialization-syntax-part-3), [direct_copy_initialization](./README.md#object-construction-initialization-syntax), [copy-elision-C++17](./README.md#return-value-optimization)
 
+# Function template. Overloading. Reference to const.
+**complexity:** professional
+```cpp
+template <typename T>
+void foo(T&)         { cout << "T&" << endl; }
+void foo(const int&) { cout << "const int&" << endl; }
+
+int main()
+{
+   auto v{42};
+   foo(v);
+}
+```
+Regarding code above what should be present in output?
+- A. T&
+- B. const int&
+- C compiler error: 'foo' ambigious call
+
+**Answer:** A  
+Function templates can be overloaded with nontemplate functions. All else being equal, the non-template function is preferred in selecting the actual function being called. However, when `const` and reference qualifiers differ, priorities for overload resolution can change. The function template __'foo<>(T&)'__ is a better match when passing a nonconstant `int`. The reason is that for an `int` the instantiated f<>(int&) is a better match than __'f(int `const`&)'__. In that case the general rules of overload resolution apply.
+
+**See also:** [Overload resolution](https://en.cppreference.com/w/cpp/language/overload_resolution)
+
+**Relatives:** [Function-template-overloading](./README.md#function-template-overloading), [Perfect-match-for-lvalue-rvalue](./README.md#function-overloading-perfect-match-for-lvalue--rvalue)
