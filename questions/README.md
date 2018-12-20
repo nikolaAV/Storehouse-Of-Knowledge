@@ -3872,3 +3872,32 @@ Here, lexicographical_first("123","1234") fails to compile, because "123" has ty
 **Relatives:** 
 [template parameter::by_value](./README.md#deducing-types-template-parameter), 
 [auto::by_reference](./README.md#deducing-types-auto-by-reference)
+
+# Explicit copy constructor.
+**complexity:** expert
+```cpp
+struct widget
+{
+   explicit widget() { cout << "ctor(default)" << endl; }
+   explicit widget(const widget&) { cout << "ctor(copy)" << endl; }
+};
+
+int main()
+{
+   const widget w = widget{}; 
+}
+```
+Regarding code above what should be present in output? 
+- A ctor(default)
+- B 
+    - ctor(default)
+    - ctor(copy)
+- C compiler error: no matching function for call to 'widget::widget(widget), it is declared 'explicit' 
+
+**Answer:** A  
+In C++11 the way of initialization like `T x{};` is called _value initialization_, which means to either call a provided constructor or _zero initialize an object_ for buil-in types. Before C++11, the syntax to ensure proper initialization was `T x = T();` as the example above. Prior to C++17, this mechanism (which is still supported) only worked if the constructor selected for the copy-initialization is not `explicit`. In C++17, __mandatory copy elision__ avoids that limitation and the given syntax does work. 
+
+**See also:** [explicit specifier](https://en.cppreference.com/w/cpp/language/explicit), [Explicit copy-constructor](https://en.wikibooks.org/wiki/More_C%2B%2B_Idioms/Non-copyable_Mixin), [copy-elision](https://en.wikipedia.org/wiki/Copy_elision#Return_value_optimization)
+
+**Relatives:** [initialization syntax](./README.md#object-construction-initialization-syntax-part-3), [direct_copy_initialization](./README.md#object-construction-initialization-syntax), [copy-elision-C++17](./README.md#return-value-optimization)
+
