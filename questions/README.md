@@ -3924,3 +3924,33 @@ Function templates can be overloaded with nontemplate functions. All else being 
 **See also:** [Overload resolution](https://en.cppreference.com/w/cpp/language/overload_resolution)
 
 **Relatives:** [Function-template-overloading](./README.md#function-template-overloading), [Perfect-match-for-lvalue-rvalue](./README.md#function-overloading-perfect-match-for-lvalue--rvalue)
+
+# Function overloading. Function parameter pack
+**complexity:** basic
+```cpp
+template <typename T>
+void foo(T) {
+   cout << "foo(T)" << endl;
+}
+
+template <typename T, typename... U>
+void foo(T,U...) {
+   cout << "foo(T,U...)" << endl;
+}
+
+int main()
+{
+   foo(1);
+}
+```
+Regarding code above what should be present in output?
+- A. foo(T)
+- B. foo(T,U...)
+- C compiler error: 'foo' ambigious call
+
+**Answer:** A  
+If the choice is between two templates, then the most specialized of the templates is preferred (provided one is actually more specialized than the other). One special case of this distinction occurs when two templates only differ in that one adds a trailing parameter packs: The template without the pack is considered more specialized and is therefore preferred if it matches the call.
+
+**See also:** [introduction to variadic templates](http://kevinushey.github.io/blog/2016/01/27/introduction-to-c++-variadic-templates/), [cppreference::Parameter pack](https://en.cppreference.com/w/cpp/language/parameter_pack)
+
+**Relatives:** [function template overloading](./README.md#function-template-overloading-part-2)
