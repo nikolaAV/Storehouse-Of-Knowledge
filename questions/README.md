@@ -3954,3 +3954,41 @@ If the choice is between two templates, then the most specialized of the templat
 **See also:** [introduction to variadic templates](http://kevinushey.github.io/blog/2016/01/27/introduction-to-c++-variadic-templates/), [cppreference::Parameter pack](https://en.cppreference.com/w/cpp/language/parameter_pack)
 
 **Relatives:** [function template overloading](./README.md#function-template-overloading-part-2)
+
+# Special member function generation. Non-const constructor template.
+**complexity:** professional
+```cpp
+struct widget
+{
+   inline static size_t instance_count{0};
+
+   widget()     { ++instance_count; }
+   template <typename T>
+   widget(T&)   { ++instance_count; }
+};
+
+int main()
+{
+   widget w1;
+   cout << w1.instance_count << endl;
+   widget w2 {w1};
+   cout << w2.instance_count << endl;
+}
+```
+Regarding code above what should be present in output?
+- A. 
+    - 0
+    - 1
+- B. 
+    - 1
+    - 2
+- C. 
+    - 1
+    - 1
+
+**Answer:** B
+According to the overload resolution rules of C++ for a nonconstant lvalue 'w1' the member template __'widget<>(T&)'__ is a better match than the (usually predefined) _copy constructor_ __'widget(const widget&)'__.
+
+**See also:** [S. Meyers. Effective Modern C++. Item 17](http://doc.imzlp.me/viewer.html?file=docs/effective/EffectiveModernCPP.pdf#page=133&zoom=auto,-123,586), [wiki::special_mem_functions](https://en.wikipedia.org/wiki/Special_member_functions), [cppreference::the_rule_of...](http://en.cppreference.com/w/cpp/language/rule_of_three) 
+
+**Relatives:** [Constructor template](./README.md#special-member-function-generation-constructor-template), [Overloading and non-const reference](./README.md#function-template-overloading-reference-to-const)
