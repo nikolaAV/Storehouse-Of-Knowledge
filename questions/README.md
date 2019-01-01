@@ -2532,7 +2532,7 @@ Non-templates 'widget(`const` widget&)' are preferred to template specialization
 
 **See also:** [S. Meyers. Effective Modern C++. Item 17](http://doc.imzlp.me/viewer.html?file=docs/effective/EffectiveModernCPP.pdf#page=133&zoom=auto,-123,586), [wiki::special_mem_functions](https://en.wikipedia.org/wiki/Special_member_functions), [cppreference::the_rule_of...](http://en.cppreference.com/w/cpp/language/rule_of_three) 
 
-**Relatives:** [constructor_template_part2](./README.md#special-member-function-generation-constructor-template-part-2), [best match & function template](./README.md#function-template-overloading), [best match & template_specialization](./README.md#function-template-spesialization-vs-overloading)
+**Relatives:** [constructor_template_part2](./README.md#special-member-function-generation-constructor-template-part-2), [best match & function template](./README.md#function-template-overloading), [best match & template_specialization](./README.md#function-template-spesialization-vs-overloading), [Nonconstant constructor template](./README.md#special-member-function-generation-non-const-constructor-template)
 
 # Function overloading. Perfect match for lvalue & rvalue.
 **complexity:** professional
