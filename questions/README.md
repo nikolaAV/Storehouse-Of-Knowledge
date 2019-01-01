@@ -3986,7 +3986,7 @@ Regarding code above what should be present in output?
     - 1
     - 1
 
-**Answer:** B
+**Answer:** __B__  
 According to the overload resolution rules of C++ for a nonconstant lvalue 'w1' the member template __'widget<>(T&)'__ is a better match than the (usually predefined) _copy constructor_ __'widget(const widget&)'__.
 
 **See also:** [S. Meyers. Effective Modern C++. Item 17](http://doc.imzlp.me/viewer.html?file=docs/effective/EffectiveModernCPP.pdf#page=133&zoom=auto,-123,586), [wiki::special_mem_functions](https://en.wikipedia.org/wiki/Special_member_functions), [cppreference::the_rule_of...](http://en.cppreference.com/w/cpp/language/rule_of_three) 
