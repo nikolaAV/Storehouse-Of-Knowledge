@@ -3992,3 +3992,34 @@ According to the overload resolution rules of C++ for a nonconstant lvalue 'w1' 
 **See also:** [S. Meyers. Effective Modern C++. Item 17](http://doc.imzlp.me/viewer.html?file=docs/effective/EffectiveModernCPP.pdf#page=133&zoom=auto,-123,586), [wiki::special_mem_functions](https://en.wikipedia.org/wiki/Special_member_functions), [cppreference::the_rule_of...](http://en.cppreference.com/w/cpp/language/rule_of_three) 
 
 **Relatives:** [Constructor template](./README.md#special-member-function-generation-constructor-template), [Overloading and non-const reference](./README.md#function-template-overloading-reference-to-const)
+
+# Function template. Overloading. rvalue reference
+**complexity:** basic
+```cpp
+void foo(int&&) {   // Line A
+   cout << "foo(int&&)" << endl;
+}
+
+template <typename T>
+void foo(T&&) {   // Line B
+   cout << "foo(T&&)" << endl;
+}
+
+int main()
+{
+   auto val{123};
+   foo(val);
+}
+```
+Regarding code above what should be present in output?
+- A. foo(int&&)
+- B. foo(T&&)
+- C. compiler error: 'foo' ambigious call
+
+**Answer:** __B__  
+Don’t assume that T&& (_Line B_) for a template parameter T behaves as `int`&& (_Line A_) for a specific type `int`. Different rules apply! However, syntactically they look identical: 
+* `int`&& for a specific type X declares a parameter to be an [`rvalue`](https://en.cppreference.com/w/cpp/language/reference) reference. __It can only be bound to a movable object__ (a `prvalue`, such as a temporary object, and an `xvalue`, such as an object passed with `std::move()`).
+* T&& for a template parameter T declares a _forwarding reference_ (also called [_universal reference_](https://isocpp.org/blog/2012/11/universal-references-in-c11-scott-meyers)). It can be bound to a mutable, immutable (i.e., `const`), or movable object. Inside the function definition, the parameter may be mutable, immutable, or refer to a value you can “steal” the internals from.
+
+**See also:** [Perfect Forwarding Explained](http://thbecker.net/articles/rvalue_references/section_08.html), [Universal References by Scott Meyers](https://isocpp.org/blog/2012/11/universal-references-in-c11-scott-meyers)
+**Relatives:** [template and exact_match](./README.md#function-template-spesialization-vs-overloading), [template and reference_to_const](./README.md#function-template-overloading-reference-to-const), [overloading_and_reference_to_rvalue](./README.md#rvalue-reference)
