@@ -893,10 +893,6 @@ long-term investment.__
 >
 > -- _Herb Sutter, Andrei Alexandrescu, C++ Coding Standards_
 
-> __Say only what needs saying: Don't enforce personal tastes or obsolete practices.__
->
-> -- _Herb Sutter, Andrei Alexandrescu, C++ Coding Standards_
-
 > __KISS (Keep It Simple Software): Correct is better than fast. Simple is better than complex. Clear is better than cute. Safe is better than insecure.__
 >
 > -- _Herb Sutter, Andrei Alexandrescu, C++ Coding Standards_
