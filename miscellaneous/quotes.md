@@ -973,11 +973,69 @@ long-term investment.__
 >
 > -- _Samuel Johnson_
 
+> __To copy others is necessary, but to copy oneself is pathetic.__
+>
+> -- _Pablo Picasso_
 
+> __Though we may know Him by a thousand names, He is one and the same to us all.__
+>
+> -- _Mahatma Gandhi_
 
+> __Now join your hands, and with your hands your hearts.__
+>
+> -- _Henry VI, William Shakespeare_
 
+> __Let me ’splain. No, there is too much. Let me sum up.__
+>
+> -- _Inigo Montoya_
 
+> __Delegating work works, provided the one delegating works, too.__
+>
+> -- _Robert Half_
 
+> __The less we use our power, the greater it will be.__
+>
+> -- _Thomas Jefferson_
+
+> __If you have one true friend you have more than your share.__
+>
+> -- _Thomas Fuller_
+
+> __Explicit is better than implicit.__
+>
+> -- [_The Zen of Python_](https://www.python.org/dev/peps/pep-0020/)
+
+> __Special cases aren't special enough to break the rules.__
+>
+> -- [_The Zen of Python_](https://www.python.org/dev/peps/pep-0020/)
+
+> __Errors should never pass silently.__
+>
+> -- [_The Zen of Python_](https://www.python.org/dev/peps/pep-0020/)
+
+> __In the face of ambiguity, refuse the temptation to guess.__
+>
+> -- [_The Zen of Python_](https://www.python.org/dev/peps/pep-0020/)
+
+> __There should be one-- and preferably only one --obvious way to do it.__
+>
+> -- [_The Zen of Python_](https://www.python.org/dev/peps/pep-0020/)
+
+> __Now is better than never. Although never is often better than _right_ now.__
+>
+> -- [_The Zen of Python_](https://www.python.org/dev/peps/pep-0020/)
+
+> __If the implementation is hard to explain, it's a bad idea. If the implementation is easy to explain, it may be a good idea.__
+>
+> -- [_The Zen of Python_](https://www.python.org/dev/peps/pep-0020/)
+
+> __Simple is better than complex. Complex is better than complicated.__
+>
+> -- [_The Zen of Python_](https://www.python.org/dev/peps/pep-0020/)
+
+> __One of the effects of living with electric information is that we live habitually in a state of information overload. There’s always more than you can cope with.__
+>
+> -- _Marshall McLuhan_
 
 - - -
 visit [GoodReads](https://www.goodreads.com/)
