@@ -2886,7 +2886,7 @@ So, the parameters will be initialized with temporary `string` objects. While th
 ```cpp
 struct widget
 {
-   static size_t   count;
+   inline static size_t   count{0};
 
    widget()                         { ++count; }
    widget(const widget&)            { ++count; }
@@ -2894,8 +2894,6 @@ struct widget
    widget& operator=(const widget&) { ++count; return *this; }
    widget& operator=(widget&&)      { ++count; return *this; }
 };
-
-size_t widget::count {0};
 
 int main()
 {
