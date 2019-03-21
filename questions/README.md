@@ -4021,3 +4021,26 @@ Don’t assume that __T&&__ (_Line B_) for a template parameter T behaves as __`
 
 **See also:** [Perfect Forwarding Explained](http://thbecker.net/articles/rvalue_references/section_08.html), [Universal References by Scott Meyers](https://isocpp.org/blog/2012/11/universal-references-in-c11-scott-meyers)  
 **Relatives:** [template and exact_match](./README.md#function-template-spesialization-vs-overloading), [template and reference_to_const](./README.md#function-template-overloading-reference-to-const), [overloading_and_reference_to_rvalue](./README.md#rvalue-reference)
+
+# lambda-expression. type & default ctor 
+**complexity:**
+```cpp
+int main() 
+{
+    int counter{0};
+    auto foo = [&]() { ++counter; };
+    decltype(foo) foo_copy;
+    foo();
+    foo_copy();
+    cout << counter << endl;
+}
+```
+Regarding code above what should be present in output?
+- A. 1
+- B. 2
+- C. compiler error: lambda closure type has a deleted default constructor
+
+**Answer:** __C__  
+The closure type associated with a lambda-expression has a deleted _default constructor_ and a deleted _copy assignment operator_.
+**See also:** [Lambdas: From C++11 to C++20, Part 1](https://www.bfilipek.com/2019/02/lambdas-story-part1.html?m=1), [snippet from ISO](https://timsong-cpp.github.io/cppwp/n3337/expr.prim.lambda#19)
+**Relatives:** 
