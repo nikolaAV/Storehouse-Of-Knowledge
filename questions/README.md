@@ -4041,6 +4041,6 @@ Regarding code above what should be present in output?
 - C. compiler error: lambda closure type has a deleted default constructor
 
 **Answer:** __C__  
-The closure type associated with a lambda-expression has a deleted _default constructor_ and a deleted _copy assignment operator_.
-**See also:** [Lambdas: From C++11 to C++20, Part 1](https://www.bfilipek.com/2019/02/lambdas-story-part1.html?m=1), [snippet from ISO](https://timsong-cpp.github.io/cppwp/n3337/expr.prim.lambda#19)
+The closure type associated with a lambda-expression has a deleted _default constructor_ and a deleted _copy assignment operator_.  
+**See also:** [Lambdas: From C++11 to C++20, Part 1](https://www.bfilipek.com/2019/02/lambdas-story-part1.html?m=1), [snippet from ISO](https://timsong-cpp.github.io/cppwp/n3337/expr.prim.lambda#19)  
 **Relatives:** 
