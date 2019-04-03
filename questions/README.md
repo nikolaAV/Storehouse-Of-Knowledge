@@ -2019,13 +2019,13 @@ Regarding code above what should be present in output?
 **Answer:** B
 
 'foo(T)' where T is `int` is __the best match__. 'foo(double)' requires the [standard conversion](./README.md#function-overloading-promotion-vs-standard-conversion).
-You might think that 'foo(double)' is very close -- and it is -- but a nontemplate function is preferred only if it is an [__exact match__](./README.md#function-template-spesialization-vs-overloading).
+You might think that 'foo(double)' is very close -- and it is -- but a nontemplate function is preferred only if it is an [__exact match__](./README.md#function-template-specialization-vs-overloading).
 
 **See also:** [H. Sutter, GotW#49](http://www.gotw.ca/gotw/049.htm)
 
 **Relatives:** [standard_conversion](./README.md#function-overloading-promotion-vs-standard-conversion), [constructor_template](./README.md#special-member-function-generation-constructor-template), [template-nonconst-reference](./README.md#function-template-overloading-reference-to-const) 
 
-# Function template. Spesialization vs. Overloading. 
+# Function template. Specialization vs. Overloading. 
 **complexity:** basic
 ```cpp
 void foo(int)     { cout << "foo(int)" << endl; }
@@ -2263,7 +2263,7 @@ The overload resolution rules are pretty simple:
 
 **See also:** [H. Sutter, Why Not Specialize Function Templates?](http://www.gotw.ca/publications/mill17.htm), [habrahabr](https://habrahabr.ru/post/237323/), [CppCoreGuidlines::T144](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#t144-dont-specialize-function-templates)
 
-**Relatives:** [template::overloading & spesialization](./README.md#function-template-spesialization-vs-overloading) 
+**Relatives:** [template::overloading & specialization](./README.md#function-template-specialization-vs-overloading) 
 
 # Type conversion. User-defined
 **complexity:** basic
@@ -2532,7 +2532,7 @@ Non-templates 'widget(`const` widget&)' are preferred to template specialization
 
 **See also:** [S. Meyers. Effective Modern C++. Item 17](http://doc.imzlp.me/viewer.html?file=docs/effective/EffectiveModernCPP.pdf#page=133&zoom=auto,-123,586), [wiki::special_mem_functions](https://en.wikipedia.org/wiki/Special_member_functions), [cppreference::the_rule_of...](http://en.cppreference.com/w/cpp/language/rule_of_three) 
 
-**Relatives:** [constructor_template_part2](./README.md#special-member-function-generation-constructor-template-part-2), [best match & function template](./README.md#function-template-overloading), [best match & template_specialization](./README.md#function-template-spesialization-vs-overloading), [Nonconstant constructor template](./README.md#special-member-function-generation-non-const-constructor-template)
+**Relatives:** [constructor_template_part2](./README.md#special-member-function-generation-constructor-template-part-2), [best match & function template](./README.md#function-template-overloading), [best match & template_specialization](./README.md#function-template-specialization-vs-overloading), [Nonconstant constructor template](./README.md#special-member-function-generation-non-const-constructor-template)
 
 # Function overloading. Perfect match for lvalue & rvalue.
 **complexity:** professional
@@ -4020,7 +4020,7 @@ Don’t assume that __T&&__ (_Line B_) for a template parameter T behaves as __`
 * T&& for a template parameter T declares a _forwarding reference_ (also called [_universal reference_](https://isocpp.org/blog/2012/11/universal-references-in-c11-scott-meyers)). It can be bound to a mutable, immutable (i.e., `const`), or movable object. Inside the function definition, the parameter may be mutable, immutable, or refer to a value you can “steal” the internals from.
 
 **See also:** [Perfect Forwarding Explained](http://thbecker.net/articles/rvalue_references/section_08.html), [Universal References by Scott Meyers](https://isocpp.org/blog/2012/11/universal-references-in-c11-scott-meyers)  
-**Relatives:** [template and exact_match](./README.md#function-template-spesialization-vs-overloading), [template and reference_to_const](./README.md#function-template-overloading-reference-to-const), [overloading_and_reference_to_rvalue](./README.md#rvalue-reference)
+**Relatives:** [template and exact_match](./README.md#function-template-specialization-vs-overloading), [template and reference_to_const](./README.md#function-template-overloading-reference-to-const), [overloading_and_reference_to_rvalue](./README.md#rvalue-reference)
 
 # lambda-expression. type & default ctor 
 **complexity:**
