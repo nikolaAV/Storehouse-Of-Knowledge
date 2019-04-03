@@ -4023,7 +4023,7 @@ Don’t assume that __T&&__ (_Line B_) for a template parameter T behaves as __`
 **Relatives:** [template and exact_match](./README.md#function-template-specialization-vs-overloading), [template and reference_to_const](./README.md#function-template-overloading-reference-to-const), [overloading_and_reference_to_rvalue](./README.md#rvalue-reference)
 
 # lambda-expression. type & default ctor 
-**complexity:**
+**complexity:** expert
 ```cpp
 int main() 
 {
@@ -4044,3 +4044,28 @@ Regarding code above what should be present in output?
 The closure type associated with a lambda-expression has a deleted _default constructor_ and a deleted _copy assignment operator_.  
 **See also:** [Lambdas: From C++11 to C++20, Part 1](https://www.bfilipek.com/2019/02/lambdas-story-part1.html?m=1), [snippet from ISO](https://timsong-cpp.github.io/cppwp/n3337/expr.prim.lambda#19)  
 **Relatives:** 
+
+# Template function overloading. Parameter type: NULL vs. nullptr
+**complexity:** basic
+```cpp
+template <typename T>
+void foo(T)  {cout << "foo(T)" << endl; }
+
+template <typename T>
+void foo(T*) {cout << "foo(T*)" << endl; }
+
+int main()
+{
+   foo(NULL);
+   foo(nullptr);
+}
+```
+Regarding code above what should be present in output?
+- A. 
+- B. 
+
+**Answer:** 
+
+**See also:** 
+
+**Relatives:** [Function template. Overloading vs. Specialization](./README.md#function-template-overloading-vs-specialization-part-2)
