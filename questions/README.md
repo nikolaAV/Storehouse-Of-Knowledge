@@ -1023,7 +1023,7 @@ Regarding code above what should be present in output?
 
 **Answer:** A
 
-`nullptr` (C++11 keyword) is a literal denoting the null pointer; it is not an integer.
+[`nullptr`](https://en.cppreference.com/w/cpp/language/nullptr) (C++11 keyword) is a literal denoting the null pointer; it is not an integer. It is a prvalue of type `std::nullptr_t`. There exist _implicit conversions_ from `nullptr` to null pointer value of any pointer type.
 
 **See also:** [Bjarne Stroustrup's C++11 FAQ](http://www.stroustrup.com/C++11FAQ.html#nullptr), [S. Meyers. Effective Modern C++, item 8](https://books.google.com.ua/books?id=rjhIBQAAQBAJ&lpg=PP1&dq=meyers%20modern%20c%2B%2B%20NULL%20nullptr&pg=PA58#v=onepage&q&f=false)
 
