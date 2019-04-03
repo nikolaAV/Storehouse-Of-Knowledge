@@ -141,7 +141,7 @@ Regarding code above what should be present in output?
 
 **See also:** [Bjarne Stroustrup's FAQ](http://www.stroustrup.com/bs_faq2.html#null)
  
-**Relatives:**  [function overloading, nullptr](./README.md#function-overloading-parameter-type-null-vs-nullptr)
+**Relatives:**  [function overloading, nullptr](./README.md#function-overloading-arguments-null-vs-nullptr)
 
 # Function overriding. Default parameter value.
 **complexity:** professional
@@ -1005,7 +1005,7 @@ be `virtual`. — Bjarne Stroustrup, [D&E Of C++, ch 15.9.3](http://doc.imzlp.me
 
 **Relatives:** 
 
-# Function overloading. Parameter type: NULL vs. nullptr
+# Function overloading. Arguments: NULL vs. nullptr
 **complexity:** basic
 ```cpp
 void foo(char*) {cout << "pointer argument" << endl; }
@@ -4045,7 +4045,7 @@ The closure type associated with a lambda-expression has a deleted _default cons
 **See also:** [Lambdas: From C++11 to C++20, Part 1](https://www.bfilipek.com/2019/02/lambdas-story-part1.html?m=1), [snippet from ISO](https://timsong-cpp.github.io/cppwp/n3337/expr.prim.lambda#19)  
 **Relatives:** 
 
-# Template function overloading. Parameter type: NULL vs. nullptr
+# Template function overloading. Arguments: NULL vs. nullptr
 **complexity:** basic
 ```cpp
 template <typename T>
