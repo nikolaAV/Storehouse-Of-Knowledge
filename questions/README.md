@@ -1027,7 +1027,7 @@ Regarding code above what should be present in output?
 
 **See also:** [Bjarne Stroustrup's C++11 FAQ](http://www.stroustrup.com/C++11FAQ.html#nullptr), [S. Meyers. Effective Modern C++, item 8](https://books.google.com.ua/books?id=rjhIBQAAQBAJ&lpg=PP1&dq=meyers%20modern%20c%2B%2B%20NULL%20nullptr&pg=PA58#v=onepage&q&f=false)
 
-**Relatives:**  [function overloading, NULL](./README.md#function-overloading-parameter-type-integer-vs-pointer)
+**Relatives:**  [function overloading, NULL](./README.md#function-overloading-parameter-type-integer-vs-pointer), [Template function overloading. NULL vs. nullptr](./README.md#template-function-overloading-arguments-null-vs-nullptr)
 
 # Inheritance. Virtual base & dominance.
 **complexity:** expert
