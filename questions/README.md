@@ -4062,9 +4062,21 @@ int main()
 ```
 Regarding code above what should be present in output?
 - A. 
+    - foo(T)
+    - foo(T*)
 - B. 
+    - foo(T*)
+    - foo(T)
+- C. 
+    - foo(T)
+    - foo(T)
+- D. 
+    - foo(T*)
+    - foo(T*)
 
-**Answer:** 
+**Answer:** __C__  
+The first call __foo(NULL)__ accepts value of `int` type, because of NULL is a macro defining integral literal 0. 
+The second call __foo(nullptr)__ accept value of `std::nullptr_t` type, because the argument [`nullptr`](https://en.cppreference.com/w/cpp/language/nullptr) passed into it is C++ keyword which denotes the pointer literal that in its turn can be implicitly convertered into pointer value of any type. Thus, if both arguments are of non-pointer type, the overloaded template foo<T>(T) is chosen.  
 
 **See also:** 
 
