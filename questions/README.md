@@ -2488,7 +2488,7 @@ Compilers internally replace uses of 'x_' with `this`->'x_'.
 
 **See also:** [S. Meyers. Effective Modern C++. Item 31](http://doc.imzlp.me/viewer.html?file=docs/effective/EffectiveModernCPP.pdf#page=238&zoom=auto,-128,583), [Lambda capture of *this](http://www.bfilipek.com/2017/01/cpp17features.html#lambda-capture-of-this)
 
-**Relatives:** [Lambda capture of globals](./README.md#lambda-capture-of-globals)
+**Relatives:** [Lambda capture of globals](./README.md#lambda-capture-of-globals), [Lambda capture of data-members. Part 2](./README.md#lambda-capture-of-data-members-part-2)
 
 # Special member function generation. Constructor template.
 **complexity:** professional
