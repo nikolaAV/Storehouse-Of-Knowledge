@@ -4110,3 +4110,27 @@ Compilers internally replace uses of 'text_' with `this`->'text_'. Thus, functio
 **See also:** [S. Meyers. Effective Modern C++. Item 31](http://doc.imzlp.me/viewer.html?file=docs/effective/EffectiveModernCPP.pdf#page=238&zoom=auto,-128,583), [Lambdas capture of *this](http://www.bfilipek.com/2017/01/cpp17features.html#lambda-capture-of-this), [Lambdas capture class member](https://www.bfilipek.com/2019/02/lambdas-story-part1.html?m=1#capturing-a-class-member)
 
 **Relatives:** [Lambda capture of data-members](./README.md#lambda-capture-of-data-members)
+
+
+# Lambda closure type & pointer to a function.
+**complexity:** professional
+```cpp
+void foo(void(*callback)(const char*)) {
+    callback("C++11");    
+}
+
+int main()
+{
+    foo([](const char*s){cout << "lambda closure:" << s << endl;});
+}
+```
+Regarding code above what should be present in output?
+- A. lambda closure:C++11
+- B. Compile error: no matching function for call to 'foo'
+
+**Answer:**  A  
+The closure type for a lambda-expression with no lambda-capture has a public non-virtual non-explicit const conversion function to pointer to function having the same parameter and return types as the closure type’s function call operator. The value returned by this conversion function shall be the address of a function that, when invoked, has the same effect as invoking the closure type’s function call operator.
+
+**See also:** [Lambda Conversion to function pointer](https://www.bfilipek.com/2019/02/lambdas-story-part1.html?m=1), [ISO C++,expr.prim.lambda,6](https://doc.imzlp.me/viewer.html?file=docs/standard/isocpp2014.pdf#page=107&zoom=auto,-119,346)
+
+**Relatives:**
