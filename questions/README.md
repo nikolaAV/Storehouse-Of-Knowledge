@@ -4086,8 +4086,8 @@ The second call __foo(nullptr)__ accepts value of `std::nullptr_t` type, because
 **complexity:** basic
 ```cpp
 struct widget {
-    std::string name_;    
-    std::function<void()> foo() const { return [=] {cout << name_ << endl; }; }
+    std::string text_;    
+    std::function<void()> foo() const { return [=] {cout << text_ << endl; }; }
 };
 
 int main()
@@ -4103,9 +4103,9 @@ Regarding code above what should be present in output?
 **Answer:** B 
 
 Lambdas capture only non-`static` local  variables  (including  parameters)  visible  in the scope where the lambda is created.
-'name_' is a data member of the 'widget' class. It can't be captured and therefore it does not matter which capture mode is set.
+'text_' is a data member of the 'widget' class. It can't be captured and therefore it does not matter which capture mode is set.
 Every non-`static` member function ('foo') has a `this` pointer an it uses it every time if an access to data member is needed.
-Compilers internally replace uses of 'name_' with `this`->'name_'. Thus, function member 'foo()' returns a lambda (stored in `std::function`) that captures `this` to have an access to data member 'name_'. Since we use temporary object of 'widget' type, we cannot be sure what will happen when we call 'f'. This is a dangling reference problem and generates Undefined Behaviour.
+Compilers internally replace uses of 'text_' with `this`->'text_'. Thus, function member 'foo()' returns a lambda (stored in `std::function`) that captures `this` to have an access to data member 'text_'. Since we use temporary object of 'widget' type, we cannot be sure what will happen when we call 'f'. This is a dangling reference problem and generates Undefined Behaviour.
 
 **See also:** [S. Meyers. Effective Modern C++. Item 31](http://doc.imzlp.me/viewer.html?file=docs/effective/EffectiveModernCPP.pdf#page=238&zoom=auto,-128,583), [Lambdas capture of *this](http://www.bfilipek.com/2017/01/cpp17features.html#lambda-capture-of-this), [Lambdas capture class member](https://www.bfilipek.com/2019/02/lambdas-story-part1.html?m=1#capturing-a-class-member)
 
