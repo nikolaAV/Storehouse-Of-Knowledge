@@ -10,14 +10,16 @@ thinking and many dire predictions.
 ![30YearsOfC++](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/30YearsOfC%2B%2B.png)
 
 ## Official online resources
-* [The home of Standard C++ on the web](https://isocpp.org/std/status) Standard C++ Foundation is a Washington 501(c)(6) not-for-profit organization whose purpose is to support the C++ software developer community and promote the understanding and use of modern Standard C++ on all compilers and platforms. [C++14,ISO/IEC 14882](http://doc.imzlp.me/viewer.html?file=docs/standard/isocpp2014.pdf), [C++17,N4687 Working Draft](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/n4687.pdf)
+* [The home of Standard C++ on the web](https://isocpp.org/std/status) Standard C++ Foundation is a Washington 501(c)(6) not-for-profit organization whose purpose is to support the C++ software developer community and promote the understanding and use of modern Standard C++ on all compilers and platforms.
+    * [C++14,ISO/IEC 14882](http://doc.imzlp.me/viewer.html?file=docs/standard/isocpp2014.pdf)
+    * [C++17,N4687 Working Draft](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/n4687.pdf)
+    * [Working Draft, Standard for Programming Language C++](https://timsong-cpp.github.io/cppwp/)
 * [C++ reference](http://en.cppreference.com/w/) provides programmers with a complete online reference for the C and C++ languages and standard libraries, i.e. a more convenient version of the C and C++ standards. Especially useful for finding examples and documentation of new library features.
 * [The C++ Core Guidelines](https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines.html) are a collaborative effort led by Bjarne Stroustrup & Herb Sutter. The aim of the guidelines is to help people to use modern C++ effectively. (The same is on [GitHub](https://github.com/isocpp/CppCoreGuidelines))
 * [clang](http://clang.llvm.org/cxx_status.html) and [gcc](https://gcc.gnu.org/projects/cxx-status.html)'s support pages.
 
 ## Online compilers & tools
 * [wandbox](https://wandbox.org/), Social Compilation Service that supports GCC and Clang compilers of the up-to-date version
-* [Visual C++](http://webcompiler.cloudapp.net/), compiler version: up-to-date
 * [tutorialspoint.com](https://www.tutorialspoint.com/compile_cpp_online.php), GCC of latest stable version
 * [C++ shell](http://cpp.sh/) is a simple frontend for a GCC 4.9.2. with Boost 1.55. Easily & Lightly
 * The following [list](https://arne-mertz.de/2017/05/online-compilers/) provides information about available online compilers and their most important features.
