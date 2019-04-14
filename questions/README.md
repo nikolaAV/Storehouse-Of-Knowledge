@@ -831,7 +831,7 @@ In the example above, the temporary returned by 'foo()' lives until the closing 
 
 **See also:** [H. Sutter. GotW #88](https://herbsutter.com/2008/01/01/gotw-88-a-candidate-for-the-most-important-const/), [Lifetime of a temporary](http://en.cppreference.com/w/cpp/language/reference_initialization#Lifetime_of_a_temporary)
 
-**Relatives:** [part_2](./README.md#object-lifetime-const-reference-to-the-temporary-part-2) , [reference initialization](./README.md#reference-initialization)
+**Relatives:** [part_2](./README.md#object-lifetime-const-reference-to-the-temporary-part-2) , [reference initialization](./README.md#reference-initialization), [rvalue-reference to the temporary](./README.md#object-lifetime-rvalue-reference-to-the-temporary)
 
 # Object lifetime. const-reference to the base. 
 **complexity:** expert
