@@ -4111,7 +4111,6 @@ Compilers internally replace uses of 'text_' with `this`->'text_'. Thus, functio
 
 **Relatives:** [Lambda capture of data-members](./README.md#lambda-capture-of-data-members)
 
-
 # Lambda closure type & pointer to a function.
 **complexity:** professional
 ```cpp
@@ -4134,3 +4133,35 @@ The closure type for a lambda-expression with no lambda-capture has a public non
 **See also:** [Lambda Conversion to function pointer](https://www.bfilipek.com/2019/02/lambdas-story-part1.html?m=1), [ISO C++,expr.prim.lambda,6](https://doc.imzlp.me/viewer.html?file=docs/standard/isocpp2014.pdf#page=107&zoom=auto,-119,346)
 
 **Relatives:**
+
+# Object lifetime. rvalue-reference to the temporary.
+**complexity:** expert
+```cpp
+struct widget{
+    ~widget() { cout << "~widget" << endl; }
+};    
+
+widget foo() {
+    return widget{};
+} 
+
+int main()
+{
+    widget&& w = foo();
+    cout << "Goodbye." << endl;
+}
+```
+Regarding code above what should be present in output?
+- A 
+    - ~widget
+    - Goodbye
+- B 
+    - Goodbye
+    - ~widget
+- C Compile error: non-const rvalue reference to type 'widget' cannot bind to a temporary of type 
+
+**Answer:**  __B__      
+
+**See also:** [Lifetime of a temporary](https://en.cppreference.com/w/cpp/language/reference_initialization#Lifetime_of_a_temporary)
+
+**Relatives:** [const-reference to the temporary](./README.md#object-lifetime-const-reference-to-the-temporary)
