@@ -4161,6 +4161,7 @@ Regarding code above what should be present in output?
 - C Compile error: non-const rvalue reference to type 'widget' cannot bind to a temporary of type 
 
 **Answer:**  __B__      
+`r-value` references extend the lifespan of the object they are initialized with to the lifespan of the `r-value` reference (`l-value` references to `const` objects can do this too).
 
 **See also:** [Lifetime of a temporary](https://en.cppreference.com/w/cpp/language/reference_initialization#Lifetime_of_a_temporary)
 
