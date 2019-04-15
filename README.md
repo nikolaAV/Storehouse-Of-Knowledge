@@ -19,12 +19,13 @@ thinking and many dire predictions.
 * [clang](http://clang.llvm.org/cxx_status.html) and [gcc](https://gcc.gnu.org/projects/cxx-status.html)'s support pages.
 
 ## Online compilers & tools
-* [wandbox](https://wandbox.org/), Social Compilation Service that supports GCC and Clang compilers of the up-to-date version
+Instead of creating local projects you can also leverage some [online compilers](https://arnemertz.github.io/online-compilers/). They offer a basic text editor and usually allow you to compile only one source file (the code that you edit). They are very handy if you want to play with a simple code example.
+* [wandbox](https://wandbox.org/), Social Compilation Service that supports GCC and Clang compilers of the up-to-date version. Also you can use boost libraries. Wandbox offers link sharing.
 * [tutorialspoint.com](https://www.tutorialspoint.com/compile_cpp_online.php), GCC of latest stable version
-* [C++ shell](http://cpp.sh/) is a simple frontend for a GCC 4.9.2. with Boost 1.55. Easily & Lightly
-* The following [list](https://arne-mertz.de/2017/05/online-compilers/) provides information about available online compilers and their most important features.
 * [C++ Quick Benchmark](http://quick-bench.com/) is a micro benchmarking tool intended to quickly and simply compare the performances of two or more code snippets.
-* [Compiler Explorer](https://godbolt.org/) allows you to see the assembly of C++ programs generated with different compilers on different platforms
+* [Compiler Explorer](https://godbolt.org/) allows you to see the assembly of C++ programs generated with different compilers on different platforms.
+* [Coliru](http://coliru.stacked-crooked.com/) uses GCC 8.1.0 (as of July 2018), offers link sharing and a basic text editor, it’s simple but very effective.
+* [C++ Insights](https://cppinsights.io/). It’s a Clang-based tool which does a source to source transformation. It shows how the compiler sees the code, for example by expanding lambdas, auto, structured bindings or range-based for loops.
 
 ## Popular Blogs
 * [Bjarne Stroustrup's homepage](http://stroustrup.com/), C++FAQ, style, techique, etc.
