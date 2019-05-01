@@ -1332,7 +1332,7 @@ code, every decent C++ compiler will employ the RVO to avoid copying 'w' — Sco
  
 Starting from C++17, another way to describe this mechanics is "unmaterialized value passing": prvalues are returned and used without ever materializing a temporary.
 
-**See also:** [Copy elision](http://en.cppreference.com/w/cpp/language/copy_elision), [RVO](https://en.wikipedia.org/wiki/Return_value_optimization), [S. Meyers. More Effective C++, item 20](https://books.google.com.ua/books?id=U7lTySXdFk0C&pg=PT439&dq=Facilitate+the+return+value+optimization.+Meyers&hl=en&sa=X&redir_esc=y#v=onepage&q&f=false)
+**See also:** [Copy elision](http://en.cppreference.com/w/cpp/language/copy_elision), [RVO](https://en.wikipedia.org/wiki/Return_value_optimization), [S. Meyers. More Effective C++, item 20](https://books.google.com.ua/books?id=U7lTySXdFk0C&pg=PT439&dq=Facilitate+the+return+value+optimization.+Meyers&hl=en&sa=X&redir_esc=y#v=onepage&q&f=false), [Guaranteed Copy Elision by Simon Brand](https://blog.tartanllama.xyz/guaranteed-copy-elision/)
 
 **Relatives:** [RVO & std::move](./README.md#stdmovervo), [ObjectConstructionOneCopy](./README.md#object-construction-copy-elision), [Explicit copy constructor](./README.md#explicit-copy-constructor)
 
@@ -2912,7 +2912,7 @@ Regarding code above what should be present in output?
 Only one call to default constructor of 'widget', to initialize 'w'.
 > Note: Since C++17, according to the core language specificatin the rule above does not specify an optimization. There is no longer a temporary to copy/move from if the initializer expression is a [pvalue](http://en.cppreference.com/w/cpp/language/value_category).
 
-**See also:** [cppref::copy_elision](http://en.cppreference.com/w/cpp/language/copy_elision) 
+**See also:** [cppref::copy_elision](http://en.cppreference.com/w/cpp/language/copy_elision), [Guaranteed Copy Elision by Simon Brand](https://blog.tartanllama.xyz/guaranteed-copy-elision/) 
 
 **Relatives:** [RVO](./README.md#return-value-optimization), [rvalue-pass-by-value](./README.md#rvalue-arguments-in-pass-by-value-parameters)
 
@@ -3833,7 +3833,7 @@ Regarding code above what should be present in output?
 **Answer:** C (since C++17), the old compilers may raise A  
 Before C++17, type 'widget' had to be copyable to be able to pass in arguments, but since C++17 you can pass temporaries ([`rvalues`](https://en.cppreference.com/w/cpp/language/value_category)) even if neither a copy nor a move constructor is valid.
 
-**See also:** [Abseil,TotW#117](https://abseil.io/tips/117), [wiki,Copy elision](https://en.wikipedia.org/wiki/Copy_elision)
+**See also:** [Abseil,TotW#117](https://abseil.io/tips/117), [wiki,Copy elision](https://en.wikipedia.org/wiki/Copy_elision), [Guaranteed Copy Elision by Simon Brand](https://blog.tartanllama.xyz/guaranteed-copy-elision/)
 
 **Relatives:** [ctor-copy-elision](./README.md#object-construction-copy-elision), [RVO](./README.md#return-value-optimization)
 
