@@ -3254,7 +3254,7 @@ Regarding code above what should be present in output?
 
 It's a quite exotic case which is applicable for _aggregate_ types with the _compiler-generated default constructor_. If you create an instance of 'widget' without an initializer, the contained `int` (x) is _default initilized_. If the object has static storage duration ('w1'), it's initialized to zero; otherwise, it ('w2') has an inderterminate value that can potentially cause [undefined behaviour](http://en.cppreference.com/w/cpp/language/ub). And, finally, if you initialize your instance ('w3') of 'widget' by explicitly invoking the default constructor, then it's initialized to zero.
 
-**See also:** [cppref::zero_initialization](http://en.cppreference.com/w/cpp/language/zero_initialization) 
+**See also:** [cppref::zero_initialization](http://en.cppreference.com/w/cpp/language/zero_initialization), [Initialization in C++ is bonkers](https://blog.tartanllama.xyz/initialization-is-bonkers/) 
 
 **Relatives:** [object_construction_3](./README.md#object-construction-initialization-syntax-part-3)
 
