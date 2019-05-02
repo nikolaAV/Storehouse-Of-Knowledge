@@ -1,6 +1,9 @@
 # Storehouse-Of-Knowledge
 Useful links, books, posts about C++
-but first ... try to examine yourself. Click [here](https://www.tutorialspoint.com/cplusplus/cpp_questions_answers.htm) or [here](./questions/README.md).
+but first ... try to examine yourself.  
+* [C++ Questions and Answers](https://www.tutorialspoint.com/cplusplus/cpp_questions_answers.htm) on tutorialspoint.com
+* [C++ Quiz](www.cppquiz.org).
+* [this site](./questions/README.md)
 
 > So far, C++ has escaped the fate of the Vasa([En](http://www.aristeia.com/TalkNotes/C++vstheVasa2-ups.pdf),[Ru](https://habrahabr.ru/company/infopulse/blog/227529/));  it has not
 keeled over and disappeared – despite much wishful
