@@ -4207,7 +4207,9 @@ Regarding code above what should be present in output?
 Let's consider the line 'widget(exemplar);'. This can be interpreted in two ways:
 - As creating a temporary unnamed copy of 'exemplar'.
 - As creating a new variable of type 'widget' named 'exemplar'. This is easier to see if you remove the parentheses, and it becomes just 'widget exemplar';.  
+
 According to [the Standard](https://timsong-cpp.github.io/cppwp/stmt.ambig#1), 'widget(exemplar) is in fact a declaration of a new variable named 'exemplar', which shadows the global 'exemplar'.  
+
 **See also:** [Statements. Ambiguity resolution. §8.8.1](https://timsong-cpp.github.io/cppwp/stmt.ambig#1)
 
 **Relatives:** [Most vexing parse](./README.md#most-vexing-parse), [Object construction. Initialization syntax](./README.md#object-construction-initialization-syntax)
