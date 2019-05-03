@@ -2055,7 +2055,7 @@ Regarding code above what should be present in output?
 
 **Relatives:** [function_template::best_match](./README.md#function-template-overloading), [function_template::best_match and rvalue](./README.md#function-template-overloading-rvalue-reference)  
 
-# Most verxing parse. 
+# Most vexing parse. 
 **difficulty:** professional
 ```cpp
 class widget
