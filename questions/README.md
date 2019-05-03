@@ -1,5 +1,5 @@
 # sizeof (\<empty>)?
-**complexity:** professional
+**difficulty:** professional
 ```cpp
 class Empty {};
 
@@ -25,7 +25,7 @@ When instantiating an instance of any type (including "empty"), the physical mem
 
 
 # virtual destructor
-**complexity:** basic
+**difficulty:** basic
 ```cpp
 struct shape
 {
@@ -69,7 +69,7 @@ Regarding code above what should be present in output?
 **Relatives:** [virtual dtor2](./README.md#virtual-destructor-part-2), [virtuality](./README.md#cost-of-the-virtuality)
 
 # Object construction
-**complexity:** basic
+**difficulty:** basic
 ```cpp
 struct member
 {
@@ -120,7 +120,7 @@ Regarding code above what should be present in output?
  
 
 # Function overloading. Parameter type: integer vs. pointer
-**complexity:** professional
+**difficulty:** professional
 ```cpp
 void foo(char*) {cout << "pointer argument" << endl; }
 void foo(int)   {cout << "integer argument" << endl; }
@@ -144,7 +144,7 @@ Regarding code above what should be present in output?
 **Relatives:**  [function overloading, nullptr](./README.md#function-overloading-arguments-null-vs-nullptr)
 
 # Function overriding. Default parameter value.
-**complexity:** professional
+**difficulty:** professional
 ```cpp
 struct base
 {
@@ -181,7 +181,7 @@ Regarding code above what should be present in output?
 **See also:** [S. Meyers. Effective C++, item 37](https://books.google.com.ua/books?id=U7lTySXdFk0C&pg=PT208&dq=Effective+C%2B%2B+Never+redefine+a+function’s+inherited+default+parameter+value&hl=en&sa=X&redir_esc=y#v=onepage&q&f=false)
  
 # Object construction. Member initialization list.
-**complexity:** basic
+**difficulty:** basic
 ```cpp
 struct part
 {
@@ -226,7 +226,7 @@ Regarding code above what should be present in output? Which of proposed constru
 **Relatives:** [ctor::member_ordering](./README.md#object-construction-member-initialization-list-vs-member-declaration-ordering)
 
 # Inheritance. Hiding names.
-**complexity:** professional
+**difficulty:** professional
 ```cpp
 struct base
 {
@@ -259,7 +259,7 @@ The compiler looks into the scope of _'derived'_, finds the single function "foo
 **Relatives:** [scopes::hiding_names](./README.md#scopes-hiding-names)
 
 # Inheritance. Virtual base.
-**complexity:** expert
+**difficulty:** expert
 ```cpp
 class base
 {
@@ -291,7 +291,7 @@ The Standatd does not specify size of `pointer` to a virtual table (vtbl).
 
 
 # Object construction. Virtual Inheritance
-**complexity:** expert
+**difficulty:** expert
 ```cpp
 struct base1
 {
@@ -335,7 +335,7 @@ Subobject of virtually inheritable class is **always** Initialized first regardl
 
 
 # Object construction. Member initialization list vs. member declaration ordering
-**complexity:** professional
+**difficulty:** professional
 ```cpp
 class range
 {
@@ -374,7 +374,7 @@ list. __D__ is the right answer in common case. For the the given test, __C__ is
 **Relatives:** [ctor::member_initialization_list](./README.md#object-construction-member-initialization-list)
 
 # Polymorphic objects. Slicing
-**complexity:** basic
+**difficulty:** basic
 ```cpp
 struct base
 {
@@ -427,7 +427,7 @@ If you have a class with virtual method then you should access it through object
 **Relatives:** 
 
 # Cost of the virtuality?
-**complexity:** professional
+**difficulty:** professional
 ```cpp
 class point
 {   // designed as a terminal class
@@ -467,7 +467,7 @@ The Standard does not say how the virtual table and the pointer to it should be 
 **Relatives:** [virtual destructor](./README.md#virtual-destructor)
 
 # Size Of C++ object (members only)?
-**complexity:** basic
+**difficulty:** basic
 ```cpp
 struct point
 {
@@ -510,7 +510,7 @@ Function-member does not impact on the object size.
 **Relatives:** 
 
 # Object construction. Exception
-**complexity:** basic
+**difficulty:** basic
 ```cpp
 struct part
 {
@@ -573,7 +573,7 @@ In C++ the lifetime of an object is said to begin when the constructor runs to c
 **Relatives:** [ctor::member](./README.md#object-construction), [delegating ctor](./README.md#object-construction-exception-in-delegating-constructor), [ctor::exception, part2](./README.md#object-construction-in-the-heap-exception)
 
 # Deducing Types. Template parameter.
-**complexity:** basic
+**difficulty:** basic
 ```cpp
 template<typename T>
 void f(T param)
@@ -606,7 +606,7 @@ Thus, the constness of 'ptr' will be ignored, but the constness of what 'ptr' po
 **Relatives:** [template parameter by reference](./README.md#deducing-types-template-parameter-by-reference)
 
 # 'C' array as function parameter. Decay of types.
-**complexity:** professional
+**difficulty:** professional
 ```cpp
 void foo(int arg[3])
 {
@@ -639,7 +639,7 @@ Moreover, 'C' array is not copyable.
 **Relatives:** 
 
 # Object construction. Virtual call
-**complexity:** basic
+**difficulty:** basic
 ```cpp
 struct base
 {
@@ -685,7 +685,7 @@ In a constructor, the virtual call mechanism __is disabled__ because overriding 
 **Relatives:** [ctor::basic](./README.md#object-construction)
 
 # Deducing Types. 'auto' by-value.
-**complexity:** basic
+**difficulty:** basic
 ```cpp
 int main()
 {
@@ -714,7 +714,7 @@ In our case, type of _expression_ for 'x' is const int; type of _expression_ for
 **Relatives:** [template_param::by_value](./README.md#deducing-types-template-parameter)
 
 # Deducing Types. 'auto' by-reference.
-**complexity:** professional
+**difficulty:** professional
 ```cpp
 int main()
 {
@@ -742,7 +742,7 @@ Type of 'y' is deduced `by-reference` rule, i.e. it is the actual type of the ar
 **Relatives:** [C array vs pointer](./README.md#c-array-as-function-parameter-decay-of-types), [deducing_type::by-value](./README.md#deducing-types-auto-by-value), [decltype of reference](./README.md#auto-vs-decltype-with-an-expression-by-reference), [template parameter by reference](./README.md#deducing-types-template-parameter-by-reference)
 
 # new/delete vs. new[]/delete[].
-**complexity:** basic
+**difficulty:** basic
 ```cpp
 struct widget
 {
@@ -778,7 +778,7 @@ At the very least, only one of 2 (N, the arbitrary number of  array dimension) w
 **Relatives:** 
 
 # Object lifetime. Destructor direct call. 
-**complexity:** basic
+**difficulty:** basic
 ```cpp
 struct widget
 {
@@ -809,7 +809,7 @@ Statement _w.~widget()_ is legal code, dcor likes a normal member-function. But 
 **Relatives:** 
 
 # Object lifetime. const-reference to the temporary. 
-**complexity:** expert
+**difficulty:** expert
 ```cpp
 string foo() { return "abc"; }
 
@@ -834,7 +834,7 @@ In the example above, the temporary returned by 'foo()' lives until the closing 
 **Relatives:** [part_2](./README.md#object-lifetime-const-reference-to-the-temporary-part-2) , [reference initialization](./README.md#reference-initialization), [rvalue-reference to the temporary](./README.md#object-lifetime-rvalue-reference-to-the-temporary)
 
 # Object lifetime. const-reference to the base. 
-**complexity:** expert
+**difficulty:** expert
 ```cpp
 struct base
 {
@@ -882,7 +882,7 @@ If we have `const` 'base' reference to 'derived' temporary, it will be destroyed
 **Relatives:** [const-reference to the temporary](./README.md#object-lifetime-const-reference-to-the-temporary)
 
 # std::shared_ptr. non-virtual destructor. 
-**complexity:** expert
+**difficulty:** expert
 ```cpp
 struct base_virtual
 {
@@ -931,7 +931,7 @@ This deleter is called when the shared_ptr object is about to free the pointed r
 **Relatives:** 
 
 # Type conversion. const-reference to the temporary. 
-**complexity:** professional
+**difficulty:** professional
 ```cpp
 void display(string& s)
 {
@@ -967,7 +967,7 @@ When 'display' returns, the temporary object is automatically destroyed.
 **Relatives:** [part 3](./README.md#const-reference-to-the-temporary-part-3), [object lifetime referenced by const](./README.md#object-lifetime-const-reference-to-the-temporary), [implicit conversion](./README.md#type-conversion-implicitly-)
 
 # Function overriding. member template & virtuality. 
-**complexity:** expert
+**difficulty:** expert
 ```cpp
 struct base
 {
@@ -1006,7 +1006,7 @@ be `virtual`. — Bjarne Stroustrup, [D&E Of C++, ch 15.9.3](http://doc.imzlp.me
 **Relatives:** 
 
 # Function overloading. Arguments: NULL vs. nullptr
-**complexity:** basic
+**difficulty:** basic
 ```cpp
 void foo(char*) {cout << "pointer argument" << endl; }
 void foo(int)   {cout << "integer argument" << endl; }
@@ -1030,7 +1030,7 @@ Regarding code above what should be present in output?
 **Relatives:**  [function overloading, NULL](./README.md#function-overloading-parameter-type-integer-vs-pointer), [Template function overloading. NULL vs. nullptr](./README.md#template-function-overloading-arguments-null-vs-nullptr)
 
 # Inheritance. Virtual base & dominance.
-**complexity:** expert
+**difficulty:** expert
 ```cpp
 struct grandparent
 {
@@ -1071,7 +1071,7 @@ Above, the classic _'diamond inheritance'_ is shown. Whome kind of behaviour has
 **Relatives:**
 
 # Object construction. Exception in delegating constructor
-**complexity:** professional
+**difficulty:** professional
 ```cpp
 struct unit
 {
@@ -1127,7 +1127,7 @@ An unit object's lifetime begins when some constructor (in our case _'principal 
 **Relatives:** [ctor::exception](./README.md#object-construction-exception) 
 
 # Exception. Catch by value
-**complexity:** professional
+**difficulty:** professional
 ```cpp
 struct my_exception
 {
@@ -1185,7 +1185,7 @@ To avoid unnecessary copying of the exception object and object slicing, the bes
 **Relatives:** [Type slicing](./README.md#polymorphic-objects-slicing)
 
 # Exception. Multiple inheritance
-**complexity:** expert
+**difficulty:** expert
 ```cpp
 struct my_exc1    : std::exception
 { 
@@ -1231,7 +1231,7 @@ The program above prints "whoops" because the C++ runtime can't resolve which `e
 **Relatives:** [Multiple Inheritance. Type conversion to base](./README.md#type-conversion-base-in-multiple-inheritance)
 
 # Type conversion. Base in multiple inheritance
-**complexity:** basic
+**difficulty:** basic
 ```cpp
 struct grandparent
 {
@@ -1277,7 +1277,7 @@ The compiler does not know what kind of subobject of whole 'child' you want to p
 **Relatives:** [exception::multiple_inheritance](./README.md#exception-multiple-inheritance)
 
 # Return value optimization
-**complexity:** professional
+**difficulty:** professional
 ```cpp
 struct widget
 {
@@ -1337,7 +1337,7 @@ Starting from C++17, another way to describe this mechanics is "unmaterialized v
 **Relatives:** [RVO & std::move](./README.md#stdmovervo), [ObjectConstructionOneCopy](./README.md#object-construction-copy-elision), [Explicit copy constructor](./README.md#explicit-copy-constructor)
 
 # sizeof (\<empty>)? aggregation vs. inheritance.
-**complexity:** expert
+**difficulty:** expert
 ```cpp
 class Empty {};
 
@@ -1384,7 +1384,7 @@ but there is a special exemption for empty classes when they are inherited from.
 **Relatives:** [sizeof(empty)](./README.md#sizeof-empty), [EBCO multiple inheritance](./README.md#sizeof-empty-multiple-inheritance)
 
 # std::move(RVO)
-**complexity:** expert
+**difficulty:** expert
 ```cpp
 struct widget
 {
@@ -1439,7 +1439,7 @@ This manual negative optimization remains in C++17, moving a temporary object pr
 **Relatives:** [RVO](./README.md#return-value-optimization), [C++17 copy_elision](./README.md#object-construction-copy-elision)
 
 # Function overloading. Promotion vs. standard conversion 
-**complexity:** professional
+**difficulty:** professional
 ```cpp
 void foo(int)
 {
@@ -1476,7 +1476,7 @@ For the given case, the '__promotion__' is better because of '__standatd convers
 **Relatives:** [user-defined conversion](./README.md#type-conversion-user-defined-vs-standard-conversion) 
 
 # Function overloading. Deleted function 
-**complexity:** expert
+**difficulty:** expert
 ```cpp
 void foo(int) = delete;
 
@@ -1510,7 +1510,7 @@ Please take the difference between 'deleted function' and 'non-existing function
 **Relatives:** [Promotion & Standard Conversion](./README.md#function-overloading-promotion-vs-standard-conversion), [access control](./README.md#function-overloading-access-control)
 
 # final specifier. Member function definition. 
-**complexity:** basic
+**difficulty:** basic
 ```cpp
 struct base
 {
@@ -1546,7 +1546,7 @@ Regarding code above what should be present in output?
 **Relatives:** 
 
 # override specifier. Member function definition. 
-**complexity:** basic
+**difficulty:** basic
 ```cpp
 struct base
 {
@@ -1579,7 +1579,7 @@ They are treated as if they have an extra parameter (_implicit object parameter_
 **Relatives:** 
 
 # Exception. The order of 'catch'.
-**complexity:** basic
+**difficulty:** basic
 ```cpp
 struct my_exception : std::exception
 {
@@ -1628,7 +1628,7 @@ with the same `try` block!
 **Relatives:** 
 
 # Type conversion. Implicitly ...
-**complexity:** basic
+**difficulty:** basic
 ```cpp
 struct integer1
 {
@@ -1676,7 +1676,7 @@ In our case, there is only an implicit conversion from `int` to 'integer1', beca
 **Relatives:** [const-ref to temporary](./README.md#type-conversion-const-reference-to-the-temporary), [copy_list_initialization](./README.md#object-construction-initialization-syntax-part-3)
 
 # Argument-dependent lookup 
-**complexity:** professional
+**difficulty:** professional
 ```cpp
 namespace A
 {
@@ -1706,7 +1706,7 @@ The first phase of [the function call process](./README.md#function-overloading-
 **Relatives:** [Overload Resolution](./README.md#function-overloading-deleted-function), [ADL & operaror function](./README.md#argument-dependent-lookup-operator-function), [ADL & friends](./README.md#argument-dependent-lookup-friend-function-definition) 
 
 # Function overriding. Non-virtual interface.
-**complexity:** basic
+**difficulty:** basic
 ```cpp
 struct base
 {
@@ -1741,7 +1741,7 @@ The method accessibility doesn't touch on its virtuality. Guidance: _prefer to m
 **Relatives:**
 
 # virtual destructor. part 2.
-**complexity:** basic
+**difficulty:** basic
 ```cpp
 struct shape
 {
@@ -1786,7 +1786,7 @@ Guideline: A base class destructor should be either public and virtual, or prote
 **Relatives:** [virtual dtor](./README.md#virtual-destructor), [NVI](./README.md#function-overriding-non-virtual-interface)
 
 # Function overloading. Access control. 
-**complexity:** professional
+**difficulty:** professional
 ```cpp
 class widget
 {
@@ -1823,7 +1823,7 @@ The _access control_ does not allow 'foo(int)' to be called.
 **Relatives:** [deleted function](./README.md#function-overloading-deleted-function) 
 
 # Object construction. Initialization syntax
-**complexity:** basic
+**difficulty:** basic
 ```cpp
 struct widget
 {
@@ -1856,7 +1856,7 @@ For the given case, language instructions: 'widget w2=w1;', 'widget w2(w1);', 'w
 **Relatives:** [auto::braced-init-list](./README.md#deducing-types-auto-by-braced-init-list), [Explicit copy constructor](./README.md#explicit-copy-constructor)
 
 # Exception. Rethrow vs. propagation.
-**complexity:** basic
+**difficulty:** basic
 ```cpp
 struct my_exception
 {
@@ -1918,7 +1918,7 @@ the first one rethrows the current exception, while the second one throws a new 
 
 
 # Scopes. Hiding names.
-**complexity:** professional
+**difficulty:** professional
 ```cpp
 void foo(int)
 {
@@ -1950,7 +1950,7 @@ Two identifiers named 'foo' are defined in different scopes: in the global and '
 **Relatives:** [Inheritance::hiding_names](./README.md#inheritance-hiding-names)
 
 # Templates. Non-dependent name.
-**complexity:** expert
+**difficulty:** expert
 ```cpp
 void foo(double)  { cout << "foo(double)" << endl; }
 
@@ -1999,7 +1999,7 @@ Note: [Visual C++ is incomplient to the Standard](https://stackoverflow.com/ques
 **Relatives:** [function_overloading](./README.md#function-overloading-deleted-function)
 
 # Function template. Overloading.
-**complexity:** basic
+**difficulty:** basic
 ```cpp
 void foo(double)  { cout << "foo(double)" << endl; }
 
@@ -2026,7 +2026,7 @@ You might think that 'foo(double)' is very close -- and it is -- but a nontempla
 **Relatives:** [standard_conversion](./README.md#function-overloading-promotion-vs-standard-conversion), [constructor_template](./README.md#special-member-function-generation-constructor-template), [template-nonconst-reference](./README.md#function-template-overloading-reference-to-const) 
 
 # Function template. Specialization vs. Overloading. 
-**complexity:** basic
+**difficulty:** basic
 ```cpp
 void foo(int)     { cout << "foo(int)" << endl; }
 
@@ -2056,7 +2056,7 @@ Regarding code above what should be present in output?
 **Relatives:** [function_template::best_match](./README.md#function-template-overloading), [function_template::best_match and rvalue](./README.md#function-template-overloading-rvalue-reference)  
 
 # Most verxing parse. 
-**complexity:** professional
+**difficulty:** professional
 ```cpp
 class widget
 {
@@ -2093,7 +2093,7 @@ Regarding code above what should be present in output?
 **Relatives:** 
 
 # Deducing Types. 'auto' by-braced-init-list. 
-**complexity:** expert
+**difficulty:** expert
 ```cpp
 void foo(int)
 {
@@ -2153,7 +2153,7 @@ C++17 introduces the following rules:
 **Relatives:** [initialization_syntax](./README.md#object-construction-initialization-syntax)
 
 # rvalue reference. 
-**complexity:** professional
+**difficulty:** professional
 ```cpp
 void foo(int& n)
 {
@@ -2191,7 +2191,7 @@ In the other words, a named object 'v' of '`rvalue`-refernce-to-int' type, canno
 **Relatives:** [std::unique_ptr](./README.md#stdunique_ptr-copyable), [overloading, template and rvalue](./README.md#function-template-overloading-rvalue-reference)
 
 # Function template. Overloading. Part 2
-**complexity:** basic
+**difficulty:** basic
 ```cpp
 template <typename T>
 void foo(T,T)       { cout << "foo<T>(a1,a2)" << endl; }
@@ -2219,7 +2219,7 @@ Regarding code above what should be present in output?
 
 
 # Function template. Overloading vs. Specialization. Part 2
-**complexity:** expert
+**difficulty:** expert
 ```cpp
 template <typename T>   void foo(T)    { cout << "foo(T)" << endl; }
 template <>             void foo(int*) { cout << "foo(int*)" << endl; }
@@ -2266,7 +2266,7 @@ The overload resolution rules are pretty simple:
 **Relatives:** [template::overloading & specialization](./README.md#function-template-specialization-vs-overloading) 
 
 # Type conversion. User-defined
-**complexity:** basic
+**difficulty:** basic
 ```cpp
 struct widget 
 {
@@ -2306,7 +2306,7 @@ only one level of [user-defined](http://en.cppreference.com/w/cpp/language/conve
 **Relatives:** [implicit_conversion](./README.md#type-conversion-implicitly-)
 
 # Object construction. Initialization syntax. Part 2.
-**complexity:** professional
+**difficulty:** professional
 ```cpp
 struct widget
 {
@@ -2346,7 +2346,7 @@ Regarding code above what should be present in output?
 **Relatives:** [Initialization_syntax_1](./README.md#object-construction-initialization-syntax), [auto_braced_init_list](./README.md#deducing-types-auto-by-braced-init-list)
 
 # Object construction. Initialization syntax. Part 3.
-**complexity:** basic
+**difficulty:** basic
 ```cpp
 struct widget 
 {
@@ -2376,7 +2376,7 @@ Regarding code above what should be present in output?
 **Relatives:** [syntax_1](./README.md#object-construction-initialization-syntax), [syntax_2](./README.md#object-construction-initialization-syntax-part-2), [implcit_type_convesion](./README.md#type-conversion-implicitly-)
 
 # Type conversion. User-defined vs. standard conversion
-**complexity:** professional
+**difficulty:** professional
 ```cpp
 void display(const string& s)
 {
@@ -2411,7 +2411,7 @@ During overload function resolution, 'display(bool)' is preferable, because the 
 **Relatives:** [user_defined_conversion](./README.md#type-conversion-const-reference-to-the-temporary), [promotion](./README.md#function-overloading-promotion-vs-standard-conversion), [user_defined_conversion2](./README.md#type-conversion-user-defined)
 
 # Lambda capture of globals
-**complexity:** professional
+**difficulty:** professional
 ```cpp
 size_t global_value {0};
 
@@ -2448,7 +2448,7 @@ Yet  specification  of  a  default `[=]` by-value  capture mode can lend the imp
 **Relatives:** [Lambda capture of data-members](./README.md#lambda-capture-of-data-members)
 
 # Lambda capture of data-members
-**complexity:** professional
+**difficulty:** professional
 ```cpp
 class widget
 {
@@ -2491,7 +2491,7 @@ Compilers internally replace uses of 'x_' with `this`->'x_'.
 **Relatives:** [Lambda capture of globals](./README.md#lambda-capture-of-globals), [Lambda capture of data-members. Part 2](./README.md#lambda-capture-of-data-members-part-2)
 
 # Special member function generation. Constructor template.
-**complexity:** professional
+**difficulty:** professional
 ```cpp
 struct widget
 {
@@ -2535,7 +2535,7 @@ Non-templates 'widget(`const` widget&)' are preferred to template specialization
 **Relatives:** [constructor_template_part2](./README.md#special-member-function-generation-constructor-template-part-2), [best match & function template](./README.md#function-template-overloading), [best match & template_specialization](./README.md#function-template-specialization-vs-overloading), [Nonconstant constructor template](./README.md#special-member-function-generation-non-const-constructor-template)
 
 # Function overloading. Perfect match for lvalue & rvalue.
-**complexity:** professional
+**difficulty:** professional
 ```cpp
 void foo(int&)       { cout << "int&" << endl; }
 void foo(const int&) { cout << "const int&" << endl; }
@@ -2572,7 +2572,7 @@ However, it is rather common to overload a function on both kinds of references.
 **Relatives:** [function_overloading_phases](./README.md#function-overloading-deleted-function), [exact_match](./README.md#function-overloading-parameter-type-integer-vs-pointer), [template-nonconst-reference](./README.md#function-template-overloading-reference-to-const)
 
 # Special member function generation. Constructor template. Part 2
-**complexity:** expert
+**difficulty:** expert
 ```cpp
 struct widget
 {
@@ -2619,7 +2619,7 @@ Calling _the copy constructor_ would require adding `const` to 'w1' to match the
 **Relatives:** [constructor_template_part1](./README.md#special-member-function-generation-constructor-template), [perfect_match_for_r-lvalue](./README.md#function-overloading-perfect-match-for-lvalue--rvalue)
 
 # std::move(const)
-**complexity:** basic
+**difficulty:** basic
 ```cpp
 struct widget
 {
@@ -2656,7 +2656,7 @@ Such behavior is essential to maintaining `const`-correctness. Moving a value ou
 **Relatives:** [std::move::RVO](./README.md#stdmovervo), [std::unique_ptr](./README.md#stdunique_ptr-copyable), [lambda with move return](./README.md#lambda-expressions-move-capture-and-move-return)
 
 # Object lifetime. const-reference to the temporary. part 2. 
-**complexity:** expert
+**difficulty:** expert
 ```cpp
 class proxy
 {
@@ -2689,7 +2689,7 @@ In _the line B_, 'foo' returns a __temporary__ object of 'proxy' type, then user
 **Relatives:** [part_1](./README.md#object-lifetime-const-reference-to-the-temporary)
 
 # string_view. 
-**complexity:** basic
+**difficulty:** basic
 ```cpp
 string_view s1("Hello, World!");
 string_view s2("Hello, World!"s);
@@ -2718,7 +2718,7 @@ Regarding code above what should be present in output?
 **Relatives:** 
 
 # Reference initialization. 
-**complexity:** basic
+**difficulty:** basic
 ```cpp
 short       v {0};
 const int&  r {v};
@@ -2750,7 +2750,7 @@ The Standard guarantees that the temporary will exist as long as the reference i
 **Relatives:** [const_reference_to_temporary](./README.md#object-lifetime-const-reference-to-the-temporary)
 
 # Pointer arithmetic. Polymorphic types. 
-**complexity:** professional
+**difficulty:** professional
 ```cpp
 struct base1 { int x; };
 struct base2 { int y; };
@@ -2794,7 +2794,7 @@ In case if a pointer is faceless (`void*`), the compiler does not know about obj
 **Relatives:** 
 
 # Argument-dependent lookup. Operator function.  
-**complexity:** professional
+**difficulty:** professional
 ```cpp
 struct widget
 {
@@ -2854,7 +2854,7 @@ The use of the function call syntax (_Line B_) follows the standard lookup seque
 **Relatives:** [ADL&namespace](./README.md#argument-dependent-lookup), [name lookup](./README.md#function-overloading-access-control)
 
 # const-reference to the temporary. part 3.  
-**complexity:** professional
+**difficulty:** professional
 ```cpp
 const string& select(bool cond, const string& first, const string& second)
 {
@@ -2882,7 +2882,7 @@ So, the parameters will be initialized with temporary `string` objects. While th
 **Relatives:** [part 1](./README.md#type-conversion-const-reference-to-the-temporary) 
 
 # Object construction. Copy elision.  
-**complexity:** basic
+**difficulty:** basic
 ```cpp
 struct widget
 {
@@ -2917,7 +2917,7 @@ Only one call to default constructor of 'widget', to initialize 'w'.
 **Relatives:** [RVO](./README.md#return-value-optimization), [rvalue-pass-by-value](./README.md#rvalue-arguments-in-pass-by-value-parameters)
 
 # Object construction in the Heap. Exception.  
-**complexity:** basic
+**difficulty:** basic
 ```cpp
 struct widget
 {
@@ -2977,7 +2977,7 @@ Regarding code above what should be present in output?
 **Relatives:** [ctor::exception, part1](./README.md#object-construction-exception)
 
 # Increment/Decrement operator function.  
-**complexity:** basic
+**difficulty:** basic
 ```cpp
 class integer
 {
@@ -3028,7 +3028,7 @@ This is a requirement that the postfix operator returns by value. Even with the 
 **Relatives:** 
 
 # std::variant. Converting constructor 
-**complexity:** professional
+**difficulty:** professional
 ```cpp
 auto foo(const char*)         { return "const char*"; }
 auto foo(const std::string&)  { return "std::string"; }
@@ -3061,7 +3061,7 @@ The rank of standard conversion ("Hello, World!"->`bool`) is _always better_ tha
 **Relatives:** [type_conversion::standard_vs_user-defined](./README.md#type-conversion-user-defined-vs-standard-conversion) 
 
 # The temporary. Function overloading and const-reference to lvalue. 
-**complexity:** professional
+**difficulty:** professional
 ```cpp
 struct widget
 {
@@ -3111,7 +3111,7 @@ On the other hand, `rvalue` can be __only__ bound with __`const`-reference__ to 
 **Relatives:** [const-reference to the temporary](./README.md#type-conversion-const-reference-to-the-temporary), [perfect match for lvalue & lvalue](./README.md#function-overloading-perfect-match-for-lvalue--rvalue)
 
 # Function overloading. const vs. constexpr
-**complexity:** expert
+**difficulty:** expert
 ```cpp
 struct widget
 {
@@ -3137,7 +3137,7 @@ Regarding code (C++14 compliant) above what should be present in output?
 **Relatives:** 
 
 # Argument-dependent lookup. Friend function definition. 
-**complexity:** expert
+**difficulty:** expert
 ```cpp
 struct widget
 {
@@ -3193,7 +3193,7 @@ At _line B_ there is only choise from the global namespace (`::`) - 'foo(double)
 **Examples:** [Operator Implementations](https://github.com/nikolaAV/skeleton/tree/master/rel_ops_auto)
 
 # Inheritance. Constructors.
-**complexity:** basic
+**difficulty:** basic
 ```cpp
 class person
 {
@@ -3224,7 +3224,7 @@ The class 'student' inherits all methods from 'person' except the 'string_view' 
 **Relatives:** [part 2](./README.md#inheritance-constructors-part-2)
 
 # Object construction. zero initialization.
-**complexity:** expert
+**difficulty:** expert
 ```cpp
 struct widget {
     int x;
@@ -3259,7 +3259,7 @@ It's a quite exotic case which is applicable for _aggregate_ types with the _com
 **Relatives:** [object_construction_3](./README.md#object-construction-initialization-syntax-part-3)
 
 # Function overloading. const-object & const-function.
-**complexity:** professional
+**difficulty:** professional
 ```cpp
 struct widget
 {
@@ -3299,7 +3299,7 @@ Instruction 'b.foo()' invokes 'widget::foo() `const`' which is a `const` method,
 **Relatives:** [Function overloading and const-ref](./README.md#the-temporary-function-overloading-and-const-reference-to-lvalue)
 
 # auto vs. decltype with an expression by-reference
-**complexity:** professional
+**difficulty:** professional
 ```cpp
 struct singleton 
 {
@@ -3338,7 +3338,7 @@ Regarding code above what should be present in output?
 **Relatives:** [Deducing Type, auto](./README.md#deducing-types-auto-by-reference)
 
 # Emplacement functions with explicit constructors  
-**complexity:** expert
+**difficulty:** expert
 ```cpp
 class widget
 {
@@ -3378,7 +3378,7 @@ Function 'vector::push_back' is declared with input parameter of 'reference to a
 **Relatives:** [implicit type conversion](./README.md#type-conversion-implicitly-), [object construction. initialization syntax](./README.md#object-construction-initialization-syntax-part-3), [emplacement vs. insertions](./README.md#emplacement-functions-vs-insertion-functions)
 
 # Emplacement functions vs. Insertion functions
-**complexity:** professional
+**difficulty:** professional
 ```cpp
 struct widget
 {
@@ -3427,7 +3427,7 @@ Insertion functions (e.g. list::push_back) take _objects to be inserted_, while 
 **Relatives:** [implicit type conversion](./README.md#type-conversion-const-reference-to-the-temporary), [emplacement with explicit](./README.md#emplacement-functions-with-explicit-constructors), [insertion failure of movable argument](./README.md#mapinsert-failure--movable-argument) 
 
 # std::unique_ptr. Copyable?
-**complexity:** basic
+**difficulty:** basic
 ```cpp
 void foo(unique_ptr<string> by_value)
 {
@@ -3469,7 +3469,7 @@ Regarding code above what output will be generated  by the compiler (imagine Lin
 
 
 # Function overloading. const vs. volatile
-**complexity:** professional 
+**difficulty:** professional 
 ```cpp
 struct widget
 {
@@ -3499,7 +3499,7 @@ In general, almost anything that applies to `const` qualifiers also applies to `
 **Relatives:** [Function overloading & const](./README.md#the-temporary-function-overloading-and-const-reference-to-lvalue) 
 
 # map::insert failure & movable argument
-**complexity:** expert 
+**difficulty:** expert 
 ```cpp
 struct widget {};
 
@@ -3531,7 +3531,7 @@ Bad news! The widget object which is owned by 'p2' is lost. 'map::insert' accept
 **Relatives:** [rvalue reference](./README.md#rvalue-reference), [std::move(const)](./README.md#stdmoveconst), [emplacement vs. insertion](./README.md#emplacement-functions-vs-insertion-functions) 
 
 # Fold expression
-**complexity:** basic 
+**difficulty:** basic 
 ```cpp
 template <typename container, typename... values>
 void insert_1st_way(container& c, values... vs)
@@ -3569,7 +3569,7 @@ Regarding code (C++17 compliant) above what should be present in output?
 **Relatives:** 
 
 # Lambda expressions. Move capture and move return
-**complexity:** expert 
+**difficulty:** expert 
 ```cpp
 struct widget
 {
@@ -3609,7 +3609,7 @@ Thus, __rvalue reference__ to `const` is copied by means __the copy constructor_
 **Relatives:** [std::move(const)](./README.md#stdmoveconst)
 
 # std::async. Ignoring std::future<>.
-**complexity:** professional
+**difficulty:** professional
 ```cpp
 int main()
 {
@@ -3648,7 +3648,7 @@ _Lines 'A','B'_ block on the call, which is most propably not what we want. That
 **Relatives:** 
 
 # const member functions and reference members.
-**complexity:** basic
+**difficulty:** basic
 ```cpp
 class widget
 {
@@ -3696,7 +3696,7 @@ A `const` function member may modify what the data member refers to, it does not
 **Relatives:** 
 
 # sizeof (\<empty>)? multiple inheritance
-**complexity:** expert
+**difficulty:** expert
 ```cpp
 struct Empty {}; 
 struct Derived  : Empty {}; 
@@ -3728,7 +3728,7 @@ Even though there are no zero-size types in C++, the C++ standard does specify t
 [empty base inheritance](./README.md#sizeof-empty-aggregation-vs-inheritance), [sizeof(\<empty>)](./README.md#sizeof-empty)
 
 # Inheritance. Constructors. Part 2.
-**complexity:** basic
+**difficulty:** basic
 ```cpp
 class person
 {
@@ -3760,7 +3760,7 @@ Default constructor of 'student' is implicitly deleted because base class 'perso
 **Relatives:** [part 1](./README.md#inheritance-constructors)
 
 # `std::max` returns the wrong value?.
-**complexity:** expert
+**difficulty:** expert
 ```cpp
 struct widget
 {
@@ -3803,7 +3803,7 @@ Yes, it's a quite annoying defect in [`std::max`](https://en.cppreference.com/w/
 **Relatives:** 
 
 # rvalue arguments in pass-by-value parameters.
-**complexity:** professional
+**difficulty:** professional
 ```cpp
 struct widget
 {
@@ -3838,7 +3838,7 @@ Before C++17, type 'widget' had to be copyable to be able to pass in arguments, 
 **Relatives:** [ctor-copy-elision](./README.md#object-construction-copy-elision), [RVO](./README.md#return-value-optimization)
 
 # Deducing Types. Template parameter by reference.
-**complexity:** professional
+**difficulty:** professional
 ```cpp
 template <typename T>
 T lexicographical_first(T const& left, T const& right)
@@ -3871,7 +3871,7 @@ Here, lexicographical_first("123","1234") fails to compile, because "123" has ty
 [auto::by_reference](./README.md#deducing-types-auto-by-reference)
 
 # Explicit copy constructor.
-**complexity:** expert
+**difficulty:** expert
 ```cpp
 struct widget
 {
@@ -3899,7 +3899,7 @@ In C++11 the way of initialization like `T x{};` is called _value initialization
 **Relatives:** [initialization syntax](./README.md#object-construction-initialization-syntax-part-3), [direct_copy_initialization](./README.md#object-construction-initialization-syntax), [copy-elision-C++17](./README.md#return-value-optimization)
 
 # Function template. Overloading. Reference to const.
-**complexity:** professional
+**difficulty:** professional
 ```cpp
 template <typename T>
 void foo(T&)         { cout << "T&" << endl; }
@@ -3924,7 +3924,7 @@ Function templates can be overloaded with nontemplate functions. All else being 
 **Relatives:** [Function-template-overloading](./README.md#function-template-overloading), [Perfect-match-for-lvalue-rvalue](./README.md#function-overloading-perfect-match-for-lvalue--rvalue), [Nonconstant consrtuctor template](./README.md#special-member-function-generation-non-const-constructor-template)
 
 # Function overloading. Function parameter pack
-**complexity:** basic
+**difficulty:** basic
 ```cpp
 template <typename T>
 void foo(T) {
@@ -3954,7 +3954,7 @@ If the choice is between two templates, then the most specialized of the templat
 **Relatives:** [function template overloading](./README.md#function-template-overloading-part-2)
 
 # Special member function generation. Non-const constructor template.
-**complexity:** professional
+**difficulty:** professional
 ```cpp
 struct widget
 {
@@ -3992,7 +3992,7 @@ According to the overload resolution rules of C++ for a nonconstant lvalue 'w1' 
 **Relatives:** [Constructor template](./README.md#special-member-function-generation-constructor-template), [Overloading and non-const reference](./README.md#function-template-overloading-reference-to-const)
 
 # Function template. Overloading. Rvalue reference
-**complexity:** basic
+**difficulty:** basic
 ```cpp
 void foo(int&&) {   // Line A
    cout << "foo(int&&)" << endl;
@@ -4023,7 +4023,7 @@ Don’t assume that __T&&__ (_Line B_) for a template parameter T behaves as __`
 **Relatives:** [template and exact_match](./README.md#function-template-specialization-vs-overloading), [template and reference_to_const](./README.md#function-template-overloading-reference-to-const), [overloading_and_reference_to_rvalue](./README.md#rvalue-reference)
 
 # lambda-expression. type & default ctor 
-**complexity:** expert
+**difficulty:** expert
 ```cpp
 int main() 
 {
@@ -4046,7 +4046,7 @@ The closure type associated with a lambda-expression has a deleted _default cons
 **Relatives:** 
 
 # Template function overloading. Arguments: NULL vs. nullptr
-**complexity:** basic
+**difficulty:** basic
 ```cpp
 template <typename T>
 void foo(T)  {cout << "foo(T)" << endl; }
@@ -4083,7 +4083,7 @@ The second call __foo(nullptr)__ accepts value of `std::nullptr_t` type, because
 **Relatives:** [Function template. Overloading vs. Specialization](./README.md#function-template-overloading-vs-specialization-part-2), [Function overloading. Arguments: NULL vs. nullptr](./README.md#function-overloading-arguments-null-vs-nullptr)
 
 # Lambda capture of data-members. Part 2
-**complexity:** basic
+**difficulty:** basic
 ```cpp
 struct widget {
     std::string text_;    
@@ -4112,7 +4112,7 @@ Compilers internally replace uses of 'text_' with `this`->'text_'. Thus, functio
 **Relatives:** [Lambda capture of data-members](./README.md#lambda-capture-of-data-members)
 
 # Lambda closure type & pointer to a function.
-**complexity:** professional
+**difficulty:** professional
 ```cpp
 void foo(void(*callback)(const char*)) {
     callback("C++11");    
@@ -4135,7 +4135,7 @@ The closure type for a lambda-expression with no lambda-capture has a public non
 **Relatives:**
 
 # Object lifetime. rvalue-reference to the temporary.
-**complexity:** expert
+**difficulty:** expert
 ```cpp
 struct widget{
     ~widget() { cout << "~widget" << endl; }
