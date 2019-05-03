@@ -4166,3 +4166,48 @@ Regarding code above what should be present in output?
 **See also:** [Lifetime of a temporary](https://en.cppreference.com/w/cpp/language/reference_initialization#Lifetime_of_a_temporary)
 
 **Relatives:** [const-reference to the temporary](./README.md#object-lifetime-const-reference-to-the-temporary)
+
+# Most vexing parse. Part 2. 
+**difficulty:** professional
+```cpp
+struct widget
+{
+   widget()              { cout << "ctor(default)" << endl; }    
+   widget(const widget&) { cout << "ctor(copy)" << endl; }    
+   ~widget()             { cout << "~ctor()" << endl; }    
+} exemplar;
+
+int main()
+{
+   widget(exemplar);
+   cout << "Hello, World!" << endl;
+}
+```
+Regarding code above what should be present in output?
+- A. 
+    - ctor(default)
+    - ctor(default)
+    - Hello, World!
+    - ~ctor()
+    - ~ctor()
+- B. 
+    - ctor(default)
+    - ctor(copy)
+    - ~ctor()
+    - Hello, World!
+    - ~ctor()
+- C. 
+    - ctor(default)
+    - ctor(copy)
+    - Hello, World!
+    - ~ctor()
+    - ~ctor()
+
+**Answer:** __A__  
+Let's consider the line 'widget(exemplar);'. This can be interpreted in two ways:
+- As creating a temporary unnamed copy of 'exemplar'.
+- As creating a new variable of type 'widget' named 'exemplar'. This is easier to see if you remove the parentheses, and it becomes just 'widget exemplar';.  
+According to [the Standard](https://timsong-cpp.github.io/cppwp/stmt.ambig#1), 'widget(exemplar) is in fact a declaration of a new variable named 'exemplar', which shadows the global 'exemplar'.  
+**See also:** [Statements. Ambiguity resolution. §8.8.1](https://timsong-cpp.github.io/cppwp/stmt.ambig#1)
+
+**Relatives:** [Most vexing parse](./README.md#most-vexing-parse), [Object construction. Initialization syntax](./README.md#object-construction-initialization-syntax)
