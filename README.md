@@ -17,6 +17,7 @@ thinking and many dire predictions.
     * [C++14,ISO/IEC 14882](http://doc.imzlp.me/viewer.html?file=docs/standard/isocpp2014.pdf)
     * [C++17,N4687 Working Draft](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/n4687.pdf)
     * [Working Draft, Standard for Programming Language C++](https://timsong-cpp.github.io/cppwp/)
+    * [HTML version of the current C++ working paper](https://github.com/timsong-cpp/cppwp)
 * [C++ reference](http://en.cppreference.com/w/) provides programmers with a complete online reference for the C and C++ languages and standard libraries, i.e. a more convenient version of the C and C++ standards. Especially useful for finding examples and documentation of new library features.
 * [The C++ Core Guidelines](https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines.html) are a collaborative effort led by Bjarne Stroustrup & Herb Sutter. The aim of the guidelines is to help people to use modern C++ effectively. (The same is on [GitHub](https://github.com/isocpp/CppCoreGuidelines))
 * [clang](http://clang.llvm.org/cxx_status.html) and [gcc](https://gcc.gnu.org/projects/cxx-status.html)'s support pages.
