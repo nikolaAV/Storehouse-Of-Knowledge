@@ -20,6 +20,7 @@ thinking and many dire predictions.
 * [C++ reference](http://en.cppreference.com/w/) provides programmers with a complete online reference for the C and C++ languages and standard libraries, i.e. a more convenient version of the C and C++ standards. Especially useful for finding examples and documentation of new library features.
 * [The C++ Core Guidelines](https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines.html) are a collaborative effort led by Bjarne Stroustrup & Herb Sutter. The aim of the guidelines is to help people to use modern C++ effectively. (The same is on [GitHub](https://github.com/isocpp/CppCoreGuidelines))
 * [clang](http://clang.llvm.org/cxx_status.html) and [gcc](https://gcc.gnu.org/projects/cxx-status.html)'s support pages.
+* [others](https://en.cppreference.com/w/cpp/links)
 
 ## Online compilers & tools
 Instead of creating local projects you can also leverage some [online compilers](https://arnemertz.github.io/online-compilers/). They offer a basic text editor and usually allow you to compile only one source file (the code that you edit). They are very handy if you want to play with a simple code example.
