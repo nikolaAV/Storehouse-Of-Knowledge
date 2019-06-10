@@ -4213,3 +4213,42 @@ According to [the Standard](https://timsong-cpp.github.io/cppwp/stmt.ambig#1), '
 **See also:** [Statements. Ambiguity resolution. §8.8.1](https://timsong-cpp.github.io/cppwp/stmt.ambig#1)
 
 **Relatives:** [Most vexing parse](./README.md#most-vexing-parse), [Object construction. Initialization syntax](./README.md#object-construction-initialization-syntax)
+
+# Polymorphic objects passed to an STL algorithm
+**difficulty:** basic
+```cpp
+struct base {
+   int operator()(int v) const {  return method(v); }
+protected:
+   virtual int method(int v) const { return 2*v; }
+};
+
+struct derived : base {
+   virtual int method(int v) const override { return 3*v; }
+};
+
+void foo(const base& b) {
+   array arr = { 1,2,3 };
+   transform(begin(arr), end(arr), begin(arr), b);
+   for (int v : arr)
+      cout << v << " ";
+}
+
+int main()
+{
+   derived d;
+   foo(d);
+}
+```
+Regarding code above what should be present in output?
+- A 2 4 6
+- B 3 6 9
+
+**Answer:**  __A__  
+The derived object __d__ has been passed to the algorithm, but the algorithm doesn’t call the overridden virtual function! 
+That happens because of STL algorithms (in the given case, `std::transform`) accept a function objects passed `by-value`. 
+In fact, polymorphic objects get sliced off when theay are passed by value: even if in 'foo(const base& b)' __b__ was referring to a derived object, making a copy of base creates a base object, and not a derived object.
+
+**See also:** [How to Pass a Polymorphic Object to an STL Algorithm](https://www.fluentcpp.com/2018/04/17/pass-polymorphic-object-stl-algorithm/)
+
+**Relatives:** [Type Slicing](.//README.md#polymorphic-objects-slicing)
