@@ -424,7 +424,7 @@ If you have a class with virtual method then you should access it through object
 
 **See also:** [CppCoreGuidelines](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#c145-access-polymorphic-objects-through-pointers-and-references), [S. Meyers. Effective C++, item 20](https://www.amazon.com/gp/product/0321334876/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0321334876&linkCode=as2&tag=fluentcpp-20&linkId=c827183fcb052e6a805d39ee7d66095)
 
-**Relatives:** 
+**Relatives:** [Polymorphic objects passed to an STL algorithm](./README.md#polymorphic-objects-passed-to-an-stl-algorithm)
 
 # Cost of the virtuality?
 **difficulty:** professional
