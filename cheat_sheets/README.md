@@ -10,3 +10,5 @@
 * [Smart Pointers](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/cheat_sheets/smart_ptr.md) by Bartlomiej Filipek
 * [New features in C++17 with examples.](https://github.com/tvaneerd/cpp17_in_TTs/blob/master/ALL_IN_ONE.md) by "Tony Tables"
 * [Markdown Syntax](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/cheat_sheets/markdown_syntax.md), [pdf](https://guides.github.com/features/mastering-markdown/)
+---
+* [Tiny cheatsheets for C++11/14/17](https://www.walletfox.com/course/cheatsheets_cpp.php) from [walletfox.com](https://www.walletfox.com/) 
