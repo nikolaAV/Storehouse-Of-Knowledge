@@ -4252,3 +4252,42 @@ In fact, polymorphic objects get sliced off when theay are passed by value: even
 **See also:** [How to Pass a Polymorphic Object to an STL Algorithm](https://www.fluentcpp.com/2018/04/17/pass-polymorphic-object-stl-algorithm/)
 
 **Relatives:** [Type Slicing](.//README.md#polymorphic-objects-slicing)
+
+# braced-init-list with a single element vs. multiple elements
+**difficulty:** professional
+```cpp
+struct widget {
+   widget() = default;
+   widget(const widget&)     { cout << "ctor(copy)" << endl; } 
+   widget(initializer_list<widget>) { cout << "ctor(initialize_list)" << endl; } 
+};
+
+int main()
+{
+   widget w{};
+   widget w1{w};
+   widget w2{w,w};
+}
+```
+Regarding code above what should be present in output?
+- A 
+    - ctor(initialize_list)
+    - ctor(initialize_list)
+- B 
+    - ctor(copy)
+    - ctor(initialize_list)
+    - ctor(copy)
+    - ctor(copy)
+    - ctor(initialize_list)
+- C 
+    - ctor(copy)
+    - ctor(copy)
+    - ctor(copy)
+    - ctor(initialize_list)
+
+**Answer:**  __C__  
+Starting C++17, instruction _widget w1{w}_ will be now deduced copy-constructor invocation, but before it was a constructor with initializer_list.
+
+**See also:** [ISO C++ dcl.type.auto.deduct](https://timsong-cpp.github.io/cppwp/dcl.type.auto.deduct#4), [ISO/IEC JTC1 SC22 WG21 N3922](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n3922.html) 
+
+**Relatives:** ['auto' deducing type by-braced-init-list.](.README.md#deducing-types-auto-by-braced-init-list)
