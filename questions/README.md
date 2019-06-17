@@ -4290,4 +4290,4 @@ Starting C++17, instruction _widget w1{w}_ will be now deduced copy-constructor 
 
 **See also:** [ISO C++ dcl.type.auto.deduct](https://timsong-cpp.github.io/cppwp/dcl.type.auto.deduct#4), [ISO/IEC JTC1 SC22 WG21 N3922](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n3922.html) 
 
-**Relatives:** ['auto' deducing type by-braced-init-list.](.README.md#deducing-types-auto-by-braced-init-list)
+**Relatives:** ['auto' deducing type by-braced-init-list.](./README.md#deducing-types-auto-by-braced-init-list)
