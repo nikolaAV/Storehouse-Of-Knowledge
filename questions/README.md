@@ -2150,7 +2150,7 @@ C++17 introduces the following rules:
 
 **See also:** [cppreference::list_initialization](http://en.cppreference.com/w/cpp/language/list_initialization), [Scott Meyers, Thoughts on the Vagaries of C++ Initialization](http://scottmeyers.blogspot.com/2015/09/thoughts-on-vagaries-of-c-initialization.html), [habrahabr::raced-init-list](https://habrahabr.ru/post/330402/), [ISOC++::deduction_rules](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n3922.html), [Bartek's Blog::N3922](http://www.bfilipek.com/2017/01/cpp17features.html#new-auto-rules-for-direct-list-initialization) 
 
-**Relatives:** [initialization_syntax](./README.md#object-construction-initialization-syntax)
+**Relatives:** [initialization_syntax](./README.md#object-construction-initialization-syntax), [braced-init-list with a single element](./README.md#braced-init-list-with-a-single-element-vs-multiple-elements)
 
 # rvalue reference. 
 **difficulty:** professional
