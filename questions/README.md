@@ -4291,3 +4291,26 @@ Starting C++17, instruction _widget w1{w}_ will be now deduced copy-constructor 
 **See also:** [ISO C++ dcl.type.auto.deduct](https://timsong-cpp.github.io/cppwp/dcl.type.auto.deduct#4), [ISO/IEC JTC1 SC22 WG21 N3922](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n3922.html) 
 
 **Relatives:** ['auto' deducing type by-braced-init-list.](./README.md#deducing-types-auto-by-braced-init-list)
+
+# Lambda capture of constexpr
+**difficulty:** expert
+```cpp
+   constexpr double PI = 3.14159265359;
+
+   const auto circle_area = [](auto radius) {
+      return PI*radius*radius;
+   };
+   cout << circle_area(1) << endl;
+```
+Regarding code above what should be present in output?
+- A 3.14159
+- B compile error: 'PI' is not captured
+ 
+**Answer:** __A__   
+A lambda expression can read the value of a variable without capturing it if the variable
+* has `const` non-`volatile` integral or enumeration type and has been initialized with a constant expression, or
+* is `constexpr` and has no mutable members
+
+**See also:** [cppreference.com](https://en.cppreference.com/w/cpp/language/lambda), [const/constexpr variables in lambda expressions](https://www.walletfox.com/course/cheatsheetsSource/const_constexpr_lambda_nocapture.png) 
+
+**Relatives:** [Lambda capture of globals](./README.md#lambda-capture-of-globals)
