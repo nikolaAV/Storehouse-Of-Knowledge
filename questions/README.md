@@ -2445,7 +2445,7 @@ Yet  specification  of  a  default `[=]` by-value  capture mode can lend the imp
 
 **See also:** [S. Meyers. Effective Modern C++. Item 31](http://doc.imzlp.me/viewer.html?file=docs/effective/EffectiveModernCPP.pdf#page=240&zoom=auto,-128,58)
 
-**Relatives:** [Lambda capture of data-members](./README.md#lambda-capture-of-data-members)
+**Relatives:** [Lambda capture of data-members](./README.md#lambda-capture-of-data-members), [Lambda capture of constexpr](./README.md#lambda-capture-of-constexpr)
 
 # Lambda capture of data-members
 **difficulty:** professional
