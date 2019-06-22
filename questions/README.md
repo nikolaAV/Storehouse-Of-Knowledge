@@ -4295,12 +4295,15 @@ Starting C++17, instruction _widget w1{w}_ will be now deduced copy-constructor 
 # Lambda capture of constexpr
 **difficulty:** expert
 ```cpp
+int main()
+{
    constexpr double PI = 3.14159265359;
 
    const auto circle_area = [](auto radius) {
       return PI*radius*radius;
    };
    cout << circle_area(1) << endl;
+}
 ```
 Regarding code above what should be present in output?
 - A 3.14159
