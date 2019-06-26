@@ -2715,7 +2715,7 @@ Regarding code above what should be present in output?
 
 **See also:** [cppreference.com](http://en.cppreference.com/w/cpp/string/basic_string_view) 
 
-**Relatives:** 
+**Relatives:** [string_view. part 2](./README.md#string_view-part-2)
 
 # Reference initialization. 
 **difficulty:** basic
@@ -4336,8 +4336,8 @@ Regarding code above what should be present in output?
 - B some garbage like 'pt���' is printed
   
 **Answer:** __B__  
-Method `std::string::substr()` returns `std::string`. Function `discard_2first` returns `std::string_view` object which is a _non-owning reference_ to the temporary produced by the previous call of `std::string::substr()`. Thus, the returned instance of `std::string_view` from 'discard_2first(s)' holds __a dangling reference__.
+Method `std::string::substr()` returns `std::string`. Function 'discard_2first' returns `std::string_view` object which is a _non-owning reference_ to the temporary produced by the previous call of `std::string::substr()`. Thus, the returned instance of `std::string_view` from 'discard_2first(s)' holds __a dangling reference__.
 
-**See also:** [`std::string_view` from function](../cheat_sheets/walletfox.com/string_view_cpp17_dangling-compressor.png)
+**See also:** [`std::string_view` from function](https://www.walletfox.com/course/cheatsheetsSource/string_view_cpp17_dangling-compressor.png)
 
 **Relatives:** [string_view. part 2](./README.md#string_view)
