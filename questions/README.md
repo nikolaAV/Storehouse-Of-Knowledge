@@ -2705,7 +2705,7 @@ Regarding code above what should be present in output?
     - Hello, World!
     - Hello, World!
 - B. run-time error: [line S1] memory violation
-- C. run-time error: [line S2] memory violation 
+- C. some garbage like 'pt��' is printed  
 
 **Answer:** C
 
