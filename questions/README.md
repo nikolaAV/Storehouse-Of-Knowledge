@@ -4317,3 +4317,27 @@ A lambda expression can read the value of a variable without capturing it if the
 **See also:** [cppreference.com](https://en.cppreference.com/w/cpp/language/lambda), [const/constexpr variables in lambda expressions](https://www.walletfox.com/course/cheatsheetsSource/const_constexpr_lambda_nocapture.png) 
 
 **Relatives:** [Lambda capture of globals](./README.md#lambda-capture-of-globals)
+
+# string_view. part 2
+**difficulty:** basic
+```cpp
+string_view discard_2first(const string& s) {
+    return s.substr(2);
+}    
+
+int main()
+{
+    const string s {"xxHello, World!"};
+    cout << discard_2first(s) << endl;
+}
+```
+Regarding code above what should be present in output?
+- A Hello, World!
+- B some garbage like 'pt���' is printed
+  
+**Answer:** __B__  
+Method `std::string::substr()` returns `std::string`. Function `discard_2first` returns `std::string_view` object which is a _non-owning reference_ to the temporary produced by the previous call of `std::string::substr()`. Thus, the returned instance of `std::string_view` from 'discard_2first(s)' holds __a dangling reference__.
+
+**See also:** [`std::string_view` from function](../cheat_sheets/walletfox.com/string_view_cpp17_dangling-compressor.png)
+
+**Relatives:** [string_view. part 2](./README.md#string_view)
