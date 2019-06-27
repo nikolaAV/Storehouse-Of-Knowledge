@@ -4341,3 +4341,56 @@ Method `std::string::substr()` returns `std::string`. Function 'discard_2first' 
 **See also:** [`std::string_view` from function](https://www.walletfox.com/course/cheatsheetsSource/string_view_cpp17_dangling-compressor.png)
 
 **Relatives:** [string_view. part 2](./README.md#string_view)
+
+# structured bindings
+**difficulty:** professional
+```cpp
+using namespace std; 
+
+struct widget
+{
+   widget()                { cout << "ctor(default)" << endl; }
+   widget(const widget&)   { cout << "ctor(copy)" << endl; }
+   widget(widget&&)        { cout << "ctor(move)" << endl; }
+};
+
+int main()
+{
+   auto [w,ignore] = make_pair(widget{},0);
+}
+```
+Regarding code above what should be present in output?
+- A
+    - ctor(default)
+    - ctor(move)
+    - ctor(move)
+- B
+    - ctor(default)
+    - ctor(move)
+    - ctor(copy)
+- C
+    - ctor(default)
+    - ctor(copy)
+    - ctor(copy)
+- D
+    - ctor(default)
+    - ctor(copy)
+- E
+    - ctor(default)
+    - ctor(move)
+- F
+    - ctor(default)
+  
+**Answer:** __E__  
+[Structured bindings](https://en.cppreference.com/w/cpp/language/structured_binding) is a syntax sugar for 
+```cpp
+auto __tmp = std::make_pair(widget{},0);
+using __E = std::remove_reference_t<decltype(__tmp)>; 
+std::tuple_element_t<0, __E>&& one = get<0>(std::move(__tmp));
+std::tuple_element_t<1, __E>&& two = get<1>(std::move(__tmp));
+```
+The point of structured bindings is to give you named references to the destructured elements of the type you're binding to. The structured bindings do not add any extra copies. In the given case, two constructors are involved: _'default'_ to create an instance of 'widget' type, _'move'_ to move it `std::pair` inside.
+
+**See also:** [Does copy elision work with structured bindings](https://stackoverflow.com/a/45698749) on stackoverflow, [C++ ISO dcl.struct.bind](http://eel.is/c++draft/dcl.struct.bind#1.sentence-8)
+
+**Relatives:** [copy-elision](./README.md#rvalue-arguments-in-pass-by-value-parameters)
