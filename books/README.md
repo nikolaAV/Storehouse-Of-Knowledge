@@ -1,3 +1,6 @@
+* [The Definitive C++ Book Guide and List](https://stackoverflow.com/questions/388242/the-definitive-c-book-guide-and-list) on stackoverflow
+---
+### List of my own preferences
 * [S. Meyers. Effective C++ (2nd Edition) (Addison-Wesley, 1997)](https://books.google.com.ua/books?id=Qx5oyB49poYC&lpg=PP1&dq=Effective%20C%2B%2B&pg=PP1#v=onepage&q&f=false), [pdf](http://doc.imzlp.me/viewer.html?file=docs/effective/EffectiveCPP.pdf), available [in Russian](http://scanlibs.com/effektivnoe-ispolzovanie-cpp/)
 * [S. Meyers. More Effective C++ (Addison-Wesley, 1996)](https://books.google.com.ua/books?id=azvE8V0c-mYC&lpg=PP1&dq=Scott%20Meyers&pg=PP1#v=onepage&q&f=false), [pdf](http://doc.imzlp.me/viewer.html?file=docs/effective/MoreEffectiveCPP.pdf)
 * [S. Meyers. Effective Modern C++ (O'Reilly, 2015)](https://books.google.com.ua/books?id=ZDhIBQAAQBAJ&lpg=PP1&dq=Scott%20Meyers&pg=PP1#v=onepage&q&f=false), [pdf](http://doc.imzlp.me/viewer.html?file=docs/effective/EffectiveModernCPP.pdf), available [in Russian](http://scanlibs.com/effektivnyiy-i-sovremennyiy-cpp-42-rekomendatsii-po-ispolzovaniyu-cpp-11-i-cpp-14/)
