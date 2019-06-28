@@ -4386,8 +4386,8 @@ Regarding code above what should be present in output?
 ```cpp
 auto __tmp = std::make_pair(widget{},0);
 using __E = std::remove_reference_t<decltype(__tmp)>; // std::pair<widget,int> 
-std::tuple_element_t<0, __E>&& w = get<0>(std::move(__tmp));
-std::tuple_element_t<1, __E>&& ignore = get<1>(std::move(__tmp));
+std::tuple_element_t<0, __E>&& w = get<0>(__tmp);
+std::tuple_element_t<1, __E>&& ignore = get<1>(__tmp);
 ```
 The point of structured bindings is to give you named references to the destructured elements of the type you're binding to. The structured bindings do not add any extra copies. In the given case, two constructors are involved: _'default'_ to create an instance of 'widget' type, _'move'_ to move it `std::pair` inside.
 
