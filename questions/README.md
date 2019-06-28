@@ -4385,7 +4385,7 @@ Regarding code above what should be present in output?
 [Structured bindings](https://en.cppreference.com/w/cpp/language/structured_binding) is a syntax sugar for 
 ```cpp
 auto __tmp = std::make_pair(widget{},0);
-using __E = std::remove_reference_t<decltype(__tmp)>; 
+using __E = std::remove_reference_t<decltype(__tmp)>; // std::pair<widget,int> 
 std::tuple_element_t<0, __E>&& w = get<0>(std::move(__tmp));
 std::tuple_element_t<1, __E>&& ignore = get<1>(std::move(__tmp));
 ```
