@@ -3052,11 +3052,11 @@ Regarding code (C++17 compliant) above what should be present in output?
 - D my type is unknown
 - E compiler error: 'variant::variant' cannot convert argument from 'const char*' to ...
  
-**Answer:** C
+**Answer:** C (B)
 
-The rank of standard conversion ("Hello, World!"->`bool`) is _always better_ than the rank of user-defined conversion ("Hello, World!"->`std::string`).  
+The rank of standard conversion ("Hello, World!"->`bool`) is _always better_ than the rank of user-defined conversion ("Hello, World!"->`std::string`). Nowadays, the ISO C++ Committee has accepted that such conversions for `std::variant` is unwanted and should be fixed ([A sane variant converting constructor - P0608](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0608r3.html)) i.e. conversion into `std::string` is more preferable (answer B). You can check GCC trunk (10.0) which implements already this C++17 fix.   
 
-**See also:** [cppref::variant::ctor4](http://en.cppreference.com/w/cpp/utility/variant/variant)
+**See also:** [cppref::variant::ctor4](http://en.cppreference.com/w/cpp/utility/variant/variant), [Surprising Conversions of const char* to bool](https://www.bfilipek.com/2019/07/surprising-conversions-char-bool.html)
 
 **Relatives:** [type_conversion::standard_vs_user-defined](./README.md#type-conversion-user-defined-vs-standard-conversion) 
 
