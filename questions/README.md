@@ -4394,3 +4394,30 @@ The point of structured bindings is to give you named references to the destruct
 **See also:** [Does copy elision work with structured bindings](https://stackoverflow.com/a/45698749) on stackoverflow, [C++ ISO dcl.struct.bind](http://eel.is/c++draft/dcl.struct.bind#1.sentence-8)
 
 **Relatives:** [copy-elision](./README.md#rvalue-arguments-in-pass-by-value-parameters)
+
+# Lambda capture of reference for returning one
+**difficulty:** basic
+```cpp
+const auto multiplay = [](auto x) {
+   return [&x](auto y) {
+      return x*y;
+   };
+};
+
+int main()
+{
+   auto const f = multiplay(2);
+   cout << f(7) << endl;
+}
+```
+Regarding code above what should be present in output?
+- A 14
+- B any other undetermined value (gibberish) 
+  
+**Answer:** __B__  
+The local variable 'x' defined as input parameter is captured by-reference into lambda closure 'f' which will have outlived it.
+
+**See also:** [Capturing by reference](https://www.walletfox.com/course/cheatsheetsSource/return_lambda_no_reference-min.png) from @walletfox
+
+**Relatives:** [Lambda capture of data-members of the temporary](./README.md#lambda-capture-of-data-members-part-2)
+
