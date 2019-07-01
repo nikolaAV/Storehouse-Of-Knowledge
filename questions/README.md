@@ -2713,7 +2713,7 @@ Regarding code above what should be present in output?
 - 's1' points to a static array (a string literal)
 - 's2' holds a dangling pointer to  a temporary object of `std::string` type which has already been destroyed. 
 
-**See also:** [cppreference.com](http://en.cppreference.com/w/cpp/string/basic_string_view) 
+**See also:** [cppreference.com](http://en.cppreference.com/w/cpp/string/basic_string_view), [std::string_view of the temporary](https://www.walletfox.com/course/cheatsheetsSource/string_view_lifetime-min.png) 
 
 **Relatives:** [string_view. part 2](./README.md#string_view-part-2)
 
