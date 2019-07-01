@@ -2651,7 +2651,7 @@ That `rvalue` cannnot be passed to 'widget''s _move constructor_ because it take
 Such behavior is essential to maintaining `const`-correctness. Moving a value out of an object generally modifies the object, so the language should not permit `const` objects to be passed to functions
 (such as move constructors) that could modify them. The `rvalue` reference to `const` is copyed by means _the copy constructor_.    
 
-**See also:** [S. Meyers. Effective Modern C++. Item 23](https://edisciplinas.usp.br/pluginfile.php/1995323/mod_resource/content/1/Effective%20Modern%20C%2B%2B%202014.pdf)
+**See also:** [S. Meyers. Effective Modern C++. Item 23](https://edisciplinas.usp.br/pluginfile.php/1995323/mod_resource/content/1/Effective%20Modern%20C%2B%2B%202014.pdf), [std::move on a `const` object](https://www.walletfox.com/course/cheatsheetsSource/std_move_const-min.png) on @walletfox
 
 **Relatives:** [std::move::RVO](./README.md#stdmovervo), [std::unique_ptr](./README.md#stdunique_ptr-copyable), [lambda with move return](./README.md#lambda-expressions-move-capture-and-move-return)
 
