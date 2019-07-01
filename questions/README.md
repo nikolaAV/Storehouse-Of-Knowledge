@@ -4109,7 +4109,7 @@ Compilers internally replace uses of 'text_' with `this`->'text_'. Thus, functio
 
 **See also:** [S. Meyers. Effective Modern C++. Item 31](http://doc.imzlp.me/viewer.html?file=docs/effective/EffectiveModernCPP.pdf#page=238&zoom=auto,-128,583), [Lambdas capture of *this](http://www.bfilipek.com/2017/01/cpp17features.html#lambda-capture-of-this), [Lambdas capture class member](https://www.bfilipek.com/2019/02/lambdas-story-part1.html?m=1#capturing-a-class-member)
 
-**Relatives:** [Lambda capture of data-members](./README.md#lambda-capture-of-data-members)
+**Relatives:** [Lambda capture of data-members](./README.md#lambda-capture-of-data-members), [Lambda capture of reference](./README.md#lambda-capture-of-reference-for-returning-one)
 
 # Lambda closure type & pointer to a function.
 **difficulty:** professional
