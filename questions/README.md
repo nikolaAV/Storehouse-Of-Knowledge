@@ -4421,3 +4421,40 @@ The local variable 'x' defined as input parameter is captured by-reference into 
 
 **Relatives:** [Lambda capture of data-members of the temporary](./README.md#lambda-capture-of-data-members-part-2)
 
+# [`std::size`](https://en.cppreference.com/w/cpp/iterator/size)
+**difficulty:** basic
+```cpp
+int main()
+{
+   cout << std::size(string("hello")) << endl;
+   cout << std::size(string_view("hello")) << endl;
+   cout << std::size("hello") << endl;
+}
+```
+Regarding code above what should be present in output?
+- A
+    - 5
+    - 5
+    - 5
+- B
+    - 6
+    - 6
+    - 6
+- C
+    - 5
+    - 5
+    - 6
+- D
+    - 5
+    - 6
+    - 6
+
+
+**Answer:** __C__  
+`std::string` and `std_string_view` holding null-terminated strings return number of characters without tailing null. _string literal_ "hello" has a type of `char[6]` i.t. it's C array with 6 elements of `char` type including `\0`.
+
+**See also:** [Beware of string literals](https://www.walletfox.com/course/cheatsheetsSource/std_size_std_empty_string_literal-min.png) from @walletfox
+
+**Relatives:** 
+
+
