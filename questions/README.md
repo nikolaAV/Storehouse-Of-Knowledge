@@ -4457,4 +4457,33 @@ Regarding code above what should be present in output?
 
 **Relatives:** 
 
+# [`std::function`](https://en.cppreference.com/w/cpp/utility/functional/function) and `const`-correctness
+**difficulty:** professional
+```cpp
+struct widget
+{
+   void operator()()        { cout << "widget is mutable. "; }
+   void operator()() const  { cout << "widget is const. "; }
+};
+
+int main()
+{
+   const auto f1 = widget{};
+   const std::function<void(void)> f2 = widget{};
+   f1();
+   f2();
+}
+```
+Regarding code above what should be present in output?
+- A widget is mutable. widget is mutable. 
+- B widget is const. widget is const. 
+- C widget is mutable. widget is const. 
+- D widget is const. widget is mutable. 
+
+**Answer:** __D__  
+Beware that [`std::function`](https://en.cppreference.com/w/cpp/utility/functional/function) is not quite `const`-aware. In the presence of both `const` and non-`const` overloads in a function object, `const std::function` selects the non-const overload.
+
+**See also:** [`std::experimental::propagate_const`](https://en.cppreference.com/w/cpp/experimental/propagate_const), [propagate_const, example](https://github.com/nikolaAV/Modern-Cpp/tree/master/propagate_const), [`std::function` and `const`-correctness](https://www.walletfox.com/course/cheatsheetsSource/std_function_const_correctness-min.png) from walletfox.com
+
+**Relatives:** [const overloading resolution through const-pointer](./README.md#function-overloading-const-object--const-function)
 
