@@ -3296,7 +3296,7 @@ Instruction 'b.foo()' invokes 'widget::foo() `const`' which is a `const` method,
 
 **See also:** [cppref::propagate_const](http://en.cppreference.com/w/cpp/experimental/propagate_const) 
 
-**Relatives:** [Function overloading and const-ref](./README.md#the-temporary-function-overloading-and-const-reference-to-lvalue)
+**Relatives:** [Function overloading and const-ref](./README.md#the-temporary-function-overloading-and-const-reference-to-lvalue), [const std::function and const-correctness](./README.md#stdfunction-and-const-correctness)
 
 # auto vs. decltype with an expression by-reference
 **difficulty:** professional
