@@ -4417,7 +4417,7 @@ Regarding code above what should be present in output?
 **Answer:** __B__  
 The local variable 'x' defined as input parameter is captured by-reference into lambda closure 'f' which will have outlived it.
 
-**See also:** [Capturing by reference](https://www.walletfox.com/course/cheatsheetsSource/return_lambda_no_reference-min.png) from @walletfox
+**See also:** Capturing by reference [1](https://www.walletfox.com/course/cheatsheetsSource/return_lambda_no_reference-min.png), [2](https://www.walletfox.com/course/cheatsheetsSource/lambda_capture_reference_inner.png) from @walletfox
 
 **Relatives:** [Lambda capture of data-members of the temporary](./README.md#lambda-capture-of-data-members-part-2)
 
