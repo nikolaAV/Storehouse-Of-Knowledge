@@ -3526,7 +3526,7 @@ Regarding code above what should be present in output?
 
 Bad news! The widget object which is owned by 'p2' is lost. 'map::insert' accepts `rvalue` of 'value_type' which is std::pair<int,unique_ptr<widget>>. That means a temporary value_type will be constructed with arguments: 1 and 'unique_ptr<widget>' using its moveable constructor. But this temporary will not be inserted because of the requested key existance, it will be destroyed when the instruction 'm.insert(...)' goes out. Refer to [map::try_emplace](http://en.cppreference.com/w/cpp/container/map/try_emplace) that does not move from rvalue argument if the insertion does not happen.
 
-**See also:** [cppref::try_emplace](http://en.cppreference.com/w/cpp/container/map/try_emplace), [what happens with a movable object if insertion fails](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4006.html) by Thomas Köppe
+**See also:** [cppref::try_emplace](http://en.cppreference.com/w/cpp/container/map/try_emplace), [what happens with a movable object if insertion fails](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4006.html) by Thomas Köppe, [the stolen movable if an insertion fails](https://www.walletfox.com/course/cheatsheetsSource/stdmap_tryemplace_insertorassign_corr.png) from @walletfox
 
 **Relatives:** [rvalue reference](./README.md#rvalue-reference), [std::move(const)](./README.md#stdmoveconst), [emplacement vs. insertion](./README.md#emplacement-functions-vs-insertion-functions) 
 
