@@ -3025,7 +3025,7 @@ This is a requirement that the postfix operator returns by value. Even with the 
 
 **See also:** [Sutter&Alexandrescu, Rule 28](https://doc.lagout.org/programmation/C/CPP101.pdf), [cppref::incr_decr](http://en.cppreference.com/w/cpp/language/operator_incdec) 
 
-**Relatives:** 
+**Relatives:** [Post-increment expression and value categories](./README.md#post-increment-expression-and-value-categories)
 
 # std::variant. Converting constructor 
 **difficulty:** professional
@@ -4502,7 +4502,7 @@ Regarding code above what should be present in output?
 - C Compile error: "???" 
 
 **Answer:** __C__  
-The post-form of incrementing __c++__ produces the result which is located at a different address that variable __c__. The address of the temporary result (`rvalue`) cannot be obtained. At line with instruction __&(c++)__, the compiler says "`lvalue` required as unary '&' operand". 
+The post-form of incrementing __'c++'__ produces the result which is located at a different address that variable __'c'__. The address of the temporary result (`rvalue`) cannot be obtained. At line with instruction __'&(c++)'__, the compiler says "`lvalue` required as unary '&' operand". 
 
 **See also:** [pre- vs post- increment expressions and value categories](https://www.walletfox.com/course/cheatsheetsSource/post_pre_increment.png) from @walletfox
 
