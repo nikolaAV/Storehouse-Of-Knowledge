@@ -4487,3 +4487,25 @@ Beware that [`std::function`](https://en.cppreference.com/w/cpp/utility/function
 
 **Relatives:** [const overloading resolution through const-pointer](./README.md#function-overloading-const-object--const-function)
 
+# Post-increment expression and value categories
+**difficulty:** expert
+```cpp
+int main()
+{
+   auto c = 0;
+   std::cout << &(c++);
+}
+```
+Regarding code above what should be present in output?
+- A 0 
+- B 1 
+- C Compile error: "???" 
+
+**Answer:** __C__  
+The post-form of incrementing __c++__ produces the result which is located at a different address that variable __c__. The address of the temporary result (`rvalue`) cannot be obtained. At line with instruction __&(c++)__, the compiler says "`lvalue` required as unary '&' operand". 
+
+**See also:** [pre- vs post- increment expressions and value categories](https://www.walletfox.com/course/cheatsheetsSource/post_pre_increment.png) from @walletfox
+
+**Relatives:** [Increment/Decrement operators](./README.md#incrementdecrement-operator-function)
+
+
