@@ -4508,4 +4508,39 @@ The post-form of incrementing __'c++'__ produces the result which is located at 
 
 **Relatives:** [Increment/Decrement operators](./README.md#incrementdecrement-operator-function)
 
+# Class template. Full specialization vs. explicit instantiation 
+**difficulty:** expert
+```cpp
+template <typename T>
+struct widget {
+   const char* name {"widget<T>"};
+};
 
+widget<void*> w1; // Line B
+
+template <>
+struct widget<void*> { // Line A
+   const char* name{ "widget<void*>" };  
+};
+
+widget<void*> w2;
+
+int main()
+{
+   cout << w1.name << " - " << w2.name << endl;
+}
+```
+Regarding code above what should be present in output?
+- A widget<void*> - widget<void*> 
+- B widget<T> - widget<void*> 
+- C widget<T> - widget<T> 
+- D widget<void*> - widget<T> 
+- E Compile error: "???" 
+
+**Answer:** __E__  
+A full specialization (template <> struct widget<void*> {...}) is a replacement for the instantiation of a certain generic template (template <typename T> struct widget {...}), 
+and it is not valid to have both the full specialization and the generated versions of a primary template present in the same program. An attempt to use both in the same file is usually caught by a compiler with an error: _at Line A_ specialization of 'widget<void*>' after instantiation widget<void*> w1 at _Line B_.
+
+**See also:** [explicit (full) template specialization](https://en.cppreference.com/w/cpp/language/template_specialization) on cppreference
+
+**Relatives:** 
