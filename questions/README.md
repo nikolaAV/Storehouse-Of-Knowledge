@@ -4544,3 +4544,45 @@ and it is not valid to have both the full specialization and the generated versi
 **See also:** [explicit (full) template specialization](https://en.cppreference.com/w/cpp/language/template_specialization) on cppreference
 
 **Relatives:** 
+
+# Object construction. Mutable data-member. 
+**difficulty:** professional
+```cpp
+struct widget {
+   widget()                { cout << "ctor(default)" << endl; }
+   widget(widget&)         { cout << "ctor(copy)" << endl; }
+   widget(const widget&)   { cout << "ctor(const copy)" << endl; }
+   widget(widget&&)        { cout << "ctor(move)" << endl; }
+};
+
+struct bar {
+   mutable widget w;
+   bar() = default;
+   bar(const bar&) = default;
+};
+
+int main()
+{
+   const bar b1{};
+   const bar b2{b1};
+}
+```
+Regarding code above what should be present in output?
+- A
+    - ctor(default)
+    - ctor(copy)
+- B
+    - ctor(default)
+    - ctor(const copy)
+- C
+    - ctor(default)
+    - ctor(move)
+
+**Answer:** __A__  
+At line __`const` bar b2{b1};__ b2 is created from b1 by means direct-initialization, __bar(const bar&)__ is called. 
+The 'bar' inside the bar(`const` bar&) copy constructor is `const`, but __w__ is marked `mutable`. 
+According to the Standard, __w__ is concidered non-`const`, and widget(widget &) is a better match to overload resolution than widget(const widget&), because in the latter case, a `const` conversion has to happen.  
+
+**See also:** [ISO C++, Specifiers](https://timsong-cpp.github.io/cppwp/n4659/dcl.stc#9)
+
+**Relatives:** [object construction](./README.md#object-construction-copy-elision), [non-copy constructor](./README.md#special-member-function-generation-constructor-template-part-2)
