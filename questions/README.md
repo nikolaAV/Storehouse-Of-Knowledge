@@ -4564,7 +4564,7 @@ struct bar {
 int main()
 {
    const bar b1{};
-   const bar b2{b1};
+   const bar b2{b1};  // Line A
 }
 ```
 Regarding code above what should be present in output?
@@ -4579,9 +4579,9 @@ Regarding code above what should be present in output?
     - ctor(move)
 
 **Answer:** __A__  
-At line __`const` bar b2{b1};__ b2 is created from b1 by means direct-initialization, __bar(const bar&)__ is called. 
+At line _Line A_ b2 is created from b1 by means direct-initialization, __bar(const bar&)__ is called. 
 The 'bar' inside the bar(`const` bar&) copy constructor is `const`, but __w__ is marked `mutable`. 
-According to the Standard, __w__ is concidered non-`const`, and widget(widget &) is a better match to overload resolution than widget(const widget&), because in the latter case, a `const` conversion has to happen.  
+According to the [Standard](https://timsong-cpp.github.io/cppwp/n4659/dcl.stc#9), __w__ is concidered non-`const`, and widget(widget &) is a better match to overload resolution than widget(const widget&), because in the latter case, a `const` conversion has to happen.  
 
 **See also:** [ISO C++, Specifiers](https://timsong-cpp.github.io/cppwp/n4659/dcl.stc#9)
 
