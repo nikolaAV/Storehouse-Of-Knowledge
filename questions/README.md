@@ -2616,7 +2616,7 @@ Calling _the copy constructor_ would require adding `const` to 'w1' to match the
 
 **See also:** [S. Meyers. Effective Modern C++. Item 26](http://doc.imzlp.me/viewer.html?file=docs/effective/EffectiveModernCPP.pdf#page=199&zoom=auto,-17,321) 
 
-**Relatives:** [constructor_template_part1](./README.md#special-member-function-generation-constructor-template), [perfect_match_for_r-lvalue](./README.md#function-overloading-perfect-match-for-lvalue--rvalue)
+**Relatives:** [constructor_template_part1](./README.md#special-member-function-generation-constructor-template), [perfect_match_for_r-lvalue](./README.md#function-overloading-perfect-match-for-lvalue--rvalue), [mutable data-member](./README.md#object-construction-mutable-data-member)
 
 # std::move(const)
 **difficulty:** basic
