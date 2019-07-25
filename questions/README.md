@@ -4586,3 +4586,33 @@ According to the [Standard](https://timsong-cpp.github.io/cppwp/n4659/dcl.stc#9)
 **See also:** [ISO C++, Specifiers](https://timsong-cpp.github.io/cppwp/n4659/dcl.stc#9)
 
 **Relatives:** [object construction](./README.md#object-construction-copy-elision), [non-copy constructor](./README.md#special-member-function-generation-constructor-template-part-2)
+
+# Function overloading. Magic integer zero
+**difficulty:** basic
+```cpp
+void foo(const char*) {
+   cout << "foo(const char*)" << endl;
+}
+
+void foo(short) {
+   cout << "foo(short)" << endl;
+}
+
+int main()
+{
+   foo(0);
+}
+```
+Regarding code above what should be present in output?
+- A foo(const char*)
+- B foo(short)
+- C compiler error: 'foo' ambigious call
+
+**Answer:** __C__  
+* 0 is a null pointer constant, it can be converted implicitly into any pointer type with a _single conversion_.
+* 0 is of type `int`, it can be converted implicitly to a short with a _single conversion_ too.   
+Both are standard conversion sequences with a single conversion of "conversion rank". Since no function is better than the other, the call is ill-formed.
+
+**See also:** [ISO C++, Best viable function](https://timsong-cpp.github.io/cppwp/n4659/over.match.best#2), [ISO C++, An integral  null pointer constant](https://timsong-cpp.github.io/cppwp/n4659/conv.ptr#1)
+
+**Relatives:** [NULL vs. nullptr](./README.md#function-overloading-arguments-null-vs-nullptr), [Promotion vs. standard conversion](./README.md#function-overloading-promotion-vs-standard-conversion) 
