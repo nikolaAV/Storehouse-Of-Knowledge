@@ -3637,7 +3637,7 @@ Regarding code above what should be present in output?
 - C
     - Undefined Behaviour, [UB](https://en.cppreference.com/w/cpp/language/ub)
 - D
-    - Undetermined Behaviour, i.e. the ordering is not specified
+    - the ordering of prints is undetermined
 
 **Answer:** B
 
