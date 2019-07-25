@@ -1473,7 +1473,7 @@ For the given case, the '__promotion__' is better because of '__standatd convers
 
 **See also:** [cppreference::ranking](http://en.cppreference.com/w/cpp/language/overload_resolution), [accu.org::function selection](https://accu.org/index.php/journals/268), [D. Vandevoorde. C++ Templates, Appendix B](http://flylib.com/books/en/3.401.1.178/1/)  
  
-**Relatives:** [user-defined conversion](./README.md#type-conversion-user-defined-vs-standard-conversion) 
+**Relatives:** [user-defined conversion](./README.md#type-conversion-user-defined-vs-standard-conversion), [magic zero](./README.md#function-overloading-magic-integer-zero) 
 
 # Function overloading. Deleted function 
 **difficulty:** expert
