@@ -1434,7 +1434,7 @@ Instruction `return std::move(w);` violates the second statement above, because 
 This manual negative optimization remains in C++17, moving a temporary object prevents [copy elision](http://en.cppreference.com/w/cpp/language/copy_elision). 
 
 
-**See also:** [S. Meyers. Effective Modern C++, item 25](https://books.google.com.ua/books?id=rjhIBQAAQBAJ&pg=PA174&dq=I+can+perform+the+same+optimization+on+local+variables+that+I%E2%80%99m+returning&hl=en&sa=X&ved=0ahUKEwit19aGgJXWAhXLrlQKHdTqANQQ6AEIKTAA#v=onepage&q&f=false) 
+**See also:** [S. Meyers. Effective Modern C++, item 25](https://books.google.com.ua/books?id=rjhIBQAAQBAJ&pg=PA174&dq=I+can+perform+the+same+optimization+on+local+variables+that+I%E2%80%99m+returning&hl=en&sa=X&ved=0ahUKEwit19aGgJXWAhXLrlQKHdTqANQQ6AEIKTAA#v=onepage&q&f=false), [Moved or Not Moved - That Is the Question!](https://www.bfilipek.com/2019/07/move-debug.html) 
 
 **Relatives:** [RVO](./README.md#return-value-optimization), [C++17 copy_elision](./README.md#object-construction-copy-elision)
 
