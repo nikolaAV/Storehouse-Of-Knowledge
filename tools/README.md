@@ -6,3 +6,5 @@
 * [Clang Power Tools](https://marketplace.visualstudio.com/items?itemName=vs-publisher-690586.ClangPowerTools) A tool bringing clang-tidy magic to Visual Studio C++ developers.
 * [Visual Studio Code](https://code.visualstudio.com/) combines the simplicity of a source code editor with powerful developer tooling, like IntelliSense code completion, debugging, Git commands built-in, [useful plugins for C++ developers](https://habr.com/ru/company/aktiv-company/blog/440142/) and more.
 * [Abseil](https://abseil.io/about/intro) is an open-source collection of C++ library code designed to augment the C++ standard library. The Abseil library code is collected from Google’s own C++ code base. 
+---
+* [Markdown Tutorial](http://commonmark.org/help/tutorial/) - a plain text format for writing structured documents. [syntax](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/cheat_sheets/markdown_syntax.md), [Extension on GitHub](https://help.github.com/articles/basic-writing-and-formatting-syntax/), [Ultimate Guide](https://blog.ghost.org/markdown/)
