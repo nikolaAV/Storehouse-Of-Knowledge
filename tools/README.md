@@ -8,3 +8,4 @@
 * [Abseil](https://abseil.io/about/intro) is an open-source collection of C++ library code designed to augment the C++ standard library. The Abseil library code is collected from Google’s own C++ code base. 
 ---
 * [Markdown Tutorial](http://commonmark.org/help/tutorial/) - a plain text format for writing structured documents. [syntax](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/cheat_sheets/markdown_syntax.md), [Extension on GitHub](https://help.github.com/articles/basic-writing-and-formatting-syntax/), [Ultimate Guide](https://blog.ghost.org/markdown/)
+* [PlantUML](https://en.wikipedia.org/wiki/PlantUML) - a simple and intuitive language to define diagrams. [Language Reference Guide](http://plantuml.com/en/guide). [Arwen Vaughan's online editor](https://www.planttext.com/), [plantuml-editor](https://plantuml-editor.kkeisuke.com/) on kkeisuke.com
