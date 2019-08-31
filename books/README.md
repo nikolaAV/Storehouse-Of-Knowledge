@@ -1,4 +1,5 @@
 * [The Definitive C++ Book Guide and List](https://stackoverflow.com/questions/388242/the-definitive-c-book-guide-and-list) on stackoverflow
+* [What Books to Read to Get Better In C++](https://www.fluentcpp.com/2017/07/28/what-books-to-read-to-get-better-at-c/) by Jonathan Boccara
 ---
 ### List of my own preferences
 * [S. Meyers. Effective C++ (2nd Edition) (Addison-Wesley, 1997)](https://books.google.com.ua/books?id=Qx5oyB49poYC&lpg=PP1&dq=Effective%20C%2B%2B&pg=PP1#v=onepage&q&f=false), [pdf](http://doc.imzlp.me/viewer.html?file=docs/effective/EffectiveCPP.pdf), available [in Russian](http://scanlibs.com/effektivnoe-ispolzovanie-cpp/)
