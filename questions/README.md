@@ -3604,7 +3604,7 @@ Regarding code above what should be present in output?
 If the keyword `mutable` is absent a lambda expression produces a closure as immutable functional object i.e. the closure type has following member: ret `operator()`(params) `const` {body}. This `const`- method returns __rvalue reference__ to `const` 'widget'. Reference to `const` is immutable, it cannot be used to move an object because moving a value out of the object modifies it.
 Thus, __rvalue reference__ to `const` is copied by means __the copy constructor__ 'widget(const widget&)'.
 
-**See also:** [Lambda expressions](http://en.cppreference.com/w/cpp/language/lambda) on cppreference.com
+**See also:** [Lambda expressions](http://en.cppreference.com/w/cpp/language/lambda) on cppreference.com, [why is the compiler trying to copy my move-only object?](https://botondballo.wordpress.com/2019/09/03/a-case-study-in-analyzing-c-compiler-errors-why-is-the-compiler-trying-to-copy-my-move-only-object/)
 
 **Relatives:** [std::move(const)](./README.md#stdmoveconst)
 
