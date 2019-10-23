@@ -4616,3 +4616,34 @@ Both are standard conversion sequences with a single conversion of "conversion r
 **See also:** [ISO C++, Best viable function](https://timsong-cpp.github.io/cppwp/n4659/over.match.best#2), [ISO C++, An integral  null pointer constant](https://timsong-cpp.github.io/cppwp/n4659/conv.ptr#1)
 
 **Relatives:** [NULL vs. nullptr](./README.md#function-overloading-arguments-null-vs-nullptr), [Promotion vs. standard conversion](./README.md#function-overloading-promotion-vs-standard-conversion) 
+
+# decltype(structured binding)
+**difficulty:** expert
+```cpp
+struct widget {
+   int value = 0;
+};
+
+int main()
+{
+    widget w{};
+    auto& [v1] = w;
+    decltype(v1) v2 {v1};
+    v1++;
+    v2++;
+ 
+    std::cout << w.value << std::endl;
+}
+```
+Regarding code above what should be present in output?
+- A 0 
+- B 1
+- C 2
+
+**Answer:** __B__  
+In this case `decltype(v1)` is `int`. However 'v1' refers to data-member 'value' in widget object 'w', i.e. 'value' can be modified from outside by means 'v1'. 'v2' is a separate new local variable of `int` type. Why? See [the Standard](http://eel.is/c++draft/dcl.struct.bind#3).   
+
+**See also:** [cppreference.com](https://en.cppreference.com/w/cpp/language/structured_binding#Notes), [when something looks like a reference and behaves similarly to a reference, but it's not a reference](https://stackoverflow.com/questions/44695684/structured-bindings-when-something-looks-like-a-reference-and-behaves-similarly)
+
+**Relatives:** [structured-bindings](./README.md#structured-bindings)
+
