@@ -4393,7 +4393,7 @@ The point of structured bindings is to give you named references to the destruct
 
 **See also:** [Does copy elision work with structured bindings](https://stackoverflow.com/a/45698749) on stackoverflow, [C++ ISO dcl.struct.bind](http://eel.is/c++draft/dcl.struct.bind#1.sentence-8)
 
-**Relatives:** [copy-elision](./README.md#rvalue-arguments-in-pass-by-value-parameters)
+**Relatives:** [copy-elision](./README.md#rvalue-arguments-in-pass-by-value-parameters), [decltype(structured_binding)](./README.md#decltypestructured-binding)
 
 # Lambda capture of reference for returning one
 **difficulty:** basic
