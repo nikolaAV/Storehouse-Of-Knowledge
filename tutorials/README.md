@@ -5,3 +5,4 @@
 * [Modern C++. Design Patterns](http://scanlibs.com/modern-c-design-patterns/) with Juilian Templeman. This course provides beginning to intermediate C++ developers with the knowledge required for up-to-date C++ programming. Exploring Design Patterns, Idioms, Functional Programming Techniques, and the Key Features of C++ 11 and C++ 14
 * Youtube. Nicolai Josuttis. Ñ++17. The Language Features. [Part 1](https://www.youtube.com/watch?v=WDGP5pO1TyM&feature=youtu.be), [Part 2](https://www.youtube.com/watch?v=_PEgl63V7wc&feature=youtu.be).
 * [Миграция на повседневный C++17](https://ps-group.github.io/cxx/cxx17)
+* [Computer Science Center](https://www.youtube.com/channel/UC0YHNueF-3Nh3uQT0P4YQZw/featured)
