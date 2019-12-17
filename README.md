@@ -46,6 +46,7 @@ Instead of creating local projects you can also leverage some [online compilers]
 * [Simon Brand's blog](https://blog.tartanllama.xyz/), template metaprogramming and the dark corners of C++ 
 * [Arne Mertz's Simplify C++](https://arne-mertz.de/), Write clean and maintainable C++
 * [Jonathan Boccara's blog](https://www.fluentcpp.com/), The theme of Fluent C++ is “expressive code in C++”.
+* [Blog given by Jacek Galowicz](https://blog.galowicz.de/) for those who has been striving after elegant, fast, and generic code.  
 
 ## [Tutorials, video trainings & courses](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/tutorials/README.md)
 ## [Principles, Patterns & Idioms](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/patterns/README.md)
