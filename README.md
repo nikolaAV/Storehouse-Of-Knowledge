@@ -33,7 +33,7 @@ Instead of creating local projects you can also leverage some [online compilers]
 * [C++ Insights](https://cppinsights.io/). It’s a Clang-based tool which does a source to source transformation. It shows how the compiler sees the code, for example by expanding lambdas, auto, structured bindings or range-based for loops.
 ---
 * [Guide to the Modern C++ Ecosystem](https://www.bfilipek.com/2019/10/cppecosystem.html)
-* [List of awesome C++ (or C) frameworks, libraries, resources, and shiny things.](https://github.com/fffaraz/awesome-cpp#online-compiler)
+* [List of awesome C++ (or C) frameworks, libraries, resources, and shiny things.](https://github.com/fffaraz/awesome-cpp#awesome-c-)
 
 ## Popular Blogs
 * [Bjarne Stroustrup's homepage](http://stroustrup.com/), C++FAQ, style, techique, etc.
