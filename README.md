@@ -31,6 +31,9 @@ Instead of creating local projects you can also leverage some [online compilers]
 * [Compiler Explorer](https://godbolt.org/) allows you to see the assembly of C++ programs generated with different compilers on different platforms.
 * [Coliru](http://coliru.stacked-crooked.com/) uses GCC 8.1.0 (as of July 2018), offers link sharing and a basic text editor, it’s simple but very effective.
 * [C++ Insights](https://cppinsights.io/). It’s a Clang-based tool which does a source to source transformation. It shows how the compiler sees the code, for example by expanding lambdas, auto, structured bindings or range-based for loops.
+---
+* [Guide to the Modern C++ Ecosystem](https://www.bfilipek.com/2019/10/cppecosystem.html)
+* [List of awesome C++ (or C) frameworks, libraries, resources, and shiny things.](https://github.com/fffaraz/awesome-cpp#awesome-c-)
 
 ## Popular Blogs
 * [Bjarne Stroustrup's homepage](http://stroustrup.com/), C++FAQ, style, techique, etc.
@@ -46,6 +49,7 @@ Instead of creating local projects you can also leverage some [online compilers]
 * [Simon Brand's blog](https://blog.tartanllama.xyz/), template metaprogramming and the dark corners of C++ 
 * [Arne Mertz's Simplify C++](https://arne-mertz.de/), Write clean and maintainable C++
 * [Jonathan Boccara's blog](https://www.fluentcpp.com/), The theme of Fluent C++ is “expressive code in C++”.
+* [Blog given by Jacek Galowicz](https://blog.galowicz.de/) for those who has been striving after elegant, fast, and generic code.  
 
 ## [Tutorials, video trainings & courses](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/tutorials/README.md)
 ## [Principles, Patterns & Idioms](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/patterns/README.md)
