@@ -12,3 +12,4 @@
 * [Markdown Syntax](./markdown_syntax.md), [pdf](https://guides.github.com/features/mastering-markdown/)
 ---
 * [Tiny cheatsheets for C++11/14/17](https://www.walletfox.com/course/cheatsheets_cpp.php) from [walletfox.com](https://www.walletfox.com/) 
+* [C++ facts & statistics (until 2015)](./jetbrains.com/infographic.md) from [jetbrains.com](https://blog.jetbrains.com/clion/2015/07/infographics-cpp-facts-before-clion/)

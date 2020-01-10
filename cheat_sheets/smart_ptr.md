@@ -1,1 +1,1 @@
-![smart_ptr](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/cheat_sheets/smart_ptr.png)
+![smart_ptr](./smart_ptr.png)
