@@ -1,14 +1,14 @@
-* [C++11 Concurrency](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/cheat_sheets/concurrency.md)
-* [C++03 STL Quick Reference](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/cheat_sheets/STL_quick_reference.md)
-* [C++11 STL Additions](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/cheat_sheets/STL_additions_Cpp11.md)
-* [C++11 ECMA Script Regex](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/cheat_sheets/ECMA_script_regex.md)
+* [C++11 Concurrency](./concurrency.md)
+* [C++03 STL Quick Reference](./STL_quick_reference.md)
+* [C++11 STL Additions](./STL_additions_Cpp11.md)
+* [C++11 ECMA Script Regex](./ECMA_script_regex.md)
 * [C++11, PDF slides](http://soft.vub.ac.be/~cderoove/structuur2/C++11.pdf) by Alex Sinyakov
-* [C++11, Move ctor\\assigment method generation](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/cheat_sheets/move_ctor_assigment_generation.md)
-* [Concept: TriviallyCopyable](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/cheat_sheets/trivially_copyable.md)
-* [C++11, STL Container Choice](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/cheat_sheets/STL_container_choice.md)
-* [C++17 Features](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/cheat_sheets/cpp17RedCard.md) by Bartlomiej Filipek
-* [Smart Pointers](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/cheat_sheets/smart_ptr.md) by Bartlomiej Filipek
+* [C++11, Move ctor\\assigment method generation](./move_ctor_assigment_generation.md)
+* [Concept: TriviallyCopyable](./trivially_copyable.md)
+* [C++11, STL Container Choice](./STL_container_choice.md)
+* [C++17 Features](./cpp17RedCard.md) by Bartlomiej Filipek
+* [Smart Pointers](./smart_ptr.md) by Bartlomiej Filipek
 * [New features in C++17 with examples.](https://github.com/tvaneerd/cpp17_in_TTs/blob/master/ALL_IN_ONE.md) by "Tony Tables"
-* [Markdown Syntax](https://github.com/nikolaAV/Storehouse-Of-Knowledge/blob/master/cheat_sheets/markdown_syntax.md), [pdf](https://guides.github.com/features/mastering-markdown/)
+* [Markdown Syntax](./markdown_syntax.md), [pdf](https://guides.github.com/features/mastering-markdown/)
 ---
 * [Tiny cheatsheets for C++11/14/17](https://www.walletfox.com/course/cheatsheets_cpp.php) from [walletfox.com](https://www.walletfox.com/) 
