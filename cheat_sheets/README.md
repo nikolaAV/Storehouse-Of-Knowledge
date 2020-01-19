@@ -8,7 +8,7 @@
 * [C++11, STL Container Choice](./STL_container_choice.md)
 * [C++17 Features](./cpp17_refcard) by Bartlomiej Filipek
 * [C++20 Features](./cpp20_refcard) by Bartlomiej Filipek
-* [Smart Pointers](./smart_ptr.md) by Bartlomiej Filipek
+* [Smart Pointers](./smart_ptr) by Bartlomiej Filipek
 * [New features in C++17 with examples.](https://github.com/tvaneerd/cpp17_in_TTs/blob/master/ALL_IN_ONE.md) by "Tony Tables"
 * [Markdown Syntax](./markdown_syntax.md), [pdf](https://guides.github.com/features/mastering-markdown/)
 ---
