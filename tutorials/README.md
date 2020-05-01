@@ -6,3 +6,4 @@
 * Youtube. Nicolai Josuttis. Ñ++17. The Language Features. [Part 1](https://www.youtube.com/watch?v=WDGP5pO1TyM&feature=youtu.be), [Part 2](https://www.youtube.com/watch?v=_PEgl63V7wc&feature=youtu.be).
 * [Миграция на повседневный C++17](https://ps-group.github.io/cxx/cxx17)
 * [Computer Science Center](https://www.youtube.com/channel/UC0YHNueF-3Nh3uQT0P4YQZw/featured)
+* [Google C++ Style Guide](https://google.github.io/styleguide/cppguide.html), [RU](https://evgenykislov.com/wp-content/custom/cpp_codestyle/cppguide_ru.html)
