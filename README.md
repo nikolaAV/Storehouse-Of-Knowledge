@@ -43,7 +43,7 @@ Instead of creating local projects you can also leverage some [online compilers]
 * [Wikibook: More C++ Idioms](https://en.wikibooks.org/wiki/More_C%2B%2B_Idioms) a catalog reusable pieces of C++ knowledge (similar to the book on design patterns by GoF). It is aimed toward anyone with an intermediate level of knowledge in C++ and supported language paradigms.
 * [C++ Tips of the Week](https://abseil.io/tips/) from Google
 * [Steve Dewhurst's blog](http://stevedewhurst.com/once_weakly.html)
-* [Bartek's coding blog](http://www.bfilipek.com/p/start-here.html), C++ and native programming stories.
+* [Bartek's coding blog](http://www.bfilipek.com/p/start-here.html),["shadow copy"](https://www.cppstories.com/) C++ and native programming stories.
 * [Andrzej's C++ blog](https://akrzemi1.wordpress.com/), Guidelines and thoughts about C++
 * [scrutator.me](http://scrutator.me/) by Evgeniy Shcherbina
 * [Simon Brand's blog](https://blog.tartanllama.xyz/), template metaprogramming and the dark corners of C++ 
