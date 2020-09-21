@@ -1037,6 +1037,145 @@ long-term investment.__
 >
 > -- _Marshall McLuhan_
 
+> __Testing may convincingly demonstrate the presence of bugs, but can never demonstrate their absence.__
+>
+> -- _Edsger W. Dijkstra, Programming as a discipline of mathematical nature, 1974_
+
+> __Testing may convincingly demonstrate the presence of bugs, but can never demonstrate their absence.__
+>
+> -- _Edsger W. Dijkstra, Programming as a discipline of mathematical nature, 1974_
+
+> __The computing scientist’s main challenge is not to get confused by the complexities of his own making.__
+>
+> -- _Edsger W. Dijkstra_
+
+> __Dijkstra once said, “Testing shows the presence, not the absence, of bugs.” In other words, a program can be proven incorrect by a test, but it cannot be proven correct. All that tests can do, after sufficient testing effort, is allow us to deem a program to be correct enough for our purposes.__
+>
+> -- _Robert C. Martin_
+
+> __By claiming that they can contribute to software engineering, the soft scientists make themselves even more ridiculous. (Not less dangerous, alas!) In spite of its name, software engineering requires (cruelly) hard science for its support.__
+>
+> -- _Edsger W. Dijkstra_
+
+> __It is practically impossible to teach good programming to students that have had a prior exposure to BASIC: as potential programmers they are mentally mutilated beyond hope of regeneration.__
+>
+> -- _Edsger W. Dijkstra_
+
+> __Object-oriented programming is an exceptionally bad idea which could only have originated in California.__
+>
+> -- _Edsger W. Dijkstra_
+
+> __If debugging is the process of removing software bugs, then programming must be the process of putting them in.__
+>
+> -- _Edsger W. Dijkstra_
+
+> __It is not only the violin that shapes the violinist, we are all shaped by the tools we train ourselves to use, and in this respect programming languages have a devious influence: they shape our thinking habits.__
+>
+> -- _Edsger W. Dijkstra_
+
+
+> __Besides a mathematical inclination, an exceptionally good mastery of one's native tongue is the most vital asset of a competent programmer.__
+>
+> -- _Edsger W. Dijkstra_
+
+
+> __I mean, if 10 years from now, when you are doing something quick and dirty, you suddenly visualize that I am looking over your shoulders and say to yourself "Dijkstra would not have liked this", well, that would be enough immortality for me.__
+>
+> -- _Edsger W. Dijkstra_
+
+> __Computer Science is no more about computers than astronomy is about telescopes.__
+>
+> -- _Edsger W. Dijkstra_
+
+> __Simplicity is prerequisite for reliability.__
+>
+> -- _Edsger W. Dijkstra_
+
+> __Raise your quality standards as high as you can live with, avoid wasting your time on routine problems, and always try to work as closely as possible at the boundary of your abilities. Do this, because it is the only way of discovering how that boundary should be moved forward.__
+>
+> -- _Edsger W. Dijkstra_
+
+> __The question of whether a computer can think is no more interesting than the question of whether a submarine can swim.__
+>
+> -- _Edsger W. Dijkstra_
+
+> __Simplicity is a great virtue but it requires hard work to achieve it and education to appreciate it. And to make matters worse: complexity sells better.__
+>
+> -- _Edsger W. Dijkstra_
+
+> __The problem that Dijkstra recognized, early on, was that programming is hard, and that programmers don’t do it very well.__
+>
+> -- _Robert C. Martin_
+
+> __Indeed, the ratio of time spent reading versus writing is well over 10 to 1. We are constantly reading old code as part of the effort to write new code. ...[Therefore,] making it easy to read makes it easier to write.__
+>
+> -- _Robert C. Martin_
+
+> __Slaves are not allowed to say no. Laborers may be hesitant to say no. But professionals are expected to say no. Indeed, good managers crave someone who has the guts to say no. It’s the only way you can really get anything done.__
+>
+> -- _Robert C. Martin_
+
+> __So if you want to go fast, if you want to get done quickly, if you want your code to be easy to write, make it easy to read.__
+>
+> -- _Robert C. Martin, Clean Code: A Handbook of Agile Software Craftsmanship_
+
+> __Every time you write a comment, you should grimace and feel the failure of your ability of expression.__
+>
+> -- _Robert C. Martin, Clean Code: A Handbook of Agile Software Craftsmanship_
+
+> __You should name a variable using the same care with which you name a first-born child.__
+>
+> -- _Robert C. Martin, Clean Code: A Handbook of Agile Software Craftsmanship_
+
+> __Clean code is not written by following a set of rules. You don’t become a software craftsman by learning a list of heuristics. Professionalism and craftsmanship come from values that drive disciplines.__
+>
+> -- _Robert C. Martin, Clean Code: A Handbook of Agile Software Craftsmanship_
+
+> __Redundant comments are just places to collect lies and misinformation.__
+>
+> -- _Robert C. Martin, Clean Code: A Handbook of Agile Software Craftsmanship_
+
+> __Redundant comments are just places to collect lies and misinformation.__
+>
+> -- _Robert C. Martin, Clean Code: A Handbook of Agile Software Craftsmanship_
+
+> __When you are working on a problem, you sometimes get so close to it that you can’t see all the options. You miss elegant solutions because the creative part of your mind is suppressed by the intensity of your focus. Sometimes the best way to solve a problem is to go home, eat dinner, watch TV, go to bed, and then wake up the next morning and take a shower.__
+>
+> -- _Robert C. Martin, Clean Code: A Handbook of Agile Software Craftsmanship_
+
+> __Why do most developers fear to make continuous changes to their code? They are afraid they’ll break it! Why are they afraid they’ll break it? Because they don’t have tests.__
+>
+> -- _Robert C. Martin, Clean Code: A Handbook of Agile Software Craftsmanship_
+
+> __I'm a programmer. I like programming. And the best way I've found to have a positive impact on code is to write it.__
+>
+> -- _Robert C. Martin, Clean Code: A Handbook of Agile Software Craftsmanship_
+
+> __The only way to go fast, is to go well.__
+>
+> -- _Robert C. Martin, Clean Code: A Handbook of Agile Software Craftsmanship_
+
+> __There are two parts to learning craftsmanship: knowledge and work. You must gain the knowledge of principles, patterns, practices, and heuristics that a craftsman knows, and you must also grind that knowledge into your fingers, eyes, and gut by working hard and practicing.__
+>
+> -- _Robert C. Martin, Clean Code: A Handbook of Agile Software Craftsmanship_
+
+> __One difference between a smart programmer and a professional programmer is that the professional understands that clarity is king. Professionals use their powers for good and write code that others can understand.__
+>
+> -- _Robert C. Martin, Clean Code: A Handbook of Agile Software Craftsmanship_
+
+> __The problem is that we view estimates in different ways. Business likes to view estimates as commitments. Developers like to view estimates as guesses. The difference is profound.__
+>
+> -- _Robert C. Martin, Clean Code: A Handbook of Agile Software Craftsmanship_
+
+> __Programmers must avoid leaving false clues that obscure the meaning of code.__
+>
+> -- _Robert C. Martin, Clean Code: A Handbook of Agile Software Craftsmanship_
+
+> __The proper use of comments is to compensate for our failure to express ourself in code. Note that I used the word failure. I meant it. Comments are always failures.__
+>
+> -- _Robert C. Martin, Clean Code: A Handbook of Agile Software Craftsmanship_
+
+
 - - -
 visit [GoodReads](https://www.goodreads.com/)
 
