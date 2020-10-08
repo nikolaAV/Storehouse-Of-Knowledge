@@ -39,6 +39,7 @@ Instead of creating local projects you can also leverage some [online compilers]
 * [Bjarne Stroustrup's homepage](http://stroustrup.com/), C++FAQ, style, techique, etc.
 * [Herb Satter's homepage](https://herbsutter.com/), Here, you can find well known "Guru of the Week (GotW)", a series of C++ programming problems created and written by Herb Sutter.
 * [C++ Super-FAQ](https://isocpp.org/faq)
+* [Modernes C++](https://www.modernescpp.com/index.php/der-einstieg-in-modernes-c) by Rainer Grimm 
 * [CODE Q&A](https://code.i-harness.com/en/tagged/c%2B%2B),[RU](https://code.i-harness.com/ru/tagged/c%2B%2B) Learn, Solve. Technical & Programming knowledge for developers.
 * [Wikibook: More C++ Idioms](https://en.wikibooks.org/wiki/More_C%2B%2B_Idioms) a catalog reusable pieces of C++ knowledge (similar to the book on design patterns by GoF). It is aimed toward anyone with an intermediate level of knowledge in C++ and supported language paradigms.
 * [C++ Tips of the Week](https://abseil.io/tips/) from Google
