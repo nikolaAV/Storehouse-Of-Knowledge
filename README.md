@@ -34,6 +34,7 @@ Instead of creating local projects you can also leverage some [online compilers]
 ---
 * [Guide to the Modern C++ Ecosystem](https://www.bfilipek.com/2019/10/cppecosystem.html)
 * [List of awesome C++ (or C) frameworks, libraries, resources, and shiny things.](https://github.com/fffaraz/awesome-cpp#awesome-c-)
+* [A curated list of awesome header-only C++ libraries](https://github.com/p-ranav/awesome-hpp#string-utilities)
 
 ## Popular Blogs
 * [Bjarne Stroustrup's homepage](http://stroustrup.com/), C++FAQ, style, techique, etc.
