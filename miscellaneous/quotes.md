@@ -1175,6 +1175,86 @@ long-term investment.__
 >
 > -- _Robert C. Martin, Clean Code: A Handbook of Agile Software Craftsmanship_
 
+> __One of the penalties of refusing to participate in politics is that you end up being governed by your inferiors.__
+> 
+> -- _Plato_
+
+> __Good people do not need laws to tell them to act responsibly, while bad people will find a way around the laws.__
+> 
+> -- _Plato_
+
+> __Ignorance, the root and stem of every evil.__
+> 
+> -- _Plato_
+
+> __I'm trying to think, don't confuse me with facts.__
+> 
+> -- _Plato_
+
+> __There are three classes of men; lovers of wisdom, lovers of honor, and lovers of gain.__
+> 
+> -- _Plato_
+
+> __When men speak ill of thee, live so as nobody may believe them.__
+> 
+> -- _Plato_
+
+> __The greatest wealth is to live content with little.__
+> 
+> -- _Plato_
+
+> __Death is not the worst that can happen to men.__
+> 
+> -- _Plato_
+
+> __Good actions give strength to ourselves and inspire good actions in others.__
+> 
+> -- _Plato_
+
+> __A hero is born among a hundred, a wise man is found among a thousand, but an accomplished one might not be found even among a hundred thousand men.__
+> 
+> -- _Plato_
+
+> __Any man may easily do harm, but not every man can do good to another.__
+> 
+> -- _Plato_
+
+> __The first and best victory is to conquer self.__
+> 
+> -- _Plato_
+
+> __True friendship can exist only between equals.__
+> 
+> -- _Plato_
+
+> __Man is a being in search of meaning.__
+> 
+> -- _Plato_
+
+> __He was a wise man who invented God.__
+> 
+> -- _Plato_
+
+> __All I really know is the extent of my own ignorance.__
+> 
+> -- _Plato_
+
+> __I am the wisest man alive, for I know one thing, and that is that I know nothing.__
+> 
+> -- _Plato, The Republic_
+
+> __The beginning is the most important part of the work.__
+> 
+> -- _Plato, The Republic_
+
+> __There is in every one of us, even those who seem to be most moderate, a type of desire that is terrible, wild, and lawless.__
+> 
+> -- _Plato, The Republic_
+
+> __Excess of liberty, whether it lies in state or individuals, seems only to pass into excess of slavery.__
+> 
+> -- _Plato, The Republic_
+
 
 - - -
 visit [GoodReads](https://www.goodreads.com/)
