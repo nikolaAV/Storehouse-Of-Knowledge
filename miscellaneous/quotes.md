@@ -933,6 +933,58 @@ long-term investment.__
 >
 > -- _G.B.Shaw_
 
+> __He who can, does. He who cannot, teaches.__
+>
+> -- _George Bernard Shaw (Man and Superman)_
+
+> __There are those that look at things the way they are, and ask why? I dream of things that never were, and ask why not?__
+>
+> -- _George Bernard Shaw_
+
+> __The most tragic thing in the world is a man of genius who is not a man of honor.__
+>
+> -- _George Bernard Shaw_
+
+> __We learn from experience that men never learn anything from experience.__
+>
+> -- _George Bernard Shaw_
+
+> __The power of accurate observation is commonly called cynicism by those who have not got it.__
+>
+> -- _George Bernard Shaw_
+
+> __Both optimists and pessimists contribute to society. The optimist invents the aeroplane, the pessimist the parachute.__
+>
+> -- _George Bernard Shaw_
+
+> __I’m an atheist and I thank God for it.__
+>
+> -- _George Bernard Shaw_
+
+> __Life isn't about finding yourself. Life is about creating yourself.__
+>
+> -- _George Bernard Shaw_
+
+> __A life spent making mistakes is not only more honorable, but more useful than a life spent doing nothing.__
+>
+> -- _George Bernard Shaw_
+
+> __People are always blaming their circumstances for what they are. I don't believe in circumstances. The people who get on in this world are the people who get up and look for the circumstances they want, and if they can't find them, make them.__
+>
+> -- _George Bernard Shaw_
+
+> __Never wrestle with pigs. You both get dirty and the pig likes it.__
+>
+> -- _George Bernard Shaw_
+
+> __Success does not consist in never making mistakes but in never making the same one a second time.__
+>
+> -- _George Bernard Shaw_
+
+> __War does not determine who is right - only who is left.__
+>
+> -- _Bertrand Russell_
+
 > __There is nothing more difficult to carry out, nor more doubtful of success, nor  more dangerous to handle, than to initiate a new order of things.__
 >
 > -- _Niccolo Macchiavelli_
