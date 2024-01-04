@@ -32,6 +32,7 @@ Instead of creating local projects you can also leverage some [online compilers]
 * [Coliru](http://coliru.stacked-crooked.com/) uses GCC 8.1.0 (as of July 2018), offers link sharing and a basic text editor, it’s simple but very effective.
 * [C++ Insights](https://cppinsights.io/). It’s a Clang-based tool which does a source to source transformation. It shows how the compiler sees the code, for example by expanding lambdas, auto, structured bindings or range-based for loops.
 * [C++ Shell](http://cpp.sh/) single file compilation IDE, but with the rare feature of interactive stdin input
+* [C++ Insights](https://cppinsights.io) let you observe the implicit transformation (if any) performed by the compiler
 ---
 * [Guide to the Modern C++ Ecosystem](https://www.bfilipek.com/2019/10/cppecosystem.html)
 * [List of awesome C++ (or C) frameworks, libraries, resources, and shiny things.](https://github.com/fffaraz/awesome-cpp#awesome-c-)
