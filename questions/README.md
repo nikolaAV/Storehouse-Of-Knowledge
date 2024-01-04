@@ -1996,7 +1996,7 @@ Note: [Visual C++ is incomplient to the Standard](https://stackoverflow.com/ques
 
 **See also:** [cppreference::dependent_names](http://en.cppreference.com/w/cpp/language/dependent_name), 
 
-**Relatives:** [function_overloading](./README.md#function-overloading-deleted-function)
+**Relatives:** [function_overloading](./README.md#function-overloading-deleted-function), [two_phases_translation](./README.md#Templates-Two-Phase-Translation)
 
 # Function template. Overloading.
 **difficulty:** basic
@@ -4647,3 +4647,51 @@ In this case `decltype(v1)` is `int`. However 'v1' refers to data-member 'value'
 
 **Relatives:** [structured-bindings](./README.md#structured-bindings)
 
+# Templates. Two-Phase Translation.
+**difficulty:** expert
+```cpp
+struct S {};
+
+template <typename T>
+void foo(T) {
+    std::cout << "T";
+}
+
+template <typename T>
+void call_foo(T t, S s) {
+    foo(t);
+    foo(s);
+}
+
+void foo(S) {
+    std::cout << "S";
+}
+
+int main()
+{
+    S s;
+    call_foo(s,s);
+}
+```
+Regarding code above what should be present in output?
+- A. 
+    - TT
+- B. 
+    - TS
+- C. 
+    - ST
+- D. 
+    - SS
+ 
+**Answer:** C
+
+Templates are "compiled" in two phases
+- Without instantiation at _definition time_, the template code itself is checked for correctness ignoring the template parameters (syntax errors, using unknown names with do not depend on template parameters, etc.)
+- At _instantiation time_, the template code is checked (again) to ensure that all code is valid. That is, now especially, all parts that depend on template parameters are double-checked
+
+`foo(t)` - is template parameter dependent (t is of type T). Thus, its name resolution is skipped at phase 1 and postponed to be processed at phase 2 during _the instantiation_ of `call_foo(s,s)`. At this point a compiler rejects `foo(T)` and chooses `foo(S)` because of exact match rank between argument type `S` and function parameter type `S`
+`foo(s)` - is not template parameter dependent (s is an instance of known type S). It's processed at phase 1 when only function template `foo(T)` is visible.  
+
+**See also:** [cppreference::dependent_names](http://en.cppreference.com/w/cpp/language/dependent_name), [D. Vandevoorde. C++ Templates, Chapter 1.1.3](http://flylib.com/books/en/3.401.1.178/1/)
+
+**Relatives:** [function_overloading](./README.md#function-overloading-deleted-function), [non-dependent-name](./README.md#Templates-Non-dependent-name)
