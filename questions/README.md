@@ -4692,6 +4692,6 @@ Templates are "compiled" in two phases
 `foo(t)` - is template parameter dependent (t is of type T). Thus, its name resolution is skipped at phase 1 and postponed to be processed at phase 2 during _the instantiation_ of `call_foo(s,s)`. At this point a compiler rejects `foo(T)` and chooses `foo(S)` because of exact match rank between argument type `S` and function parameter type `S`
 `foo(s)` - is not template parameter dependent (s is an instance of known type S). It's processed at phase 1 when only function template `foo(T)` is visible.  
 
-**See also:** [cppreference::dependent_names](http://en.cppreference.com/w/cpp/language/dependent_name), [D. Vandevoorde. C++ Templates, Chapter 1.1.3](http://flylib.com/books/en/3.401.1.178/1/)
+**See also:** [cppreference::dependent_names](http://en.cppreference.com/w/cpp/language/dependent_name), [D. Vandevoorde. C++ Templates, Chapter 1.1.3](http://www.tmplbook.com/)
 
 **Relatives:** [function_overloading](./README.md#function-overloading-deleted-function), [non-dependent-name](./README.md#Templates-Non-dependent-name)
